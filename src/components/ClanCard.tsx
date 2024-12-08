@@ -3,8 +3,8 @@ import Card from "./Card";
 
 export default function ClanCard ({clan}: {clan: IClan}){
   const {name, rank, mission, adventurers, quests } = clan 
-  const adventurerNames = adventurers.map(a => a.name)
-  const questTitles = quests.map(q => q.title)
+  const adventurerNames = adventurers.map(a => <div>{a.name}</div>)
+  const questTitles = quests.map(q => <div>{q.title}</div>)
   return (
     <Card color = '#224433'>
       <h2>Clan {name}</h2>

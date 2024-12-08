@@ -25,6 +25,17 @@ export const dummyQuests = [
     questRank: Ranks.E,
     postedBy: 'Mort Gort',
     description:`Here's one with a short description. `
+  },
+  {
+    id: '3',
+    title:'Clan Quest',
+    reward: 123453,
+    claimType: QuestClaimType.Clan,
+    claimedById: '1',
+    questType: QuestTypes.Kill,
+    questRank: Ranks.A,
+    postedBy: 'Fire Man',
+    description:`Description hast a bit of test.`
   }
 ]
 
@@ -34,5 +45,5 @@ export const questsByClanId = dummyQuests.reduce((prev, q)=>{
   if(!q.claimedById) return prev
   const exists = prev[q.claimedById]
   if(!exists) return {...prev, [q.claimedById]: [q]}
-  return {...prev, [q.claimedById]: {...exists, q}}
+  return {...prev, [q.claimedById]: [...exists, q]}
 }, {} as {[clanId: string]: IDbQuest[]})
