@@ -28,7 +28,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div>Here we go</div>
         {allClans}
         {allQuests}
         {allAdventurers}

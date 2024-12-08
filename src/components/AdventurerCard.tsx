@@ -6,7 +6,7 @@ export default function AdventurerCard ({adventurer}: {adventurer: IAdventurer})
   const questTitles = quests?.map(a => <div>{a.title}</div>)
   
   return (
-    <Card color = '#554433'>
+    <Card color = '#554433' data={adventurer}>
       <h2>Adventurer {name}</h2>
       <div>
         <b>Clan</b>: {clan?.name || 'None'}
