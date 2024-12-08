@@ -1,8 +1,9 @@
+import { IDbClan } from "./Clan"
 import { IDbQuest } from "./Quest"
 import { Ranks } from "./Ranks"
 
 export interface IAdventurer extends IDbAdventurer{
-  clanName: string
+  clan?: IDbClan
   quests: IDbQuest[]
 }
 

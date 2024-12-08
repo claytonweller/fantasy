@@ -6,16 +6,16 @@ import { questsById } from "./dummy/quests";
 
 export function getAdventurers ():IAdventurer[]{
   const compositeAdventurers = dummyAdventurers.map(a =>{
-    const clanName = a.clanId 
-      ? clansById[a.clanId].name
-      : 'none'
+    const clan = a.clanId 
+      ? clansById[a.clanId]
+      : undefined;
     const adventurerQuests = adventurerQuestsByAdventurerId[a.id]
     const quests = adventurerQuests?.map(aq => {
       return questsById[aq.questId]
     })
     return {
       ...a,
-      clanName,
+      clan,
       quests
     }
   })

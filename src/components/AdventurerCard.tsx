@@ -2,14 +2,14 @@ import { IAdventurer } from "../types/Adventurer";
 import Card from "./Card";
 
 export default function AdventurerCard ({adventurer}: {adventurer: IAdventurer}){
-  const {name, bio, clanName, quests} = adventurer 
+  const {name, bio, clan, quests} = adventurer 
   const questTitles = quests?.map(a => <div>{a.title}</div>)
   
   return (
     <Card color = '#554433'>
       <h2>Adventurer {name}</h2>
       <div>
-        <b>Clan</b>: {clanName}
+        <b>Clan</b>: {clan?.name || 'None'}
       </div>
       <div>
         <b>Quests</b>: {questTitles}
