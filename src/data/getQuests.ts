@@ -1,4 +1,5 @@
 import { IDbQuest, IQuest, QuestClaimType } from "../types/Quest";
+import { adventurerQuestsByQuestId } from "./dummy/adventurerQuest";
 import { adventurersById } from "./dummy/adventurers";
 import { clansById } from "./dummy/clans";
 import { dummyQuests } from "./dummy/quests";
@@ -6,9 +7,14 @@ import { dummyQuests } from "./dummy/quests";
 export function getQuests ():IQuest[]{
   const compositeQuests = dummyQuests.map(q =>{
     const claimedByName = determineClaimedByName(q)
+    const adventurerQuests = adventurerQuestsByQuestId[q.id]
+    const adventurers = adventurerQuests?.map(aq => {
+      return adventurersById[aq.adventurerId]
+    })
     return {
       ...q,
-      claimedByName
+      claimedByName,
+      adventurers
     }
       
   

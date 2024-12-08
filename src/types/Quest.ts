@@ -1,7 +1,9 @@
+import { IDbAdventurer } from "./Adventurer";
 import { Ranks } from "./Ranks";
 
 export interface IQuest extends IDbQuest {
   claimedByName: string
+  adventurers: IDbAdventurer[]
 }
 
 export interface IDbQuest {

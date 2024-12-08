@@ -35,7 +35,7 @@ export const dummyQuests = [
     questType: QuestTypes.Kill,
     questRank: Ranks.A,
     postedBy: 'Fire Man',
-    description:`Description hast a bit of test.`
+    description:`I need more fire please.`
   }
 ]
 
