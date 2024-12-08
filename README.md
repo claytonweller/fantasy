@@ -1,46 +1,11 @@
-# Getting Started with Create React App
+# Fantasy Guild Fantasy League
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It’s a fantasy sports league but in a fantasy setting. 
 
-## Available Scripts
+We’re in a standard fantasy world which has monsters, adventurers, magic, and all the usual trappings. Adventurers accept quests from the Adventurers guild, and then get rewards based upon the difficulty upon completion. To complete more difficult quests adventurers have to specialize and team up into parties, and eventually join/create larger more permanent organizations called Clans. In this world these adventurers’ exploits are public record through the guild, and as such they are analogous to professional athletes in our world. Clans are like sports franchises/teams. 
 
-In the project directory, you can run:
+Instead of playing as an adventurer you play as a townsperson, who is following the “season” at the guild and is creating a fantasy “Clan.” Every week you pick adventurers, then depending upon what they do, you get points. You play in a league against other villagers, at the end of the season the person with the most cumulative points wins!
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Status
+Currently I'm just noodling around. This is a completely frontend react websited. There's no API or DB anything everything is just dummy data. My plan is to playtest using spreadsheets, the output the values from there into a CSV, then parse that into hosted data on update. Is this a long term solution? No absolutely not. Is it lightweight and easy to change? Yes. That's what I need right now. Prototype baybeee!
