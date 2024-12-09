@@ -1,13 +1,19 @@
 import { IAdventurer } from "../types/Adventurer";
+import { CardTypes } from "../types/Card";
 import Card from "./Card";
 
-export default function AdventurerCard ({adventurer}: {adventurer: IAdventurer}){
+export default function AdventurerCard ({adventurer, search}: {adventurer: IAdventurer, search: {searchText: string}}){
   const {name, bio, clan, quests} = adventurer 
-  const questTitles = quests?.map(a => <div>{a.title}</div>)
+  const questTitles = quests?.map(a => <div>{a.name}</div>)
   
   return (
-    <Card color = '#554433' data={adventurer}>
-      <h2>Adventurer {name}</h2>
+    <Card 
+      color='#554433' 
+      search={search} 
+      data={adventurer}
+      name={name}
+      type={CardTypes.Adventurer}
+    >
       <div>
         <b>Clan</b>: {clan?.name || 'None'}
       </div>

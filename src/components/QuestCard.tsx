@@ -1,13 +1,19 @@
+import { CardTypes } from "../types/Card";
 import { IQuest } from "../types/Quest";
 import { addCommasToNumber } from "../utils/addCommasToNumber";
 import Card from "./Card";
 
-export default function QuestCard ({quest}: {quest: IQuest}){
-  const {title, reward, postedBy, questType, claimedByName, description, questRank, adventurers } = quest 
+export default function QuestCard ({quest, search}: {quest: IQuest, search: {searchText: string}}){
+  const {name, reward, postedBy, questType, claimedByName, description, questRank, adventurers } = quest 
   const adventurerNames = adventurers?.map(a => <div>{a.name}</div>)
   return (
-    <Card color = '#442211'>
-      <h2>Quest: {title}</h2>
+    <Card 
+      color='#442211' 
+      search={search}
+      data={quest}
+      type={CardTypes.Quest}
+      name={name}
+    >
       <div>
         <b>Reward</b>: {addCommasToNumber(reward)}
       </div>

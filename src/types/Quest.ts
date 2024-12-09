@@ -8,7 +8,7 @@ export interface IQuest extends IDbQuest {
 
 export interface IDbQuest {
   id: string,
-  title:string, 
+  name:string, 
   reward: number, 
   postedBy: string,
   claimType: QuestClaimType

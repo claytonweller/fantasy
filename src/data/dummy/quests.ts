@@ -3,10 +3,10 @@ import { Ranks } from "../../types/Ranks";
 import { loremParagraph } from "./loremParagraph";
 import { makeByIdQuery } from "./makeByIdQuery";
 
-export const dummyQuests = [
+export const dummyQuests: IDbQuest[] = [
   {
     id: '1',
-    title:'Test Quest',
+    name:'Test Quest',
     reward: 123453,
     claimType: QuestClaimType.Clan,
     claimedById: '1',
@@ -17,7 +17,7 @@ export const dummyQuests = [
   },
   {
     id: '2',
-    title:'Other',
+    name:'Other',
     reward: 222,
     claimType: QuestClaimType.Individual,
     claimedById: '1',
@@ -28,7 +28,7 @@ export const dummyQuests = [
   },
   {
     id: '3',
-    title:'Clan Quest',
+    name:'Clan Quest',
     reward: 123453,
     claimType: QuestClaimType.Clan,
     claimedById: '1',

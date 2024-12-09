@@ -1,13 +1,19 @@
+import { CardTypes } from "../types/Card";
 import { IClan } from "../types/Clan";
 import Card from "./Card";
 
-export default function ClanCard ({clan}: {clan: IClan}){
+export default function ClanCard ({clan, search}: {clan: IClan, search: {searchText: string}}){
   const {name, rank, mission, adventurers, quests } = clan 
   const adventurerNames = adventurers.map(a => <div>{a.name}</div>)
-  const questTitles = quests.map(q => <div>{q.title}</div>)
+  const questTitles = quests.map(q => <div>{q.name}</div>)
   return (
-    <Card color = '#224433'>
-      <h2>Clan {name}</h2>
+    <Card 
+      search={search} 
+      color='#224433' 
+      data={clan}
+      name={name}
+      type={CardTypes.Clan}
+    >
       <div>
         <b>Rank</b>: {rank}
       </div>
@@ -20,7 +26,6 @@ export default function ClanCard ({clan}: {clan: IClan}){
       <div>
         <b>Mission</b>: {mission}
       </div>
-
     </Card>
   )
 }
