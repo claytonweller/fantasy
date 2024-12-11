@@ -1,8 +1,9 @@
 import { IAdventurer } from "../types/Adventurer";
 import { CardTypes } from "../types/Card";
+import { ISearchParams } from "../types/SearchParams";
 import Card from "./Card";
 
-export default function AdventurerCard ({adventurer, search}: {adventurer: IAdventurer, search: {searchText: string}}){
+export default function AdventurerCard ({adventurer, search}: {adventurer: IAdventurer, search: ISearchParams}){
   const {name, bio, clan, quests} = adventurer 
   const questTitles = quests?.map(a => <div>{a.name}</div>)
   

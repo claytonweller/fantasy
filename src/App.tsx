@@ -6,12 +6,18 @@ import QuestCard from './components/QuestCard';
 import { getAdventurers } from './data/getAdventurers';
 import { getClans } from './data/getClans';
 import { getQuests } from './data/getQuests';
+import CardGroup from './components/CardGroup';
+import { CardTypes } from './types/Card';
+import Search from './components/Search';
 
 function App() {
-  const [searchText, updateSearchText] = useState('')
-  const onSearchInputChange = (event: React.ChangeEvent<HTMLInputElement>) =>{
-    updateSearchText(event.target.value)
-  }
+  const [searchText, setSearchText] = useState('')
+  const cardFilterValues = Object.values(CardTypes).reduce((prev, ct) =>{
+    return {...prev, [ct]: true}
+  },{} as {[key in CardTypes]: boolean})
+
+  const [cardTypeFilters, setCardTypeFilters] = useState(cardFilterValues)
+
   const clans = getClans()
   const allClans = clans.map((c, i) =>{
     return <ClanCard key={`Clan${i}`} clan={c} search={{searchText}} />
@@ -30,16 +36,33 @@ function App() {
   return (
     <div className="App">
       <div style={{backgroundColor:'#111111', color: 'white'}}>
-        <label htmlFor='searchText'>Search: </label>
-        <input 
-          id='searchText' 
-          name='searchText' 
-          type='text' 
-          onChange={onSearchInputChange}
+        <Search 
+          setSearchText={setSearchText} 
+          cardTypeFilters={cardTypeFilters}
+          setCardTypeFilters={setCardTypeFilters}
         />
-        {allClans}
-        {allQuests}
-        {allAdventurers}
+        <CardGroup 
+          cardTypeFilters={cardTypeFilters} 
+          cardType={CardTypes.Clan} 
+          color='#223322'
+        >
+          {allClans}
+        </CardGroup>
+        <CardGroup 
+          cardType={CardTypes.Adventurer} 
+          color='#332620'
+          cardTypeFilters={cardTypeFilters} 
+        >
+          {allAdventurers}
+        </CardGroup>
+        <CardGroup 
+          cardType={CardTypes.Quest} 
+          color='#402222'
+          cardTypeFilters={cardTypeFilters} 
+        >
+          {allQuests}
+        </CardGroup>
+
       </div>
     </div>
   );

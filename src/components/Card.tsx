@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { ISearchParams } from "../types/SearchParams"
 
 function Card(
   props : {
@@ -7,13 +8,14 @@ function Card(
     name?: string,
     type?: string,
     data?: any, 
-    search:{ searchText: string}
+    search: ISearchParams
   }
 ){
   const{children, color, name = '', type = '', data = {}, search} = props
   const [showData, setShowData] = useState(false)
   const [showFull, setShowFull] = useState(false)
-  const onCardClick = ()=> {
+  const onCardClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>)=> {
+    e.stopPropagation()
     setShowFull(!showFull)
   }
   const onDataClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>
@@ -36,7 +38,7 @@ function Card(
 
   return (
     <div onClick={onCardClick} style={style}>
-      <h2>{type + ' ' + name}</h2>
+      <h2>{name}</h2>
       <div style={{display: showFull ? 'block' : 'none'}}>
         {children}
         <div>

@@ -8,7 +8,7 @@ export default function QuestCard ({quest, search}: {quest: IQuest, search: {sea
   const adventurerNames = adventurers?.map(a => <div>{a.name}</div>)
   return (
     <Card 
-      color='#442211' 
+      color='#552211' 
       search={search}
       data={quest}
       type={CardTypes.Quest}
