@@ -1,17 +1,19 @@
 import React, { useState } from "react"
 import { ISearchParams } from "../types/SearchParams"
+import { Ranks } from "../types/Ranks"
 
 function Card(
   props : {
     children: any, 
-    color: string, 
+    color: string,
+    rank: Ranks,
     name?: string,
     type?: string,
     data?: any, 
     search: ISearchParams
   }
 ){
-  const{children, color, name = '', type = '', data = {}, search} = props
+  const{children, color, rank, name = '', data = {}, search} = props
   const [showData, setShowData] = useState(false)
   const [showFull, setShowFull] = useState(false)
   const onCardClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>)=> {
@@ -25,7 +27,9 @@ function Card(
   }
   const dataString = JSON.stringify(data)
   const isEmptyString = search?.searchText === ''
-  const isVisible = isEmptyString || dataString.toLowerCase().includes(search.searchText.toLowerCase())
+  const isTextMatch = isEmptyString || dataString.toLowerCase().includes(search.searchText.toLowerCase())
+  const isCorrectRank = search?.rankFilter[rank]
+  const isVisible = isCorrectRank && isCorrectRank
   const style:React.CSSProperties = {
     backgroundColor: color,
     padding: '10px',

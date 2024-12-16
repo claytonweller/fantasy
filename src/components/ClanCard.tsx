@@ -12,6 +12,7 @@ export default function ClanCard ({clan, search}: {clan: IClan, search: ISearchP
       search={search} 
       color='#224433' 
       data={clan}
+      rank={rank}
       name={name}
       type={CardTypes.Clan}
     >

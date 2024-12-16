@@ -15,22 +15,34 @@ import { useCardRankFilter } from './hooks/useCardRankFilter';
 
 function App() {
   const [searchText, setSearchText] = useState('')
-
   const [cardTypeFilters, setCardTypeFilters] = useCardTypeFilter()
-  const [cardRankFilters, setCardRankFilters] = useCardRankFilter()
+  const [rankFilter, setCardRankFilters] = useCardRankFilter()
 
   const clans = getClans()
   const allClans = clans.map((c, i) =>{
-    return <ClanCard key={`Clan${i}`} clan={c} search={{searchText}} />
+    return <ClanCard 
+      key={`Clan${i}`} 
+      clan={c} 
+      search={{searchText, rankFilter}} 
+    />
   })
   const quests = getQuests()
   const allQuests = quests.map((q, i) =>{
-    return <QuestCard key={`Quest${i}`} quest={q} search={{searchText}}/>
+    return <QuestCard 
+      key={`Quest${i}`} 
+      quest={q} 
+      search={{searchText, rankFilter}}
+
+    />
   })
 
   const adventurers = getAdventurers()
   const allAdventurers = adventurers.map((a, i) =>{
-    return <AdventurerCard key={`Adv${i}`} adventurer={a} search={{searchText}}/>
+    return <AdventurerCard 
+    key={`Adv${i}`}
+    adventurer={a} 
+    search={{searchText, rankFilter}}
+  />
   })
 
 
@@ -41,7 +53,7 @@ function App() {
           setSearchText={setSearchText} 
           cardTypeFilters={cardTypeFilters}
           setCardTypeFilters={setCardTypeFilters}
-          cardRankFilters={cardRankFilters}
+          cardRankFilters={rankFilter}
           setCardRankFilters={setCardRankFilters}
         />
         <CardGroup 

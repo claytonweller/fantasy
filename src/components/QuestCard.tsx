@@ -1,15 +1,17 @@
 import { CardTypes } from "../types/Card";
 import { IQuest } from "../types/Quest";
+import { ISearchParams } from "../types/SearchParams";
 import { addCommasToNumber } from "../utils/addCommasToNumber";
 import Card from "./Card";
 
-export default function QuestCard ({quest, search}: {quest: IQuest, search: {searchText: string}}){
+export default function QuestCard ({quest, search}: {quest: IQuest, search: ISearchParams}){
   const {name, reward, postedBy, questType, claimedByName, description, questRank, adventurers } = quest 
   const adventurerNames = adventurers?.map(a => <div>{a.name}</div>)
   return (
     <Card 
       color='#552211' 
       search={search}
+      rank={questRank}
       data={quest}
       type={CardTypes.Quest}
       name={name}

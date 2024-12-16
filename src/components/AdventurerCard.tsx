@@ -3,8 +3,11 @@ import { CardTypes } from "../types/Card";
 import { ISearchParams } from "../types/SearchParams";
 import Card from "./Card";
 
-export default function AdventurerCard ({adventurer, search}: {adventurer: IAdventurer, search: ISearchParams}){
-  const {name, bio, clan, quests} = adventurer 
+export default function AdventurerCard ({adventurer, search}: {
+  adventurer: IAdventurer, 
+  search: ISearchParams, 
+}){
+  const {name, bio, clan, quests, rank} = adventurer 
   const questTitles = quests?.map(a => <div>{a.name}</div>)
   
   return (
@@ -12,6 +15,7 @@ export default function AdventurerCard ({adventurer, search}: {adventurer: IAdve
       color='#554433' 
       search={search} 
       data={adventurer}
+      rank={rank}
       name={name}
       type={CardTypes.Adventurer}
     >
