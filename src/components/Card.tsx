@@ -29,7 +29,7 @@ function Card(
   const isEmptyString = search?.searchText === ''
   const isTextMatch = isEmptyString || dataString.toLowerCase().includes(search.searchText.toLowerCase())
   const isCorrectRank = search?.rankFilter[rank]
-  const isVisible = isCorrectRank && isCorrectRank
+  const isVisible = isCorrectRank && isTextMatch
   const style:React.CSSProperties = {
     backgroundColor: color,
     padding: '10px',

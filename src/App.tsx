@@ -9,9 +9,9 @@ import { getQuests } from './data/getQuests';
 import CardGroup from './components/CardGroup';
 import { CardTypes } from './types/Card';
 import Search from './components/Search';
-import { Ranks } from './types/Ranks';
 import { useCardTypeFilter } from './hooks/useCardTypeFilter';
 import { useCardRankFilter } from './hooks/useCardRankFilter';
+import { SearchableText } from './components/SearchableText';
 
 function App() {
   const [searchText, setSearchText] = useState('')
@@ -50,6 +50,7 @@ function App() {
     <div className="App">
       <div style={{backgroundColor:'#111111', color: 'white'}}>
         <Search 
+          searchText={searchText}
           setSearchText={setSearchText} 
           cardTypeFilters={cardTypeFilters}
           setCardTypeFilters={setCardTypeFilters}
