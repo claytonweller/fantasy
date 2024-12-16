@@ -9,14 +9,15 @@ import { getQuests } from './data/getQuests';
 import CardGroup from './components/CardGroup';
 import { CardTypes } from './types/Card';
 import Search from './components/Search';
+import { Ranks } from './types/Ranks';
+import { useCardTypeFilter } from './hooks/useCardTypeFilter';
+import { useCardRankFilter } from './hooks/useCardRankFilter';
 
 function App() {
   const [searchText, setSearchText] = useState('')
-  const cardFilterValues = Object.values(CardTypes).reduce((prev, ct) =>{
-    return {...prev, [ct]: true}
-  },{} as {[key in CardTypes]: boolean})
 
-  const [cardTypeFilters, setCardTypeFilters] = useState(cardFilterValues)
+  const [cardTypeFilters, setCardTypeFilters] = useCardTypeFilter()
+  const [cardRankFilters, setCardRankFilters] = useCardRankFilter()
 
   const clans = getClans()
   const allClans = clans.map((c, i) =>{
@@ -40,6 +41,8 @@ function App() {
           setSearchText={setSearchText} 
           cardTypeFilters={cardTypeFilters}
           setCardTypeFilters={setCardTypeFilters}
+          cardRankFilters={cardRankFilters}
+          setCardRankFilters={setCardRankFilters}
         />
         <CardGroup 
           cardTypeFilters={cardTypeFilters} 

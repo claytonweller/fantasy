@@ -1,35 +1,23 @@
 import { CardTypes } from "../types/Card"
+import { Ranks } from "../types/Ranks"
+import {createCheckboxesFromEnumFilter} from '../utils/createCheckboxesFromEnumFilter'
 
 export default function Search(props:{
   setSearchText: React.Dispatch<React.SetStateAction<string>>
-  setCardTypeFilters: React.Dispatch<React.SetStateAction<any>>
+  setCardTypeFilters: React.Dispatch<React.SetStateAction<{[key in CardTypes]: boolean}>>
   cardTypeFilters: {[key in CardTypes]: boolean}
+  setCardRankFilters: React.Dispatch<React.SetStateAction<{[key in Ranks]: boolean}>>
+  cardRankFilters: {[key in Ranks]: boolean}
 }){
-  const {setSearchText, setCardTypeFilters, cardTypeFilters} = props
+  const {setSearchText, setCardTypeFilters, cardTypeFilters, setCardRankFilters, cardRankFilters} = props
   const onSearchInputChange = (event: React.ChangeEvent<HTMLInputElement>) =>{
     setSearchText(event.target.value)
   }
-  const cardOptions = Object.entries(cardTypeFilters).map(([cardType, checked]) =>{
-    const id = `cardType${cardType}`
-    return(
-      <div>
-        <label htmlFor={id}>{cardType}</label>
-        <input 
-          id={id}
-          name={id}
-          type='checkbox' 
-          checked={checked}
-          onClick={()=>{
-            console.warn(cardType)
-            if(!(cardType in CardTypes)) return console.warn('CardType not recognized');
-            const coerced = cardType as CardTypes
-            const updated = {...cardTypeFilters, [coerced]: !cardTypeFilters[coerced]} 
-            setCardTypeFilters(updated)
-          }}
-        />
-      </div>
-    )
-  })
+  const typeOptions = createCheckboxesFromEnumFilter(cardTypeFilters, setCardTypeFilters)
+
+  const rankOptions = createCheckboxesFromEnumFilter(cardRankFilters, setCardRankFilters)
+
+
   return(
     <div>
       <div>
@@ -43,7 +31,12 @@ export default function Search(props:{
       </div>
       <div>
         <label htmlFor='clan'>CardType </label>
-        {cardOptions}
+        {typeOptions}
+        
+      </div>
+      <div>
+        <label htmlFor='clan'>Rank </label>
+        {rankOptions}
       </div>
         
 
