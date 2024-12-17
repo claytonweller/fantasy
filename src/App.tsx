@@ -11,12 +11,13 @@ import { CardTypes } from './types/Card';
 import Search from './components/Search';
 import { useCardTypeFilter } from './hooks/useCardTypeFilter';
 import { useCardRankFilter } from './hooks/useCardRankFilter';
-import { SearchableText } from './components/SearchableText';
+import { makeSearchableText } from './components/SearchableText';
 
 function App() {
   const [searchText, setSearchText] = useState('')
   const [cardTypeFilters, setCardTypeFilters] = useCardTypeFilter()
   const [rankFilter, setCardRankFilters] = useCardRankFilter()
+  const makeSearchable = makeSearchableText(setSearchText)
 
   const clans = getClans()
   const allClans = clans.map((c, i) =>{
@@ -24,6 +25,7 @@ function App() {
       key={`Clan${i}`} 
       clan={c} 
       search={{searchText, rankFilter}} 
+      makeSearchable={makeSearchable} 
     />
   })
   const quests = getQuests()
@@ -32,7 +34,7 @@ function App() {
       key={`Quest${i}`} 
       quest={q} 
       search={{searchText, rankFilter}}
-
+      makeSearchable={makeSearchable} 
     />
   })
 
@@ -42,6 +44,7 @@ function App() {
     key={`Adv${i}`}
     adventurer={a} 
     search={{searchText, rankFilter}}
+    makeSearchable={makeSearchable} 
   />
   })
 

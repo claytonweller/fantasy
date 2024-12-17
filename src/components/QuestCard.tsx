@@ -4,9 +4,13 @@ import { ISearchParams } from "../types/SearchParams";
 import { addCommasToNumber } from "../utils/addCommasToNumber";
 import Card from "./Card";
 
-export default function QuestCard ({quest, search}: {quest: IQuest, search: ISearchParams}){
+export default function QuestCard ({quest, search, makeSearchable}: {
+  quest: IQuest, 
+  search: ISearchParams
+  makeSearchable: (text: string) => JSX.Element
+}){
   const {name, reward, postedBy, questType, claimedByName, description, questRank, adventurers } = quest 
-  const adventurerNames = adventurers?.map(a => <div>{a.name}</div>)
+  const adventurerNames = adventurers?.map(a => <div>{makeSearchable(a.name)}</div>)
   return (
     <Card 
       color='#552211' 
@@ -20,7 +24,7 @@ export default function QuestCard ({quest, search}: {quest: IQuest, search: ISea
         <b>Reward</b>: {addCommasToNumber(reward)}
       </div>
       <div>
-        <b>Posted By</b>: {postedBy}
+        <b>Posted By</b>: {makeSearchable(postedBy)}
       </div>
       <div>
         <b>Quest Type</b>: {questType}
@@ -29,7 +33,7 @@ export default function QuestCard ({quest, search}: {quest: IQuest, search: ISea
         <b>Rank</b>: {questRank}
       </div>
       <div>
-        <b>Claimed by</b>: { claimedByName}
+        <b>Claimed by</b>: { makeSearchable(claimedByName)}
       </div>
       <div>
         <b>Adventurers</b>: { adventurerNames}

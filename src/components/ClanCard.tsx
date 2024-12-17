@@ -3,10 +3,14 @@ import { IClan } from "../types/Clan";
 import { ISearchParams } from "../types/SearchParams";
 import Card from "./Card";
 
-export default function ClanCard ({clan, search}: {clan: IClan, search: ISearchParams}){
+export default function ClanCard ({clan, search, makeSearchable}: {
+  clan: IClan, 
+  search: ISearchParams
+  makeSearchable: (text: string) => JSX.Element
+}){
   const {name, rank, mission, adventurers, quests } = clan 
-  const adventurerNames = adventurers.map(a => <div>{a.name}</div>)
-  const questTitles = quests.map(q => <div>{q.name}</div>)
+  const adventurerNames = adventurers.map(a => <div>{makeSearchable(a.name)}</div>)
+  const questTitles = quests.map(q => <div>{makeSearchable(q.name)}</div>)
   return (
     <Card 
       search={search} 
