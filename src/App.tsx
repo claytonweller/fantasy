@@ -12,6 +12,7 @@ import Search from './components/Search';
 import { useCardTypeFilter } from './hooks/useCardTypeFilter';
 import { useCardRankFilter } from './hooks/useCardRankFilter';
 import { makeSearchableText } from './components/SearchableText';
+import { getVillagers } from './data/getVillagers';
 
 function App() {
   const [searchText, setSearchText] = useState('')
@@ -48,10 +49,16 @@ function App() {
   />
   })
 
+  const villagers = getVillagers()
+  const allVillagers = villagers.map((a, i) =>{
+    return <div key={`villagers${i}`}>{JSON.stringify(a)}</div>
+  })
+
 
   return (
     <div className="App">
       <div style={{backgroundColor:'#111111', color: 'white'}}>
+        {allVillagers}
         <Search 
           searchText={searchText}
           setSearchText={setSearchText} 

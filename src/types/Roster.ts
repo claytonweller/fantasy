@@ -1,3 +1,7 @@
+import { IDbAdventurer } from "./Adventurer"
+import { IDbClan } from "./Clan"
+import { IDbQuest } from "./Quest"
+
 export interface IDbRoster {
   id: string
   villagerId: string
@@ -28,4 +32,13 @@ export enum RosterPositions {
   C1 = 'C1',
   C2 = 'C2',
   C3 = 'C3'
+}
+
+export interface IRosterPick extends IDbRosterPick {
+  pick: IDbAdventurer | IDbClan
+  pickQuests: IDbQuest[]
+}
+
+export interface IRoster extends IDbRoster{
+  rosterPicks: IRosterPick[]
 }
