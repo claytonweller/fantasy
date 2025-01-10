@@ -21,7 +21,7 @@ export interface IDbAdventurer {
   traits: string[]
 }
 
-export enum AdventurerClasses {
+export enum AdventurerClasses { 
   Support = 'Support',
   Attacker = 'Attacker',
   Defender = 'Defender'

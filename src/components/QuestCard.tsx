@@ -33,10 +33,10 @@ export default function QuestCard ({quest, search, makeSearchable}: {
         <b>Rank</b>: {questRank}
       </div>
       <div>
-        <b>Claimed by</b>: { makeSearchable(claimedByName)}
+        <b>Claimed by</b>: {makeSearchable(claimedByName)}
       </div>
       <div>
-        <b>Adventurers</b>: { adventurerNames}
+        <b>Adventurers</b>: {adventurerNames}
       </div>
       <div>
         <b>Description</b>: {description}

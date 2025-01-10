@@ -16,8 +16,8 @@ export interface IDbQuest {
   questType: QuestTypes, 
   description: string, 
   questRank: Ranks
-  startTimeStamp?: number,
-  completeTimeStamp?: number,
+  startWeek?: number,
+  completeTimeWeek?: number,
 }
 
 export enum QuestTypes {
