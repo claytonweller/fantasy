@@ -9,8 +9,8 @@ export default function QuestCard ({quest, search, makeSearchable}: {
   search: ISearchParams
   makeSearchable: (text: string) => JSX.Element
 }){
-  const {name, reward, postedBy, questType, claimedByName, description, questRank, adventurers } = quest 
-  const adventurerNames = adventurers?.map(a => <div>{makeSearchable(a.name)}</div>)
+  const {name, reward, postedBy, questType, claimedByName = 'Default', description, questRank, parties, status } = quest 
+  const adventurerNames = parties[0].adventurers?.map(a => <div>{makeSearchable(a.name)}</div>)
   return (
     <Card 
       color='#552211' 
@@ -34,6 +34,9 @@ export default function QuestCard ({quest, search, makeSearchable}: {
       </div>
       <div>
         <b>Claimed by</b>: {makeSearchable(claimedByName)}
+      </div>
+      <div>
+        <b>Status</b>: {makeSearchable(status)}
       </div>
       <div>
         <b>Adventurers</b>: {adventurerNames}

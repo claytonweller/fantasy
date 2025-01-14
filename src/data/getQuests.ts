@@ -1,20 +1,30 @@
-import { IDbQuest, IQuest, QuestClaimType } from "../types/Quest";
-import { adventurerQuestsByQuestId } from "./dummy/adventurerQuest";
-import { adventurersById } from "./dummy/adventurers";
+import { IQuest, IQuestParty, QuestClaimType, QuestStatus } from "../types/Quest";
+import { sortByRank } from "../utils/sortByRank";
+import { adventurersByPartyId } from "./dummy/adventurers";
 import { clansById } from "./dummy/clans";
-import { dummyQuests } from "./dummy/quests";
+import { humanReadableQuests, IHumanReadableQuest, IHumanReadableQuestParty } from "./humanReadable/quests";
 
 export function getQuests ():IQuest[]{
-  const compositeQuests = dummyQuests.map(q =>{
-    const claimedByName = determineClaimedByName(q)
-    const adventurerQuests = adventurerQuestsByQuestId[q.id]
-    const adventurers = adventurerQuests?.map(aq => {
-      return adventurersById[aq.adventurerId]
+  const compositeQuests:IQuest[] = humanReadableQuests.map(q =>{
+    const activeParty = q.parties
+      .filter(p => typeof p.endWeek !== 'number' )
+      [0]
+    const claimedByName = determineClaimedByName(q, activeParty)
+    const questStatus = determineStatus(activeParty)
+    const compositeParties = q.parties.map(p =>{
+      return {
+        ...p,
+        questId: q.id,
+        adventurers: adventurersByPartyId[p.id],
+        metrics: p.metrics.map(m => ({...m, questPartyId: 'PLACEHOLDER'}))
+      }
     })
+    
     return {
       ...q,
       claimedByName,
-      adventurers
+      status: questStatus,
+      parties: compositeParties
     }
       
   
@@ -22,11 +32,20 @@ export function getQuests ():IQuest[]{
   return compositeQuests
 }
 
-function determineClaimedByName (quest: IDbQuest){
+function determineClaimedByName (quest: IHumanReadableQuest, party?: IHumanReadableQuestParty){
   const defaultName = 'Nobody'
-  if(!quest.claimedById) return defaultName
+  if(!party) return defaultName
   if(quest.claimType === QuestClaimType.Clan){
-    return clansById[quest.claimedById].name || defaultName
+    if(!party.clanId) return defaultName
+    return clansById[party.clanId].name || defaultName
   }
-  return adventurersById[quest.claimedById].name || defaultName
+  const adventurers = adventurersByPartyId[party.id]
+  if(!adventurers) return defaultName
+  const highestRankedAdventurer = sortByRank(adventurers)[0]
+  return highestRankedAdventurer.name
+}
+
+function determineStatus(party?: IHumanReadableQuestParty){
+  if(!party) return QuestStatus.Unclaimed
+  return party.status
 }

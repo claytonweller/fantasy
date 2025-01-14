@@ -9,7 +9,7 @@ export default function AdventurerCard ({adventurer, search, makeSearchable}: {
   makeSearchable: (text: string) => JSX.Element
 }){
   const {name, bio, clan, quests, rank} = adventurer 
-  const questTitles = quests?.map(a => <div>{makeSearchable(a.name)}</div>)
+  const questTitles = quests?.map(q => <div>{makeSearchable(q.details.name)}</div>)
   return (
     <Card 
       color='#554433' 

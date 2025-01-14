@@ -1,18 +1,33 @@
-import { IAdventurer } from "../types/Adventurer";
-import { adventurerQuestsByAdventurerId } from "./dummy/adventurerQuest";
-import { dummyAdventurers } from "./dummy/adventurers";
+import { IAdventurer, IAdventurerQuest } from "../types/Adventurer";
 import { clansById } from "./dummy/clans";
-import { questsById } from "./dummy/quests";
+import {  questsByPartyId } from "./dummy/quests";
+import { humanReadableAdventurers } from "./humanReadable/adventurers";
 
 export function getAdventurers ():IAdventurer[]{
-  const compositeAdventurers = dummyAdventurers.map(a =>{
+  const compositeAdventurers = humanReadableAdventurers.map(a =>{
     const clan = a.clanId 
       ? clansById[a.clanId]
       : undefined;
-    const adventurerQuests = adventurerQuestsByAdventurerId[a.id]
-    const quests = adventurerQuests?.map(aq => {
-      return questsById[aq.questId]
+    const quests: IAdventurerQuest[] = a.questParties.map(qp => {
+      const {partyId} = qp
+      const quest = questsByPartyId[partyId]
+      const personalMetrics = qp.metrics.map(m => ({...m, questAdventurerId: 'PLACEHOLDER'}))
+      const partyMetrics = quest.parties
+        .filter(p => p.id == partyId)
+        [0].metrics
+        .map(m => ({...m, questPartyId: partyId}))
+      return {
+        id: 'PLACEHOLDER',
+        adventurerId: a.id,
+        partyId,
+        metrics: {
+          personal: personalMetrics,
+          party: partyMetrics 
+        },
+        details: quest
+      }
     })
+    
     return {
       ...a,
       clan,
