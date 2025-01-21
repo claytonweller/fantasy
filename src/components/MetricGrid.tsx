@@ -52,7 +52,7 @@ function createEmptyRow (quests: IAdventurerQuest[]){
   }).flat()
 
   const sortedKeys = sortStringsAlphabetical(keys)
-
+  
   let emptyRow: IMetricRow = {
     title: 'Default title',
     rank: Ranks.E,

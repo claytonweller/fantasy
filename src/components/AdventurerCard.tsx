@@ -14,7 +14,6 @@ export default function AdventurerCard ({adventurer, search, makeSearchable}: {
   const questSection = (
     <MetricGrid quests={quests} makeSearchable={makeSearchable}/>
   )
-
   return (
     <Card 
       color='#554433' 
@@ -28,10 +27,10 @@ export default function AdventurerCard ({adventurer, search, makeSearchable}: {
         <b>Clan</b> :{makeSearchable(clan?.name || 'None')}
       </div>
       <div>
-        <b>Quests</b>: {questSection}
+        <b>Bio</b>: {bio}
       </div>
       <div>
-        <b>Bio</b>: {bio}
+        <b>Quests</b>: {questSection}
       </div>
     </Card>
   )
