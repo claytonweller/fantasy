@@ -1,4 +1,5 @@
 import { IAdventurer, IAdventurerQuest } from "../types/Adventurer";
+import { adventurersByPartyId } from "./queries/adventurers";
 import { clansById } from "./queries/clans";
 import {  questsByPartyId } from "./queries/quests";
 import { rawAdventurers } from "./raw/adventurers";
@@ -12,18 +13,25 @@ export function getAdventurers ():IAdventurer[]{
       const {partyId} = qp
       const quest = questsByPartyId[partyId]
       const personalMetrics = qp.metrics.map(m => ({...m, questAdventurerId: 'PLACEHOLDER'}))
-      const partyMetrics = quest.parties
+      const parties = quest.parties
         .filter(p => p.id == partyId)
-        [0].metrics
-        .map(m => ({...m, questPartyId: partyId}))
+        .map(p => {
+          const adventurers = adventurersByPartyId[p.id]
+          const metrics =  p.metrics.map(m => ({...m, questPartyId: 'PLACEHOLDER'}))
+          return {
+            ...p,
+            adventurers,
+            metrics,
+            questId: quest.id
+          }
+        } )
+
       return {
         id: 'PLACEHOLDER',
         adventurerId: a.id,
         partyId,
-        metrics: {
-          personal: personalMetrics,
-          party: partyMetrics 
-        },
+        metrics:personalMetrics,
+        parties,
         details: quest
       }
     })

@@ -2,6 +2,8 @@ import { IAdventurer } from "../types/Adventurer";
 import { CardTypes } from "../types/Card";
 import { ISearchParams } from "../types/SearchParams";
 import Card from "./Card";
+import MetricGrid from "./MetricGrid";
+import MetricRow from "./MetricRow";
 
 export default function AdventurerCard ({adventurer, search, makeSearchable}: {
   adventurer: IAdventurer, 
@@ -9,7 +11,10 @@ export default function AdventurerCard ({adventurer, search, makeSearchable}: {
   makeSearchable: (text: string) => JSX.Element
 }){
   const {name, bio, clan, quests, rank} = adventurer 
-  const questTitles = quests?.map(q => <div>{makeSearchable(q.details.name)}</div>)
+  const questSection = (
+    <MetricGrid quests={quests} makeSearchable={makeSearchable}/>
+  )
+
   return (
     <Card 
       color='#554433' 
@@ -23,7 +28,7 @@ export default function AdventurerCard ({adventurer, search, makeSearchable}: {
         <b>Clan</b> :{makeSearchable(clan?.name || 'None')}
       </div>
       <div>
-        <b>Quests</b>: {questTitles}
+        <b>Quests</b>: {questSection}
       </div>
       <div>
         <b>Bio</b>: {bio}

@@ -61,7 +61,11 @@ export const rawAdventurers:IRawAdventurer[] = [
         partyId: 'party3',
         // Composite
         metrics:[
-
+          {
+            metricRuleId: MetricRuleId.MonsterKill, 
+            value: 5,
+            rank: Ranks.C
+          },
         ]
       }
     ]
@@ -69,9 +73,9 @@ export const rawAdventurers:IRawAdventurer[] = [
 ]
 
 export interface IRawAdventurer extends IDbAdventurer{
-  questParties: IRawParties[]
+  questParties: IRawParty[]
 }
 
-export interface IRawParties extends Omit<IDbQuestPartyAdventurer, "id" | 'adventurerId'> {
+export interface IRawParty extends Omit<IDbQuestPartyAdventurer, "id" | 'adventurerId'> {
   metrics: IDbMetric[]
 }
