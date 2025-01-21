@@ -1,8 +1,8 @@
 import { IDbMetric, IDbQuest, IDbQuestParty, MetricRuleId, QuestClaimType, QuestStatus, QuestTypes } from "../../types/Quest";
 import { Ranks } from "../../types/Ranks";
-import { loremParagraph } from "../dummy/loremParagraph";
+import { loremParagraph } from "../queries/loremParagraph";
 
-export const humanReadableQuests: IHumanReadableQuest[] = [
+export const rawQuests: IRawQuest[] = [
   {
     id: 'quest1',
     name:'Test Quest',
@@ -79,10 +79,10 @@ export const humanReadableQuests: IHumanReadableQuest[] = [
   }
 ]
 
-export interface IHumanReadableQuest extends IDbQuest{
-  parties: IHumanReadableQuestParty[]
+export interface IRawQuest extends IDbQuest{
+  parties: IRawQuestParty[]
 }
 
-export interface IHumanReadableQuestParty extends Omit<IDbQuestParty, "questId"> {
+export interface IRawQuestParty extends Omit<IDbQuestParty, "questId"> {
   metrics: IDbMetric[]
 }

@@ -1,5 +1,5 @@
 import { IDbClan } from "./Clan"
-import { IDbQuest, IDbQuestAdventurerMetric, IDbQuestParty, IDbQuestPartyAdventurer, IDbQuestPartyMetric } from "./Quest"
+import { IDbQuest, IDbQuestAdventurerMetric, IDbQuestPartyAdventurer, IDbQuestPartyMetric } from "./Quest"
 import { Ranks } from "./Ranks"
 
 export interface IAdventurer extends IDbAdventurer {

@@ -1,10 +1,10 @@
 import { IAdventurer, IAdventurerQuest } from "../types/Adventurer";
-import { clansById } from "./dummy/clans";
-import {  questsByPartyId } from "./dummy/quests";
-import { humanReadableAdventurers } from "./humanReadable/adventurers";
+import { clansById } from "./queries/clans";
+import {  questsByPartyId } from "./queries/quests";
+import { rawAdventurers } from "./raw/adventurers";
 
 export function getAdventurers ():IAdventurer[]{
-  const compositeAdventurers = humanReadableAdventurers.map(a =>{
+  const compositeAdventurers = rawAdventurers.map(a =>{
     const clan = a.clanId 
       ? clansById[a.clanId]
       : undefined;
@@ -27,7 +27,7 @@ export function getAdventurers ():IAdventurer[]{
         details: quest
       }
     })
-    
+
     return {
       ...a,
       clan,

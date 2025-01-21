@@ -2,7 +2,7 @@ import { AdventurerClasses, AdventurerRaces, AdventurerStatuses, IDbAdventurer }
 import { IDbMetric, IDbQuestPartyAdventurer, MetricRuleId } from "../../types/Quest";
 import { Ranks } from "../../types/Ranks";
 
-export const humanReadableAdventurers:IHumanReadableAdventurer[] = [
+export const rawAdventurers:IRawAdventurer[] = [
   {
     // DB - Adventurer
     id: 'adv1',
@@ -68,10 +68,10 @@ export const humanReadableAdventurers:IHumanReadableAdventurer[] = [
   }
 ]
 
-interface IHumanReadableAdventurer extends IDbAdventurer{
-  questParties: IHumanReadableParties[]
+export interface IRawAdventurer extends IDbAdventurer{
+  questParties: IRawParties[]
 }
 
-interface IHumanReadableParties extends Omit<IDbQuestPartyAdventurer, "id" | 'adventurerId'> {
+export interface IRawParties extends Omit<IDbQuestPartyAdventurer, "id" | 'adventurerId'> {
   metrics: IDbMetric[]
 }

@@ -1,11 +1,11 @@
 
 import { IClan } from "../types/Clan";
-import { adventurersByClanId } from "./dummy/adventurers";
-import { dummyClans } from "./dummy/clans";
-import { questsByClanId } from "./dummy/quests";
+import { adventurersByClanId } from "./queries/adventurers";
+import { questsByClanId } from "./queries/quests";
+import { rawClans } from "./raw/clans";
 
 export function getClans ():IClan[]{
-  const compositeClans = dummyClans.map(c =>{
+  const compositeClans = rawClans.map(c =>{
     const adventurers = adventurersByClanId[c.id] 
     const quests = questsByClanId[c.id]
     return {

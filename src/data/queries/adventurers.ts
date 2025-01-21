@@ -1,17 +1,17 @@
 import { IDbAdventurer } from "../../types/Adventurer";
-import { humanReadableAdventurers } from "../humanReadable/adventurers";
+import { rawAdventurers } from "../raw/adventurers";
 import { makeByIdQuery } from "./makeByIdQuery";
 
-export const adventurersById = makeByIdQuery(humanReadableAdventurers)
+export const adventurersById = makeByIdQuery(rawAdventurers)
 
-export const adventurersByClanId = humanReadableAdventurers.reduce((prev, a)=>{
+export const adventurersByClanId = rawAdventurers.reduce((prev, a)=>{
   if(!a.clanId) return prev
   const existing = prev[a.clanId]
   if(!existing) return {...prev, [a.clanId]: [a]}
   return {...prev, [a.clanId]:[...existing, a]}
 }, {} as {[clanId: string]:IDbAdventurer[]} )
 
-export const adventurersByPartyId = humanReadableAdventurers.reduce((prev, a)=>{
+export const adventurersByPartyId = rawAdventurers.reduce((prev, a)=>{
   let updated = {...prev}
   a.questParties.forEach(qp =>{
     const existing = prev[qp.partyId]
