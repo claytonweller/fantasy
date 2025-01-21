@@ -1,5 +1,7 @@
 import { IAdventurerQuest } from "../types/Adventurer";
 import { IDbQuestAdventurerMetric, IDbQuestPartyMetric } from "../types/Quest";
+import { Ranks } from "../types/Ranks";
+import { capitalizeFirstLetter } from "../utils/capitalizeFirstLetter";
 import MetricRow from "./MetricRow";
 
 
@@ -9,23 +11,36 @@ export default function MetricGrid (params:{
 }){
   const {quests, makeSearchable} = params
   const emptyRow = createEmptyRow(quests)
-  
-  const rows = quests.map(q =>(
-    <div>
-      <div>Title: {makeSearchable(q.details.name)}</div>
-      <MetricRow quest={q} emptyRow={emptyRow}/>
-    </div>
-
-  ));
+  const headers = Object.keys(emptyRow).map(key => <th>{capitalizeFirstLetter(key)}</th>)
+  const rows = quests.map(q =>{
+    return (<MetricRow 
+      quest={q} 
+      emptyRow={emptyRow}
+      makeSearchable={makeSearchable}
+    />)
+  });
   return (
-   <div>
-    {rows}
+   <div style={{display: 'flex', justifyContent: 'center'}}>
+    <table>
+      <thead>
+        <tr>
+          {headers}
+        </tr>
+      </thead>
+      <tbody>
+        {rows}
+      </tbody>
+    </table>
+
    </div>    
   )
 }
 
 function createEmptyRow (quests: IAdventurerQuest[]){
-  let emptyRow: IEmptyMetricRow = {}
+  let emptyRow: IMetricRow = {
+    title: 'Default title',
+    rank: Ranks.E
+  }
   quests.forEach(q =>{
     const {parties} = q
     const personalMetricsCells = createEmptyCells(q.metrics)
@@ -50,6 +65,11 @@ function createEmptyCells(metrics: (IDbQuestAdventurerMetric | IDbQuestPartyMetr
   return emptyCells
 }
 
+export interface IMetricRow extends IEmptyMetricRow{
+  title: string | JSX.Element
+  rank: Ranks | JSX.Element
+}
+
 export interface IEmptyMetricRow {
-  [columnName: string]: number | string
+  [columnName: string]: number | string | JSX.Element
 }

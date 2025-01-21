@@ -6,8 +6,9 @@ export function SearchableText(params:{children: string, setSearchText: React.Di
   const {children:text, setSearchText} = params
   return (<span 
     style={{textDecoration:'underline', cursor: 'pointer'}} 
-    onClick={()=>{
+    onClick={(e)=>{
       console.warn(text)
+      e.stopPropagation()
       setSearchText(text)
     }}
   >{

@@ -1,18 +1,19 @@
 import { IAdventurerQuest } from "../types/Adventurer";
-import { Ranks } from "../types/Ranks";
-import { IEmptyMetricRow } from "./MetricGrid";
+import { IMetricRow } from "./MetricGrid";
 
 
 export default function MetricRow (params:{
   quest: IAdventurerQuest,
-  emptyRow: IEmptyMetricRow 
+  emptyRow: IMetricRow 
+  makeSearchable: (text: string) => JSX.Element
 }){
-  const {quest, emptyRow} = params
-  const {name: title, questRank: rank} = quest.details
-  const row: IEmptyMetricRow & {title: string, rank: Ranks} = {
-    title,
-    rank,
-    ...emptyRow
+  const {quest, emptyRow, makeSearchable} = params
+  // We spread here to create a shallow copy so our
+  // mutations don't affect other rows
+  const row: IMetricRow = { 
+    ...emptyRow, 
+    title: makeSearchable(quest.details.name),
+    rank: quest.details.questRank
   }
 
   quest.metrics.forEach(m => {
@@ -25,10 +26,15 @@ export default function MetricRow (params:{
     })
   })
 
+  const cells = Object.values(row).map(value =>{
+    return (
+      <td>{value}</td>
+    )
+  })
   
   return (
-   <div>
-    {JSON.stringify(row)}
-   </div>    
+    <tr>
+      {cells}
+    </tr>
   )
 }
