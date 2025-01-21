@@ -1,5 +1,5 @@
 import { IAdventurerQuest } from "../types/Adventurer";
-import { IMetricRow } from "./MetricGrid";
+import { formatRuleNameFromMetric, IMetricRow } from "./MetricGrid";
 
 
 export default function MetricRow (params:{
@@ -17,12 +17,12 @@ export default function MetricRow (params:{
   }
 
   quest.metrics.forEach(m => {
-    row[m.metricRuleId] = m.value
+    row[formatRuleNameFromMetric(m)] = m.value
   })
 
   quest.parties.forEach(p => {
     p.metrics.forEach(m =>{
-      row[m.metricRuleId] = m.value
+      row[formatRuleNameFromMetric(m)] = m.value
     })
   })
 

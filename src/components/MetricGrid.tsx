@@ -2,6 +2,7 @@ import { IAdventurerQuest } from "../types/Adventurer";
 import { IDbQuestAdventurerMetric, IDbQuestPartyMetric } from "../types/Quest";
 import { Ranks } from "../types/Ranks";
 import { capitalizeFirstLetter } from "../utils/capitalizeFirstLetter";
+import { sortStringsAlphabetical } from "../utils/sortStringsAlphabetical";
 import MetricRow from "./MetricRow";
 
 
@@ -37,32 +38,45 @@ export default function MetricGrid (params:{
 }
 
 function createEmptyRow (quests: IAdventurerQuest[]){
+
+  const keys: string[] = quests.map(q =>{
+    const {parties} = q
+
+    const personalMetricKeys = q.metrics.map(m => formatRuleNameFromMetric(m))
+    let partyMetricKeys: string[] = []
+    parties.forEach(p =>{
+      const keys = p.metrics.map(m => formatRuleNameFromMetric(m))
+      partyMetricKeys = [...partyMetricKeys, ...keys]
+    })
+    return [...personalMetricKeys, ...partyMetricKeys]
+  }).flat()
+
+  const sortedKeys = sortStringsAlphabetical(keys)
+
   let emptyRow: IMetricRow = {
     title: 'Default title',
-    rank: Ranks.E
+    rank: Ranks.E,
+    ... createEmptyCells(sortedKeys)
   }
-  quests.forEach(q =>{
-    const {parties} = q
-    const personalMetricsCells = createEmptyCells(q.metrics)
-    emptyRow = {...emptyRow, ...personalMetricsCells}
-    parties.forEach(p =>{
-      const partyMetricsCells = createEmptyCells(p.metrics)
-      emptyRow = {...emptyRow, ...partyMetricsCells}
-    })
-  })
   return emptyRow
 }
 
-function createEmptyCells(metrics: (IDbQuestAdventurerMetric | IDbQuestPartyMetric)[]){
+function createEmptyCells(metricKeys: string[]){
   const emptyCells: IEmptyMetricRow = {}
-  metrics.forEach(m =>{
+  metricKeys.forEach(mk =>{
     // Right now we're using the metricRuleId to be the columnName
     // In the future when we have custom metric rules will have a name 
     // property which will be human readable.
-    const ruleName = m.metricRuleId
-    emptyCells[ruleName] = 0
+
+    emptyCells[mk] = 0
   })
   return emptyCells
+}
+
+export function formatRuleNameFromMetric (m: IDbQuestAdventurerMetric | IDbQuestPartyMetric){
+  return m.rank
+  ? `${m.metricRuleId}(${m.rank})`
+  : m.metricRuleId
 }
 
 export interface IMetricRow extends IEmptyMetricRow{
