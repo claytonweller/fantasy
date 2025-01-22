@@ -1,5 +1,4 @@
-import { IAdventurerQuest } from "../types/Adventurer";
-import { IDbQuestAdventurerMetric, IDbQuestPartyMetric } from "../types/Quest";
+import { IMetricsWithMeta, IMetric } from "../types/Quest";
 import { Ranks } from "../types/Ranks";
 import { capitalizeFirstLetter } from "../utils/capitalizeFirstLetter";
 import { sortStringsAlphabetical } from "../utils/sortStringsAlphabetical";
@@ -7,15 +6,15 @@ import MetricRow from "./MetricRow";
 
 
 export default function MetricGrid (params:{
-  quests: IAdventurerQuest[], 
+  metaMetrics: IMetricsWithMeta[], 
   makeSearchable: (text: string) => JSX.Element
 }){
-  const {quests, makeSearchable} = params
-  const emptyRow = createEmptyRow(quests)
+  const {metaMetrics, makeSearchable} = params
+  const emptyRow = createEmptyRow(metaMetrics)
   const headers = Object.keys(emptyRow).map(key => <th>{capitalizeFirstLetter(key)}</th>)
-  const rows = quests.map(q =>{
+  const rows = metaMetrics.map(m =>{
     return (<MetricRow 
-      quest={q} 
+      meta={m} 
       emptyRow={emptyRow}
       makeSearchable={makeSearchable}
     />)
@@ -37,26 +36,18 @@ export default function MetricGrid (params:{
   )
 }
 
-function createEmptyRow (quests: IAdventurerQuest[]){
-
-  const keys: string[] = quests.map(q =>{
-    const {parties} = q
-
-    const personalMetricKeys = q.metrics.map(m => formatRuleNameFromMetric(m))
-    let partyMetricKeys: string[] = []
-    parties.forEach(p =>{
-      const keys = p.metrics.map(m => formatRuleNameFromMetric(m))
-      partyMetricKeys = [...partyMetricKeys, ...keys]
-    })
-    return [...personalMetricKeys, ...partyMetricKeys]
+function createEmptyRow (metrics: IMetricsWithMeta[]){
+  const ruleNames: string[] = metrics.map(meta =>{
+    const names = meta.metrics.map(m => formatRuleNameFromMetric(m))
+    return names
   }).flat()
 
-  const sortedKeys = sortStringsAlphabetical(keys)
+  const sortedNames = sortStringsAlphabetical(ruleNames)
   
   let emptyRow: IMetricRow = {
-    title: 'Default title',
+    name: 'Default title',
     rank: Ranks.E,
-    ... createEmptyCells(sortedKeys)
+    ...createEmptyCells(sortedNames)
   }
   return emptyRow
 }
@@ -73,14 +64,14 @@ function createEmptyCells(metricKeys: string[]){
   return emptyCells
 }
 
-export function formatRuleNameFromMetric (m: IDbQuestAdventurerMetric | IDbQuestPartyMetric){
+export function formatRuleNameFromMetric (m: IMetric){
   return m.rank
   ? `${m.metricRuleId}(${m.rank})`
   : m.metricRuleId
 }
 
 export interface IMetricRow extends IEmptyMetricRow{
-  title: string | JSX.Element
+  name: string | JSX.Element
   rank: Ranks | JSX.Element
 }
 

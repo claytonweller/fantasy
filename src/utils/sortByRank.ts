@@ -10,6 +10,7 @@ const sortPriority = {
 }
 
 export function sortByRank<T>(input:(T & {rank:Ranks})[]):T[]{
+  if(!input) return []
   const sorted = input.sort((a, b)=> sortPriority[a.rank] - sortPriority[b.rank])
 
   return sorted

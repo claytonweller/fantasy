@@ -1,29 +1,24 @@
-import { IAdventurerQuest } from "../types/Adventurer";
+import { IMetricsWithMeta } from "../types/Quest";
+import { Ranks } from "../types/Ranks";
 import { formatRuleNameFromMetric, IMetricRow } from "./MetricGrid";
 
 
 export default function MetricRow (params:{
-  quest: IAdventurerQuest,
+  meta: IMetricsWithMeta,
   emptyRow: IMetricRow 
   makeSearchable: (text: string) => JSX.Element
 }){
-  const {quest, emptyRow, makeSearchable} = params
+  const {meta, emptyRow, makeSearchable} = params
   // We spread here to create a shallow copy so our
   // mutations don't affect other rows
   const row: IMetricRow = { 
     ...emptyRow, 
-    title: makeSearchable(quest.details.name),
-    rank: quest.details.questRank
+    name: makeSearchable(meta.name),
+    rank: meta.rank || Ranks.E
   }
 
-  quest.metrics.forEach(m => {
+  meta.metrics.forEach(m => {
     row[formatRuleNameFromMetric(m)] = m.value
-  })
-
-  quest.parties.forEach(p => {
-    p.metrics.forEach(m =>{
-      row[formatRuleNameFromMetric(m)] = m.value
-    })
   })
 
   const cells = Object.values(row).map(value =>{
