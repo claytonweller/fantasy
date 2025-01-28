@@ -41,7 +41,7 @@ export interface IMetricsWithMeta {
   metrics: IMetric[]
 }
 
-export type IMetric = IDbQuestPartyMetric | IDbQuestAdventurerMetric
+export type IMetric = IDbQuestPartyMetric | IDbQuestAdventurerMetric | IDbMetric
 
 export interface IDbQuestPartyAdventurer {
   id: string,
@@ -108,4 +108,10 @@ export enum MetricRuleId {
   RewardGold = 'RewardGold',
   CiviliansDead = 'CiviliansDead',
   PropertyDamaged = 'PropertyDamaged',
+
+  // Clan Metrics
+  QuestsAccepted = 'QuestsAccepted',
+  QuestsComplete = 'QuestsCompleted',
+  ActiveMembers = 'ActiveMembers',
+  InactiveMembers = 'InactiveMembers'
 }

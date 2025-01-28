@@ -1,7 +1,10 @@
+import { questsByAdventurerId, questsById } from "../data/queries/quests";
 import { CardTypes } from "../types/Card";
 import { IClan } from "../types/Clan";
+import { IMetricsWithMeta, MetricRuleId, QuestStatus } from "../types/Quest";
 import { ISearchParams } from "../types/SearchParams";
 import Card from "./Card";
+import MetricGrid from "./MetricGrid";
 
 export default function ClanCard ({clan, search, makeSearchable}: {
   clan: IClan, 
@@ -11,6 +14,40 @@ export default function ClanCard ({clan, search, makeSearchable}: {
   const {name, rank, mission, adventurers, quests } = clan 
   const adventurerNames = adventurers.map(a => <div>{makeSearchable(a.name)}</div>)
   const questTitles = quests.map(q => <div>{makeSearchable(q.name)}</div>)
+  const activeAdventurers = adventurers.filter(a =>{
+    const quests = questsByAdventurerId[a.id]
+    return quests.length > 0
+  })
+  const completeQuests = quests.filter(q =>{
+    const parties = questsById[q.id].parties
+    const clanParties = parties.filter(p => p.clanId === clan.id)
+    const complete = clanParties.find(p => p.status === QuestStatus.Success)
+    return !!complete
+  })
+  const metrics: IMetricsWithMeta[] = [
+    {
+      name: 'Week1',
+      rank: clan.rank,
+      metrics:[
+        {
+          metricRuleId: MetricRuleId.QuestsAccepted,
+          value: quests.length
+        },
+        {
+          metricRuleId: MetricRuleId.QuestsComplete,
+          value: completeQuests.length
+        },
+        {
+          metricRuleId: MetricRuleId.ActiveMembers,
+          value: activeAdventurers.length
+        },
+        {
+          metricRuleId: MetricRuleId.InactiveMembers,
+          value: adventurers.length - activeAdventurers.length
+        },
+      ]
+   }
+  ]
   return (
     <Card 
       search={search} 
@@ -29,6 +66,7 @@ export default function ClanCard ({clan, search, makeSearchable}: {
       <div>
         <b>Quests</b>: {questTitles}
       </div>
+      <MetricGrid metaMetrics={metrics} makeSearchable={makeSearchable} />
       <div>
         <b>Mission</b>: {mission}
       </div>

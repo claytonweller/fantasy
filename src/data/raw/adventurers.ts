@@ -69,6 +69,21 @@ export const rawAdventurers:IRawAdventurer[] = [
         ]
       }
     ]
+  },
+  {
+    id: '3',
+    name: 'Cool Mike',
+    races: [AdventurerRaces.Human],
+    nicknames: [],
+    rank: Ranks.B,
+    class: AdventurerClasses.Defender,
+    className: 'Dude',
+    clanId: 'clan1',
+    bio: 'A cool guy who gets stuff done',
+    status: [],
+    traits: ['Cool'],
+    questParties:[
+    ]
   }
 ]
 
