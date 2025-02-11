@@ -12,6 +12,8 @@ import Search from './components/Search';
 import { useCardTypeFilter } from './hooks/useCardTypeFilter';
 import { useCardRankFilter } from './hooks/useCardRankFilter';
 import { makeSearchableText } from './components/SearchableText';
+import { getRules, rankMultipliers } from './data/getRules';
+import Rules from './components/Rules';
 // import { getVillagers } from './data/getVillagers';
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
   const [cardTypeFilters, setCardTypeFilters] = useCardTypeFilter()
   const [rankFilter, setCardRankFilters] = useCardRankFilter()
   const makeSearchable = makeSearchableText(setSearchText)
+
+  const rules = getRules()
 
   const clans = getClans()
   const allClans = clans.map((c, i) =>{
@@ -67,6 +71,7 @@ function App() {
           cardRankFilters={rankFilter}
           setCardRankFilters={setCardRankFilters}
         />
+        <Rules rules={rules} rankMultipliers={rankMultipliers}/>
         <CardGroup 
           cardTypeFilters={cardTypeFilters} 
           cardType={CardTypes.Clan} 

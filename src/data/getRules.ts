@@ -9,6 +9,11 @@ export function getRules ():{ raw:IRawMetricRule[], calculators: MetricCalculato
   }
 }
 
+export interface IRules {
+  raw:IRawMetricRule[], 
+  calculators: MetricCalculators
+}
+
 
 // Calculator Logic
 function makeMetricPointCalculators ():MetricCalculators{
@@ -54,7 +59,7 @@ function pointByGold (metric:IDbMetric, multiplier = 1){
 
 }
 
-const rankMultipliers ={
+export const rankMultipliers ={
   [Ranks.S]: 50,
   [Ranks.A]: 16,
   [Ranks.B]: 8,
