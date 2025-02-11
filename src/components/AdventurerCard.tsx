@@ -1,3 +1,4 @@
+import { IRules } from "../data/getRules";
 import { IAdventurer, IAdventurerQuest } from "../types/Adventurer";
 import { CardTypes } from "../types/Card";
 import { IMetricsWithMeta } from "../types/Quest";
@@ -5,9 +6,10 @@ import { ISearchParams } from "../types/SearchParams";
 import Card from "./Card";
 import MetricGrid from "./MetricGrid";
 
-export default function AdventurerCard ({adventurer, search, makeSearchable}: {
+export default function AdventurerCard ({adventurer, search, rules, makeSearchable}: {
   adventurer: IAdventurer, 
   search: ISearchParams, 
+  rules: IRules,
   makeSearchable: (text: string) => JSX.Element
 }){
   const {name, bio, clan, quests, rank} = adventurer 
@@ -15,7 +17,11 @@ export default function AdventurerCard ({adventurer, search, makeSearchable}: {
     return metaMetricsFromAdventurerQuest(q)
   })
   const questSection = (
-    <MetricGrid metaMetrics={metaMetrics} makeSearchable={makeSearchable}/>
+    <MetricGrid 
+      metaMetrics={metaMetrics} 
+      makeSearchable={makeSearchable}
+      rules={rules}
+    />
   )
   return (
     <Card 

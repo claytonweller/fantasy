@@ -30,6 +30,7 @@ function App() {
       key={`Clan${i}`} 
       clan={c} 
       search={{searchText, rankFilter}} 
+      rules={rules}
       makeSearchable={makeSearchable} 
     />
   })
@@ -39,6 +40,7 @@ function App() {
       key={`Quest${i}`} 
       quest={q} 
       search={{searchText, rankFilter}}
+      rules={rules}
       makeSearchable={makeSearchable} 
     />
   })
@@ -50,6 +52,7 @@ function App() {
     adventurer={a} 
     search={{searchText, rankFilter}}
     makeSearchable={makeSearchable} 
+    rules={rules}
   />
   })
 

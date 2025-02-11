@@ -1,3 +1,4 @@
+import { IRules } from "../data/getRules";
 import { questsByAdventurerId, questsById } from "../data/queries/quests";
 import { CardTypes } from "../types/Card";
 import { IClan } from "../types/Clan";
@@ -6,9 +7,10 @@ import { ISearchParams } from "../types/SearchParams";
 import Card from "./Card";
 import MetricGrid from "./MetricGrid";
 
-export default function ClanCard ({clan, search, makeSearchable}: {
+export default function ClanCard ({clan, search, makeSearchable, rules}: {
   clan: IClan, 
-  search: ISearchParams
+  search: ISearchParams,
+  rules: IRules,
   makeSearchable: (text: string) => JSX.Element
 }){
   const {name, rank, mission, adventurers, quests } = clan 
@@ -66,7 +68,11 @@ export default function ClanCard ({clan, search, makeSearchable}: {
       <div>
         <b>Quests</b>: {questTitles}
       </div>
-      <MetricGrid metaMetrics={metrics} makeSearchable={makeSearchable} />
+      <MetricGrid 
+        metaMetrics={metrics} 
+        makeSearchable={makeSearchable} 
+        rules={rules}
+      />
       <div>
         <b>Mission</b>: {mission}
       </div>

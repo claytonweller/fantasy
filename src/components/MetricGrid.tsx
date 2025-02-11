@@ -1,3 +1,4 @@
+import { IRules } from "../data/getRules";
 import { IMetricsWithMeta, IMetric } from "../types/Quest";
 import { Ranks } from "../types/Ranks";
 import { capitalizeFirstLetter } from "../utils/capitalizeFirstLetter";
@@ -7,9 +8,10 @@ import MetricRow from "./MetricRow";
 
 export default function MetricGrid (params:{
   metaMetrics: IMetricsWithMeta[], 
-  makeSearchable: (text: string) => JSX.Element
+  makeSearchable: (text: string) => JSX.Element,
+  rules: IRules
 }){
-  const {metaMetrics, makeSearchable} = params
+  const {metaMetrics, makeSearchable, rules} = params
   const emptyRow = createEmptyRow(metaMetrics)
   const headers = Object.keys(emptyRow).map(key => <th>{capitalizeFirstLetter(key)}</th>)
   const rows = metaMetrics.map(m =>{
@@ -17,6 +19,7 @@ export default function MetricGrid (params:{
       meta={m} 
       emptyRow={emptyRow}
       makeSearchable={makeSearchable}
+      rules={rules}
     />)
   });
   return (
@@ -47,6 +50,7 @@ function createEmptyRow (metrics: IMetricsWithMeta[]){
   let emptyRow: IMetricRow = {
     name: 'Default title',
     rank: Ranks.E,
+    points: 0,
     ...createEmptyCells(sortedNames)
   }
   return emptyRow
@@ -73,6 +77,7 @@ export function formatRuleNameFromMetric (m: IMetric){
 export interface IMetricRow extends IEmptyMetricRow{
   name: string | JSX.Element
   rank: Ranks | JSX.Element
+  points: number
 }
 
 export interface IEmptyMetricRow {

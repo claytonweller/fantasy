@@ -1,3 +1,4 @@
+import { IRules } from "../data/getRules";
 import { adventurersById } from "../data/queries/adventurers";
 import { CardTypes } from "../types/Card";
 import { IQuest } from "../types/Quest";
@@ -8,9 +9,10 @@ import { sortByRank } from "../utils/sortByRank";
 import Card from "./Card";
 import MetricGrid from "./MetricGrid";
 
-export default function QuestCard ({quest, search, makeSearchable}: {
+export default function QuestCard ({quest, search, makeSearchable, rules}: {
   quest: IQuest, 
   search: ISearchParams
+  rules: IRules
   makeSearchable: (text: string) => JSX.Element
 }){
   const {name, reward, postedBy, questType, claimedByName = 'Default', description, questRank, parties } = quest 
@@ -46,7 +48,11 @@ export default function QuestCard ({quest, search, makeSearchable}: {
       }}>
         <div>
           <div>Status: {p.status}</div>
-          <MetricGrid metaMetrics={metaMetrics} makeSearchable={makeSearchable}/>
+          <MetricGrid 
+            metaMetrics={metaMetrics} 
+            makeSearchable={makeSearchable}
+            rules= {rules}
+          />
         </div>
       </div>
     )

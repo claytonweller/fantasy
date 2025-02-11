@@ -7,7 +7,7 @@ export default function CardGroup(props:{
   color:string,
   cardTypeFilters: {[key in CardTypes]: boolean}
 }){
-  const {children, cardType, color, cardTypeFilters} = props
+  const {children, cardType, color, cardTypeFilters } = props
   const [showFull, setShowFull] = useState(true)
   const style:React.CSSProperties = {
     backgroundColor: color,

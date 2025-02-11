@@ -1,3 +1,4 @@
+import { IRules } from "../data/getRules";
 import { IMetricsWithMeta } from "../types/Quest";
 import { Ranks } from "../types/Ranks";
 import { formatRuleNameFromMetric, IMetricRow } from "./MetricGrid";
@@ -5,19 +6,24 @@ import { formatRuleNameFromMetric, IMetricRow } from "./MetricGrid";
 
 export default function MetricRow (params:{
   meta: IMetricsWithMeta,
-  emptyRow: IMetricRow 
+  emptyRow: IMetricRow,
+  rules: IRules,
   makeSearchable: (text: string) => JSX.Element
 }){
-  const {meta, emptyRow, makeSearchable} = params
+  const {meta, emptyRow, makeSearchable, rules} = params
   // We spread here to create a shallow copy so our
   // mutations don't affect other rows
   const row: IMetricRow = { 
     ...emptyRow, 
+    points: 0, 
     name: makeSearchable(meta.name),
     rank: meta.rank || Ranks.E
   }
 
   meta.metrics.forEach(m => {
+    const pointCalculator = rules.calculators[m.metricRuleId]
+    const metricPoints = pointCalculator(m)
+    row.points += metricPoints
     row[formatRuleNameFromMetric(m)] = m.value
   })
 
