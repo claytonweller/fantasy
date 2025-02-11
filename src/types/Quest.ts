@@ -97,17 +97,17 @@ export enum QuestMetricType {
 export enum MetricRuleId {
   // Adventurer/individual metrics
   MonsterKill = 'MonsterKill',
-  Death = 'Death',
   ChestOpened = 'ChestOpened',
   TrapDisarmed = 'TrapDisarmed',
+  TrapTriggered = 'TrapTriggered',
+  Death = 'Death',
   AllyResurrect = 'AllyResurrect',
   AllyHealed = 'AllyHealed',
-  TrapTriggered = 'TrapTriggered',
 
   // Quest global/party metrics
   CivilianSaved = 'CivilianSaved',
-  RewardGold = 'RewardGold',
   CiviliansDead = 'CiviliansDead',
+  RewardGold = 'RewardGold',
   PropertyDamaged = 'PropertyDamaged',
 
   // Clan Metrics
