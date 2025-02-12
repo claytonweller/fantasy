@@ -12,7 +12,7 @@ export default function AdventurerCard ({adventurer, search, rules, makeSearchab
   rules: IRules,
   makeSearchable: (text: string) => JSX.Element
 }){
-  const {name, bio, clan, quests, rank} = adventurer 
+  const {name, bio, clan, quests, rank, status} = adventurer 
   const metaMetrics: IMetricsWithMeta[] = quests.map(q =>{
     return metaMetricsFromAdventurerQuest(q)
   })
@@ -23,6 +23,9 @@ export default function AdventurerCard ({adventurer, search, rules, makeSearchab
       rules={rules}
     />
   )
+  const formattedStatus = status.length
+    ? status.join(', ')
+    : 'Normal'
   return (
     <Card 
       color='#554433' 
@@ -34,6 +37,12 @@ export default function AdventurerCard ({adventurer, search, rules, makeSearchab
     >
       <div>
         <b>Clan</b> :{makeSearchable(clan?.name || 'None')}
+      </div>
+      <div>
+        <b>Status</b>: {formattedStatus}
+      </div>
+      <div>
+        <b>Job (Class)</b>: {adventurer.className} ({adventurer.class})
       </div>
       <div>
         <b>Bio</b>: {bio}

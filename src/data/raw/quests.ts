@@ -19,6 +19,7 @@ export const rawQuests: IRawQuest[] = [
         startWeek: 1,
         clanId: 'clan1',
         status: QuestStatus.Failed,
+        notes: 'Party Notes',
         metrics:[
           {
             metricRuleId: MetricRuleId.CivilianSaved,

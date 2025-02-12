@@ -32,6 +32,7 @@ export interface IDbQuestParty {
   startWeek: number
   endWeek?: number
   status: QuestStatus
+  notes?: string
   // Links to a list of metrics
 }
 

@@ -39,6 +39,9 @@ export default function QuestCard ({quest, search, makeSearchable, rules}: {
       partyMetrics, 
       ...adventurerMetrics
     ]
+    const notes = p.notes
+      ?  <div>Notes: {p.notes}</div>
+      : ''
     return(
       <div style={{
         border: 'rgb(50, 0, 0)', 
@@ -48,6 +51,7 @@ export default function QuestCard ({quest, search, makeSearchable, rules}: {
       }}>
         <div>
           <div>Status: {p.status}</div>
+         {notes}
           <MetricGrid 
             metaMetrics={metaMetrics} 
             makeSearchable={makeSearchable}
@@ -74,6 +78,9 @@ export default function QuestCard ({quest, search, makeSearchable, rules}: {
       </div>
       <div>
         <b>Quest Type</b>: {questType}
+      </div>
+      <div>
+        <b>Status</b>: {quest.status}
       </div>
       <div>
         <b>Rank</b>: {questRank}
