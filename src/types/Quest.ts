@@ -62,6 +62,7 @@ export interface IDbMetric {
   metricRuleId: MetricRuleId,
   value: number,
   rank?: Ranks
+  week: number
 }
 
 export enum QuestStatus {

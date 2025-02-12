@@ -33,19 +33,25 @@ export default function ClanCard ({clan, search, makeSearchable, rules}: {
       metrics:[
         {
           metricRuleId: MetricRuleId.QuestsAccepted,
-          value: quests.length
+          value: quests.length,
+          week: 1,
         },
         {
           metricRuleId: MetricRuleId.QuestsComplete,
-          value: completeQuests.length
+          value: completeQuests.length,
+          week: 1,
+
         },
         {
           metricRuleId: MetricRuleId.ActiveMembers,
-          value: activeAdventurers.length
+          value: activeAdventurers.length,
+          week: 1,
         },
         {
           metricRuleId: MetricRuleId.InactiveMembers,
-          value: adventurers.length - activeAdventurers.length
+          value: adventurers.length - activeAdventurers.length,
+          week: 1,
+
         },
       ]
    }

@@ -22,7 +22,8 @@ export const rawAdventurers:IRawAdventurer[] = [
           {
             metricRuleId: MetricRuleId.MonsterKill, 
             value: 3,
-            rank: Ranks.D
+            rank: Ranks.D,
+            week: 1
           }
         ]
       },
@@ -48,12 +49,14 @@ export const rawAdventurers:IRawAdventurer[] = [
           {
             metricRuleId: MetricRuleId.MonsterKill, 
             value: 1,
-            rank: Ranks.A
+            rank: Ranks.A,
+            week: 1,
           },
           {
             metricRuleId: MetricRuleId.AllyHealed,
             value: 3,
-            rank: Ranks.B
+            rank: Ranks.B,
+            week: 1,
           }
         ]
       },
@@ -64,7 +67,8 @@ export const rawAdventurers:IRawAdventurer[] = [
           {
             metricRuleId: MetricRuleId.MonsterKill, 
             value: 5,
-            rank: Ranks.C
+            rank: Ranks.C,
+            week: 2,
           },
         ]
       }

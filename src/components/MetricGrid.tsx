@@ -49,6 +49,7 @@ function createEmptyRow (metrics: IMetricsWithMeta[]){
   
   let emptyRow: IMetricRow = {
     name: 'Default title',
+    week: 1,
     rank: Ranks.E,
     points: 0,
     ...createEmptyCells(sortedNames)

@@ -23,6 +23,7 @@ export const rawQuests: IRawQuest[] = [
           {
             metricRuleId: MetricRuleId.CivilianSaved,
             value: 4,
+            week: 1,
           }
         ]
       },
@@ -35,6 +36,7 @@ export const rawQuests: IRawQuest[] = [
           {
             metricRuleId: MetricRuleId.CivilianSaved,
             value: 2,
+            week: 2,
           }
         ]
       }
@@ -59,6 +61,7 @@ export const rawQuests: IRawQuest[] = [
           {
             metricRuleId: MetricRuleId.PropertyDamaged,
             value: 4000,
+            week: 1,
           }
         ]
       }
@@ -67,7 +70,7 @@ export const rawQuests: IRawQuest[] = [
   {
     id: 'quest3',
     name:'Clan Quest',
-    reward: 123453,
+    reward: 12345,
     claimType: QuestClaimType.Clan,
     questType: QuestTypes.Kill,
     questRank: Ranks.A,
@@ -75,15 +78,21 @@ export const rawQuests: IRawQuest[] = [
     description:`I need more fire please.`,
     parties:[
       {
-        id: 'party3',
+        id: 'party4',
         startWeek: 1,
-        endWeek: 1,
+        endWeek: 2,
         clanId: 'clan1',
         status: QuestStatus.Success,
         metrics:[
           {
             metricRuleId: MetricRuleId.CiviliansDead,
             value: 1,
+            week: 2,
+          },
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 12345,
+            week: 2
           }
         ]
       }

@@ -7,7 +7,7 @@ import { rawQuests, IRawQuest, IRawQuestParty } from "./raw/quests";
 export function getQuests ():IQuest[]{
   const compositeQuests:IQuest[] = rawQuests.map(q =>{
     const activeParty = q.parties
-      .filter(p => typeof p.endWeek !== 'number' )
+      .filter(p => p.status !== QuestStatus.Failed )
       [0]
     const claimedByName = determineClaimedByName(q, activeParty)
     const questStatus = determineStatus(activeParty)
