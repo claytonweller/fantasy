@@ -28,7 +28,9 @@ function Card(
   const dataString = JSON.stringify(data)
   const isEmptyString = search?.searchText === ''
   const isTextMatch = isEmptyString || dataString.toLowerCase().includes(search.searchText.toLowerCase())
-  const isCorrectRank = search?.rankFilter[rank]
+  const isCorrectRank = search.rankFilter
+    ? search?.rankFilter[rank]
+    : true
   const isVisible = isCorrectRank && isTextMatch
   const style:React.CSSProperties = {
     backgroundColor: color,

@@ -22,6 +22,7 @@ function App() {
   const [searchText, setSearchText] = useState('')
   const [cardTypeFilters, setCardTypeFilters] = useCardTypeFilter()
   const [rankFilter, setCardRankFilters] = useCardRankFilter()
+  const [currentWeek] = useState(2)
   const makeSearchable = makeSearchableText(setSearchText)
 
   const rules = getRules()
@@ -32,6 +33,7 @@ function App() {
       key={`Clan${i}`} 
       clan={c} 
       search={{searchText, rankFilter}} 
+      currentWeek={currentWeek}
       rules={rules}
       makeSearchable={makeSearchable} 
     />
@@ -63,7 +65,8 @@ function App() {
     return <VillagerCard 
       key={`Vil${i}`}
       villager={v}
-      search={{searchText, rankFilter}}
+      search={{searchText}}
+      currentWeek={currentWeek}
       makeSearchable={makeSearchable}
       rules={rules}
     />
@@ -86,7 +89,7 @@ function App() {
         <CardGroup 
           cardTypeFilters={cardTypeFilters} 
           cardType={CardTypes.Villager} 
-          color='#223322'
+          color='#221128'
         >
           {allVillagers}
         </CardGroup>

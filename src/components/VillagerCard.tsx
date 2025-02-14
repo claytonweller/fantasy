@@ -8,16 +8,17 @@ import { IVillager } from "../types/Villager";
 import Card from "./Card";
 import MetricGrid from "./MetricGrid";
 
-export default function VillagerCard ({villager, search, rules, makeSearchable}: {
+export default function VillagerCard ({villager, search, rules, currentWeek, makeSearchable}: {
   villager: IVillager, 
   search: ISearchParams, 
   rules: IRules,
+  currentWeek: number,
   makeSearchable: (text: string) => JSX.Element
 }){
   const {name} = villager 
   return (
     <Card 
-      color='#554433' 
+      color='#332233' 
       search={search} 
       data={villager}
       rank={Ranks.A}

@@ -5,7 +5,21 @@ import { clansById } from "./queries/clans";
 import { rawQuests, IRawQuest, IRawQuestParty } from "./raw/quests";
 
 export function getQuests ():IQuest[]{
-  const compositeQuests:IQuest[] = rawQuests.map(q =>{
+  const compositeQuests:IQuest[] = formatQuests(rawQuests)
+  return compositeQuests
+}
+
+export function getQuestsByClanId(clanId: string):IQuest[]{
+  const clanQuests = rawQuests.filter(q => {
+    const isClanQuest = q.claimType === QuestClaimType.Clan
+    const isClaimedByClan = !!q.parties.find(p => p.clanId)
+    return isClanQuest && isClaimedByClan
+  })
+  return formatQuests(clanQuests)
+}
+
+function formatQuests (unformattedQuests: IRawQuest[]):IQuest[]{
+  return unformattedQuests.map(q =>{
     const activeParty = q.parties
       .filter(p => p.status !== QuestStatus.Failed )
       [0]
@@ -26,10 +40,7 @@ export function getQuests ():IQuest[]{
       status: questStatus,
       parties: compositeParties
     }
-      
-  
   })
-  return compositeQuests
 }
 
 function determineClaimedByName (quest: IRawQuest, party?: IRawQuestParty){
