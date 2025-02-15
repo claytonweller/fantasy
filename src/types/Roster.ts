@@ -1,6 +1,7 @@
-import { IDbAdventurer } from "./Adventurer"
+import { IAdventurer } from "./Adventurer"
 import { IDbClan } from "./Clan"
 import { IDbQuest } from "./Quest"
+import { Ranks } from "./Ranks"
 
 export interface IDbRoster {
   id: string
@@ -25,17 +26,18 @@ export enum RosterPickTypes {
 // In the future we probably want to the roster layout to
 // vary depending upon the league/season and possibly custom setups
 export enum RosterPositions {
-  Clan = 'Clan',
-  A = 'A',
-  B1 = 'B1',
-  B2 = 'B2',
-  C1 = 'C1',
-  C2 = 'C2',
-  C3 = 'C3'
+  // Clan = 'Clan',
+  A = Ranks.A,
+  B1 = Ranks.B,
+  B2 = Ranks.B,
+  C1 = Ranks.C,
+  C2 = Ranks.C,
+  C3 = Ranks.C,
 }
 
 export interface IRosterPick extends IDbRosterPick {
-  pick: IDbAdventurer | IDbClan
+  pick: IAdventurer 
+  // pick: IAdventurer | IDbClan
   pickQuests: IDbQuest[]
 }
 

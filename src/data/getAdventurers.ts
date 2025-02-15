@@ -1,46 +1,53 @@
 import { IAdventurer, IAdventurerQuest } from "../types/Adventurer";
-import { adventurersByPartyId } from "./queries/adventurers";
+import { adventurersById, adventurersByPartyId } from "./queries/adventurers";
 import { clansById } from "./queries/clans";
 import {  questsByPartyId } from "./queries/quests";
-import { rawAdventurers } from "./raw/adventurers";
+import { IRawAdventurer, rawAdventurers } from "./raw/adventurers";
 
 export function getAdventurers ():IAdventurer[]{
-  const compositeAdventurers = rawAdventurers.map(a =>{
-    const clan = a.clanId 
-      ? clansById[a.clanId]
-      : undefined;
-    const quests: IAdventurerQuest[] = a.questParties.map(qp => {
-      const {partyId} = qp
-      const quest = questsByPartyId[partyId]
-      const personalMetrics = qp.metrics.map(m => ({...m, questAdventurerId: 'PLACEHOLDER'}))
-      const parties = quest.parties
-        .filter(p => p.id == partyId)
-        .map(p => {
-          const adventurers = adventurersByPartyId[p.id]
-          const metrics =  p.metrics.map(m => ({...m, questPartyId: 'PLACEHOLDER'}))
-          return {
-            ...p,
-            adventurers,
-            metrics,
-            questId: quest.id
-          }
-        } )
+  const adventurers = rawAdventurers.map(formatAdventurer)
+  return adventurers
+}
 
-      return {
-        id: 'PLACEHOLDER',
-        adventurerId: a.id,
-        partyId,
-        metrics:personalMetrics,
-        parties,
-        details: quest
-      }
-    })
+export function getAdventurerById(id:string):IAdventurer{
+  const adventurer = adventurersById[id]
+  return formatAdventurer(adventurer)
+}
+
+function formatAdventurer(a:IRawAdventurer):IAdventurer{
+  const clan = a.clanId 
+    ? clansById[a.clanId]
+    : undefined;
+  const quests: IAdventurerQuest[] = a.questParties.map(qp => {
+    const {partyId} = qp
+    const quest = questsByPartyId[partyId]
+    const personalMetrics = qp.metrics.map(m => ({...m, questAdventurerId: 'PLACEHOLDER'}))
+    const parties = quest.parties
+      .filter(p => p.id == partyId)
+      .map(p => {
+        const adventurers = adventurersByPartyId[p.id]
+        const metrics =  p.metrics.map(m => ({...m, questPartyId: 'PLACEHOLDER'}))
+        return {
+          ...p,
+          adventurers,
+          metrics,
+          questId: quest.id
+        }
+      } )
 
     return {
-      ...a,
-      clan,
-      quests
+      id: 'PLACEHOLDER',
+      adventurerId: a.id,
+      partyId,
+      metrics:personalMetrics,
+      parties,
+      details: quest
     }
   })
-  return compositeAdventurers
+
+  return {
+    ...a,
+    clan,
+    quests
+  }
 }

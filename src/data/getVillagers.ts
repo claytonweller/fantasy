@@ -1,10 +1,10 @@
+import { IAdventurer } from "../types/Adventurer";
 import { IDbClan } from "../types/Clan";
 import { IRoster, IRosterPick, RosterPickTypes } from "../types/Roster";
 import { IVillager } from "../types/Villager";
-import { adventurersById } from "./queries/adventurers";
+import { getAdventurerById } from "./getAdventurers";
 import { clansById } from "./queries/clans";
 import { questsByAdventurerId, questsByClanId } from "./queries/quests";
-import { IRawAdventurer } from "./raw/adventurers";
 import { IRawRosterPick, rawVillagers } from "./raw/villagers";
 
 export function getVillagers ():IVillager[]{
@@ -43,11 +43,11 @@ export function getVillagers ():IVillager[]{
 
 function determinePick (rosterPick: IRawRosterPick){
   const {pickType, pickId} = rosterPick
-  if(pickType === RosterPickTypes.Clan) return clansById[pickId]
-  return adventurersById[pickId]
+  // if(pickType === RosterPickTypes.Clan) return clansById[pickId]
+  return getAdventurerById(pickId)
 }
 
-function findQuests(pick: IRawAdventurer | IDbClan, pickType: RosterPickTypes){
+function findQuests(pick: IAdventurer | IDbClan, pickType: RosterPickTypes){
   if(pickType === RosterPickTypes.Clan){
     return questsByClanId[pick.id]
   }

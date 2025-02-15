@@ -1,5 +1,6 @@
 import { IDbAdventurer } from "./Adventurer";
 import { Ranks } from "./Ranks";
+import { RosterPositions } from "./Roster";
 
 export interface IQuest extends IDbQuest {
   // Clan Name or the highest ranked adventurer in the active party
@@ -38,7 +39,7 @@ export interface IDbQuestParty {
 
 export interface IMetricsWithMeta {
   name: string
-  rank?: Ranks
+  rank?: Ranks | RosterPositions
   metrics: IMetric[]
 }
 

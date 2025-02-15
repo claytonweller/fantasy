@@ -1,8 +1,9 @@
 import { IRules } from "../data/getRules";
-import { IAdventurer, IAdventurerQuest } from "../types/Adventurer";
+import { IAdventurer } from "../types/Adventurer";
 import { CardTypes } from "../types/Card";
 import { IMetricsWithMeta } from "../types/Quest";
 import { ISearchParams } from "../types/SearchParams";
+import { metaMetricsFromAdventurerQuest } from "../utils/metaMetricsFromAdventurerQuest";
 import Card from "./Card";
 import MetricGrid from "./MetricGrid";
 
@@ -13,8 +14,8 @@ export default function AdventurerCard ({adventurer, search, rules, makeSearchab
   makeSearchable: (text: string) => JSX.Element
 }){
   const {name, bio, clan, quests, rank, status} = adventurer 
-  const metaMetrics: IMetricsWithMeta[] = quests.map(q =>{
-    return metaMetricsFromAdventurerQuest(q)
+  const metaMetrics: IMetricsWithMeta[] = quests.map(quest =>{
+    return metaMetricsFromAdventurerQuest({quest})
   })
   const questSection = (
     <MetricGrid 
@@ -52,17 +53,4 @@ export default function AdventurerCard ({adventurer, search, rules, makeSearchab
       </div>
     </Card>
   )
-}
-
-function metaMetricsFromAdventurerQuest(q: IAdventurerQuest){
-  const personalMetrics = q.metrics
-  const partyMetrics = q.parties
-    .filter(p => p.questId === q.details.id)
-    .map(p => p.metrics)
-    .flat()
-  return {
-    name: q.details.name,
-    rank: q.details.questRank,
-    metrics: [...personalMetrics, ...partyMetrics]
-  }
 }

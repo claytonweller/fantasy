@@ -11,7 +11,7 @@ export const rawQuests: IRawQuest[] = [
     questType: QuestTypes.Fetch,
     questRank: Ranks.C,
     postedBy: 'Gerb McDerb',
-    description:`Description hast a bit of test. ${loremParagraph}`,
+    description:`Description has a bit of text. ${loremParagraph}`,
     // Composite
     parties:[
       {
@@ -81,19 +81,18 @@ export const rawQuests: IRawQuest[] = [
       {
         id: 'party4',
         startWeek: 1,
-        endWeek: 2,
         clanId: 'clan1',
         status: QuestStatus.Success,
         metrics:[
           {
             metricRuleId: MetricRuleId.CiviliansDead,
             value: 1,
-            week: 2,
+            week: 1,
           },
           {
             metricRuleId: MetricRuleId.RewardGold,
             value: 12345,
-            week: 2
+            week: 1
           }
         ]
       }

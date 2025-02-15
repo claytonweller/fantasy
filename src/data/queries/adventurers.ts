@@ -14,11 +14,10 @@ export const adventurersByClanId = rawAdventurers.reduce((prev, a)=>{
 export const adventurersByPartyId = rawAdventurers.reduce((prev, a)=>{
   let updated = {...prev}
   a.questParties.forEach(qp =>{
-    const existing = prev[qp.partyId]
-    if(!existing) return updated = {...prev, [qp.partyId]: [a]}
-    return updated = {...prev, [qp.partyId]: [...existing, a]}
+    const existing = updated[qp.partyId]
+    if(!existing) updated = {...updated, [qp.partyId]: []}
+    updated[qp.partyId].push(a)
   })
-
   return updated
 
 }, {} as {[clanId: string]:IDbAdventurer[]} )

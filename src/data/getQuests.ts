@@ -12,7 +12,7 @@ export function getQuests ():IQuest[]{
 export function getQuestsByClanId(clanId: string):IQuest[]{
   const clanQuests = rawQuests.filter(q => {
     const isClanQuest = q.claimType === QuestClaimType.Clan
-    const isClaimedByClan = !!q.parties.find(p => p.clanId)
+    const isClaimedByClan = !!q.parties.find(p => p.clanId === clanId)
     return isClanQuest && isClaimedByClan
   })
   return formatQuests(clanQuests)

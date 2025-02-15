@@ -1,10 +1,11 @@
 import { IRules } from "../data/getRules";
-import { IAdventurer, IAdventurerQuest } from "../types/Adventurer";
 import { CardTypes } from "../types/Card";
 import { IMetricsWithMeta } from "../types/Quest";
 import { Ranks } from "../types/Ranks";
+import { RosterPositions } from "../types/Roster";
 import { ISearchParams } from "../types/SearchParams";
 import { IVillager } from "../types/Villager";
+import { metaMetricsFromAdventurerQuest } from "../utils/metaMetricsFromAdventurerQuest";
 import Card from "./Card";
 import MetricGrid from "./MetricGrid";
 
@@ -15,7 +16,36 @@ export default function VillagerCard ({villager, search, rules, currentWeek, mak
   currentWeek: number,
   makeSearchable: (text: string) => JSX.Element
 }){
-  const {name} = villager 
+  const {name, rosters} = villager
+  const currentRoster = rosters.find(r => r.week === currentWeek)
+  // TODO separate by week
+  const test = rosters[0].rosterPicks
+  const metaTest:IMetricsWithMeta[] = test.map((test) => {
+    const {pick, position} = test
+    const all = pick.quests.map(q =>{
+      return q.metrics
+    })
+    const metrics = all.flat()
+    return metaMetricsFromAdventurerQuest({
+      name: pick.name,
+      rank: position,
+      quest: {...pick.quests[0], metrics}
+    })
+    
+  })
+  // const metaMetrics: IMetricsWithMeta[] = [
+  //   {
+  //     name: test.name,
+  //     rank: RosterPositions.A,
+  //     metrics: test.quests[0].metrics
+  //   },
+  //   {
+  //     name: 'GREG',
+  //     rank: Ranks.B,
+  //     metrics: []
+  //   }
+  // ]
+
   return (
     <Card 
       color='#332233' 
@@ -27,6 +57,17 @@ export default function VillagerCard ({villager, search, rules, currentWeek, mak
     >
       <div>
         <b>Note</b> : Nothing much
+      </div>
+      <div>
+        <h3>Week ___ Roster</h3>
+        <MetricGrid 
+            metaMetrics={metaTest} 
+            makeSearchable={makeSearchable}
+            rules= {rules}
+          />
+      </div>
+      <div>
+        {JSON.stringify(currentRoster?.rosterPicks)}
       </div>
     </Card>
   )

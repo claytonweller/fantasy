@@ -1,6 +1,7 @@
 import { IRules } from "../data/getRules";
 import { IMetricsWithMeta, IMetric } from "../types/Quest";
 import { Ranks } from "../types/Ranks";
+import { RosterPositions } from "../types/Roster";
 import { capitalizeFirstLetter } from "../utils/capitalizeFirstLetter";
 import { sortStringsAlphabetical } from "../utils/sortStringsAlphabetical";
 import MetricRow from "./MetricRow";
@@ -77,7 +78,7 @@ export function formatRuleNameFromMetric (m: IMetric){
 
 export interface IMetricRow extends IEmptyMetricRow{
   name: string | JSX.Element
-  rank: Ranks | JSX.Element
+  rank: Ranks | RosterPositions
   points: number
 }
 

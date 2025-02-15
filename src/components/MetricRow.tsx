@@ -13,9 +13,12 @@ export default function MetricRow (params:{
   const {meta, emptyRow, makeSearchable, rules} = params
   // We spread here to create a shallow copy so our
   // mutations don't affect other rows
+  const week = meta.metrics[0]
+    ? meta.metrics[0].week
+    : 0
   const row: IMetricRow = { 
     ...emptyRow,
-    week: meta.metrics[0].week,
+    week,
     points: 0, 
     name: makeSearchable(meta.name),
     rank: meta.rank || Ranks.E

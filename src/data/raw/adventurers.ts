@@ -71,7 +71,25 @@ export const rawAdventurers:IRawAdventurer[] = [
             week: 2,
           },
         ]
-      }
+      },
+      {
+        partyId: 'party4',
+        // Composite
+        metrics:[
+          {
+            metricRuleId: MetricRuleId.MonsterKill, 
+            value: 1,
+            rank: Ranks.C,
+            week: 1,
+          },
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            value: 1,
+            rank: Ranks.B,
+            week: 1,
+          }
+        ]
+      },
     ]
   },
   {
@@ -87,6 +105,24 @@ export const rawAdventurers:IRawAdventurer[] = [
     status: [],
     traits: ['Cool'],
     questParties:[
+      {
+        partyId: 'party4',
+        // Composite
+        metrics:[
+          {
+            metricRuleId: MetricRuleId.MonsterKill, 
+            value: 1,
+            rank: Ranks.C,
+            week: 1,
+          },
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            value: 1,
+            rank: Ranks.B,
+            week: 1,
+          }
+        ]
+      },
     ]
   }
 ]
