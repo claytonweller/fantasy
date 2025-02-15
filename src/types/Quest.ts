@@ -37,6 +37,13 @@ export interface IDbQuestParty {
   // Links to a list of metrics
 }
 
+export interface IDbQuestPartyAdventurer {
+  id: string,
+  adventurerId: string,
+  partyId: string
+  // Links to a list of metrics
+}
+
 export interface IMetricsWithMeta {
   name: string
   rank?: Ranks | RosterPositions
@@ -44,13 +51,6 @@ export interface IMetricsWithMeta {
 }
 
 export type IMetric = IDbQuestPartyMetric | IDbQuestAdventurerMetric | IDbMetric
-
-export interface IDbQuestPartyAdventurer {
-  id: string,
-  adventurerId: string,
-  partyId: string
-  // Links to a list of metrics
-}
 
 export interface IDbQuestPartyMetric extends IDbMetric {
   questPartyId: string,

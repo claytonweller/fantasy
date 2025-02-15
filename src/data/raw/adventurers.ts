@@ -27,6 +27,23 @@ export const rawAdventurers:IRawAdventurer[] = [
           }
         ]
       },
+      {
+        partyId: 'party5',
+        metrics:[
+          {
+            metricRuleId: MetricRuleId.MonsterKill, 
+            value: 1,
+            rank: Ranks.E,
+            week: 1
+          },
+          {
+            metricRuleId: MetricRuleId.MonsterKill, 
+            value: 2,
+            rank: Ranks.D,
+            week: 1
+          }
+        ]
+      },
     ]
   },
   {

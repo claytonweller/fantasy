@@ -60,6 +60,11 @@ export const rawQuests: IRawQuest[] = [
         status: QuestStatus.Failed,
         metrics:[
           {
+            metricRuleId: MetricRuleId.CiviliansDead,
+            value: 1,
+            week: 1,
+          },
+          {
             metricRuleId: MetricRuleId.PropertyDamaged,
             value: 4000,
             week: 1,
@@ -92,6 +97,35 @@ export const rawQuests: IRawQuest[] = [
           {
             metricRuleId: MetricRuleId.RewardGold,
             value: 12345,
+            week: 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'quest4',
+    name:'Gad\'s quest',
+    reward: 3,
+    claimType: QuestClaimType.Individual,
+    questType: QuestTypes.Fetch,
+    questRank: Ranks.E,
+    postedBy: 'Fire Man',
+    description:`I need more fire please.`,
+    parties:[
+      {
+        id: 'party5',
+        startWeek: 1,
+        status: QuestStatus.Success,
+        metrics:[
+          {
+            metricRuleId: MetricRuleId.CiviliansDead,
+            value: 1,
+            week: 1,
+          },
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 3,
             week: 1
           }
         ]

@@ -2,9 +2,9 @@ import { IRules } from "../data/getRules";
 import { CardTypes } from "../types/Card";
 import { IMetricsWithMeta } from "../types/Quest";
 import { Ranks } from "../types/Ranks";
-import { RosterPositions } from "../types/Roster";
 import { ISearchParams } from "../types/SearchParams";
 import { IVillager } from "../types/Villager";
+import { combineMetaMetrics } from "../utils/combineMetricsArrays";
 import { metaMetricsFromAdventurerQuest } from "../utils/metaMetricsFromAdventurerQuest";
 import Card from "./Card";
 import MetricGrid from "./MetricGrid";
@@ -23,14 +23,14 @@ export default function VillagerCard ({villager, search, rules, currentWeek, mak
   const metaTest:IMetricsWithMeta[] = test.map((test) => {
     const {pick, position} = test
     const all = pick.quests.map(q =>{
-      return q.metrics
+      return metaMetricsFromAdventurerQuest({
+        name: pick.name,
+        rank: position,
+        quest: q
+      })
     })
-    const metrics = all.flat()
-    return metaMetricsFromAdventurerQuest({
-      name: pick.name,
-      rank: position,
-      quest: {...pick.quests[0], metrics}
-    })
+    
+    return combineMetaMetrics(all)
     
   })
   // const metaMetrics: IMetricsWithMeta[] = [
@@ -65,9 +65,6 @@ export default function VillagerCard ({villager, search, rules, currentWeek, mak
             makeSearchable={makeSearchable}
             rules= {rules}
           />
-      </div>
-      <div>
-        {JSON.stringify(currentRoster?.rosterPicks)}
       </div>
     </Card>
   )
