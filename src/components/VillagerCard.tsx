@@ -19,21 +19,46 @@ export default function VillagerCard ({villager, search, rules, currentWeek, mak
   const {name, rosters} = villager
   const currentRoster = rosters.find(r => r.week === currentWeek)
   // TODO separate by week
-  const roster = rosters[0]
-  const metaTest:IMetricsWithMeta[] = roster.rosterPicks.map((test) => {
-    const {pick, position} = test
-    const all = pick.quests.map(q =>{
-      return metaMetricsFromAdventurerQuest({
-        name: pick.name,
-        rank: position,
-        quest: q,
-        week: roster.week
+  const weeklyProps = rosters
+    .sort((a, b) => b.week - a.week)
+    .map(r =>{
+    const metaMetrics:IMetricsWithMeta[] = r.rosterPicks.map((test) => {
+      const {pick, position} = test
+      const all = pick.quests.map(q =>{
+        return metaMetricsFromAdventurerQuest({
+          name: pick.name,
+          rank: position,
+          quest: q,
+          week: r.week
+        })
       })
+      
+      return combineMetaMetrics(all)
+      
     })
-    
-    return combineMetaMetrics(all)
-    
+    const total = metaMetrics.reduce((tot, mm) =>{
+      let subTotal = 0
+      mm.metrics.forEach(m => {
+        const pointCalculator = rules.calculators[m.metricRuleId]
+        const metricPoints = pointCalculator(m)
+        subTotal += metricPoints
+      })
+      return tot + subTotal
+    }, 0)
+    return  {
+      total,
+      week: r.week,
+      metaMetrics
+    }  
   })
+
+  const weeklyRosters = weeklyProps.map(p =>{
+    return formatRoster({...p, makeSearchable, rules})
+  })
+
+  const runningTotal = weeklyProps.reduce((total, props) =>{
+    return total + props.total
+  }, 0)
 
   return (
     <Card 
@@ -45,16 +70,30 @@ export default function VillagerCard ({villager, search, rules, currentWeek, mak
       type={CardTypes.Villager}
     >
       <div>
-        <b>Note</b> : Nothing much
+        <b>Running Total : {runningTotal}</b>
       </div>
-      <div>
-        <h3>Week ___ Roster</h3>
-        <MetricGrid 
-            metaMetrics={metaTest} 
-            makeSearchable={makeSearchable}
-            rules= {rules}
-          />
-      </div>
+      {weeklyRosters}
     </Card>
   )
+}
+
+function formatRoster (params:{
+  week: number
+  metaMetrics: IMetricsWithMeta[]
+  rules: IRules,
+  total: number,
+  makeSearchable: (text: string) => JSX.Element
+}) {
+  const {week, metaMetrics, rules, total, makeSearchable} = params
+  return  (
+    <div>
+      <h3>Week {week} Roster</h3>
+      <div><b>Weekly Total {total}</b></div>
+      <MetricGrid 
+          metaMetrics={metaMetrics} 
+          makeSearchable={makeSearchable}
+          rules= {rules}
+        />
+    </div>
+  )   
 }
