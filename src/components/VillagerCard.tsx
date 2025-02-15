@@ -19,32 +19,21 @@ export default function VillagerCard ({villager, search, rules, currentWeek, mak
   const {name, rosters} = villager
   const currentRoster = rosters.find(r => r.week === currentWeek)
   // TODO separate by week
-  const test = rosters[0].rosterPicks
-  const metaTest:IMetricsWithMeta[] = test.map((test) => {
+  const roster = rosters[0]
+  const metaTest:IMetricsWithMeta[] = roster.rosterPicks.map((test) => {
     const {pick, position} = test
     const all = pick.quests.map(q =>{
       return metaMetricsFromAdventurerQuest({
         name: pick.name,
         rank: position,
-        quest: q
+        quest: q,
+        week: roster.week
       })
     })
     
     return combineMetaMetrics(all)
     
   })
-  // const metaMetrics: IMetricsWithMeta[] = [
-  //   {
-  //     name: test.name,
-  //     rank: RosterPositions.A,
-  //     metrics: test.quests[0].metrics
-  //   },
-  //   {
-  //     name: 'GREG',
-  //     rank: Ranks.B,
-  //     metrics: []
-  //   }
-  // ]
 
   return (
     <Card 

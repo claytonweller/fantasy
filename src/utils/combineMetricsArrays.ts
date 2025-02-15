@@ -17,7 +17,6 @@ export function combineMetaMetrics(metaMetrics: IMetricsWithMeta[]):IMetricsWith
       }
     })
   })
-  console.warn('combined Map', combinedMap)
   const combinedMetrics = Object.values(combinedMap)
   return {
     name: metaMetrics[0].name,

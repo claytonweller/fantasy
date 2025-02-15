@@ -28,7 +28,7 @@ export default function MetricRow (params:{
     const pointCalculator = rules.calculators[m.metricRuleId]
     const metricPoints = pointCalculator(m)
     row.points += metricPoints
-    row[formatRuleNameFromMetric(m)] = m.value
+    row[formatRuleNameFromMetric(m)] = `${m.value}=> ${metricPoints}`
   })
 
   const cells = Object.values(row).map(value =>{

@@ -24,7 +24,7 @@ export default function MetricGrid (params:{
     />)
   });
   return (
-   <div style={{display: 'flex', justifyContent: 'center'}}>
+   <div style={{display: 'flex',  overflowX: 'auto'}}>
     <table>
       <thead>
         <tr>
