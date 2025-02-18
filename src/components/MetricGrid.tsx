@@ -15,8 +15,9 @@ export default function MetricGrid (params:{
   const {metaMetrics, makeSearchable, rules} = params
   const emptyRow = createEmptyRow(metaMetrics)
   const headers = Object.keys(emptyRow).map(key => <th>{capitalizeFirstLetter(key)}</th>)
-  const rows = metaMetrics.map(m =>{
+  const rows = metaMetrics.map((m,i) =>{
     return (<MetricRow 
+      key={'row'+i}
       meta={m} 
       emptyRow={emptyRow}
       makeSearchable={makeSearchable}

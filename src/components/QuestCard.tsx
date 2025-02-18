@@ -61,6 +61,7 @@ export default function QuestCard ({quest, search, makeSearchable, rules}: {
       </div>
     )
   })
+  
   return (
     <Card 
       color='#552211' 

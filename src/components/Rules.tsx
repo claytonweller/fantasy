@@ -41,8 +41,8 @@ function RulesModal (props:{
   const {rules, rankMultipliers, rulesVisible, setRulesVisible} = props
 
   const sectionStyle = {padding: '5px'}
-  const formattedRules = rules.raw.map(rule =>{
-    return <div>
+  const formattedRules = rules.raw.map((rule, i) =>{
+    return <div key={'rule'+i}>
       <b>{rule.metricRuleId}: </b>
       <span>{rule.questMetricType} X {rule.multiplier}</span>
     </div>

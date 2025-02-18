@@ -31,9 +31,9 @@ export default function MetricRow (params:{
     row[formatRuleNameFromMetric(m)] = `${m.value}`
   })
 
-  const cells = Object.values(row).map(value =>{
+  const cells = Object.values(row).map((value, i) =>{
     return (
-      <td>{value}</td>
+      <td key={`cell${i}`}>{value}</td>
     )
   })
   

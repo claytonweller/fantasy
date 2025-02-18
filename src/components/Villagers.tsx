@@ -27,9 +27,10 @@ export default function Villagers (props: {
       return { villager, metrics }
     })
     .sort((a, b) => b.metrics.total - a.metrics.total)
-    .map((input) =>{
+    .map((input, i) =>{
       return (
         <VillagerCard
+          key={'VCard' + i}
           villager={input.villager}
           search={search}
           rules={rules}
@@ -42,9 +43,9 @@ export default function Villagers (props: {
   return (
     <div>
       <CardGroup
-          cardTypeFilters={cardTypeFilters} 
-          cardType={CardTypes.Villager} 
-          color='#221128'
+        cardTypeFilters={cardTypeFilters} 
+        cardType={CardTypes.Villager} 
+        color='#221128'
       >
         {allVillagers}
       </CardGroup>

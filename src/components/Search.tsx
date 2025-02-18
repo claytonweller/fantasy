@@ -10,7 +10,14 @@ export default function Search(props:{
   setCardRankFilters: React.Dispatch<React.SetStateAction<{[key in Ranks]: boolean}>>
   cardRankFilters: {[key in Ranks]: boolean}
 }){
-  const {searchText, setSearchText, setCardTypeFilters, cardTypeFilters, setCardRankFilters, cardRankFilters} = props
+  const {
+    searchText, 
+    setSearchText, 
+    setCardTypeFilters, 
+    cardTypeFilters, 
+    setCardRankFilters, 
+    cardRankFilters
+  } = props
   const onSearchInputChange = (event: React.ChangeEvent<HTMLInputElement>) =>{
     setSearchText(event.target.value)
   }
