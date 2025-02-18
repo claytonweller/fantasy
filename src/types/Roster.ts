@@ -1,7 +1,6 @@
 import { IAdventurer } from "./Adventurer"
-import { IDbClan } from "./Clan"
+import { IClan } from "./Clan"
 import { IDbQuest } from "./Quest"
-import { Ranks } from "./Ranks"
 
 export interface IDbRoster {
   id: string
@@ -36,8 +35,12 @@ export enum RosterPositions {
 }
 
 export interface IRosterPick extends IDbRosterPick {
-  pick: IAdventurer 
-  // pick: IAdventurer | IDbClan
+  // Instead of doing 'pick: IAdventurer | IDbClan' here we're doing
+  // this method so that some of our downstream conditionals are easier.
+  pick: {
+    adventurer?: IAdventurer
+    clan?: IClan
+  }
   pickQuests: IDbQuest[]
 }
 

@@ -29,11 +29,11 @@ export const rawVillagers:IRawVillager[] = [
             pickType: RosterPickTypes.Adventurer,
             position: RosterPositions.B1
           },
-          // {
-          //   pickId: 'clan1',
-          //   pickType: RosterPickTypes.Clan,
-          //   position: RosterPositions.Clan
-          // },
+          {
+            pickId: 'clan1',
+            pickType: RosterPickTypes.Clan,
+            position: RosterPositions.Clan
+          },
         ]
       },
     ]
@@ -50,6 +50,11 @@ export const rawVillagers:IRawVillager[] = [
             pickId: '2',
             pickType: RosterPickTypes.Adventurer,
             position: RosterPositions.A
+          },
+          {
+            pickId: 'clan1',
+            pickType: RosterPickTypes.Clan,
+            position: RosterPositions.Clan
           },
         ]
       }

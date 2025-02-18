@@ -8,6 +8,9 @@ import { IVillager } from "../types/Villager";
 import { combineMetaMetrics } from "../utils/combineMetricsArrays";
 import { metaMetricsFromAdventurerQuest } from "../utils/metaMetricsFromAdventurerQuest";
 import { IMetricsWithMeta } from "../types/Quest";
+import { IAdventurer } from "../types/Adventurer";
+import { RosterPositions } from "../types/Roster";
+import { metaMetricsFromClan } from "../utils/metaMetricsFromClan";
 
 export default function Villagers (props: {
   search: ISearchParams, 
@@ -56,16 +59,23 @@ function computeVillagerMetrics(props:{rules:IRules, villager: IVillager}){
     .map(r =>{
       const metaMetrics:IMetricsWithMeta[] = r.rosterPicks.map((rosterPick) => {
         const {pick, position} = rosterPick
-        const all = pick.quests.map(q =>{
-          return metaMetricsFromAdventurerQuest({
-            name: pick.name,
-            rank: position,
-            quest: q,
-            week: r.week
+        if(pick.adventurer) return calculateAdventurerPickMetrics(pick.adventurer, position, r.week);
+        if(pick.clan){
+          const clanMetrics = metaMetricsFromClan(pick.clan, 2)
+          const weekMetrics = clanMetrics.filter(cm => {
+            return cm.metrics.find(m => m.week === r.week)
           })
-        })
-        
-        return combineMetaMetrics(all)
+          return {
+            name: pick.clan.name,
+            rank: RosterPositions.Clan,
+            metrics: weekMetrics[0].metrics
+          } 
+        }
+        return {
+          name: 'clan',
+          rank: RosterPositions.Clan,
+          metrics:[]
+        }
         
       })
       const total = metaMetrics.reduce((tot, mm) =>{
@@ -92,6 +102,22 @@ function computeVillagerMetrics(props:{rules:IRules, villager: IVillager}){
     total: runningTotal,
     weekly
   }
+}
+
+function calculateAdventurerPickMetrics (
+  adventurer: IAdventurer, 
+  position: RosterPositions, 
+  week: number
+){
+  const all = adventurer.quests.map(q =>{
+    return metaMetricsFromAdventurerQuest({
+      name: adventurer.name,
+      rank: position,
+      quest: q,
+      week
+    })
+  })
+  return combineMetaMetrics(all)
 }
 
 export interface IVillagerMetrics {
