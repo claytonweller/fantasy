@@ -28,7 +28,9 @@ function sortQuestsByWeek(params:{
   }
 
   quests.forEach(q => {
+    if(!q.parties) return;
     q.parties.forEach(p =>{
+      if(!weeks[p.startWeek]) return
       weeks[p.startWeek].push(q)
     })
   })

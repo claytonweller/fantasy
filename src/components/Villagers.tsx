@@ -9,8 +9,9 @@ import { combineMetaMetrics } from "../utils/combineMetricsArrays";
 import { metaMetricsFromAdventurerQuest } from "../utils/metaMetricsFromAdventurerQuest";
 import { IMetricsWithMeta } from "../types/Quest";
 import { IAdventurer } from "../types/Adventurer";
-import { RosterPositions } from "../types/Roster";
+import { IRoster, RosterPositions } from "../types/Roster";
 import { metaMetricsFromClan } from "../utils/metaMetricsFromClan";
+import { IClan } from "../types/Clan";
 
 export default function Villagers (props: {
   search: ISearchParams, 
@@ -59,24 +60,15 @@ function computeVillagerMetrics(props:{rules:IRules, villager: IVillager}){
     .map(r =>{
       const metaMetrics:IMetricsWithMeta[] = r.rosterPicks.map((rosterPick) => {
         const {pick, position} = rosterPick
-        if(pick.adventurer) return calculateAdventurerPickMetrics(pick.adventurer, position, r.week);
-        if(pick.clan){
-          const clanMetrics = metaMetricsFromClan(pick.clan, 2)
-          const weekMetrics = clanMetrics.filter(cm => {
-            return cm.metrics.find(m => m.week === r.week)
-          })
-          return {
-            name: pick.clan.name,
-            rank: RosterPositions.Clan,
-            metrics: weekMetrics[0].metrics
-          } 
-        }
+        if(pick.adventurer) {
+          return calculateAdventurerPickMetrics(pick.adventurer, position, r.week);
+        } 
+        if(pick.clan) return calculateClanPickMetrics(pick.clan, r.week)
         return {
           name: 'clan',
           rank: RosterPositions.Clan,
           metrics:[]
         }
-        
       })
       const total = metaMetrics.reduce((tot, mm) =>{
         let subTotal = 0
@@ -102,6 +94,18 @@ function computeVillagerMetrics(props:{rules:IRules, villager: IVillager}){
     total: runningTotal,
     weekly
   }
+}
+
+function calculateClanPickMetrics (clan: IClan, week: number) {
+  const clanMetrics = metaMetricsFromClan(clan, week)
+  const weekMetrics = clanMetrics.filter(cm => {
+    return cm.metrics.find(m => m.week === week)
+  })
+  return {
+    name: clan.name,
+    rank: RosterPositions.Clan,
+    metrics: weekMetrics[0].metrics
+  } 
 }
 
 function calculateAdventurerPickMetrics (
