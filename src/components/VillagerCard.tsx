@@ -47,12 +47,15 @@ function formatRoster (params:{
 }) {
   const {week, metaMetrics, rules, total, makeSearchable} = params
   return  (
-    <div style={{
-      border: 'rgb(100, 100, 100)',
-      borderStyle: 'solid',
-      margin: '5px',
-      padding: '10px'
-    }}>
+    <div 
+      style={{
+        border: 'rgb(100, 100, 100)',
+        borderStyle: 'solid',
+        margin: '5px',
+        padding: '10px'
+      }}
+      key={'roster'+ week}
+    >
       <h3>Week {week} Roster</h3>
       <div><b>Weekly Total {total}</b></div>
       <MetricGrid 

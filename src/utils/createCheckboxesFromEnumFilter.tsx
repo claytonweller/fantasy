@@ -7,10 +7,10 @@ export function createCheckboxesFromEnumFilter<T extends {[key:string]: boolean}
   const options = Object.entries(filter).map(([cardType, checked], i) =>{
     const id = `cardType${cardType}`
     return(
-      <div>
+      <div key={`${cardType}${i}`}>
         <label htmlFor={id}>{cardType}</label>
         <input 
-          key={`${cardType}${i}`}
+          
           id={id}
           name={id}
           type='checkbox' 

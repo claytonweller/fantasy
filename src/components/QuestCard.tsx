@@ -17,7 +17,7 @@ export default function QuestCard ({quest, search, makeSearchable, rules}: {
 }){
   const {name, reward, postedBy, questType, claimedByName = 'Default', description, questRank, parties } = quest 
   
-  const partyComponents = parties.map(p =>{
+  const partyComponents = parties.map((p,i) =>{
     const adventurerMetrics = p.adventurers?.map(a => {
       const compositeAdventurer = adventurersById[a.id]
       const questParty = compositeAdventurer.questParties.find(qp => qp.partyId === p.id)
@@ -43,12 +43,15 @@ export default function QuestCard ({quest, search, makeSearchable, rules}: {
       ?  <div>Notes: {p.notes}</div>
       : ''
     return(
-      <div style={{
-        border: 'rgb(50, 0, 0)', 
-        borderStyle: 'solid', 
-        padding: '5px',
-        margin: '5px'
-      }}>
+      <div 
+        key={'Party'+i}
+        style={{
+          border: 'rgb(50, 0, 0)', 
+          borderStyle: 'solid', 
+          padding: '5px',
+          margin: '5px'
+       }
+      }>
         <div>
           <div>Status: {p.status}</div>
          {notes}

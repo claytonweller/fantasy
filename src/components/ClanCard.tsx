@@ -14,9 +14,9 @@ export default function ClanCard ({clan, search, makeSearchable, rules, currentW
   makeSearchable: (text: string) => JSX.Element
 }){
   const {name, rank, mission, adventurers, quests } = clan 
-  const adventurerNames = adventurers.map(a => <div>{makeSearchable(a.name)}</div>)
+  const adventurerNames = adventurers.map((a,i) => <div key={'aName'+i}>{makeSearchable(a.name)}</div>)
   const questNames = [...new Set(quests.map(q => q.name))]
-  const questTitles = questNames.map(name => <div>{makeSearchable(name)}</div>)
+  const questTitles = questNames.map((name, i) => <div key={'qName'+i}>{makeSearchable(name)}</div>)
   const metrics = metaMetricsFromClan(clan, currentWeek)
 
   return (
