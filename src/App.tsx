@@ -14,9 +14,7 @@ import { useCardRankFilter } from './hooks/useCardRankFilter';
 import { makeSearchableText } from './components/SearchableText';
 import { getRules, rankMultipliers } from './data/getRules';
 import Rules from './components/Rules';
-import { getVillagers } from './data/getVillagers';
-import VillagerCard from './components/VillagerCard';
-// import { getVillagers } from './data/getVillagers';
+import Villagers from './components/Villagers';
 
 function App() {
   const [searchText, setSearchText] = useState('')
@@ -60,18 +58,6 @@ function App() {
   />
   })
 
-  const villagers = getVillagers()
-  const allVillagers = villagers.map((v, i) =>{
-    return <VillagerCard 
-      key={`Vil${i}`}
-      villager={v}
-      search={{searchText}}
-      currentWeek={currentWeek}
-      makeSearchable={makeSearchable}
-      rules={rules}
-    />
-  })
-
 
   return (
     <div className="App">
@@ -85,14 +71,12 @@ function App() {
           cardRankFilters={rankFilter}
           setCardRankFilters={setCardRankFilters}
         />
-        
-        <CardGroup 
-          cardTypeFilters={cardTypeFilters} 
-          cardType={CardTypes.Villager} 
-          color='#221128'
-        >
-          {allVillagers}
-        </CardGroup>
+        <Villagers
+          search={{searchText}}
+          makeSearchable={makeSearchable}
+          rules={rules}
+          cardTypeFilters={cardTypeFilters}
+        />
         <Rules rules={rules} rankMultipliers={rankMultipliers}/>
         <CardGroup 
           cardTypeFilters={cardTypeFilters} 

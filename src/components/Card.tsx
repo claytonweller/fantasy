@@ -6,14 +6,14 @@ function Card(
   props : {
     children: any, 
     color: string,
-    rank: Ranks,
+    rank?: Ranks,
     name?: string,
     type?: string,
     data?: any, 
     search: ISearchParams
   }
 ){
-  const{children, color, rank, name = '', data = {}, search} = props
+  const{children, color, rank = Ranks.E, name = '', data = {}, search} = props
   const [showData, setShowData] = useState(false)
   const [showFull, setShowFull] = useState(false)
   const onCardClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>)=> {

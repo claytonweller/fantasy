@@ -4,73 +4,34 @@ import { IMetricsWithMeta } from "../types/Quest";
 import { Ranks } from "../types/Ranks";
 import { ISearchParams } from "../types/SearchParams";
 import { IVillager } from "../types/Villager";
-import { combineMetaMetrics } from "../utils/combineMetricsArrays";
-import { metaMetricsFromAdventurerQuest } from "../utils/metaMetricsFromAdventurerQuest";
 import Card from "./Card";
 import MetricGrid from "./MetricGrid";
+import { IVillagerMetrics } from "./Villagers";
 
-export default function VillagerCard ({villager, search, rules, currentWeek, makeSearchable}: {
+export default function VillagerCard (props: {
   villager: IVillager, 
   search: ISearchParams, 
   rules: IRules,
-  currentWeek: number,
+  villagerMetrics: IVillagerMetrics
   makeSearchable: (text: string) => JSX.Element
 }){
-  const {name, rosters} = villager
-  const currentRoster = rosters.find(r => r.week === currentWeek)
-  // TODO separate by week
-  const weeklyProps = rosters
-    .sort((a, b) => b.week - a.week)
-    .map(r =>{
-    const metaMetrics:IMetricsWithMeta[] = r.rosterPicks.map((test) => {
-      const {pick, position} = test
-      const all = pick.quests.map(q =>{
-        return metaMetricsFromAdventurerQuest({
-          name: pick.name,
-          rank: position,
-          quest: q,
-          week: r.week
-        })
-      })
-      
-      return combineMetaMetrics(all)
-      
-    })
-    const total = metaMetrics.reduce((tot, mm) =>{
-      let subTotal = 0
-      mm.metrics.forEach(m => {
-        const pointCalculator = rules.calculators[m.metricRuleId]
-        const metricPoints = pointCalculator(m)
-        subTotal += metricPoints
-      })
-      return tot + subTotal
-    }, 0)
-    return  {
-      total,
-      week: r.week,
-      metaMetrics
-    }  
-  })
+  const {villager, search, rules, makeSearchable, villagerMetrics} = props
+  const {name} = villager
 
-  const weeklyRosters = weeklyProps.map(p =>{
+  const weeklyRosters = villagerMetrics.weekly.map(p =>{
     return formatRoster({...p, makeSearchable, rules})
   })
-
-  const runningTotal = weeklyProps.reduce((total, props) =>{
-    return total + props.total
-  }, 0)
 
   return (
     <Card 
       color='#332233' 
       search={search} 
       data={villager}
-      rank={Ranks.A}
-      name={name}
+      name={`${name} - ${villagerMetrics.total}pts`}
       type={CardTypes.Villager}
     >
       <div>
-        <b>Running Total : {runningTotal}</b>
+        <b>Running Total : {villagerMetrics.total}</b>
       </div>
       {weeklyRosters}
     </Card>
@@ -86,7 +47,12 @@ function formatRoster (params:{
 }) {
   const {week, metaMetrics, rules, total, makeSearchable} = params
   return  (
-    <div>
+    <div style={{
+      border: 'rgb(100, 100, 100)',
+      borderStyle: 'solid',
+      margin: '5px',
+      padding: '10px'
+    }}>
       <h3>Week {week} Roster</h3>
       <div><b>Weekly Total {total}</b></div>
       <MetricGrid 
