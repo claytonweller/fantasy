@@ -5,7 +5,15 @@ This will allow us to both have future states for the application and past state
 
 Obviously once we have an actual back end, we'll probably have a different snapshotting/versioning system put in place (which isn't duplicating huge swathes of the the data in every version)
 
-To set the live data to a specific snapshot run this code from the main directory
+
+## Set the live state to a saved snapshot
+run this code from the main directory
 ```bash
 yarn set-snapshot yyyy-mm-dd
+```
+
+## Store the current live state to a new snapshot folder
+run this code from the main directory
+```bash
+yarn store-snapshot yyyy-mm-dd
 ```

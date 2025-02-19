@@ -22,7 +22,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject", 
-    "set-snapshot": "bash ./src/data/snapshots/setSnapshot.sh"
+    "set-snapshot": "bash ./src/data/snapshots/setSnapshot.sh",
+    "store-snapshot": "bash ./src/data/snapshots/storeSnapshot.sh",
+    "scrub-research": "bash ./src/data/raw/scrubResearch.sh"
   },
   "eslintConfig": {
     "extends": [
