@@ -27,3 +27,5 @@ yarn-error.log*
 /src/data/snapshots/*
 !/src/data/snapshots/README.md
 !src/data/snapshots/setSnapshot.sh
+
+/src/data/raw/research.ts

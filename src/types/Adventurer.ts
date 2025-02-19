@@ -1,10 +1,12 @@
 import { IDbClan } from "./Clan"
-import { IDbQuest, IDbQuestAdventurerMetric, IDbQuestParty, IDbQuestPartyAdventurer, IDbQuestPartyMetric, IQuestParty } from "./Quest"
+import { IDbQuest, IDbQuestAdventurerMetric, IDbQuestPartyAdventurer, IQuestParty } from "./Quest"
 import { Ranks } from "./Ranks"
+import { IResearch } from "./Research"
 
 export interface IAdventurer extends IDbAdventurer {
   clan?: IDbClan
   quests: IAdventurerQuest[]
+  research: IResearch[]
 }
 
 export interface IAdventurerQuest extends IDbQuestPartyAdventurer {

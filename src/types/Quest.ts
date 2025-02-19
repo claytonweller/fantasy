@@ -1,5 +1,6 @@
 import { IDbAdventurer } from "./Adventurer";
 import { Ranks } from "./Ranks";
+import { IResearch } from "./Research";
 import { RosterPositions } from "./Roster";
 
 export interface IQuest extends IDbQuest {
@@ -8,6 +9,7 @@ export interface IQuest extends IDbQuest {
   claimedById?: string,
   status: QuestStatus,
   parties: IQuestParty[]
+  research: IResearch[]
 }
 
 export interface IQuestParty extends IDbQuestParty {

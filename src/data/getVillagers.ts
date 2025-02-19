@@ -1,12 +1,16 @@
+import { EntityTypes } from "types/Research";
 import { IRoster, IRosterPick, RosterPickTypes } from "../types/Roster";
 import { IVillager } from "../types/Villager";
 import { getAdventurerById } from "./getAdventurers";
 import { getClanById } from "./getClans";
 import { questsByAdventurerId, questsByClanId } from "./queries/quests";
+import { researchByTag } from "./queries/research";
 import { IRawRosterPick, rawVillagers } from "./raw/villagers";
 
 export function getVillagers ():IVillager[]{
   const compositeVillagers:IVillager[] = rawVillagers.map(v =>{
+    const research = researchByTag[EntityTypes.Villager][v.id] || []
+
     const rosters:IRoster[] = v.rosters.map(r =>{
       const rosterPicks:IRosterPick[] = r.picks.map(p =>{
         const pick = determinePick(p)
@@ -32,6 +36,7 @@ export function getVillagers ():IVillager[]{
 
     return {
       ...v,
+      research,
       rosters
     }
   })

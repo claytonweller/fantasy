@@ -15,6 +15,8 @@ import { makeSearchableText } from './components/SearchableText';
 import { getRules, rankMultipliers } from './data/getRules';
 import Rules from './components/Rules';
 import Villagers from './components/Villagers';
+import { researchByTag } from 'data/queries/research';
+import { EntityTypes } from 'types/Research';
 
 function App() {
   const [searchText, setSearchText] = useState('')

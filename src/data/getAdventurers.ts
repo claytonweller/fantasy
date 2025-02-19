@@ -1,7 +1,9 @@
+import { EntityTypes } from "types/Research";
 import { IAdventurer, IAdventurerQuest } from "../types/Adventurer";
 import { adventurersById, adventurersByPartyId } from "./queries/adventurers";
 import { clansById } from "./queries/clans";
 import {  questsByPartyId } from "./queries/quests";
+import { researchByTag } from "./queries/research";
 import { IRawAdventurer, rawAdventurers } from "./raw/adventurers";
 
 export function getAdventurers ():IAdventurer[]{
@@ -18,6 +20,7 @@ function formatAdventurer(a:IRawAdventurer):IAdventurer{
   const clan = a.clanId 
     ? clansById[a.clanId]
     : undefined;
+  const research = researchByTag[EntityTypes.Adventurer][a.id] || []
   const quests: IAdventurerQuest[] = a.questParties.map(qp => {
     const {partyId} = qp
     const quest = questsByPartyId[partyId]
@@ -48,6 +51,7 @@ function formatAdventurer(a:IRawAdventurer):IAdventurer{
   return {
     ...a,
     clan,
-    quests
+    quests,
+    research
   }
 }

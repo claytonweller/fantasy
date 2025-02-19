@@ -1,3 +1,4 @@
+import { IResearch } from "./Research"
 import { IRoster } from "./Roster"
 
 export interface IDbVillager {
@@ -8,4 +9,5 @@ export interface IDbVillager {
 
 export interface IVillager extends IDbVillager {
   rosters: IRoster[]
+  research: IResearch[]
 }

@@ -8,4 +8,4 @@ Instead of playing as an adventurer you play as a townsperson, who is following 
 
 
 ## Status
-Currently I'm just noodling around. This is a completely frontend react website. There's no API or DB anything everything is just dummy data. My plan is to playtest using spreadsheets, the output the values from there into a CSV, then parse that into hosted data on update. Is this a long term solution? No absolutely not. Is it lightweight and easy to change? Yes. That's what I need right now. Prototype baybeee!
+Currently I'm just noodling around. This is a completely frontend react website. There's no API or DB anything everything is just dummy data stored client side. Is this a long term solution? No absolutely not. Is it lightweight and easy to change? Yes. That's what I need right now. Prototype baybeee!

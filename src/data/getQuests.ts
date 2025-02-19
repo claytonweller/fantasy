@@ -1,7 +1,9 @@
+import { EntityTypes } from "types/Research";
 import { IQuest, QuestClaimType, QuestStatus } from "../types/Quest";
 import { sortByRank } from "../utils/sortByRank";
 import { adventurersByPartyId } from "./queries/adventurers";
 import { clansById } from "./queries/clans";
+import { researchByTag } from "./queries/research";
 import { rawQuests, IRawQuest, IRawQuestParty } from "./raw/quests";
 
 export function getQuests ():IQuest[]{
@@ -20,6 +22,7 @@ export function getQuestsByClanId(clanId: string):IQuest[]{
 
 function formatQuests (unformattedQuests: IRawQuest[]):IQuest[]{
   return unformattedQuests.map(q =>{
+    const research = researchByTag[EntityTypes.Quest][q.id] || []
     const activeParty = q.parties
       .filter(p => p.status !== QuestStatus.Failed )
       [0]
@@ -38,7 +41,8 @@ function formatQuests (unformattedQuests: IRawQuest[]):IQuest[]{
       ...q,
       claimedByName,
       status: questStatus,
-      parties: compositeParties
+      parties: compositeParties,
+      research
     }
   })
 }
