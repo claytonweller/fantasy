@@ -24,7 +24,8 @@
     "eject": "react-scripts eject", 
     "set-snapshot": "bash ./src/data/snapshots/setSnapshot.sh",
     "store-snapshot": "bash ./src/data/snapshots/storeSnapshot.sh",
-    "scrub-research": "bash ./src/data/raw/scrubResearch.sh"
+    "scrub-research": "bash ./src/data/raw/scrubResearch.sh",
+    "deploy": "yarn build && aws s3 sync build/ s3://fantasy.claytonweller.com --acl public-read"
   },
   "eslintConfig": {
     "extends": [
