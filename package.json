@@ -25,7 +25,9 @@
     "set-snapshot": "bash ./src/data/snapshots/setSnapshot.sh",
     "store-snapshot": "bash ./src/data/snapshots/storeSnapshot.sh",
     "scrub-research": "bash ./src/data/raw/scrubResearch.sh",
-    "deploy": "yarn build && aws s3 sync build/ s3://fantasy.claytonweller.com --acl public-read"
+    "update-cloudfront": "aws cloudfront create-invalidation --distribution-id E8N78ZCJXLHBY --paths \"/*\"",
+    "upload-to-s3": "aws s3 sync build/ s3://fantasy.claytonweller.com --acl public-read",
+    "deploy": "yarn build && yarn upload-to-s3 && yarn update-cloudfront"
   },
   "eslintConfig": {
     "extends": [
