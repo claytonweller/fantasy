@@ -1,6 +1,6 @@
-import { IDbMetric, IDbQuest, IDbQuestParty, MetricRuleId, QuestClaimType, QuestStatus, QuestTypes } from "../../types/Quest";
-import { Ranks } from "../../types/Ranks";
-import { loremParagraph } from "../queries/loremParagraph";
+import { IDbMetric, IDbQuest, IDbQuestParty, MetricRuleId, QuestClaimType, QuestStatus, QuestTypes } from "types/Quest";
+import { Ranks } from "types/Ranks";
+import { loremParagraph } from "data/queries/loremParagraph";
 
 export const rawQuests: IRawQuest[] = [
   {

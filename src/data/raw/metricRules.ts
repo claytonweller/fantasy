@@ -1,4 +1,4 @@
-import { MetricRuleId, QuestMetricType } from "../../types/Quest";
+import { MetricRuleId, QuestMetricType } from "types/Quest";
 
 export const rawMetricRules: IRawMetricRule[]  = [
   {

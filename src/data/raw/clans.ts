@@ -1,5 +1,5 @@
-import { IDbClan } from "../../types/Clan";
-import { Ranks } from "../../types/Ranks";
+import { IDbClan } from "types/Clan";
+import { Ranks } from "types/Ranks";
 
 export const rawClans: IDbClan[] = [
   {

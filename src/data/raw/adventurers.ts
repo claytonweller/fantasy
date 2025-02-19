@@ -1,6 +1,6 @@
-import { AdventurerClasses, AdventurerRaces, AdventurerStatuses, IDbAdventurer } from "../../types/Adventurer";
-import { IDbMetric, IDbQuestPartyAdventurer, MetricRuleId } from "../../types/Quest";
-import { Ranks } from "../../types/Ranks";
+import { AdventurerClasses, AdventurerRaces, AdventurerStatuses, IDbAdventurer } from "types/Adventurer";
+import { IDbMetric, IDbQuestPartyAdventurer, MetricRuleId } from "types/Quest";
+import { Ranks } from "types/Ranks";
 
 export const rawAdventurers:IRawAdventurer[] = [
   {
