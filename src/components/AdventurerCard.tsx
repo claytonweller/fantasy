@@ -35,6 +35,7 @@ export default function AdventurerCard ({adventurer, search, rules, makeSearchab
       rank={rank}
       name={name}
       type={CardTypes.Adventurer}
+      research={adventurer.research}
     >
       <div>
         <b>Clan</b> :{makeSearchable(clan?.name || 'None')}

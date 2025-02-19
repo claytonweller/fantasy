@@ -27,6 +27,7 @@ export default function ClanCard ({clan, search, makeSearchable, rules, currentW
       rank={rank}
       name={name}
       type={CardTypes.Clan}
+      research={clan.research}
     >
       <div>
         <b>Rank</b>: {rank}

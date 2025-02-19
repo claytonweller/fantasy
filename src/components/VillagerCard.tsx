@@ -29,6 +29,7 @@ export default function VillagerCard (props: {
       data={villager}
       name={`${name} - ${villagerMetrics.total}pts`}
       type={CardTypes.Villager}
+      research={villager.research}
     >
       <div>
         <b>Running Total : {villagerMetrics.total}</b>

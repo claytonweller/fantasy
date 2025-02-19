@@ -73,6 +73,7 @@ export default function QuestCard ({quest, search, makeSearchable, rules}: {
       data={quest}
       type={CardTypes.Quest}
       name={name}
+      research={quest.research}
     >
       <div>
         <b>Reward</b>: {addCommasToNumber(reward)}
