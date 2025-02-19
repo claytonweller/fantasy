@@ -64,6 +64,27 @@ export const rawVillagers:IRawVillager[] = [
         ]
       }
     ]
+  },
+  {
+    id: '3',
+    name: 'Tad',
+    rosters: [
+      {
+        week: 1,
+        picks:[
+          {
+            pickId: '2',
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.A
+          },
+          {
+            pickId: 'clan1',
+            pickType: RosterPickTypes.Clan,
+            position: RosterPositions.Clan
+          },
+        ]
+      }
+    ]
   }
 ]
 
