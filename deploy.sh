@@ -1,4 +1,5 @@
 yarn store-snapshot safety
+# Remove private notes from from public research deployment
 yarn scrub-research
 yarn build
 # Upload to S3

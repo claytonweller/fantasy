@@ -48,7 +48,7 @@ function Card(
     ? (<></>)
     : (
       <div>
-        <h3>Research</h3>
+        <h3>Research / Notes</h3>
         <ul>
           {research.map((r, i) =>{
             return (
