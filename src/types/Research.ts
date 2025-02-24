@@ -1,5 +1,6 @@
 export interface IResearch {
   note: string,
+  isPublic?: boolean,
   tags: {
     entityType: EntityTypes,
     entityId: string

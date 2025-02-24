@@ -1,1 +1,0 @@
-cp -f ./src/data/raw/emptyResearch.ts ./src/data/raw/research.ts

@@ -21,5 +21,19 @@ export const rawResearch: IResearch[] = [
         entityId: 'quest1'
       }
     ]
+  },
+  {
+    note: 'Gad is a wanted man in the capitol',
+    isPublic: true,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: 'adv1'
+      },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: '1'
+      },
+    ]
   }
 ]
