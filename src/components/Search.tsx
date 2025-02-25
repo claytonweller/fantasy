@@ -1,6 +1,4 @@
 import { IEnumFilter } from "hooks/useEnumFilterState"
-import { Ranks } from "../types/Ranks"
-import {createCheckboxesFromEnumFilter} from '../utils/createCheckboxesFromEnumFilter'
 import { EnumFilterSelector } from "./EnumFilterSelector"
 
 export default function Search(props:{
@@ -13,7 +11,7 @@ export default function Search(props:{
     enumFilters, 
     setSearchText,
   } = props
-  
+
   let filters
   if(enumFilters){
     filters =  enumFilters.map((f, i) =>{

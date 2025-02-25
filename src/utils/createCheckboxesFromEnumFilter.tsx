@@ -2,7 +2,7 @@ import React from "react"
 
 export function createCheckboxesFromEnumFilter<T extends {[key:string]: boolean}> (
   filter:T, 
-  set:React.Dispatch<React.SetStateAction<T>>
+  set:React.Dispatch<React.SetStateAction<T>>,
 ){
   const options = Object.entries(filter).map(([key, checked], i) =>{
     console.log(checked)
@@ -28,3 +28,4 @@ export function createCheckboxesFromEnumFilter<T extends {[key:string]: boolean}
   return options
 
 }
+

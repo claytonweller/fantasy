@@ -14,6 +14,7 @@ import Villagers from './components/Villagers';
 import Quests from 'components/Quests';
 import { Ranks } from 'types/Ranks';
 import { useEnumFilterState } from 'hooks/useEnumFilterState';
+import Adventurers from 'components/Adventurers';
 
 function App() {
   const [searchText, setSearchText] = useState('')
@@ -35,19 +36,7 @@ function App() {
       makeSearchable={makeSearchable} 
     />
   })
-
-  const adventurers = getAdventurers()
-  const allAdventurers = adventurers.map((a, i) =>{
-    return <AdventurerCard 
-    key={`Adv${i}`}
-    adventurer={a} 
-    search={{searchText, rankFilter:rankFilter.state}}
-    makeSearchable={makeSearchable} 
-    rules={rules}
-  />
-  })
-
-
+  
   return (
     <div className="App">
       <div style={{backgroundColor:'#111111', color: 'white'}}>
@@ -71,13 +60,12 @@ function App() {
         >
           {allClans}
         </CardGroup>
-        <CardGroup 
-          cardType={CardTypes.Adventurer} 
-          color='#332620'
-          cardTypeFilters={cardTypeFilter.state} 
-        >
-          {allAdventurers}
-        </CardGroup>
+        <Adventurers
+          search={{searchText, rankFilter: rankFilter.state}}
+          rules={rules}
+          cardTypeFilters={cardTypeFilter.state}
+          makeSearchable={makeSearchable}
+        />
         <Quests
           search={{searchText, rankFilter: rankFilter.state}}
           rules={rules}

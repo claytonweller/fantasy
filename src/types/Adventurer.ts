@@ -32,7 +32,8 @@ export interface IDbAdventurer {
 export enum AdventurerClasses { 
   Support = 'Support',
   Attacker = 'Attacker',
-  Defender = 'Defender'
+  Defender = 'Defender',
+  Generalist = 'Generalist'
 }
 
 export enum AdventurerStatuses {
@@ -43,7 +44,7 @@ export enum AdventurerStatuses {
   Criminal = 'Criminal',
   Imprisoned = 'Imprisoned',
   ManaDepletion = 'ManaDepletion'
-}
+} 
 
 export enum AdventurerRaces {
   Human = 'Human',

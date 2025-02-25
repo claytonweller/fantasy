@@ -2,9 +2,12 @@ import { useState, Dispatch, SetStateAction } from "react"
 
 export function useEnumFilterState<K extends string>(
   enumObject:{[key in K]: string},
-  name?: string
+  name?: string,
+  nullable = false
 ):IEnumFilter<K>{
-  const cardFilterValues = Object.keys(enumObject).reduce((prev, key) =>{
+  const fullObject: EnumWithNull<K> = {...enumObject}
+  if(nullable) fullObject['None'] = 'None'
+  const cardFilterValues = Object.keys(fullObject).reduce((prev, key) =>{
     return {...prev, [key]: true}
   },{} as {[key in K]: boolean})
   const [state, setState] = useState(cardFilterValues)
@@ -20,3 +23,6 @@ export interface IEnumFilter <K extends string>{
   state: IFilterState<K>
   setState: ISetFilterState<K>
 }
+
+
+type EnumWithNull <K extends string> = {[key in K]: string} & {None?: 'None'}

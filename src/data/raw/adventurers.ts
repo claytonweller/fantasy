@@ -112,7 +112,7 @@ export const rawAdventurers:IRawAdventurer[] = [
   {
     id: '3',
     name: 'Cool Mike',
-    races: [AdventurerRaces.Human],
+    races: [AdventurerRaces.Human, AdventurerRaces.Gnome],
     nicknames: [],
     rank: Ranks.B,
     class: AdventurerClasses.Defender,

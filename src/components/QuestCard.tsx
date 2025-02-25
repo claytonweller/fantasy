@@ -9,6 +9,7 @@ import { addCommasToNumber } from "../utils/addCommasToNumber";
 import { sortByRank } from "../utils/sortByRank";
 import Card from "./Card";
 import MetricGrid from "./MetricGrid";
+import { setVisibilityFromFilterState } from "utils/setVisibilityFromFilterState";
 
 export default function QuestCard (props: {
   quest: IQuest, 
@@ -30,11 +31,12 @@ export default function QuestCard (props: {
   } = quest 
   
   const partyComponents = createPartyComponents({quest, rules, makeSearchable})
-  const statusFilter = typeSpecificFilters?.find(f => f.name === 'Status')
-  const isStatusMatch = statusFilter?.state[status] || false
-
-  const questTypeFilter = typeSpecificFilters?.find(f => f.name === 'QuestType')
-  const isQuestTypeMatch = questTypeFilter?.state[questType] || false
+  const isQuestTypeMatch = setVisibilityFromFilterState(
+    'QuestType', questType, typeSpecificFilters
+  )
+  const isStatusMatch = setVisibilityFromFilterState(
+    'Status', status, typeSpecificFilters
+  )
 
   const isVisible = isStatusMatch && isQuestTypeMatch
 
