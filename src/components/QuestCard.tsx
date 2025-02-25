@@ -1,3 +1,4 @@
+import { IEnumFilter } from "hooks/useEnumFilterState";
 import { IRules } from "../data/getRules";
 import { adventurersById } from "../data/queries/adventurers";
 import { CardTypes } from "../types/Card";
@@ -9,15 +10,86 @@ import { sortByRank } from "../utils/sortByRank";
 import Card from "./Card";
 import MetricGrid from "./MetricGrid";
 
-export default function QuestCard ({quest, search, makeSearchable, rules}: {
+export default function QuestCard (props: {
   quest: IQuest, 
   search: ISearchParams
   rules: IRules
   makeSearchable: (text: string) => JSX.Element
+  typeSpecificFilters?: IEnumFilter<string>[]
 }){
-  const {name, reward, postedBy, questType, claimedByName = 'Default', description, questRank, parties } = quest 
+  const {quest, search, makeSearchable, rules, typeSpecificFilters} = props
+  const {
+    name, 
+    reward, 
+    postedBy, 
+    questType, 
+    claimedByName = 'Default', 
+    description, 
+    questRank, 
+    status
+  } = quest 
   
-  const partyComponents = parties.map((p,i) =>{
+  const partyComponents = createPartyComponents({quest, rules, makeSearchable})
+  const statusFilter = typeSpecificFilters?.find(f => f.name === 'Status')
+  const isStatusMatch = statusFilter?.state[status] || false
+
+  const questTypeFilter = typeSpecificFilters?.find(f => f.name === 'QuestType')
+  const isQuestTypeMatch = questTypeFilter?.state[questType] || false
+
+  const isVisible = isStatusMatch && isQuestTypeMatch
+
+  return (
+    <div style={{display: isVisible? 'block': 'none'}}>
+
+    <Card 
+      color='#552211' 
+      search={search}
+      rank={questRank}
+      data={quest}
+      type={CardTypes.Quest}
+      name={name}
+      research={quest.research}
+    >
+      <div>
+        <b>Reward</b>: {addCommasToNumber(reward)}
+      </div>
+      <div>
+        <b>Posted By</b>: {makeSearchable(postedBy)}
+      </div>
+      <div>
+        <b>Quest Type</b>: {questType}
+      </div>
+      <div>
+        <b>Status</b>: {quest.status}
+      </div>
+      <div>
+        <b>Rank</b>: {questRank}
+      </div>
+      <div>
+        <b>Claimed by</b>: {makeSearchable(claimedByName)}
+      </div>
+      <div>
+        {partyComponents}
+      </div>
+      <div>
+        <b>Description</b>: {description}
+      </div>
+    </Card>
+    
+    </div>
+  )
+}
+
+function createPartyComponents(params:{
+  quest: IQuest, 
+  rules: IRules
+  makeSearchable: (text: string) => JSX.Element
+}){
+  const {quest,  makeSearchable, rules} = params
+  const {
+    parties, 
+  } = quest 
+  return  parties.map((p,i) =>{
     const adventurerMetrics = p.adventurers?.map(a => {
       const compositeAdventurer = adventurersById[a.id]
       const questParty = compositeAdventurer.questParties.find(qp => qp.partyId === p.id)
@@ -64,41 +136,4 @@ export default function QuestCard ({quest, search, makeSearchable, rules}: {
       </div>
     )
   })
-  
-  return (
-    <Card 
-      color='#552211' 
-      search={search}
-      rank={questRank}
-      data={quest}
-      type={CardTypes.Quest}
-      name={name}
-      research={quest.research}
-    >
-      <div>
-        <b>Reward</b>: {addCommasToNumber(reward)}
-      </div>
-      <div>
-        <b>Posted By</b>: {makeSearchable(postedBy)}
-      </div>
-      <div>
-        <b>Quest Type</b>: {questType}
-      </div>
-      <div>
-        <b>Status</b>: {quest.status}
-      </div>
-      <div>
-        <b>Rank</b>: {questRank}
-      </div>
-      <div>
-        <b>Claimed by</b>: {makeSearchable(claimedByName)}
-      </div>
-      <div>
-        {partyComponents}
-      </div>
-      <div>
-        <b>Description</b>: {description}
-      </div>
-    </Card>
-  )
 }

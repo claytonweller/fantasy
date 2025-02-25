@@ -71,9 +71,10 @@ export interface IDbMetric {
 
 export enum QuestStatus {
   Claimed = 'Claimed',
-  InProgress = 'In Progress',
+  InProgress = 'InProgress',
   Failed = 'Failed',
   Success = 'Success',
+  Expired = 'Expired',
   // Parties will never have the Unclaimed status
   // It's only for use as a composite value in Quest displays
   Unclaimed = 'Unclaimed',
@@ -83,6 +84,7 @@ export enum QuestTypes {
   Fetch = 'Fetch',
   Guard = 'Guard',
   Kill = 'Kill',
+  Other = 'Other'
 }
 
 export enum QuestClaimType {

@@ -12,13 +12,13 @@ import { getRules, rankMultipliers } from './data/getRules';
 import Rules from './components/Rules';
 import Villagers from './components/Villagers';
 import Quests from 'components/Quests';
-import { createFilterState } from 'utils/createFilterStateFromEnum';
 import { Ranks } from 'types/Ranks';
+import { useEnumFilterState } from 'hooks/useEnumFilterState';
 
 function App() {
   const [searchText, setSearchText] = useState('')
-  const [cardTypeFilters, setCardTypeFilters] = createFilterState(CardTypes)
-  const [rankFilter, setCardRankFilters] = createFilterState(Ranks)
+  const cardTypeFilter = useEnumFilterState(CardTypes)
+  const rankFilter = useEnumFilterState(Ranks)
   const [currentWeek] = useState(2)
   const makeSearchable = makeSearchableText(setSearchText)
 
@@ -29,7 +29,7 @@ function App() {
     return <ClanCard 
       key={`Clan${i}`} 
       clan={c} 
-      search={{searchText, rankFilter}} 
+      search={{searchText, rankFilter:rankFilter.state}} 
       currentWeek={currentWeek}
       rules={rules}
       makeSearchable={makeSearchable} 
@@ -41,7 +41,7 @@ function App() {
     return <AdventurerCard 
     key={`Adv${i}`}
     adventurer={a} 
-    search={{searchText, rankFilter}}
+    search={{searchText, rankFilter:rankFilter.state}}
     makeSearchable={makeSearchable} 
     rules={rules}
   />
@@ -55,20 +55,20 @@ function App() {
         <Search 
           searchText={searchText}
           setSearchText={setSearchText} 
-          cardTypeFilters={cardTypeFilters}
-          setCardTypeFilters={setCardTypeFilters}
-          cardRankFilters={rankFilter}
-          setCardRankFilters={setCardRankFilters}
+          cardTypeFilters={cardTypeFilter.state}
+          setCardTypeFilters={cardTypeFilter.setState}
+          cardRankFilters={rankFilter.state}
+          setCardRankFilters={rankFilter.setState}
         />
         <Villagers
           search={{searchText}}
           makeSearchable={makeSearchable}
           rules={rules}
-          cardTypeFilters={cardTypeFilters}
+          cardTypeFilters={cardTypeFilter.state}
         />
         <Rules rules={rules} rankMultipliers={rankMultipliers}/>
         <CardGroup 
-          cardTypeFilters={cardTypeFilters} 
+          cardTypeFilters={cardTypeFilter.state} 
           cardType={CardTypes.Clan} 
           color='#223322'
         >
@@ -77,14 +77,14 @@ function App() {
         <CardGroup 
           cardType={CardTypes.Adventurer} 
           color='#332620'
-          cardTypeFilters={cardTypeFilters} 
+          cardTypeFilters={cardTypeFilter.state} 
         >
           {allAdventurers}
         </CardGroup>
         <Quests
-          search={{searchText, rankFilter}}
+          search={{searchText, rankFilter: rankFilter.state}}
           rules={rules}
-          cardTypeFilters={cardTypeFilters}
+          cardTypeFilters={cardTypeFilter.state}
           makeSearchable={makeSearchable}
         />
 

@@ -1,23 +1,24 @@
 import React from "react"
 
 export function createCheckboxesFromEnumFilter<T extends {[key:string]: boolean}> (
-  filter:T , 
+  filter:T, 
   set:React.Dispatch<React.SetStateAction<T>>
 ){
-  const options = Object.entries(filter).map(([cardType, checked], i) =>{
-    const id = `cardType${cardType}`
+  const options = Object.entries(filter).map(([key, checked], i) =>{
+    console.log(checked)
+    const id = `cardType${key}`
     return(
-      <div key={`${cardType}${i}`}>
-        <label htmlFor={id}>{cardType}</label>
+      <div key={`${key}${i}`}>
+        <label htmlFor={id}>{key}</label>
         <input 
-          
           id={id}
           name={id}
           type='checkbox' 
           readOnly = {true}
           checked={checked}
-          onClick={()=>{
-            const updated = {...filter, [cardType]: !filter[cardType]} 
+          onClick={(e)=>{
+            e.stopPropagation()
+            const updated = {...filter, [key]: !filter[key]} 
             set(updated)
           }}
         />
