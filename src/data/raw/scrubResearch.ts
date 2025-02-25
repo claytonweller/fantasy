@@ -5,17 +5,14 @@ import { writeFileSync } from "fs";
 const scrubbedResearch:IResearch[] = rawResearch.filter((r:IResearch) =>{
   return r.isPublic
 })
+console.log('Scrubbing research secrets')
 
-console.warn(scrubbedResearch)
-
-const outPut = `
+const output = `
 import { IResearch } from "types/Research";
 
 export const rawResearch = ${JSON.stringify(scrubbedResearch)} as IResearch[]
 `
 
-console.warn(outPut)
+writeFileSync('src/data/raw/research.ts', output)
 
-writeFileSync('src/data/raw/research.ts', outPut)
-
-console.log('Done!')
+console.log('Squeaky clean!')

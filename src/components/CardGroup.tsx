@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { CardTypes } from "../types/Card"
-import { IEnumFilter, IUseFilterState } from "hooks/useEnumFilterState"
+import { IEnumFilter } from "hooks/useEnumFilterState"
 import { createCheckboxesFromEnumFilter } from "utils/createCheckboxesFromEnumFilter"
 
 export default function CardGroup(props:{
