@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { CardTypes } from "../types/Card"
 import { IEnumFilter } from "hooks/useEnumFilterState"
-import { createCheckboxesFromEnumFilter } from "utils/createCheckboxesFromEnumFilter"
+import { EnumFilterSelector } from "./EnumFilterSelector"
 
 export default function CardGroup(props:{
   children:any, 
@@ -16,16 +16,8 @@ export default function CardGroup(props:{
   const [showFull, setShowFull] = useState(true)
   let filters
   if(typeSpecificFilters){
-    filters = typeSpecificFilters.map(({state, setState, name}) =>{
-      const nameLabel = name 
-        ? (<div><b>{name}</b></div>) 
-        : '';
-      return(
-        <div>
-        {nameLabel}
-        {createCheckboxesFromEnumFilter(state, setState)}
-        </div>
-      ) 
+    filters =  typeSpecificFilters.map((f, i) =>{
+      return (<EnumFilterSelector key={`${f.name || 'filter'}${i}`} enumFilter={f} />)
     })
   }
   

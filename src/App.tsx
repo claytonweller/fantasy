@@ -17,8 +17,8 @@ import { useEnumFilterState } from 'hooks/useEnumFilterState';
 
 function App() {
   const [searchText, setSearchText] = useState('')
-  const cardTypeFilter = useEnumFilterState(CardTypes)
-  const rankFilter = useEnumFilterState(Ranks)
+  const cardTypeFilter = useEnumFilterState(CardTypes, 'CardType')
+  const rankFilter = useEnumFilterState(Ranks, 'Ranks')
   const [currentWeek] = useState(2)
   const makeSearchable = makeSearchableText(setSearchText)
 
@@ -55,10 +55,7 @@ function App() {
         <Search 
           searchText={searchText}
           setSearchText={setSearchText} 
-          cardTypeFilters={cardTypeFilter.state}
-          setCardTypeFilters={cardTypeFilter.setState}
-          cardRankFilters={rankFilter.state}
-          setCardRankFilters={rankFilter.setState}
+          enumFilters={[cardTypeFilter, rankFilter]}
         />
         <Villagers
           search={{searchText}}

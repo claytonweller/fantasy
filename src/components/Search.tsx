@@ -1,33 +1,28 @@
-import { CardTypes } from "../types/Card"
+import { IEnumFilter } from "hooks/useEnumFilterState"
 import { Ranks } from "../types/Ranks"
 import {createCheckboxesFromEnumFilter} from '../utils/createCheckboxesFromEnumFilter'
+import { EnumFilterSelector } from "./EnumFilterSelector"
 
 export default function Search(props:{
   searchText: string
   setSearchText: React.Dispatch<React.SetStateAction<string>>
-  setCardTypeFilters: React.Dispatch<React.SetStateAction<{[key in CardTypes]: boolean}>>
-  cardTypeFilters: {[key in CardTypes]: boolean}
-  setCardRankFilters: React.Dispatch<React.SetStateAction<{[key in Ranks]: boolean}>>
-  cardRankFilters: {[key in Ranks]: boolean}
+  enumFilters: IEnumFilter<string>[]
 }){
   const {
     searchText, 
-    setSearchText, 
-    setCardTypeFilters, 
-    cardTypeFilters, 
-    setCardRankFilters, 
-    cardRankFilters
+    enumFilters, 
+    setSearchText,
   } = props
-  const onSearchInputChange = (event: React.ChangeEvent<HTMLInputElement>) =>{
-    setSearchText(event.target.value)
+  
+  let filters
+  if(enumFilters){
+    filters =  enumFilters.map((f, i) =>{
+      return (<EnumFilterSelector key={`${f.name || 'filter'}${i}`} enumFilter={f} />)
+    })
   }
-  const typeOptions = createCheckboxesFromEnumFilter(cardTypeFilters, setCardTypeFilters)
-
-  const rankOptions = createCheckboxesFromEnumFilter(cardRankFilters, setCardRankFilters)
-
 
   return(
-    <div>
+    <div style={{display: 'flex', justifyItems: 'center'}}>
       <div>
         <label htmlFor='searchText'>Search: </label>
         <input 
@@ -35,20 +30,10 @@ export default function Search(props:{
           name='searchText' 
           type='text'
           value={searchText}
-          onChange={onSearchInputChange}
+          onChange={(e)=> setSearchText(e.target.value)}
         />
       </div>
-      <div>
-        <label htmlFor='clan'>CardType </label>
-        {typeOptions}
-        
-      </div>
-      <div>
-        <label htmlFor='clan'>Rank </label>
-        {rankOptions}
-      </div>
-        
-
+      {filters}
     </div>
   )
 }
