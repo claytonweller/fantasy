@@ -2,26 +2,23 @@ import { useState } from 'react';
 import './App.css';
 import AdventurerCard from './components/AdventurerCard';
 import ClanCard from './components/ClanCard';
-import QuestCard from './components/QuestCard';
 import { getAdventurers } from './data/getAdventurers';
 import { getClans } from './data/getClans';
-import { getQuests } from './data/getQuests';
 import CardGroup from './components/CardGroup';
 import { CardTypes } from './types/Card';
 import Search from './components/Search';
-import { useCardTypeFilter } from './hooks/useCardTypeFilter';
-import { useCardRankFilter } from './hooks/useCardRankFilter';
 import { makeSearchableText } from './components/SearchableText';
 import { getRules, rankMultipliers } from './data/getRules';
 import Rules from './components/Rules';
 import Villagers from './components/Villagers';
-import { researchByTag } from 'data/queries/research';
-import { EntityTypes } from 'types/Research';
+import Quests from 'components/Quests';
+import { createFilterState } from 'utils/createFilterStateFromEnum';
+import { Ranks } from 'types/Ranks';
 
 function App() {
   const [searchText, setSearchText] = useState('')
-  const [cardTypeFilters, setCardTypeFilters] = useCardTypeFilter()
-  const [rankFilter, setCardRankFilters] = useCardRankFilter()
+  const [cardTypeFilters, setCardTypeFilters] = createFilterState(CardTypes)
+  const [rankFilter, setCardRankFilters] = createFilterState(Ranks)
   const [currentWeek] = useState(2)
   const makeSearchable = makeSearchableText(setSearchText)
 
@@ -34,16 +31,6 @@ function App() {
       clan={c} 
       search={{searchText, rankFilter}} 
       currentWeek={currentWeek}
-      rules={rules}
-      makeSearchable={makeSearchable} 
-    />
-  })
-  const quests = getQuests()
-  const allQuests = quests.map((q, i) =>{
-    return <QuestCard 
-      key={`Quest${i}`} 
-      quest={q} 
-      search={{searchText, rankFilter}}
       rules={rules}
       makeSearchable={makeSearchable} 
     />
@@ -94,13 +81,12 @@ function App() {
         >
           {allAdventurers}
         </CardGroup>
-        <CardGroup 
-          cardType={CardTypes.Quest} 
-          color='#402222'
-          cardTypeFilters={cardTypeFilters} 
-        >
-          {allQuests}
-        </CardGroup>
+        <Quests
+          search={{searchText, rankFilter}}
+          rules={rules}
+          cardTypeFilters={cardTypeFilters}
+          makeSearchable={makeSearchable}
+        />
 
       </div>
     </div>

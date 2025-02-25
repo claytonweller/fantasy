@@ -9,7 +9,7 @@ import { combineMetaMetrics } from "../utils/combineMetricsArrays";
 import { metaMetricsFromAdventurerQuest } from "../utils/metaMetricsFromAdventurerQuest";
 import { IMetricsWithMeta } from "../types/Quest";
 import { IAdventurer } from "../types/Adventurer";
-import { IRoster, RosterPositions } from "../types/Roster";
+import { RosterPositions } from "../types/Roster";
 import { metaMetricsFromClan } from "../utils/metaMetricsFromClan";
 import { IClan } from "../types/Clan";
 

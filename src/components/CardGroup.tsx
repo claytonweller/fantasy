@@ -18,12 +18,14 @@ export default function CardGroup(props:{
     borderWidth: '2px',
     display: cardTypeFilters[cardType] ? 'block' : 'none'
   }
+  
   return (
     <div onClick={(e)=> {
       e.stopPropagation()
       setShowFull(!showFull)
     }} style={style}>
       <h1>{cardType}s</h1>
+      <div>Filters {}</div>
       <div style={{display: showFull ? 'block' : 'none'}}>
         {children}
       </div>
