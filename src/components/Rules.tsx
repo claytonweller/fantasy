@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { IRules } from "../data/getRules";
 import { QuestMetricType } from "../types/Quest";
+import { JsxElement } from "typescript";
 
 export default function Rules (props: {rules: IRules, rankMultipliers: {[rank: string]: number}}){
   const [rulesVisible, setRulesVisible] = useState(false)
@@ -47,6 +48,26 @@ function RulesModal (props:{
       <span>{rule.questMetricType} X {rule.multiplier}</span>
     </div>
   })
+
+  const TitleList = (props:{title: string, bullets: string[]})=>{
+    const {title, bullets} = props
+    const items = bullets.map((b, i) => (<li key={i} style={{textAlign: 'left'}}>{b}</li>))
+    return (
+      <>
+        <div><b>{title}</b></div>
+        <div style={{
+          display:'flex', 
+          justifyContent: 'center', 
+          padding: '5px',
+          listStylePosition: 'outside'
+        }}>
+          <ul>
+            {items}
+          </ul>
+        </div>
+      </>
+    )
+  }
   return(
     <div 
       style={{
@@ -74,7 +95,35 @@ function RulesModal (props:{
       </div>
       
       <h2>Rules -</h2> 
-      <h3>Rule Descriptions - </h3>
+      <h3>Weekly Flow</h3>
+      <TitleList 
+        title="Monday" 
+        bullets={[
+          'Previous Week Recapped',
+          'New Quests posted. All quests have a rank, and whether they are for individuals or clans.',
+          'Villagers send Research prompts to League Master'
+        ]}
+      ></TitleList>
+
+      <TitleList 
+        title="Tues-Thursday" 
+        bullets={[
+          'Adventurers sign up for quests. They can pick more than one. Clans or Adventurers can only claim quests within 1 rank of their own.',
+          'League Master will have responds to all Research prompts',
+          'Villagers send in Roster picks to League Master'
+        ]}
+      ></TitleList>
+      
+      <TitleList 
+        title="Fri-Sun" 
+        bullets={[
+          'Adventurers do the quests, things happen that make points',
+          'League Master will have responds to all Research prompts',
+          'Villagers pray that they made the right picks!'
+        ]}
+      ></TitleList>
+
+      <h3>Points Descriptions - </h3>
       <div style={sectionStyle}>
         <b>{QuestMetricType.Count}: </b>
         <span>Simply the count X a multiplier</span>

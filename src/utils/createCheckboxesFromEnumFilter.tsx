@@ -5,7 +5,6 @@ export function createCheckboxesFromEnumFilter<T extends {[key:string]: boolean}
   set:React.Dispatch<React.SetStateAction<T>>,
 ){
   const options = Object.entries(filter).map(([key, checked], i) =>{
-    console.log(checked)
     const id = `cardType${key}`
     return(
       <div key={`${key}${i}`}>
