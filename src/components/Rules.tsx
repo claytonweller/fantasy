@@ -109,16 +109,16 @@ function RulesModal (props:{
         title="Tues-Thursday" 
         bullets={[
           'Adventurers sign up for quests. They can pick more than one. Clans or Adventurers can only claim quests within 1 rank of their own.',
-          'League Master will responds to all Research prompts',
-          'Villagers send in Roster picks to League Master'
+          'League Master will respond to all Research prompts',
+          'Villagers send in roster picks to League Master'
         ]}
       ></TitleList>
       
       <TitleList 
         title="Fri-Sun" 
         bullets={[
-          'Adventurers do the quests, things happen that make points',
-          'League Master will have responds to all Research prompts',
+          'Adventurers do the quests, things happen, some stuff is worth points. See below.',
+          'League Master will put rosters online',
           'Villagers pray that they made the right picks!'
         ]}
       ></TitleList>
