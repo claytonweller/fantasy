@@ -13,6 +13,7 @@ export default function Rules (props: {rules: IRules, rankMultipliers: {[rank: s
         style={{
           display: rulesVisible ? 'none' : 'block',
           position: 'fixed',
+          overflowY:'auto',
           top: '0px',
           right: '0px',
           padding: '10px',
@@ -91,59 +92,67 @@ function RulesModal (props:{
           setRulesVisible(false)
         }}
       >
-      <h2>X</h2>
+       <h2>X</h2>
       </div>
-      
-      <h2>Rules -</h2> 
-      <h3>Weekly Flow</h3>
-      <TitleList 
-        title="Monday" 
-        bullets={[
-          'Previous Week Recapped',
-          'New Quests posted. All quests have a rank, and whether they are for individuals or clans.',
-          'Villagers send Research prompts to League Master'
-        ]}
-      ></TitleList>
+      <div 
+        style={{
+          overflowY: 'auto',
+          height: '90vh',
+          width: '90vw'
+        }}
+      >
+        <h2>Rules -</h2> 
+        <h3>Weekly Flow</h3>
+        <TitleList 
+          title="Monday" 
+          bullets={[
+            'Previous Week Recapped',
+            'New Quests posted. All quests have a rank, and whether they are for individuals or clans.',
+            'Villagers send Research prompts to League Master'
+          ]}
+        ></TitleList>
 
-      <TitleList 
-        title="Tues-Thursday" 
-        bullets={[
-          'Adventurers sign up for quests. They can pick more than one. Clans or Adventurers can only claim quests within 1 rank of their own.',
-          'League Master will respond to all Research prompts',
-          'Villagers send in roster picks to League Master'
-        ]}
-      ></TitleList>
-      
-      <TitleList 
-        title="Fri-Sun" 
-        bullets={[
-          'Adventurers do the quests, things happen, some stuff is worth points. See below.',
-          'League Master will put rosters online',
-          'Villagers pray that they made the right picks!'
-        ]}
-      ></TitleList>
+        <TitleList 
+          title="Tues-Thursday" 
+          bullets={[
+            'Adventurers sign up for quests. They can pick more than one. Clans or Adventurers can only claim quests within 1 rank of their own.',
+            'League Master will respond to all Research prompts',
+            'Villagers send in roster picks to League Master'
+          ]}
+        ></TitleList>
+        
+        <TitleList 
+          title="Fri-Sun" 
+          bullets={[
+            'Adventurers do the quests, things happen, some stuff is worth points. See below.',
+            'League Master will put rosters online',
+            'Villagers pray that they made the right picks!'
+          ]}
+        ></TitleList>
 
-      <h3>Points Descriptions - </h3>
-      <div style={sectionStyle}>
-        <b>{QuestMetricType.Count}: </b>
-        <span>Simply the count X a multiplier</span>
-        <div>Ex: The Adventurer disarmed 3 traps. 3 traps X 2 points per trap = 6 points</div>
+        <h3>Points Descriptions - </h3>
+        <div style={sectionStyle}>
+          <b>{QuestMetricType.Count}: </b>
+          <span>Simply the count X a multiplier</span>
+          <div>Ex: The Adventurer disarmed 3 traps. 3 traps X 2 points per trap = 6 points</div>
+        </div>
+        <div style={sectionStyle}>
+          <b>{QuestMetricType.PointByRank}: </b>
+          <span>Similar to count except it also scales relative to the rank. </span>
+          Values -- {JSON.stringify(rankMultipliers)}
+          <div>Ex: The Adventurer killed 5 Rank C monsters. 5 monsters X 0.25 base points X 4 points for C Rank = 5 points</div>
+        </div>
+        <div style={sectionStyle}>
+          <b>{QuestMetricType.GoldConvert}: </b>
+          <span>A point for every decimal place.</span>
+          <div>Ex1: 5g = 1pt</div>
+          <div>Ex2: 1234g = 4pt</div>
+        </div>
+    
+        <h3>All Rules - </h3>
+        {formattedRules}
       </div>
-      <div style={sectionStyle}>
-        <b>{QuestMetricType.PointByRank}: </b>
-        <span>Similar to count except it also scales relative to the rank. </span>
-        Values -- {JSON.stringify(rankMultipliers)}
-        <div>Ex: The Adventurer killed 5 Rank C monsters. 5 monsters X 0.25 base points X 4 points for C Rank = 5 points</div>
-      </div>
-      <div style={sectionStyle}>
-        <b>{QuestMetricType.GoldConvert}: </b>
-        <span>A point for every decimal place.</span>
-        <div>Ex1: 5g = 1pt</div>
-        <div>Ex2: 1234g = 4pt</div>
-      </div>
-  
-      <h3>All Rules - </h3>
-      {formattedRules}
+
     </div>  
     )  
 }
