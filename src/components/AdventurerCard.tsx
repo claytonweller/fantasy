@@ -17,7 +17,7 @@ export default function AdventurerCard (props: {
   typeSpecificFilters?: IEnumFilter<string>[]
 }){
   const {adventurer, search, rules, makeSearchable, typeSpecificFilters} = props
-  const {name, bio, clan, quests, rank, status} = adventurer 
+  const {name, bio, clan, quests, rank, status, races} = adventurer 
   const metaMetrics: IMetricsWithMeta[] = quests.map(quest =>{
     return metaMetricsFromAdventurerQuest({quest})
   })
@@ -36,10 +36,10 @@ export default function AdventurerCard (props: {
     'Class', adventurer.class, typeSpecificFilters
   )
   const isRaceMatch = setVisibilityFromFilterState(
-    'Race', adventurer.races, typeSpecificFilters
+    'Race', races, typeSpecificFilters
   )
   const isStatusMatch = setVisibilityFromFilterState(
-    'Status', adventurer.status, typeSpecificFilters
+    'Status', status, typeSpecificFilters
   )
   
   const isVisible = isClassMatch && isRaceMatch && isStatusMatch
@@ -62,6 +62,9 @@ export default function AdventurerCard (props: {
         </div>
         <div>
           <b>Job (Class)</b>: {adventurer.className} ({adventurer.class})
+        </div>
+        <div>
+          <b>Race(s)</b>: {races.join(', ')}
         </div>
         <div>
           <b>Bio</b>: {bio}
