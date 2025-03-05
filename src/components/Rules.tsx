@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { IRules } from "../data/getRules";
 import { QuestMetricType } from "../types/Quest";
-import { JsxElement } from "typescript";
 
 export default function Rules (props: {rules: IRules, rankMultipliers: {[rank: string]: number}}){
   const [rulesVisible, setRulesVisible] = useState(false)

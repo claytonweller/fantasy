@@ -20,7 +20,11 @@ export default function Search(props:{
   }
 
   return(
-    <div style={{display: 'flex', justifyItems: 'center'}}>
+    <div style={{
+      display: 'flex', 
+      justifyItems: 'center', 
+      padding: '40px 10px 10px 10px'
+    }}>
       <div>
         <label htmlFor='searchText'>Search: </label>
         <input 
