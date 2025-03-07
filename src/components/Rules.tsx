@@ -21,7 +21,7 @@ export default function Rules (props: {rules: IRules, rankMultipliers: {[rank: s
       >
         <button onClick={()=>setRulesVisible(true)}>Rules</button>
       </div>
-      
+
       <RulesModal 
         rules={rules} 
         rankMultipliers={rankMultipliers}
@@ -49,7 +49,8 @@ function RulesModal (props:{
         top: '20px',
         padding: '10px',
         backgroundColor: 'rgba(0,0,0,0.9)',
-        width: '100%'
+        width: '100%',
+        backdropFilter:'blur(2px)'
       }}
     >
       <CloseX setRulesVisible={setRulesVisible} />
@@ -81,7 +82,7 @@ function CloseX (props:{
     <div
       style={{
         position: 'fixed',
-        top: '20px',
+        top: '-20px',
         right: '20px',
         padding: '10px',
         backgroundColor: 'rgba(0,0,0,0.9)',

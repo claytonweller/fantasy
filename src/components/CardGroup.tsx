@@ -28,6 +28,8 @@ export default function CardGroup(props:{
     borderColor: 'black',
     borderRadius: '3px',
     borderWidth: '2px',
+    maxWidth: '600px',
+    width: '90vw',
     display: cardTypeFilters[cardType] ? 'block' : 'none'
   }
   

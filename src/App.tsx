@@ -15,6 +15,7 @@ import Quests from 'components/Quests';
 import { Ranks } from 'types/Ranks';
 import { useEnumFilterState } from 'hooks/useEnumFilterState';
 import Adventurers from 'components/Adventurers';
+import Clans from 'components/Clans';
 
 function App() {
   const [searchText, setSearchText] = useState('')
@@ -25,54 +26,50 @@ function App() {
 
   const rules = getRules()
 
-  const clans = getClans()
-  const allClans = clans.map((c, i) =>{
-    return <ClanCard 
-      key={`Clan${i}`} 
-      clan={c} 
-      search={{searchText, rankFilter:rankFilter.state}} 
-      currentWeek={currentWeek}
-      rules={rules}
-      makeSearchable={makeSearchable} 
-    />
-  })
+
   
   return (
     <div className="App">
-      <div style={{backgroundColor:'#111111', color: 'white'}}>
-        {/* {allVillagers} */}
+      <div style={{
+        backgroundColor:'#111111', 
+        color: 'white',
+      }}>
         <Search 
           searchText={searchText}
           setSearchText={setSearchText} 
           enumFilters={[cardTypeFilter, rankFilter]}
         />
-        <Villagers
-          search={{searchText}}
-          makeSearchable={makeSearchable}
-          rules={rules}
-          cardTypeFilters={cardTypeFilter.state}
-        />
         <Rules rules={rules} rankMultipliers={rankMultipliers}/>
-        <CardGroup 
-          cardTypeFilters={cardTypeFilter.state} 
-          cardType={CardTypes.Clan} 
-          color='#223322'
-        >
-          {allClans}
-        </CardGroup>
-        <Adventurers
-          search={{searchText, rankFilter: rankFilter.state}}
-          rules={rules}
-          cardTypeFilters={cardTypeFilter.state}
-          makeSearchable={makeSearchable}
-        />
-        <Quests
-          search={{searchText, rankFilter: rankFilter.state}}
-          rules={rules}
-          cardTypeFilters={cardTypeFilter.state}
-          makeSearchable={makeSearchable}
-        />
-
+        <div style={{
+          display: 'flex',
+          flexWrap:'wrap'
+        }}>
+          <Villagers
+            search={{searchText}}
+            makeSearchable={makeSearchable}
+            rules={rules}
+            cardTypeFilters={cardTypeFilter.state}
+          />
+          <Clans
+            search={{searchText, rankFilter: rankFilter.state}}
+            rules={rules}
+            cardTypeFilters={cardTypeFilter.state}
+            makeSearchable={makeSearchable}
+            currentWeek={currentWeek}
+          />
+          <Adventurers
+            search={{searchText, rankFilter: rankFilter.state}}
+            rules={rules}
+            cardTypeFilters={cardTypeFilter.state}
+            makeSearchable={makeSearchable}
+          />
+          <Quests
+            search={{searchText, rankFilter: rankFilter.state}}
+            rules={rules}
+            cardTypeFilters={cardTypeFilter.state}
+            makeSearchable={makeSearchable}
+          />
+        </div>
       </div>
     </div>
   );
