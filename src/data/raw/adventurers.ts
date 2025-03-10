@@ -13,7 +13,7 @@ export const rawAdventurers:IRawAdventurer[] = [
     class: AdventurerClasses.Attacker,
     className: 'Assassin',
     bio: 'Kind of a prick',
-    status: [AdventurerStatuses.Injured],
+    status: [AdventurerStatuses.Injured, AdventurerStatuses.Criminal],
     traits: ['Gambler'],
     questParties: [
       {

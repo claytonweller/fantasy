@@ -1,10 +1,5 @@
 import { useState } from 'react';
 import './App.css';
-import AdventurerCard from './components/AdventurerCard';
-import ClanCard from './components/ClanCard';
-import { getAdventurers } from './data/getAdventurers';
-import { getClans } from './data/getClans';
-import CardGroup from './components/CardGroup';
 import { CardTypes } from './types/Card';
 import Search from './components/Search';
 import { makeSearchableText } from './components/SearchableText';
