@@ -1,137 +1,33 @@
-import { IDbMetric, IDbQuest, IDbQuestParty, MetricRuleId, QuestClaimType, QuestStatus, QuestTypes } from "types/Quest";
+import { IDbMetric, IDbQuest, IDbQuestParty, QuestClaimType, QuestTypes } from "types/Quest";
 import { Ranks } from "types/Ranks";
-import { loremParagraph } from "data/queries/loremParagraph";
 
 export const rawQuests: IRawQuest[] = [
   {
-    id: 'quest1',
-    name:'Test Quest',
-    reward: 123453,
+    id: 'q1-1',
+    name:'A Nobel Escort',
+    reward: 500,
     claimType: QuestClaimType.Clan,
-    questType: QuestTypes.Fetch,
-    questRank: Ranks.C,
-    postedBy: 'Gerb McDerb',
-    description:`Description has a bit of text. ${loremParagraph}`,
+    questType: QuestTypes.Guard,
+    questRank: Ranks.B,
+    postedBy: 'Cliff Vanderbliff',
+    description:`A group of nobles lead Count Clifford Vanderbliff and their retinue will be from the capitol to Morton to attend the annual festival. They require, "A competent local guard detail. Must be an established party, in good reputation, with knowledge of regional dangers."`,
     // Composite
     parties:[
-      {
-        id: 'party1',
-        startWeek: 1,
-        clanId: 'clan1',
-        status: QuestStatus.Failed,
-        notes: 'Party Notes',
-        metrics:[
-          {
-            metricRuleId: MetricRuleId.CivilianSaved,
-            value: 4,
-            week: 1,
-          }
-        ]
-      },
-      {
-        id: 'party3',
-        startWeek: 2,
-        clanId: 'clan1',
-        status: QuestStatus.InProgress,
-        metrics:[
-          {
-            metricRuleId: MetricRuleId.CivilianSaved,
-            value: 2,
-            week: 2,
-          }
-        ]
-      }
-    ]
-
-  },
-  {
-    id: 'quest2',
-    name:'Other',
-    reward: 222,
-    claimType: QuestClaimType.Individual,
-    questType: QuestTypes.Fetch,
-    questRank: Ranks.E,
-    postedBy: 'Mort Gort',
-    description:`Here's one with a short description.`,
-    parties:[
-      {
-        id: 'party2',
-        startWeek: 1,
-        status: QuestStatus.Failed,
-        metrics:[
-          {
-            metricRuleId: MetricRuleId.CiviliansDead,
-            value: 1,
-            week: 1,
-          },
-          {
-            metricRuleId: MetricRuleId.PropertyDamaged,
-            value: 4000,
-            week: 1,
-          }
-        ]
-      }
     ]
   },
   {
-    id: 'quest3',
-    name:'Clan Quest',
-    reward: 12345,
+    id: 'q1-2',
+    name:'Too Many Rats',
+    reward: 100,
     claimType: QuestClaimType.Clan,
     questType: QuestTypes.Kill,
-    questRank: Ranks.A,
-    postedBy: 'Fire Man',
-    description:`I need more fire please.`,
+    questRank: Ranks.D,
+    postedBy: 'Mayor Corque',
+    description: `We can't keep ignoring the sewer problem. The rats keep multiplying and getting bigger. They're attacking people in the street. We have to fix this before the Bounty Festival. What will people think if we have dog sized rats? One Gold for ever rat brought back this week.`,
+    // Composite
     parties:[
-      {
-        id: 'party4',
-        startWeek: 1,
-        clanId: 'clan1',
-        status: QuestStatus.Success,
-        metrics:[
-          {
-            metricRuleId: MetricRuleId.CiviliansDead,
-            value: 1,
-            week: 1,
-          },
-          {
-            metricRuleId: MetricRuleId.RewardGold,
-            value: 12345,
-            week: 1
-          }
-        ]
-      }
     ]
   },
-  {
-    id: 'quest4',
-    name:'Gad\'s quest',
-    reward: 3,
-    claimType: QuestClaimType.Individual,
-    questType: QuestTypes.Fetch,
-    questRank: Ranks.E,
-    postedBy: 'Fire Man',
-    description:`I need more fire please.`,
-    parties:[
-      {
-        id: 'party5',
-        startWeek: 1,
-        status: QuestStatus.Success,
-        metrics:[
-          {
-            metricRuleId: MetricRuleId.CiviliansDead,
-            value: 1,
-            week: 1,
-          },
-          {
-            metricRuleId: MetricRuleId.RewardGold,
-            value: 3,
-            week: 1
-          }
-        ]
-      }
-    ]
-  }
 ]
 
 export interface IRawQuest extends IDbQuest{
