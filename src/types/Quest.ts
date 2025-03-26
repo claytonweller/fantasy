@@ -22,6 +22,8 @@ export interface IDbQuest {
   name:string, 
   reward: number, 
   postedBy: string,
+  postedWeek: number,
+  expireWeek?: number, 
   claimType: QuestClaimType
   questType: QuestTypes, 
   description: string, 
