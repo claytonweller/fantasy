@@ -289,4 +289,18 @@ export const rawResearch: IResearch[] = [
       }
     ]
   },
+  {  
+    note: `On top of being an active member of the Church of the Holy Mother, Pendle Chilpin is one of the most acclaimed healing mages in all of Morton.`,
+    isPublic: true,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: 'a61'
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: 'c8'
+      }
+    ]
+  },
 ]

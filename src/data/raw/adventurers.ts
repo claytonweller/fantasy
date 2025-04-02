@@ -615,7 +615,7 @@ export const rawAdventurers:IRawAdventurer[] = [
     class: AdventurerClasses.Generalist,
     className: 'Squire maid',
     bio: `Sir Robin's squire. Also his maid.`,
-    clanId: undefined, // TODO CLAN
+    clanId: 'c1',
     nicknames: [],
     status: [],
     traits: [],
@@ -645,7 +645,7 @@ export const rawAdventurers:IRawAdventurer[] = [
     class: AdventurerClasses.Defender,
     className: 'Brave Knight',
     bio: `Brave, brave sir Robin.`,
-    clanId: undefined, // TODO CLAN
+    clanId: 'c1',
     nicknames: [],
     status: [],
     traits: [],
@@ -690,7 +690,7 @@ export const rawAdventurers:IRawAdventurer[] = [
     class: AdventurerClasses.Generalist,
     className: 'Aged Wizard',
     bio: `His magic tome store has gone out of business. So despite being very old he has decided to become an adventurer.`,
-    clanId: undefined, // TODO CLAN
+    clanId: undefined,
     nicknames: [],
     status: [],
     traits: [],
@@ -735,7 +735,7 @@ export const rawAdventurers:IRawAdventurer[] = [
     class: AdventurerClasses.Attacker,
     className: 'Shade Warrior',
     bio: `P'Tark is a shade spirit. If it gets too bright he looses his form.`,
-    clanId: undefined, // TODO CLAN
+    clanId: 'c1',
     nicknames: [],
     status: [],
     traits: [],
@@ -760,12 +760,12 @@ export const rawAdventurers:IRawAdventurer[] = [
   {
     id: 'a49',
     name: `Squeakela Mousekin`,
-    races: [AdventurerRaces.Dwarf],
+    races: [AdventurerRaces.Beastkin],
     rank: Ranks.E,
     class: AdventurerClasses.Support,
     className: 'Tiny Dancer',
     bio: `As hard to his as she is cute.`,
-    clanId: undefined, // TODO CLAN
+    clanId: 'c1',
     nicknames: [],
     status: [],
     traits: [],
@@ -896,7 +896,7 @@ export const rawAdventurers:IRawAdventurer[] = [
     id: 'a58',
     name: `Ken Casablanca`,
     races: [AdventurerRaces.Human, AdventurerRaces.Dwarf],
-    rank: Ranks.E,
+    rank: Ranks.D,
     class: AdventurerClasses.Attacker,
     className: 'Street Fighter',
     bio: `Refuses to wear shoes. Always wears a headband.`,
@@ -923,6 +923,96 @@ export const rawAdventurers:IRawAdventurer[] = [
     ]
   },
   {
+    id: 'a61',
+    name: `Borther Chilpin`,
+    races: [AdventurerRaces.Halfling],
+    rank: Ranks.B,
+    class: AdventurerClasses.Support,
+    className: 'Surgical Mage',
+    bio: `On top of being an active member of the Church of the Holy Mother, Pendle Chilpin is one of the most acclaimed healing mages in all of Morton..`,
+    clanId: 'c8',
+    nicknames: [],
+    status: [],
+    traits: [],
+    questParties: [
+    ]
+  },
+  {
+    id: 'a62',
+    name: `Spicetro`,
+    races: [AdventurerRaces.Spirit],
+    rank: Ranks.E,
+    class: AdventurerClasses.Support,
+    className: 'Capsaicinoid',
+    bio: `"Spicy!"`,
+    clanId: 'c7',
+    nicknames: [],
+    status: [],
+    traits: [],
+    questParties: [
+    ]
+  },
+  {
+    id: 'a63',
+    name: `Barkskin Rhinokin`,
+    races: [AdventurerRaces.Beastkin],
+    rank: Ranks.C,
+    class: AdventurerClasses.Defender,
+    className: 'Horned Barbarian',
+    bio: `As long as he keeps his cool, he'll keep you safe.`,
+    clanId: 'c9',
+    nicknames: [],
+    status: [],
+    traits: [],
+    questParties: [
+    ]
+  },
+  {
+    id: 'a64',
+    name: `Steve`,
+    races: [AdventurerRaces.Human],
+    rank: Ranks.E,
+    class: AdventurerClasses.Attacker,
+    className: 'Puncher',
+    bio: `He punches. That's it.`,
+    clanId: 'c9',
+    status: [],
+    nicknames: [],
+    traits: [],
+    questParties: [
+    ]
+  },
+  {
+    id: 'a65',
+    name: `Freya Geisergard`,
+    races: [AdventurerRaces.Dwarf],
+    rank: Ranks.D,
+    class: AdventurerClasses.Defender,
+    className: 'Hydrologer',
+    bio: `Competent water and ice mage. Obsessed with local water quality.`,
+    clanId: 'c10',
+    nicknames: [],
+    status: [],
+    traits: [],
+    questParties: [
+    ]
+  },
+  {
+    id: 'a66',
+    name: `Fleeting Whisp Landorin`,
+    races: [AdventurerRaces.Elf],
+    rank: Ranks.E,
+    class: AdventurerClasses.Defender,
+    className: 'Waif Wall',
+    bio: `What has possessed this scrawny elf to become a front line defender after living for 276 years is anybody's guess.`,
+    clanId: 'c1',
+    nicknames: [],
+    status: [],
+    traits: [],
+    questParties: [
+    ]
+  },
+  {
     id: 'a60',
     name: `Philagula`,
     races: [AdventurerRaces.Spirit],
@@ -931,7 +1021,7 @@ export const rawAdventurers:IRawAdventurer[] = [
     className: 'Sentient Slime',
     bio: `Philagula is a sentient bacteria which can infect a host and take over its mind, however the host immune system will eventually adapt and Philagula must escape.`,
     clanId: 'c10',
-    nicknames: [],
+    nicknames: ['Phil'],
     status: [],
     traits: [],
     questParties: [
