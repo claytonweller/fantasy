@@ -16,7 +16,7 @@ function App() {
   const [searchText, setSearchText] = useState('')
   const cardTypeFilter = useEnumFilterState(CardTypes, 'CardType')
   const rankFilter = useEnumFilterState(Ranks, 'Ranks')
-  const [currentWeek] = useState(2)
+  const [currentWeek] = useState(1)
   const makeSearchable = makeSearchableText(setSearchText)
 
   const rules = getRules()

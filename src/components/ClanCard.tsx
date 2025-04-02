@@ -38,14 +38,15 @@ export default function ClanCard ({clan, search, makeSearchable, rules, currentW
       <div>
         <b>Quests</b>: {questTitles}
       </div>
+      <div>
+        <b>Mission</b>: {mission}
+      </div>
       <MetricGrid 
         metaMetrics={metrics} 
         makeSearchable={makeSearchable} 
         rules={rules}
       />
-      <div>
-        <b>Mission</b>: {mission}
-      </div>
+
     </Card>
   )
 }

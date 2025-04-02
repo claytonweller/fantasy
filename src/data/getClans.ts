@@ -18,13 +18,13 @@ export function getClanById (id: string): IClan {
 }
 
 function createCompositeClan(clan: IDbClan){
-  const adventurers = adventurersByClanId[clan.id] 
-    const quests = getQuestsByClanId(clan.id)
-    const research = researchByTag[EntityTypes.Clan][clan.id] || []
-    return {
-      ...clan,
-      adventurers,
-      quests,
-      research
-    }
+  const adventurers = adventurersByClanId[clan.id] || []
+  const quests = getQuestsByClanId(clan.id)
+  const research = researchByTag[EntityTypes.Clan][clan.id] || []
+  return {
+    ...clan,
+    adventurers,
+    quests,
+    research
+  }
 }
