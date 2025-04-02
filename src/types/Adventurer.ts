@@ -52,6 +52,6 @@ export enum AdventurerRaces {
   Beastkin = 'Beastkin',
   Elf = 'Elf',
   Spirit  = 'Spirit',
-  Gnome = 'Gnome',
+  Halfling = 'Halfling',
   Unknown = 'Unknown',
 }

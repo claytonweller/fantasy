@@ -6,7 +6,7 @@ export const rawClans: IDbClan[] = [
     id: 'c1',
     rank: Ranks.C,
     name: 'The Mill',
-    mission: `Any adventurer who wants in is welcome. Don't blame us if you die...`
+    mission: `Any adventurer who wants in is welcome. Just don't blame us if you die...`
   },
   {
     id: 'c2',
@@ -48,12 +48,18 @@ export const rawClans: IDbClan[] = [
     id: 'c8',
     rank: Ranks.C,
     name: 'Breath Of Life',
-    mission: `Every good party needs a healer. Borrow on of ours.`
+    mission: `Every good party needs a healer. Borrow one of ours.`
   },
   {
     id: 'c9',
     rank: Ranks.C,
     name: 'Exploding Fist',
     mission: `If your body is a weapon. Then you can never be disarmed.`
+  },
+  {
+    id: 'c10',
+    rank: Ranks.C,
+    name: 'The Glade',
+    mission: `Nature does not serve us, we serve nature.`
   },
 ]

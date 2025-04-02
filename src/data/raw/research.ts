@@ -125,4 +125,168 @@ export const rawResearch: IResearch[] = [
       }
     ]
   },
+  {  
+    note: `Szuuth was forced to torture people at the Capitol, and has fled to Morton.`,
+    isPublic: false,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: 'a54'
+      }
+    ]
+  },
+  {  
+    note: `Arc Northstar is the leader of the Blessed Sword Clan`,
+    isPublic: true,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: 'a15'
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: 'c4'
+      }
+    ]
+  },
+  {  
+    note: `Mara Wright is master of the Explosive Fist clan and dojo.`,
+    isPublic: true,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: 'a40'
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: 'c9'
+      }
+    ]
+  },
+  {  
+    note: `Vlort is the "leader" of The Mill clan.`,
+    isPublic: true,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: 'a20'
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: 'c1'
+      }
+    ]
+  },
+  {  
+    note: `Thorin Brassburn is the leader of the Clowork Chisel clan.`,
+    isPublic: true,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: 'a21'
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: 'c5'
+      }
+    ]
+  },
+  {  
+    note: `Vince Dawn is the Leader of the Mythril Trap clan.`,
+    isPublic: true,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: 'a9'
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: 'c3'
+      }
+    ]
+  },
+  {  
+    note: `Elise Shadowthread is the leader of the Night Cowl clan.`,
+    isPublic: true,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: 'a2'
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: 'c2'
+      }
+    ]
+  },
+  {  
+    note: `Vivian Crestmor is the leader of the Radiantia clan.`,
+    isPublic: true,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: 'a22'
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: 'c6'
+      }
+    ]
+  },
+  {  
+    note: `The Chairman is the leader and financier of the Crockpot clan.`,
+    isPublic: true,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: 'a50'
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: 'c7'
+      }
+    ]
+  },
+  {  
+    note: `Mettalfang is Stoneclaw's older brother.`,
+    isPublic: true,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: 'a10'
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: 'a11'
+      }
+    ]
+  },
+  {  
+    note: `The Duffenklampf twins are inseparable. They always do every thing together. Duke Duffenklampf attempted to marry off Anastasia, but literally couldn't physically pry her away from Alexandria. He forced them to get their own income.`,
+    isPublic: true,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: 'a55'
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: 'a56'
+      }
+    ]
+  },
+  {  
+    note: `Tall Pine Marlon is the leader of The Glade clan`,
+    isPublic: true,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: 'a59'
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: 'c10'
+      }
+    ]
+  },
 ]

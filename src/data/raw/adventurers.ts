@@ -2,6 +2,14 @@ import { AdventurerClasses, AdventurerRaces, AdventurerStatuses, IDbAdventurer }
 import { IDbMetric, IDbQuestPartyAdventurer, MetricRuleId } from "types/Quest";
 import { Ranks } from "types/Ranks";
 
+export interface IRawAdventurer extends IDbAdventurer{
+  questParties: IRawParty[]
+}
+
+export interface IRawParty extends Omit<IDbQuestPartyAdventurer, "id" | 'adventurerId'> {
+  metrics: IDbMetric[]
+}
+
 export const rawAdventurers:IRawAdventurer[] = [
   {
     // DB - Adventurer
@@ -53,7 +61,7 @@ export const rawAdventurers:IRawAdventurer[] = [
     nicknames: [],
     rank: Ranks.B,
     class: AdventurerClasses.Attacker,
-    className: 'Assassin',
+    className: 'Puppet Master',
     bio: 'A spider catches her prey through patience and planning.',
     clanId: 'c2',
     status: [],
@@ -94,7 +102,7 @@ export const rawAdventurers:IRawAdventurer[] = [
   {
     id: 'a5',
     name: 'Chargla The Brave',
-    races: [AdventurerRaces.Gnome, AdventurerRaces.Dwarf],
+    races: [AdventurerRaces.Halfling, AdventurerRaces.Dwarf],
     nicknames: [],
     rank: Ranks.D,
     class: AdventurerClasses.Defender,
@@ -109,7 +117,7 @@ export const rawAdventurers:IRawAdventurer[] = [
   {
     id: 'a6',
     name: 'Chiff Biffly',
-    races: [AdventurerRaces.Gnome],
+    races: [AdventurerRaces.Halfling],
     rank: Ranks.C,
     class: AdventurerClasses.Support,
     className: 'Metalmancer',
@@ -154,7 +162,7 @@ export const rawAdventurers:IRawAdventurer[] = [
   {
     id: 'a9',
     name: `Vince Dawn`,
-    races: [AdventurerRaces.Human, AdventurerRaces.Gnome],
+    races: [AdventurerRaces.Human, AdventurerRaces.Halfling],
     rank: Ranks.B,
     class: AdventurerClasses.Support,
     className: 'Trapper',
@@ -173,7 +181,7 @@ export const rawAdventurers:IRawAdventurer[] = [
     rank: Ranks.B,
     class: AdventurerClasses.Attacker,
     className: 'Weretiger Berserker',
-    bio: `Metalfang's, twin sister. Usually doesn't completely lose control... Usually... Hopefully her brother is there to calm her down.`,
+    bio: `Usually doesn't completely lose control... Usually... Hopefully her brother is there to calm her down.`,
     clanId: 'c3',
     nicknames: [],
     status: [],
@@ -188,7 +196,7 @@ export const rawAdventurers:IRawAdventurer[] = [
     rank: Ranks.B,
     class: AdventurerClasses.Defender,
     className: 'Weretiger Sentry',
-    bio: `Stoneclaw's twin brother. A wall of a man. Easily distracted.`,
+    bio: `A stripy wall of a man. Easily distracted, but reliable when it matters.`,
     clanId: 'c3',
     nicknames: [],
     status: [],
@@ -247,7 +255,7 @@ export const rawAdventurers:IRawAdventurer[] = [
     rank: Ranks.A,
     class: AdventurerClasses.Defender,
     className: 'Star Paladin',
-    bio: `Leader of the Blessed Sword Clan. He stands up for what's right and good, which of course are in no way subjective.`,
+    bio: `He stands up for what's right and good, which of course are in no way subjective.`,
     clanId: 'c4',
     nicknames: [],
     status: [],
@@ -321,7 +329,7 @@ export const rawAdventurers:IRawAdventurer[] = [
     rank: Ranks.A,
     class: AdventurerClasses.Generalist,
     className: 'Primordial',
-    bio: `Leader of the Mill clan. He was here before Morten was even a hamlet. Some say he was here before Heavens Cross was a country.`,
+    bio: `Founder of the Mill clan. He was here before Morten was even a hamlet. Some say he was here before Heavens Cross was a country.`,
     clanId: 'c1',
     nicknames: [],
     status: [],
@@ -336,7 +344,7 @@ export const rawAdventurers:IRawAdventurer[] = [
     rank: Ranks.B,
     class: AdventurerClasses.Defender,
     className: 'Ancient Smith',
-    bio: `Leader of the Clockwork Chisel clan. The good thing about being old as rocks is you know everything that can be made from them.`,
+    bio: `The good thing about being old as rocks is you know everything that can be made from them.`,
     clanId: 'c5',
     nicknames: [],
     status: [],
@@ -351,7 +359,7 @@ export const rawAdventurers:IRawAdventurer[] = [
     rank: Ranks.B,
     class: AdventurerClasses.Support,
     className: 'Time Mage',
-    bio: `Leader of the Radiantia Clan. The Crestmor family is the largest nobel house in Morton. In order for a child of the family to be in line for succession they must demonstrate prowess in Time manipulation magic. `,
+    bio: `The Crestmor family is the largest nobel house in Morton. In order for a child of the family to be in line for succession they must demonstrate prowess in Time manipulation magic. `,
     clanId: 'c6',
     nicknames: [],
     status: [],
@@ -410,7 +418,7 @@ export const rawAdventurers:IRawAdventurer[] = [
     races: [AdventurerRaces.Human],
     rank: Ranks.E,
     class: AdventurerClasses.Attacker,
-    className: 'Boxer',
+    className: 'Welterweight Boxer',
     bio: `Tired of fighting in the ring.`,
     clanId: 'c9',
     nicknames: [],
@@ -542,7 +550,7 @@ export const rawAdventurers:IRawAdventurer[] = [
   {
     id: 'a35',
     name: `Tad Faddler`,
-    races: [AdventurerRaces.Gnome],
+    races: [AdventurerRaces.Halfling],
     rank: Ranks.E,
     class: AdventurerClasses.Support,
     className: 'Dirtmancer',
@@ -577,7 +585,7 @@ export const rawAdventurers:IRawAdventurer[] = [
     class: AdventurerClasses.Support,
     className: 'Beast Tamer',
     bio: `He's going to be the very best. The best there ever was.`,
-    clanId: undefined, // TODO CLAN
+    clanId: 'c10',
     nicknames: [],
     status: [],
     traits: [],
@@ -587,7 +595,7 @@ export const rawAdventurers:IRawAdventurer[] = [
   {
     id: 'a38',
     name: `Axel Gearlywhirl`,
-    races: [AdventurerRaces.Gnome, AdventurerRaces.Dwarf],
+    races: [AdventurerRaces.Halfling, AdventurerRaces.Dwarf],
     rank: Ranks.C,
     class: AdventurerClasses.Support,
     className: 'Inventor',
@@ -646,8 +654,8 @@ export const rawAdventurers:IRawAdventurer[] = [
   },
   {
     id: 'a42',
-    name: `Diggle Biggly`,
-    races: [AdventurerRaces.Gnome],
+    name: `Derb Alperd`,
+    races: [AdventurerRaces.Halfling],
     rank: Ranks.E,
     class: AdventurerClasses.Support,
     className: 'Tooting Bard',
@@ -771,8 +779,158 @@ export const rawAdventurers:IRawAdventurer[] = [
     rank: Ranks.C,
     class: AdventurerClasses.Generalist,
     className: 'Gourmand',
-    bio: `Leader and financier of the Crockpot Clan. Little is known about the chairman other than his love for food.`,
+    bio: `Little is known about the Chairman other than his love for food.`,
     clanId: 'c7',
+    nicknames: [],
+    status: [],
+    traits: [],
+    questParties: [
+    ]
+  },
+  {
+    id: 'a51',
+    name: `Fissure`,
+    races: [AdventurerRaces.Spirit],
+    rank: Ranks.B,
+    class: AdventurerClasses.Attacker,
+    className: 'Pressure Point Pixie',
+    bio: `The tiny hands are not a drawback, they just focus the force into a tiny area. Float like a butterfly, sting like a bee.`,
+    clanId: 'c9',
+    nicknames: [],
+    status: [],
+    traits: [],
+    questParties: [
+    ]
+  },
+  {
+    id: 'a52',
+    name: `Norn Bornelby`,
+    races: [AdventurerRaces.Halfling],
+    rank: Ranks.D,
+    class: AdventurerClasses.Support,
+    className: 'Field Medic',
+    bio: `Tiny hands, expert at neat stitches.`,
+    clanId: 'c8',
+    nicknames: [],
+    status: [],
+    traits: [],
+    questParties: [
+    ]
+  },
+  {
+    id: 'a53',
+    name: `Shelly Toritoisekin`,
+    races: [AdventurerRaces.Beastkin],
+    rank: Ranks.D,
+    class: AdventurerClasses.Defender,
+    className: 'Turtle Cleric',
+    bio: `She may not get there first but she'll get there eventually, and when she does she'll heal whoever was hurt while they were waiting`,
+    clanId: 'c8',
+    nicknames: [],
+    status: [],
+    traits: [],
+    questParties: [
+    ]
+  },
+  {
+    id: 'a54',
+    name: `Szuuth`,
+    races: [AdventurerRaces.Spirit],
+    rank: Ranks.E,
+    class: AdventurerClasses.Support,
+    className: 'Pain Sprite',
+    bio: `Can't heal you. But can ease your pain.`,
+    clanId: 'c8',
+    nicknames: [],
+    status: [],
+    traits: [],
+    questParties: [
+    ]
+  },
+  {
+    id: 'a55',
+    name: `Alexandria Von Duffenklampf`,
+    races: [AdventurerRaces.Human],
+    rank: Ranks.D,
+    class: AdventurerClasses.Attacker,
+    className: 'Mirror Blade',
+    bio: `This twin always wears pink. Left handed.`,
+    clanId: 'c6',
+    nicknames: [],
+    status: [],
+    traits: [],
+    questParties: [
+    ]
+  },
+  {
+    id: 'a56',
+    name: `Anastasia Von Duffenklampf`,
+    races: [AdventurerRaces.Human],
+    rank: Ranks.D,
+    class: AdventurerClasses.Attacker,
+    className: 'Mirror Blade',
+    bio: `This twin always wears blue. Right handed.`,
+    clanId: 'c6',
+    nicknames: [],
+    status: [],
+    traits: [],
+    questParties: [
+    ]
+  },
+  {
+    id: 'a57',
+    name: `Buster Zeddemore`,
+    races: [AdventurerRaces.Halfling],
+    rank: Ranks.E,
+    class: AdventurerClasses.Support,
+    className: 'Exorcist',
+    bio: `Who ya' gonna' call?`,
+    clanId: 'c1',
+    nicknames: [],
+    status: [],
+    traits: [],
+    questParties: [
+    ]
+  },
+  {
+    id: 'a58',
+    name: `Ken Casablanca`,
+    races: [AdventurerRaces.Human, AdventurerRaces.Dwarf],
+    rank: Ranks.E,
+    class: AdventurerClasses.Attacker,
+    className: 'Street Fighter',
+    bio: `Refuses to wear shoes. Always wears a headband.`,
+    clanId: 'c9',
+    nicknames: [],
+    status: [],
+    traits: [],
+    questParties: [
+    ]
+  },
+  {
+    id: 'a59',
+    name: `Tall Pine Marlon`,
+    races: [AdventurerRaces.Elf],
+    rank: Ranks.B,
+    class: AdventurerClasses.Generalist,
+    className: 'Botanic Druid',
+    bio: `Don't chop down a tree where Marlon can see you. Or the rest of the trees might take revenge.`,
+    clanId: 'c10',
+    nicknames: [],
+    status: [],
+    traits: [],
+    questParties: [
+    ]
+  },
+  {
+    id: 'a60',
+    name: `Philagula`,
+    races: [AdventurerRaces.Spirit],
+    rank: Ranks.C,
+    class: AdventurerClasses.Generalist,
+    className: 'Sentient Slime',
+    bio: `Philagula is a sentient bacteria which can infect a host and take over its mind, however the host immune system will eventually adapt and Philagula must escape.`,
+    clanId: 'c10',
     nicknames: [],
     status: [],
     traits: [],
@@ -781,10 +939,3 @@ export const rawAdventurers:IRawAdventurer[] = [
   },
 ]
 
-export interface IRawAdventurer extends IDbAdventurer{
-  questParties: IRawParty[]
-}
-
-export interface IRawParty extends Omit<IDbQuestPartyAdventurer, "id" | 'adventurerId'> {
-  metrics: IDbMetric[]
-}
