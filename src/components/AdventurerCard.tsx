@@ -55,7 +55,7 @@ export default function AdventurerCard (props: {
         research={adventurer.research}
       >
         <div>
-          <b>Clan</b> :{makeSearchable(clan?.name || 'None')}
+          <b>Clan</b>: {makeSearchable(clan?.name || 'None')}
         </div>
         <div>
           <b>Status</b>: {formattedStatus}

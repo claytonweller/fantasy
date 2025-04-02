@@ -30,9 +30,6 @@ export default function ClanCard ({clan, search, makeSearchable, rules, currentW
       research={clan.research}
     >
       <div>
-        <b>Rank</b>: {rank}
-      </div>
-      <div>
         <b>Adventurers</b>: {adventurerNames}
       </div>
       <div>

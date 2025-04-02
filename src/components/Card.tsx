@@ -66,6 +66,7 @@ function Card(
     <div onClick={onCardClick} style={style}>
       <h2>{name}</h2>
       <div style={{display: showFull ? 'block' : 'none'}}>
+        <div><b>Rank:</b> {rank}</div>
         {children}
         {researchComponent}
         <div>

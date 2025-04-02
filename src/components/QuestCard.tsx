@@ -65,9 +65,6 @@ export default function QuestCard (props: {
         <b>Status</b>: {quest.status}
       </div>
       <div>
-        <b>Rank</b>: {questRank}
-      </div>
-      <div>
         <b>Claimed by</b>: {makeSearchable(claimedByName)}
       </div>
       <div>
