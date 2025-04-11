@@ -5,6 +5,7 @@ import { IResearch } from "./Research"
 
 export interface IAdventurer extends IDbAdventurer {
   clan?: IDbClan
+  lastActiveWeek: number;
   quests: IAdventurerQuest[]
   research: IResearch[]
 }
@@ -54,4 +55,9 @@ export enum AdventurerRaces {
   Spirit  = 'Spirit',
   Halfling = 'Halfling',
   Unknown = 'Unknown',
+}
+
+export enum ActivityStates {
+  ActiveThisWeek = 'ActiveThisWeek',
+  InactiveThisWeek = 'InactiveThisWeek'
 }

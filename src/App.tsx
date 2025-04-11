@@ -28,8 +28,6 @@ function App() {
         backgroundColor:'#111111', 
         color: 'white',
       }}>
-        {ENVIRONMENT}
-
         <Search 
           searchText={searchText}
           setSearchText={setSearchText} 
@@ -58,6 +56,7 @@ function App() {
             rules={rules}
             cardTypeFilters={cardTypeFilter.state}
             makeSearchable={makeSearchable}
+            currentWeek={currentWeek}
           />
           <Quests
             search={{searchText, rankFilter: rankFilter.state}}

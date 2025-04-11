@@ -19,9 +19,9 @@ export const rawQuests: IRawQuest[] = [
         id: 'p1-q1-1',
         startWeek: 1,
         status: QuestStatus.Claimed,
-        // notes?: string,
-        // endWeek?: number,
-        // clanId?: 'string'
+        // notes: string,
+        // endWeek: number,
+        clanId: 'c6',
         metrics:[
 
         ]
@@ -40,6 +40,28 @@ export const rawQuests: IRawQuest[] = [
     description: `"I hear you. We can't keep ignoring the sewer problem. The rats keep multiplying and getting bigger. They're attacking people in the street. Focus groups tell us this is not a great look for our town. We have to fix this before the Bounty Festival. What will people think if we have dog sized rats? One gold for every dead rat brought back this week."`,
     // Composite
     parties:[
+      {
+        id: 'p1-q1-2',
+        startWeek: 1,
+        status: QuestStatus.Claimed,
+        // notes: string,
+        // endWeek: number,
+        clanId: 'c1',
+        metrics:[
+          
+        ]
+      },
+      {
+        id: 'p2-q1-2',
+        startWeek: 1,
+        status: QuestStatus.Claimed,
+        // notes: string,
+        // endWeek: number,
+        clanId: 'c1',
+        metrics:[
+          
+        ]
+      }
     ]
   },
   {
@@ -54,6 +76,119 @@ export const rawQuests: IRawQuest[] = [
     description: `"The Shrine to Mamut is falling apart. I am old. I need help repairing it."`,
     // Composite
     parties:[
+      {
+        id: 'p1-q1-3',
+        startWeek: 1,
+        status: QuestStatus.Claimed,
+        // notes: string,
+        // endWeek: number,
+        metrics:[
+          
+        ]
+      },
+      {
+        id: 'p2-q1-3',
+        startWeek: 1,
+        status: QuestStatus.Claimed,
+        // notes: string,
+        // endWeek: number,
+        metrics:[
+          
+        ]
+      }
+    ]
+  },
+  {
+    id: 'q1-4',
+    name:'Merchant Caravan Escorts',
+    reward: 100,
+    postedWeek: 1,
+    claimType: QuestClaimType.Clan,
+    questType: QuestTypes.Guard,
+    questRank: Ranks.C,
+    postedBy: 'Trade Guild',
+    description: `With the Festival coming up in a couple of weeks we capable parties to guard the wagons as they come in.`,
+    // Composite
+    parties:[
+      {
+        id: 'p1-q1-4',
+        startWeek: 2,
+        status: QuestStatus.Claimed,
+        notes: "Southern Caravan: from the port/ocean.",
+        // endWeek: number,
+        metrics:[
+          
+        ]
+      },
+      {
+        id: 'p2-q1-4',
+        startWeek: 2,
+        status: QuestStatus.Claimed,
+        notes: "Eastern Caravan: From the capitol.",
+        // endWeek: number,
+        metrics:[
+          
+        ]
+      },
+      {
+        id: 'p2-q1-4',
+        startWeek: 2,
+        status: QuestStatus.Claimed,
+        notes: "Western Caravan: From the mountains.",
+        // endWeek: number,
+        metrics:[
+          
+        ]
+      },
+    ]
+  },
+  {
+    id: 'q1-5',
+    name:'Herb Gathering',
+    reward: 50,
+    postedWeek: 1,
+    claimType: QuestClaimType.Individual,
+    questType: QuestTypes.Fetch,
+    questRank: Ranks.D,
+    postedBy: 'Church of the Holy Mother',
+    description: `We're running low on medical herbs. reward depends upon the quality of the herbs obtained.`,
+    // Composite
+    parties:[
+      {
+        id: 'p1-q1-5',
+        startWeek: 1,
+        status: QuestStatus.Claimed,
+        notes: "Southern Caravan: from the port/ocean.",
+        // endWeek: number,
+        metrics:[
+          
+        ]
+      },
+    ]
+  },
+  {
+    id: 'q1-6',
+    name:'Spice Quest',
+    reward: 0,
+    postedWeek: 1,
+    claimType: QuestClaimType.Clan,
+    questType: QuestTypes.Fetch,
+    questRank: Ranks.C,
+    postedBy: 'The Chairman',
+    description: `To make the ultimate dish.: you need the ultimate spices!`,
+    // Composite
+    parties:[
+      {
+        id: 'p1-q1-6',
+        startWeek: 1,
+        status: QuestStatus.Claimed,
+        clanId: 'c7',
+        notes: "Southern Caravan: from the port/ocean.",
+        // endWeek: number,
+        metrics:[
+          
+        ]
+      },
     ]
   },
 ]

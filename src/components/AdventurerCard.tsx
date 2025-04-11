@@ -1,6 +1,6 @@
 import { IEnumFilter } from "hooks/useEnumFilterState";
 import { IRules } from "../data/getRules";
-import { IAdventurer } from "../types/Adventurer";
+import { ActivityStates, IAdventurer } from "../types/Adventurer";
 import { CardTypes } from "../types/Card";
 import { IMetricsWithMeta } from "../types/Quest";
 import { ISearchParams } from "../types/SearchParams";
@@ -14,9 +14,10 @@ export default function AdventurerCard (props: {
   search: ISearchParams, 
   rules: IRules,
   makeSearchable: (text: string) => JSX.Element,
+  currentWeek: number,
   typeSpecificFilters?: IEnumFilter<string>[]
 }){
-  const {adventurer, search, rules, makeSearchable, typeSpecificFilters} = props
+  const {adventurer, search, rules, makeSearchable, currentWeek, typeSpecificFilters} = props
   const {name, bio, clan, quests, rank, status, races} = adventurer 
   const metaMetrics: IMetricsWithMeta[] = quests.map(quest =>{
     return metaMetricsFromAdventurerQuest({quest})
@@ -28,10 +29,19 @@ export default function AdventurerCard (props: {
       rules={rules}
     />
   )
+
   const formattedStatus = status.length
     ? status.join(', ')
     : 'Normal'
 
+  const activityFilter = typeSpecificFilters?.find(f => f.name === 'Activity')
+  let isActivityMatch = false
+  if(activityFilter){
+    const activeThisWeek = adventurer.lastActiveWeek === currentWeek
+    const lookingForActiveThisWeek = activityFilter.state[ActivityStates.ActiveThisWeek]
+    const lookingForInactiveThisWeek = activityFilter.state[ActivityStates.InactiveThisWeek]
+    isActivityMatch = (activeThisWeek && lookingForActiveThisWeek) || (!activeThisWeek && lookingForInactiveThisWeek)
+  }
   const isClassMatch = setVisibilityFromFilterState(
     'Class', adventurer.class, typeSpecificFilters
   )
@@ -42,7 +52,7 @@ export default function AdventurerCard (props: {
     'Status', status, typeSpecificFilters
   )
   
-  const isVisible = isClassMatch && isRaceMatch && isStatusMatch
+  const isVisible = isClassMatch && isRaceMatch && isStatusMatch && isActivityMatch
   return (
     <div style={{display: isVisible? 'block': 'none'}}>
       <Card 

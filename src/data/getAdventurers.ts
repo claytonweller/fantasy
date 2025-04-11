@@ -21,6 +21,8 @@ function formatAdventurer(a:IRawAdventurer):IAdventurer{
     ? clansById[a.clanId]
     : undefined;
   const research = researchByTag[EntityTypes.Adventurer][a.id] || []
+  let lastActiveWeek = 0
+
   const quests: IAdventurerQuest[] = a.questParties.map(qp => {
     const {partyId} = qp
     const quest = questsByPartyId[partyId]
@@ -28,6 +30,7 @@ function formatAdventurer(a:IRawAdventurer):IAdventurer{
     const parties = quest.parties
       .filter(p => p.id == partyId)
       .map(p => {
+        if(p.startWeek > lastActiveWeek) lastActiveWeek = p.startWeek
         const adventurers = adventurersByPartyId[p.id]
         const metrics =  p.metrics.map(m => ({...m, questPartyId: 'PLACEHOLDER'}))
         return {
@@ -50,6 +53,7 @@ function formatAdventurer(a:IRawAdventurer):IAdventurer{
 
   return {
     ...a,
+    lastActiveWeek,
     clan,
     quests,
     research
