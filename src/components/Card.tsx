@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { ISearchParams } from "../types/SearchParams"
 import { Ranks } from "../types/Ranks"
 import { IResearch } from "types/Research"
+import { ENVIRONMENT } from "config"
 
 function Card(
   props : {
@@ -41,7 +42,8 @@ function Card(
     borderColor: 'black',
     borderRadius: '3px',
     borderWidth: '2px',
-    display: isVisible ? 'block' : 'none'
+    display: isVisible ? 'block' : 'none',
+    position: 'relative'
   }
 
   const researchComponent = !research.length
@@ -60,16 +62,23 @@ function Card(
         </ul>
       </div>
     )
-
+  
+  const isDevEnv = ENVIRONMENT === 'dev'
 
   return (
     <div onClick={onCardClick} style={style}>
       <h2>{name}</h2>
+      <span style={{
+        display: isDevEnv ? 'block' : 'none', 
+        position:'absolute', 
+        right: 5,
+        top: 5
+      }}>{rank} - {data.id}</span>
       <div style={{display: showFull ? 'block' : 'none'}}>
         <div><b>Rank:</b> {rank}</div>
         {children}
         {researchComponent}
-        <div>
+        <div style={{display: isDevEnv ? 'block' : 'none'}}>
           <button onClick={onDataClick}>{showData ? 'Hide':'Show'} Data</button>
           <div style={{ fontSize: 11, display: showData ? 'block': 'none' }}>{JSON.stringify(data)}</div>
         </div>

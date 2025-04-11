@@ -53,13 +53,13 @@ export default function QuestCard (props: {
       research={quest.research}
     >
       <div>
-        <b>Reward</b>: {addCommasToNumber(reward)}
+        <b>Reward</b>: {addCommasToNumber(reward)}g
       </div>
       <div>
         <b>Posted By</b>: {makeSearchable(postedBy)}
       </div>
       <div>
-        <b>Quest Type</b>: {questType}
+        <b>Quest Type</b>: {questType} ({quest.claimType})
       </div>
       <div>
         <b>Status</b>: {quest.status}

@@ -11,6 +11,7 @@ import { Ranks } from 'types/Ranks';
 import { useEnumFilterState } from 'hooks/useEnumFilterState';
 import Adventurers from 'components/Adventurers';
 import Clans from 'components/Clans';
+import { ENVIRONMENT } from 'config';
 
 function App() {
   const [searchText, setSearchText] = useState('')
@@ -21,14 +22,14 @@ function App() {
 
   const rules = getRules()
 
-
-  
   return (
     <div className="App">
       <div style={{
         backgroundColor:'#111111', 
         color: 'white',
       }}>
+        {ENVIRONMENT}
+
         <Search 
           searchText={searchText}
           setSearchText={setSearchText} 
