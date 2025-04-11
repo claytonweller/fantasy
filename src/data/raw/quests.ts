@@ -99,42 +99,71 @@ export const rawQuests: IRawQuest[] = [
     ]
   },
   {
-    id: 'q1-4',
-    name:'Merchant Caravan Escorts',
-    reward: 100,
+    id: 'q1-4.1',
+    name:'Southern Merchant Caravan Escorts',
+    reward: 50,
     postedWeek: 1,
     claimType: QuestClaimType.Clan,
     questType: QuestTypes.Guard,
     questRank: Ranks.C,
     postedBy: 'Trade Guild',
-    description: `With the Festival coming up in a couple of weeks we capable parties to guard the wagons as they come in.`,
+    description: `With the Festival coming up in a couple of weeks we capable parties to guard the wagons as they come in. Southern Caravan from the Port city of Serpentina.`,
     // Composite
     parties:[
       {
         id: 'p1-q1-4',
-        startWeek: 2,
+        startWeek: 1,
         status: QuestStatus.Claimed,
-        notes: "Southern Caravan: from the port/ocean.",
+        clanId: 'c1',
         // endWeek: number,
         metrics:[
           
         ]
       },
+    ]
+  },
+  {
+    id: 'q1-4.2',
+    name:'Eastern Merchant Caravan Escorts',
+    reward: 150,
+    postedWeek: 1,
+    claimType: QuestClaimType.Clan,
+    questType: QuestTypes.Guard,
+    questRank: Ranks.C,
+    postedBy: 'Trade Guild',
+    description: `With the Festival coming up in a couple of weeks we capable parties to guard the wagons as they come in. Eastern Caravan: From the capitol.`,
+    // Composite
+    parties:[
       {
         id: 'p2-q1-4',
-        startWeek: 2,
+        startWeek: 1,
         status: QuestStatus.Claimed,
+        clanId: 'c9',
         notes: "Eastern Caravan: From the capitol.",
         // endWeek: number,
         metrics:[
           
         ]
       },
+    ]
+  },
+  {
+    id: 'q1-4.3',
+    name:'Western Merchant Caravan Escorts',
+    reward: 100,
+    postedWeek: 1,
+    claimType: QuestClaimType.Clan,
+    questType: QuestTypes.Guard,
+    questRank: Ranks.C,
+    postedBy: 'Trade Guild',
+    description: `With the Festival coming up in a couple of weeks we capable parties to guard the wagons as they come in. Eastern Caravan: Western Caravan: From the mountains.`,
+    // Composite
+    parties:[
       {
-        id: 'p2-q1-4',
-        startWeek: 2,
+        id: 'p3-q1-4',
+        startWeek: 1,
+        clanId: 'c5',
         status: QuestStatus.Claimed,
-        notes: "Western Caravan: From the mountains.",
         // endWeek: number,
         metrics:[
           
@@ -158,7 +187,15 @@ export const rawQuests: IRawQuest[] = [
         id: 'p1-q1-5',
         startWeek: 1,
         status: QuestStatus.Claimed,
-        notes: "Southern Caravan: from the port/ocean.",
+        // endWeek: number,
+        metrics:[
+          
+        ]
+      },
+      {
+        id: 'p2-q1-5',
+        startWeek: 1,
+        status: QuestStatus.Claimed,
         // endWeek: number,
         metrics:[
           

@@ -362,6 +362,12 @@ export const rawAdventurers:IRawAdventurer[] = [
     status: [],
     traits: [],
     questParties: [
+      {
+        partyId: 'p3-q1-4',
+        metrics:[
+          
+        ]
+      },
     ]
   },
   {
@@ -455,6 +461,12 @@ export const rawAdventurers:IRawAdventurer[] = [
     status: [],
     traits: [],
     questParties: [
+      {
+        partyId: 'p2-q1-4',
+        metrics:[
+          
+        ]
+      },
     ]
   },
   {
@@ -470,6 +482,12 @@ export const rawAdventurers:IRawAdventurer[] = [
     status: [],
     traits: [],
     questParties: [
+      {
+        partyId: 'p3-q1-4',
+        metrics:[
+          
+        ]
+      },
     ]
   },
   {
@@ -506,6 +524,12 @@ export const rawAdventurers:IRawAdventurer[] = [
     status: [],
     traits: [],
     questParties: [
+      {
+        partyId: 'p1-q1-5',
+        metrics:[
+          
+        ]
+      },
     ]
   },
   {
@@ -536,6 +560,12 @@ export const rawAdventurers:IRawAdventurer[] = [
     status: [],
     traits: [],
     questParties: [
+      {
+        partyId: 'p1-q1-4',
+        metrics:[
+          
+        ]
+      },
     ]
   },
   {
@@ -653,6 +683,12 @@ export const rawAdventurers:IRawAdventurer[] = [
     status: [],
     traits: [],
     questParties: [
+      {
+        partyId: 'p3-q1-4',
+        metrics:[
+          
+        ]
+      },
     ]
   },  
   {
@@ -824,6 +860,12 @@ export const rawAdventurers:IRawAdventurer[] = [
     status: [],
     traits: [],
     questParties: [
+      {
+        partyId: 'p1-q1-4',
+        metrics:[
+          
+        ]
+      },
     ]
   },
   {
@@ -935,6 +977,12 @@ export const rawAdventurers:IRawAdventurer[] = [
     status: [],
     traits: [],
     questParties: [
+      {
+        partyId: 'p2-q1-5',
+        metrics:[
+          
+        ]
+      },
     ]
   },
   {
@@ -1007,6 +1055,12 @@ export const rawAdventurers:IRawAdventurer[] = [
     status: [],
     traits: [],
     questParties: [
+      {
+        partyId: 'p2-q1-4',
+        metrics:[
+          
+        ]
+      },
     ]
   },
   {
@@ -1037,6 +1091,12 @@ export const rawAdventurers:IRawAdventurer[] = [
     status: [],
     traits: [],
     questParties: [
+      {
+        partyId: 'p1-q1-1',
+        metrics:[
+          
+        ]
+      },
     ]
   },
   {
@@ -1073,6 +1133,12 @@ export const rawAdventurers:IRawAdventurer[] = [
     status: [],
     traits: [],
     questParties: [
+      {
+        partyId: 'p2-q1-4',
+        metrics:[
+          
+        ]
+      },
     ]
   },
   {
@@ -1118,6 +1184,12 @@ export const rawAdventurers:IRawAdventurer[] = [
     status: [],
     traits: [],
     questParties: [
+      {
+        partyId: 'p1-q1-4',
+        metrics:[
+          
+        ]
+      },
     ]
   },
   {

@@ -1,4 +1,4 @@
-import { questsById } from "../data/queries/quests"
+import { questsByAdventurerId, questsById } from "../data/queries/quests"
 import { IClan } from "../types/Clan"
 import { IMetricsWithMeta, IQuest, MetricRuleId, QuestStatus } from "../types/Quest"
 
@@ -53,13 +53,15 @@ function calculateSingleWeekMetrics (params:{
   })
 
   const activeAdventurers: Set<string> = new Set()
-  quests.forEach( q =>{
-    q.parties?.forEach( p =>{
-      p.adventurers?.forEach( a =>{
-        activeAdventurers.add(a.id)
+  adventurers.forEach(a =>{
+    const aQuests = questsByAdventurerId[a.id]
+    aQuests.forEach(q =>{
+      q.parties.forEach(p =>{
+        if(p.startWeek === week) activeAdventurers.add(a.id)
       })
     })
   })
+
   return {
     name: 'Week'+week,
     rank,
