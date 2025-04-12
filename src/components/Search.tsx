@@ -25,7 +25,14 @@ export default function Search(props:{
       justifyItems: 'center', 
       padding: '40px 10px 10px 10px'
     }}>
-      <div>
+      <div style={{
+        position: 'fixed', 
+        top: 0, 
+        backgroundColor: 'black', 
+        zIndex: 1000,
+        // margin: '5px',
+        padding: '5px'
+      }}>
         <label htmlFor='searchText'>Search: </label>
         <input 
           id='searchText' 

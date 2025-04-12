@@ -82,6 +82,11 @@ export const rawAdventurers:IRawAdventurer[] = [
     status: [],
     traits: [],
     questParties: [
+      {
+        partyId: 'p3-q1-7',
+        metrics:[
+        ]
+      },
     ]
   },
   {
@@ -97,6 +102,11 @@ export const rawAdventurers:IRawAdventurer[] = [
     status: [],
     traits: [],
     questParties: [
+      {
+        partyId: 'p3-q1-7',
+        metrics:[
+        ]
+      },
     ]
   },
   {
@@ -178,6 +188,11 @@ export const rawAdventurers:IRawAdventurer[] = [
     status: [],
     traits: [],
     questParties: [
+      {
+        partyId: 'p1-q1-7',
+        metrics:[
+        ]
+      },
     ]
   },
   {
@@ -288,6 +303,12 @@ export const rawAdventurers:IRawAdventurer[] = [
     status: [],
     traits: [],
     questParties: [
+      {
+        partyId: 'p4-q1-7',
+        metrics:[
+          
+        ]
+      },
     ]
   },
   {
@@ -325,13 +346,19 @@ export const rawAdventurers:IRawAdventurer[] = [
     races: [AdventurerRaces.Human],
     rank: Ranks.C,
     class: AdventurerClasses.Generalist,
-    className: 'The Fixer',
+    className: 'Sun Priestess',
     bio: `The newest addition to the Blessed Sword Clan. She's young but shows great potential.`,
     clanId: 'c4',
     nicknames: [],
     status: [],
     traits: [],
     questParties: [
+      {
+        partyId: 'p4-q1-7',
+        metrics:[
+          
+        ]
+      },
     ]
   },
   {
@@ -947,6 +974,12 @@ export const rawAdventurers:IRawAdventurer[] = [
     status: [],
     traits: [],
     questParties: [
+      {
+        partyId: 'p2-q1-4',
+        metrics:[
+          
+        ]
+      },
     ]
   },
   {
@@ -1205,6 +1238,11 @@ export const rawAdventurers:IRawAdventurer[] = [
     status: [],
     traits: [],
     questParties: [
+      {
+        partyId: 'p2-q1-7',
+        metrics:[
+        ]
+      },
     ]
   },
 ]

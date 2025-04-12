@@ -228,6 +228,56 @@ export const rawQuests: IRawQuest[] = [
       },
     ]
   },
+  {
+    id: 'q1-7',
+    name:'Monster Management',
+    reward: 200,
+    postedWeek: 1,
+    claimType: QuestClaimType.Individual,
+    questType: QuestTypes.Kill,
+    questRank: Ranks.C,
+    postedBy: 'Trade Guild',
+    description: `Since we'll be having many people from the region coming to Morton we should make the roads safer by culling the local monster numbers.`,
+    // Composite
+    parties:[
+      {
+        id: 'p1-q1-7',
+        startWeek: 1,
+        status: QuestStatus.Claimed,
+        // endWeek: number,
+        metrics:[
+          
+        ]
+      },
+      {
+        id: 'p2-q1-7',
+        startWeek: 1,
+        status: QuestStatus.Claimed,
+        // endWeek: number,
+        metrics:[
+          
+        ]
+      },
+      {
+        id: 'p3-q1-7',
+        startWeek: 1,
+        status: QuestStatus.Claimed,
+        // endWeek: number,
+        metrics:[
+          
+        ]
+      },
+      {
+        id: 'p4-q1-7',
+        startWeek: 1,
+        status: QuestStatus.Claimed,
+        // endWeek: number,
+        metrics:[
+          
+        ]
+      },
+    ]
+  },
 ]
 
 export interface IRawQuest extends IDbQuest{
