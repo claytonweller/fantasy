@@ -4,7 +4,7 @@ import { IRoster } from "./Roster"
 export interface IDbVillager {
   id: string
   name: string
-  alias?: string
+  playerName?: string
 }
 
 export interface IVillager extends IDbVillager {

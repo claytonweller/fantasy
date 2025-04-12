@@ -3,8 +3,9 @@ import { IDbVillager } from "types/Villager";
 
 export const rawVillagers:IRawVillager[] = [
   {
-    id: '1',
-    name: 'Clayton',
+    id: 'v1',
+    name: 'Wilder',
+    playerName: 'Wilder',
     rosters:[
       // {
       //   week: 1,
@@ -14,33 +15,51 @@ export const rawVillagers:IRawVillager[] = [
       //       pickType: RosterPickTypes.Adventurer,
       //       position: RosterPositions.B1
       //     },
-      //     {
-      //       pickId: 'adv1',
-      //       pickType: RosterPickTypes.Adventurer,
-      //       position: RosterPositions.C1
-      //     },
-      //     {
-      //       pickId: 'clan1',
-      //       pickType: RosterPickTypes.Clan,
-      //       position: RosterPositions.Clan
-      //     },
+
       //   ]
       // },
-      // {
-      //   week: 2,
-      //   picks: [
-      //     {
-      //       pickId: '2',
-      //       pickType: RosterPickTypes.Adventurer,
-      //       position: RosterPositions.B1
-      //     },
-      //     {
-      //       pickId: 'clan1',
-      //       pickType: RosterPickTypes.Clan,
-      //       position: RosterPositions.Clan
-      //     },
-      //   ]
-      // },
+    ]
+  },
+  {
+    id: 'v2',
+    name: 'Catie',
+    playerName: 'Catie',
+    rosters:[
+    ]
+  },
+  {
+    id: 'v3',
+    name: 'Dan',
+    playerName: 'Dan',
+    rosters:[
+    ]
+  },
+  {
+    id: 'v4',
+    name: 'Sophie',
+    playerName: 'Sophie',
+    rosters:[
+    ]
+  },
+  {
+    id: 'v5',
+    name: 'Adam',
+    playerName: 'Adam',
+    rosters:[
+    ]
+  },
+  {
+    id: 'v6',
+    name: 'Jake',
+    playerName: 'Jake',
+    rosters:[
+    ]
+  },
+  {
+    id: 'v7',
+    name: 'Courtney',
+    playerName: 'Courtney',
+    rosters:[
     ]
   },
 ]
