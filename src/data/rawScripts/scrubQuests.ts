@@ -5,6 +5,7 @@ console.info("Scrubbing Quests");
 
 let week = 100;
 let shouldScrubParties = false;
+let shouldScrubMetrics = false;
 
 process.argv.forEach((arg, i) => {
   if (arg === "--week") {
@@ -13,19 +14,32 @@ process.argv.forEach((arg, i) => {
   }
   console.info("Scrubbing quests after week ", week);
 
-  if (arg === "--scrub-parties") {
+  if (arg === "--parties") {
     console.info("Scrubbing parties from new quests");
     shouldScrubParties = true;
+  }
+
+  if (arg === "--metrics") {
+    console.info("Scrubbing metrics from new quests");
+    shouldScrubMetrics = true;
   }
 });
 
 const temporallyAccurateQuests = rawQuests.filter((q) => q.postedWeek <= week);
 const formattedQuests = temporallyAccurateQuests.map((q) => {
+  let parties = q.parties;
+
   if (shouldScrubParties) {
-    const parties = q.parties.filter((p) => p.startWeek <= week);
-    return { ...q, parties };
+    parties = parties.filter((p) => p.startWeek <= week);
   }
-  return q;
+
+  if (shouldScrubMetrics) {
+    parties = parties.map((p) => {
+      const metrics = p.metrics.filter((m) => m.week < week);
+      return { ...p, metrics };
+    });
+  }
+  return { ...q, parties };
 });
 
 const output = `
