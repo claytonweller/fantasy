@@ -7,13 +7,13 @@ const sortPriority = {
   [Ranks.C]: 3,
   [Ranks.D]: 4,
   [Ranks.E]: 5,
+};
+
+export function sortByRank<T>(input: (T & { rank: Ranks })[]): T[] {
+  if (!input) return [];
+  const sorted = input.sort(
+    (a, b) => sortPriority[a.rank] - sortPriority[b.rank],
+  );
+
+  return sorted;
 }
-
-export function sortByRank<T>(input:(T & {rank:Ranks})[]):T[]{
-  if(!input) return []
-  const sorted = input.sort((a, b)=> sortPriority[a.rank] - sortPriority[b.rank])
-
-  return sorted
-
-}
-

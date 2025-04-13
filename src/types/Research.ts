@@ -1,15 +1,15 @@
 export interface IResearch {
-  note: string,
-  isPublic?: boolean,
+  note: string;
+  isPublic?: boolean;
   tags: {
-    entityType: EntityTypes,
-    entityId: string
-  }[]
+    entityType: EntityTypes;
+    entityId: string;
+  }[];
 }
 
 export enum EntityTypes {
-  Clan = 'Clan',
-  Adventurer = 'Adventurer',
-  Villager = 'Villager',
-  Quest = 'Quest',
+  Clan = "Clan",
+  Adventurer = "Adventurer",
+  Villager = "Villager",
+  Quest = "Quest",
 }

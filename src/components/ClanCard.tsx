@@ -6,23 +6,33 @@ import { metaMetricsFromClan } from "../utils/metaMetricsFromClan";
 import Card from "./Card";
 import MetricGrid from "./MetricGrid";
 
-export default function ClanCard ({clan, search, makeSearchable, rules, currentWeek}: {
-  clan: IClan, 
-  search: ISearchParams,
-  rules: IRules,
-  currentWeek: number,
-  makeSearchable: (text: string) => JSX.Element
-}){
-  const {name, rank, mission, adventurers, quests } = clan 
-  const adventurerNames = adventurers.map((a,i) => <div key={'aName'+i}>{makeSearchable(a.name)}</div>)
-  const questNames = [...new Set(quests.map(q => q.name))]
-  const questTitles = questNames.map((name, i) => <div key={'qName'+i}>{makeSearchable(name)}</div>)
-  const metrics = metaMetricsFromClan(clan, currentWeek)
+export default function ClanCard({
+  clan,
+  search,
+  makeSearchable,
+  rules,
+  currentWeek,
+}: {
+  clan: IClan;
+  search: ISearchParams;
+  rules: IRules;
+  currentWeek: number;
+  makeSearchable: (text: string) => JSX.Element;
+}) {
+  const { name, rank, mission, adventurers, quests } = clan;
+  const adventurerNames = adventurers.map((a, i) => (
+    <div key={"aName" + i}>{makeSearchable(a.name)}</div>
+  ));
+  const questNames = [...new Set(quests.map((q) => q.name))];
+  const questTitles = questNames.map((name, i) => (
+    <div key={"qName" + i}>{makeSearchable(name)}</div>
+  ));
+  const metrics = metaMetricsFromClan(clan, currentWeek);
 
   return (
-    <Card 
-      search={search} 
-      color='#224433' 
+    <Card
+      search={search}
+      color="#224433"
       data={clan}
       rank={rank}
       name={name}
@@ -38,12 +48,11 @@ export default function ClanCard ({clan, search, makeSearchable, rules, currentW
       <div>
         <b>Mission</b>: {mission}
       </div>
-      <MetricGrid 
-        metaMetrics={metrics} 
-        makeSearchable={makeSearchable} 
+      <MetricGrid
+        metaMetrics={metrics}
+        makeSearchable={makeSearchable}
         rules={rules}
       />
-
     </Card>
-  )
+  );
 }

@@ -8,24 +8,24 @@ import Card from "./Card";
 import MetricGrid from "./MetricGrid";
 import { IVillagerMetrics } from "./Villagers";
 
-export default function VillagerCard (props: {
-  villager: IVillager, 
-  search: ISearchParams, 
-  rules: IRules,
-  villagerMetrics: IVillagerMetrics
-  makeSearchable: (text: string) => JSX.Element
-}){
-  const {villager, search, rules, makeSearchable, villagerMetrics} = props
-  const {name} = villager
+export default function VillagerCard(props: {
+  villager: IVillager;
+  search: ISearchParams;
+  rules: IRules;
+  villagerMetrics: IVillagerMetrics;
+  makeSearchable: (text: string) => JSX.Element;
+}) {
+  const { villager, search, rules, makeSearchable, villagerMetrics } = props;
+  const { name } = villager;
 
-  const weeklyRosters = villagerMetrics.weekly.map(p =>{
-    return formatRoster({...p, makeSearchable, rules})
-  })
+  const weeklyRosters = villagerMetrics.weekly.map((p) => {
+    return formatRoster({ ...p, makeSearchable, rules });
+  });
 
   return (
-    <Card 
-      color='#332233' 
-      search={search} 
+    <Card
+      color="#332233"
+      search={search}
       data={villager}
       name={`${name} - ${villagerMetrics.total}pts`}
       type={CardTypes.Villager}
@@ -36,34 +36,36 @@ export default function VillagerCard (props: {
       </div>
       {weeklyRosters}
     </Card>
-  )
+  );
 }
 
-function formatRoster (params:{
-  week: number
-  metaMetrics: IMetricsWithMeta[]
-  rules: IRules,
-  total: number,
-  makeSearchable: (text: string) => JSX.Element
+function formatRoster(params: {
+  week: number;
+  metaMetrics: IMetricsWithMeta[];
+  rules: IRules;
+  total: number;
+  makeSearchable: (text: string) => JSX.Element;
 }) {
-  const {week, metaMetrics, rules, total, makeSearchable} = params
-  return  (
-    <div 
+  const { week, metaMetrics, rules, total, makeSearchable } = params;
+  return (
+    <div
       style={{
-        border: 'rgb(100, 100, 100)',
-        borderStyle: 'solid',
-        margin: '5px',
-        padding: '10px'
+        border: "rgb(100, 100, 100)",
+        borderStyle: "solid",
+        margin: "5px",
+        padding: "10px",
       }}
-      key={'roster'+ week}
+      key={"roster" + week}
     >
       <h3>Week {week} Roster</h3>
-      <div><b>Weekly Total {total}</b></div>
-      <MetricGrid 
-          metaMetrics={metaMetrics} 
-          makeSearchable={makeSearchable}
-          rules= {rules}
-        />
+      <div>
+        <b>Weekly Total {total}</b>
+      </div>
+      <MetricGrid
+        metaMetrics={metaMetrics}
+        makeSearchable={makeSearchable}
+        rules={rules}
+      />
     </div>
-  )   
+  );
 }
