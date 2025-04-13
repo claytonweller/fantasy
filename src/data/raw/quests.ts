@@ -101,7 +101,7 @@ export const rawQuests: IRawQuest[] = [
   {
     id: 'q1-4.1',
     name:'Southern Merchant Caravan Escorts',
-    reward: 50,
+    reward: 100,
     postedWeek: 1,
     claimType: QuestClaimType.Clan,
     questType: QuestTypes.Guard,
@@ -114,7 +114,7 @@ export const rawQuests: IRawQuest[] = [
         id: 'p1-q1-4',
         startWeek: 1,
         status: QuestStatus.Claimed,
-        clanId: 'c1',
+        clanId: 'c6',
         // endWeek: number,
         metrics:[
           
@@ -201,6 +201,15 @@ export const rawQuests: IRawQuest[] = [
           
         ]
       },
+      {
+        id: 'p3-q1-5',
+        startWeek: 1,
+        status: QuestStatus.Claimed,
+        // endWeek: number,
+        metrics:[
+          
+        ]
+      },
     ]
   },
   {
@@ -269,6 +278,61 @@ export const rawQuests: IRawQuest[] = [
       },
       {
         id: 'p4-q1-7',
+        startWeek: 1,
+        status: QuestStatus.Claimed,
+        // endWeek: number,
+        metrics:[
+          
+        ]
+      },
+    ]
+  },
+  {
+    id: 'q1-8',
+    name:'A family heirloom',
+    reward: 50,
+    postedWeek: 1,
+    claimType: QuestClaimType.Individual,
+    questType: QuestTypes.Fetch,
+    questRank: Ranks.C,
+    postedBy: 'Trimble Dinklesbean',
+    description: `"Someone has purloined our a priceless timepiece of great sentimental value. How it makes its way back to me I do not care, nor will I ask."`,
+    // Composite
+    parties:[
+      {
+        id: 'p1-q1-8',
+        startWeek: 1,
+        status: QuestStatus.Claimed,
+        // endWeek: number,
+        metrics:[
+          
+        ]
+      },
+      {
+        id: 'p2-q1-8',
+        startWeek: 1,
+        status: QuestStatus.Claimed,
+        // endWeek: number,
+        metrics:[
+          
+        ]
+      },
+    ]
+  },
+  {
+    id: 'q1-9',
+    name:'Missing Pet',
+    reward: 0,
+    postedWeek: 1,
+    claimType: QuestClaimType.Individual,
+    questType: QuestTypes.Fetch,
+    questRank: Ranks.E,
+    postedBy: 'Silky Bunnykin',
+    description: `There's a child's drawing of a small, fuzzy, crying animal.`,
+    // Composite
+    parties:[
+      {
+        id: 'p1-q1-9',
         startWeek: 1,
         status: QuestStatus.Claimed,
         // endWeek: number,

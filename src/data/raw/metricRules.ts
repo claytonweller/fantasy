@@ -59,11 +59,11 @@ export const rawMetricRules: IRawMetricRule[]  = [
   {
     metricRuleId: MetricRuleId.QuestsAccepted,
     questMetricType: QuestMetricType.Count,
-    multiplier: -0.5
+    multiplier: -1
   },  {
     metricRuleId: MetricRuleId.QuestsComplete,
     questMetricType: QuestMetricType.Count,
-    multiplier: 1
+    multiplier: 1.5
   },  {
     metricRuleId: MetricRuleId.ActiveMembers,
     questMetricType: QuestMetricType.Count,

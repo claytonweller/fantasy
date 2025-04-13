@@ -51,7 +51,6 @@ function calculateSingleWeekMetrics (params:{
     const complete = clanParties.find(p => p.status === QuestStatus.Success)
     return !!complete
   })
-
   const activeAdventurers: Set<string> = new Set()
   adventurers.forEach(a =>{
     const aQuests = questsByAdventurerId[a.id]

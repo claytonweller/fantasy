@@ -17,6 +17,7 @@ export default function Rules (props: {rules: IRules, rankMultipliers: {[rank: s
           right: '0px',
           padding: '10px',
           backgroundColor: 'rgba(0,0,0,0.9)',
+          zIndex: 2000
         }}
       >
         <button onClick={()=>setRulesVisible(true)}>Rules</button>
@@ -50,7 +51,8 @@ function RulesModal (props:{
         padding: '10px',
         backgroundColor: 'rgba(0,0,0,0.9)',
         width: '100%',
-        backdropFilter:'blur(2px)'
+        backdropFilter:'blur(2px)',
+        zIndex: 2000
       }}
     >
       <CloseX setRulesVisible={setRulesVisible} />
