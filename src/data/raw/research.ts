@@ -263,7 +263,7 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `The Duffenklampf twins are inseparable. They always do every thing together. Duke Duffenklampf attempted to marry off Anastasia, but literally couldn't physically pry her away from Alexandria. He forced them to get their own income.`,
-    isPublic: false,
+    isPublic: true,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -291,7 +291,7 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `On top of being an active member of the Church of the Holy Mother, Pendle Chilpin is one of the most acclaimed healing mages in all of Morton.`,
-    isPublic: false,
+    isPublic: true,
     tags: [
       {
         entityType: EntityTypes.Adventurer,

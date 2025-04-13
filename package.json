@@ -27,6 +27,8 @@
     "load-snapshot": "bash ./src/data/snapshots/loadSnapshot.sh",
     "store-snapshot": "bash ./src/data/snapshots/storeSnapshot.sh",
     "scrub-research": "node_modules/.bin/tsx src/data/rawScripts/scrubResearch.ts && yarn format",
+    "scrub-adventurers": "node_modules/.bin/tsx src/data/rawScripts/scrubAdventurers.ts",
+    "scrub-quests": "node_modules/.bin/tsx src/data/rawScripts/scrubQuests.ts",
     "deploy": "bash ./deploy.sh"
   },
   "eslintConfig": {
