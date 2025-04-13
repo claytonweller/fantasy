@@ -1,5 +1,5 @@
 import { IResearch } from "types/Research";
-import { rawResearch } from "./research";
+import { rawResearch } from "../raw/research";
 import { writeFileSync } from "fs";
 
 const scrubbedResearch: IResearch[] = rawResearch.filter((r: IResearch) => {

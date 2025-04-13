@@ -23,9 +23,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "format": "npx prettier . --write",
     "load-snapshot": "bash ./src/data/snapshots/loadSnapshot.sh",
     "store-snapshot": "bash ./src/data/snapshots/storeSnapshot.sh",
-    "scrub-research": "node_modules/.bin/tsx src/data/rawScripts/scrubResearch.ts",
+    "scrub-research": "node_modules/.bin/tsx src/data/rawScripts/scrubResearch.ts && yarn format",
     "deploy": "bash ./deploy.sh"
   },
   "eslintConfig": {
