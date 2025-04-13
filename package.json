@@ -23,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "set-snapshot": "bash ./src/data/snapshots/setSnapshot.sh",
+    "load-snapshot": "bash ./src/data/snapshots/loadSnapshot.sh",
     "store-snapshot": "bash ./src/data/snapshots/storeSnapshot.sh",
     "scrub-research": "node_modules/.bin/tsx src/data/raw/scrubResearch.ts",
     "deploy": "bash ./deploy.sh"
