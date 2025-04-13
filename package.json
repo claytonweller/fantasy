@@ -25,7 +25,7 @@
     "eject": "react-scripts eject",
     "load-snapshot": "bash ./src/data/snapshots/loadSnapshot.sh",
     "store-snapshot": "bash ./src/data/snapshots/storeSnapshot.sh",
-    "scrub-research": "node_modules/.bin/tsx src/data/raw/scrubResearch.ts",
+    "scrub-research": "node_modules/.bin/tsx src/data/rawScripts/scrubResearch.ts",
     "deploy": "bash ./deploy.sh"
   },
   "eslintConfig": {
