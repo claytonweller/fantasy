@@ -30,42 +30,15 @@ export const rawAdventurers: IRawAdventurer[] = [
     status: [],
     traits: [],
     questParties: [
-      {
-        partyId: "p1-q1-1",
-        metrics: [],
-      },
-      {
-        partyId: "p1-q1-2",
-        metrics: [
-          {
-            metricRuleId: MetricRuleId.MonsterKill,
-            value: 3,
-            rank: Ranks.D,
-            week: 1
-          },
-          {
-            metricRuleId: MetricRuleId.MonsterKill,
-            value: 3,
-            rank: Ranks.D,
-            week: 1000
-          },
-          {
-            metricRuleId: MetricRuleId.MonsterKill,
-            value: 3,
-            rank: Ranks.D,
-            week: 1001
-          }
-        ],
-      },
       //   {
       //     partyId: 'party2',
       //     metrics:[
-            // {
-            //   metricRuleId: MetricRuleId.MonsterKill,
-            //   value: 3,
-            //   rank: Ranks.D,
-            //   week: 1
-            // }
+      //       {
+      //         metricRuleId: MetricRuleId.MonsterKill,
+      //         value: 3,
+      //         rank: Ranks.D,
+      //         week: 1
+      //       }
       //     ]
       //   },
       //   {

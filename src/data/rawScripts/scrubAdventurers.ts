@@ -4,7 +4,11 @@ import { writeFileSync } from "fs";
 import { IScrubParams } from "./types";
 
 export function scrubAdventurers(params: IScrubParams) {
-  const { week = 1000, shouldScrubMetrics = false, shouldScrubParties = false } = params;
+  const {
+    week = 1000,
+    shouldScrubMetrics = false,
+    shouldScrubParties = false,
+  } = params;
 
   console.info("Scrubbing Adventurers");
 
@@ -14,16 +18,18 @@ export function scrubAdventurers(params: IScrubParams) {
       const party = quest.parties.find(
         (questParty) => questParty.id === p.partyId,
       );
-      if(!party) return false
-      if( shouldScrubParties ) return party.startWeek < week
-      return  party.startWeek <= week;
+      if (!party) return false;
+      if (shouldScrubParties) return party.startWeek < week;
+      return party.startWeek <= week;
     });
 
-    if (shouldScrubMetrics)
-      questParties = questParties.map((p) => {
-        const metrics = p.metrics.filter((m) => m.week < week);
-        return { ...p, metrics };
+    questParties = questParties.map((p) => {
+      const metrics = p.metrics.filter((m) => {
+        if (shouldScrubMetrics) return m.week < week;
+        return m.week <= week;
       });
+      return { ...p, metrics };
+    });
 
     return { ...a, questParties };
   });
@@ -55,4 +61,3 @@ export function scrubAdventurers(params: IScrubParams) {
 
   console.log("Squeaky clean!");
 }
-

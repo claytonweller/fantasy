@@ -19,12 +19,13 @@ export function scrubQuests(params: IScrubParams) {
       parties = parties.filter((p) => p.startWeek <= week);
     }
 
-    if (shouldScrubMetrics) {
-      parties = parties.map((p) => {
-        const metrics = p.metrics.filter((m) => m.week < week);
-        return { ...p, metrics };
+    parties = parties.map((p) => {
+      const metrics = p.metrics.filter((m) => {
+        if (shouldScrubMetrics) return m.week < week;
+        return m.week <= week;
       });
-    }
+      return { ...p, metrics };
+    });
     return { ...q, parties };
   });
 
@@ -54,4 +55,3 @@ export function scrubQuests(params: IScrubParams) {
 
   console.log("Squeaky clean!");
 }
-

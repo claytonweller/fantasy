@@ -27,7 +27,7 @@
     "load-snapshot": "bash ./src/data/snapshots/loadSnapshot.sh",
     "store-snapshot": "bash ./src/data/snapshots/storeSnapshot.sh",
     "scrub-research": "node_modules/.bin/tsx src/data/rawScripts/scrubResearch.ts && yarn format",
-    "scrub-by-week": "node_modules/.bin/tsx src/data/rawScripts/scrubByWeek.ts",
+    "scrub-by-week": "node_modules/.bin/tsx src/data/rawScripts/runScrubByWeek.ts",
     "deploy": "bash ./deploy.sh"
   },
   "eslintConfig": {
