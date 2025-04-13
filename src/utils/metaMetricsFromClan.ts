@@ -1,3 +1,4 @@
+import { adventurersById, adventurersByPartyId } from "data/queries/adventurers"
 import { questsByAdventurerId, questsById } from "../data/queries/quests"
 import { IClan } from "../types/Clan"
 import { IMetricsWithMeta, IQuest, MetricRuleId, QuestStatus } from "../types/Quest"
@@ -52,40 +53,64 @@ function calculateSingleWeekMetrics (params:{
     return !!complete
   })
   const activeAdventurers: Set<string> = new Set()
+  let deathCount = 0
+  let totalGold = 0
   adventurers.forEach(a =>{
     const aQuests = questsByAdventurerId[a.id]
     aQuests.forEach(q =>{
       q.parties.forEach(p =>{
-        if(p.startWeek === week) activeAdventurers.add(a.id)
+        if(p.startWeek === week){
+          activeAdventurers.add(a.id)
+          const questDetails = adventurersById[a.id].questParties
+            .find(qp => qp.partyId === p.id)
+          
+          questDetails?.metrics.forEach(m => {
+            if(m.metricRuleId === MetricRuleId.Death) deathCount += m.value
+            if(m.metricRuleId === MetricRuleId.RewardGold) totalGold += m.value
+            if(m.metricRuleId === MetricRuleId.PropertyDamaged) totalGold -= m.value
+          })
+        } 
       })
     })
   })
 
+  const metrics = [
+    {
+      metricRuleId: MetricRuleId.QuestsAccepted,
+      value: quests.length,
+      week,
+    },
+    {
+      metricRuleId: MetricRuleId.QuestsComplete,
+      value: completeQuests.length,
+      week,
+
+    },
+    {
+      metricRuleId: MetricRuleId.ActiveMembers,
+      value: activeAdventurers.size,
+      week,
+    },
+    {
+      metricRuleId: MetricRuleId.InactiveMembers,
+      value: adventurers.length - activeAdventurers.size,
+      week,
+    },
+    {
+      metricRuleId: MetricRuleId.Death,
+      value: deathCount,
+      week,
+    },
+    {
+      metricRuleId: MetricRuleId.RewardGold,
+      value: totalGold,
+      week,
+    },
+  ]
+
   return {
     name: 'Week'+week,
     rank,
-    metrics:[
-      {
-        metricRuleId: MetricRuleId.QuestsAccepted,
-        value: quests.length,
-        week,
-      },
-      {
-        metricRuleId: MetricRuleId.QuestsComplete,
-        value: completeQuests.length,
-        week,
-
-      },
-      {
-        metricRuleId: MetricRuleId.ActiveMembers,
-        value: activeAdventurers.size,
-        week,
-      },
-      {
-        metricRuleId: MetricRuleId.InactiveMembers,
-        value: adventurers.length - activeAdventurers.size,
-        week,
-      },
-    ]
+    metrics: metrics.filter(m => m.value !== 0)
  }
 }

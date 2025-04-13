@@ -85,6 +85,7 @@ export const rawAdventurers:IRawAdventurer[] = [
       {
         partyId: 'p3-q1-7',
         metrics:[
+
         ]
       },
     ]
