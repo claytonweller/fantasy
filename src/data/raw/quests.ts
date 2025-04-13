@@ -24,7 +24,7 @@ export const rawQuests: IRawQuest[] = [
     parties: [
       {
         id: "p1-q1-1",
-        startWeek: 1,
+        startWeek: 1001,
         status: QuestStatus.Claimed,
         // notes: string,
         // endWeek: number,
