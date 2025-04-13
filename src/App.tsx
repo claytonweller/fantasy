@@ -11,13 +11,13 @@ import { Ranks } from "types/Ranks";
 import { useEnumFilterState } from "hooks/useEnumFilterState";
 import Adventurers from "components/Adventurers";
 import Clans from "components/Clans";
-import { ENVIRONMENT } from "config";
+import { CURRENT_WEEK } from "config";
 
 function App() {
   const [searchText, setSearchText] = useState("");
   const cardTypeFilter = useEnumFilterState(CardTypes, "CardType");
   const rankFilter = useEnumFilterState(Ranks, "Ranks");
-  const [currentWeek] = useState(1);
+  const [currentWeek] = useState(CURRENT_WEEK);
   const makeSearchable = makeSearchableText(setSearchText);
 
   const rules = getRules();
