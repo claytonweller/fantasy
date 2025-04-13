@@ -5,6 +5,7 @@ import { writeFileSync } from "fs";
 console.info("Scrubbing Adventurers");
 
 let week = 100;
+let shouldScrubMetrics = false;
 
 process.argv.forEach((arg, i) => {
   if (arg === "--week") {
@@ -12,16 +13,28 @@ process.argv.forEach((arg, i) => {
     if (Number.isNaN(week)) week = 100;
   }
   console.info("Scrubbing parties after week ", week);
+
+  if (arg === "--metrics") {
+    console.info("Scrubbing metrics from new quests");
+    shouldScrubMetrics = true;
+  }
 });
 
 const scrubbedAdventurers = rawAdventurers.map((a) => {
-  const questParties = a.questParties.filter((p) => {
+  let questParties = a.questParties.filter((p) => {
     const quest = questsByPartyId[p.partyId];
     const party = quest.parties.find(
       (questParty) => questParty.id === p.partyId,
     );
     return party && party.startWeek <= week;
   });
+
+  if (shouldScrubMetrics)
+    questParties = questParties.map((p) => {
+      const metrics = p.metrics.filter((m) => m.week < week);
+      return { ...p, metrics };
+    });
+
   return { ...a, questParties };
 });
 
