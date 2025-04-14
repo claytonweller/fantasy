@@ -43,7 +43,8 @@ export function scrubAdventurers(params: IScrubParams) {
   } from "types/Adventurer";
   import { IDbMetric, IDbQuestPartyAdventurer, MetricRuleId } from "types/Quest";
   import { Ranks } from "types/Ranks";
-  
+  import { shuffleArray } from "utils/shuffleArray";
+
   export interface IRawAdventurer extends IDbAdventurer {
     questParties: IRawParty[];
   }
@@ -53,7 +54,7 @@ export function scrubAdventurers(params: IScrubParams) {
     metrics: IDbMetric[];
   }
   
-  export const rawAdventurers = ${JSON.stringify(scrubbedAdventurers)} as IRawAdventurer[]
+  export const rawAdventurers = shuffleArray(${JSON.stringify(scrubbedAdventurers)}) as IRawAdventurer[]
   
   `;
 

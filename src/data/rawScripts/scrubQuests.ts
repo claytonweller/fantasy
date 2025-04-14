@@ -40,9 +40,7 @@ export function scrubQuests(params: IScrubParams) {
     QuestTypes,
   } from "types/Quest";
   import { Ranks } from "types/Ranks";
-
-  export const rawQuests = ${JSON.stringify(formattedQuests)} as IRawQuest[]
-
+  
   export interface IRawQuest extends IDbQuest {
     parties: IRawQuestParty[];
   }
@@ -50,6 +48,8 @@ export function scrubQuests(params: IScrubParams) {
   export interface IRawQuestParty extends Omit<IDbQuestParty, "questId"> {
     metrics: IDbMetric[];
   }
+
+  export const rawQuests = ${JSON.stringify(formattedQuests)} as IRawQuest[]
   `;
 
   writeFileSync("src/data/raw/quests.ts", output);

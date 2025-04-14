@@ -34,12 +34,10 @@ export default function CardGroup(props: {
   };
 
   return (
-    <div
-      style={style}
-    >
+    <div style={style}>
       <h1>{cardType}s</h1>
       <div style={{ display: "flex", justifyContent: "center" }}>{filters}</div>
-      <div >{children}</div>
+      <div>{children}</div>
     </div>
   );
 }

@@ -7,7 +7,6 @@ import {
   QuestTypes,
 } from "types/Quest";
 import { Ranks } from "types/Ranks";
-import { shuffleArray } from "utils/shuffleArray";
 
 export interface IRawQuest extends IDbQuest {
   parties: IRawQuestParty[];
