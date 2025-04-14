@@ -12,7 +12,6 @@ export default function CardGroup(props: {
 }) {
   const { children, cardType, color, cardTypeFilters, typeSpecificFilters } =
     props;
-  const [showFull, setShowFull] = useState(true);
   let filters;
   if (typeSpecificFilters) {
     filters = typeSpecificFilters.map((f, i) => {
@@ -36,15 +35,11 @@ export default function CardGroup(props: {
 
   return (
     <div
-      onClick={(e) => {
-        e.stopPropagation();
-        setShowFull(!showFull);
-      }}
       style={style}
     >
       <h1>{cardType}s</h1>
       <div style={{ display: "flex", justifyContent: "center" }}>{filters}</div>
-      <div style={{ display: showFull ? "block" : "none" }}>{children}</div>
+      <div >{children}</div>
     </div>
   );
 }
