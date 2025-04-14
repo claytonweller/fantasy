@@ -29,6 +29,7 @@
     "scrub-research": "node_modules/.bin/tsx src/data/rawScripts/scrubResearch.ts",
     "scrub-by-week": "node_modules/.bin/tsx src/data/rawScripts/runScrubByWeek.ts",
     "set-data-state": "bash src/data/rawScripts/setDataState.sh",
+    "revert-data-state": "bash src/data/rawScripts/revertDataState.sh",
     "deploy": "bash ./deploy.sh"
   },
   "eslintConfig": {
