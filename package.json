@@ -19,16 +19,16 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "eval $(egrep -v '^#' .env | xargs) react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "npx prettier . --write",
     "load-snapshot": "bash ./src/data/snapshots/loadSnapshot.sh",
     "store-snapshot": "bash ./src/data/snapshots/storeSnapshot.sh",
-    "scrub-research": "node_modules/.bin/tsx src/data/rawScripts/scrubResearch.ts && yarn format",
+    "scrub-research": "node_modules/.bin/tsx src/data/rawScripts/scrubResearch.ts",
     "scrub-by-week": "node_modules/.bin/tsx src/data/rawScripts/runScrubByWeek.ts",
-    "set-data-state": "node_modules/.bin/tsx src/data/rawScripts/runSetDataState.ts",
+    "set-data-state": "bash src/data/rawScripts/setDataState.sh",
     "deploy": "bash ./deploy.sh"
   },
   "eslintConfig": {
