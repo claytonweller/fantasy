@@ -15,9 +15,10 @@ export function scrubQuests(params: IScrubParams) {
   const formattedQuests = temporallyAccurateQuests.map((q) => {
     let parties = q.parties;
 
-    if (shouldScrubParties) {
-      parties = parties.filter((p) => p.startWeek <= week);
-    }
+    parties = parties.filter((p) => {
+      if (shouldScrubParties) return p.startWeek < week;
+      return p.startWeek <= week;
+    });
 
     parties = parties.map((p) => {
       const metrics = p.metrics.filter((m) => {

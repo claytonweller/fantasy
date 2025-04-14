@@ -18,7 +18,7 @@ export function scrubAdventurers(params: IScrubParams) {
       const party = quest.parties.find(
         (questParty) => questParty.id === p.partyId,
       );
-      if (!party) return false;
+      if (!party || quest.postedWeek > week) return false;
       if (shouldScrubParties) return party.startWeek < week;
       return party.startWeek <= week;
     });

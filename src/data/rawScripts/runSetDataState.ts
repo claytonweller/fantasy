@@ -3,10 +3,10 @@ import { DataStates, setDataState } from "./setDataState";
 const INFINITE_FUTURE = 1000;
 
 let week = INFINITE_FUTURE;
-let dataState = DataStates.WeekComplete
+let dataState = DataStates.WeekComplete;
 
 process.argv.forEach((arg, i) => {
-  const nextValue = process.argv[i + 1]
+  const nextValue = process.argv[i + 1];
   if (arg === "--week") {
     week = parseInt(nextValue);
     if (Number.isNaN(week)) week = INFINITE_FUTURE;
@@ -14,16 +14,15 @@ process.argv.forEach((arg, i) => {
   console.info("Setting data state to week: ", week);
 
   if (arg === "--state") {
-    if(nextValue === 'quest-only'){
+    if (nextValue === "quests-only") {
       console.info("Only quests");
       dataState = DataStates.QuestsOnly;
-    } else if(nextValue === 'before-points'){
+    } else if (nextValue === "before-points") {
       console.info("Before points");
       dataState = DataStates.BeforePoints;
     } else {
-      console.info('Unknown stat defaulting to complete week')
+      console.info("Unknown state defaulting to complete week");
     }
-
   }
 });
 
