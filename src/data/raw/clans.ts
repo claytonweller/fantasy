@@ -1,7 +1,8 @@
 import { IDbClan } from "types/Clan";
 import { Ranks } from "types/Ranks";
+import { shuffleArray } from "utils/shuffleArray";
 
-export const rawClans: IDbClan[] = [
+export const rawClans: IDbClan[] = shuffleArray([
   {
     id: "c1",
     rank: Ranks.C,
@@ -62,4 +63,4 @@ export const rawClans: IDbClan[] = [
     name: "The Glade",
     mission: `Nature does not serve us, we serve nature.`,
   },
-];
+]);

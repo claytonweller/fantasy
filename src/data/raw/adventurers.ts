@@ -6,6 +6,7 @@ import {
 } from "types/Adventurer";
 import { IDbMetric, IDbQuestPartyAdventurer, MetricRuleId } from "types/Quest";
 import { Ranks } from "types/Ranks";
+import { shuffleArray } from "utils/shuffleArray";
 
 export interface IRawAdventurer extends IDbAdventurer {
   questParties: IRawParty[];
@@ -16,7 +17,7 @@ export interface IRawParty
   metrics: IDbMetric[];
 }
 
-export const rawAdventurers: IRawAdventurer[] = [
+export const rawAdventurers: IRawAdventurer[] = shuffleArray([
   {
     // DB - Adventurer
     id: "a1",
@@ -1163,4 +1164,4 @@ export const rawAdventurers: IRawAdventurer[] = [
       },
     ],
   },
-];
+]);

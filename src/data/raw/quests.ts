@@ -7,6 +7,15 @@ import {
   QuestTypes,
 } from "types/Quest";
 import { Ranks } from "types/Ranks";
+import { shuffleArray } from "utils/shuffleArray";
+
+export interface IRawQuest extends IDbQuest {
+  parties: IRawQuestParty[];
+}
+
+export interface IRawQuestParty extends Omit<IDbQuestParty, "questId"> {
+  metrics: IDbMetric[];
+}
 
 export const rawQuests: IRawQuest[] = [
   // Week 5
@@ -547,10 +556,4 @@ export const rawQuests: IRawQuest[] = [
   },
 ];
 
-export interface IRawQuest extends IDbQuest {
-  parties: IRawQuestParty[];
-}
 
-export interface IRawQuestParty extends Omit<IDbQuestParty, "questId"> {
-  metrics: IDbMetric[];
-}
