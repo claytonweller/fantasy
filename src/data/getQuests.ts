@@ -64,14 +64,17 @@ function determineClaimedByName(quest: IRawQuest, party?: IRawQuestParty) {
 function determineStatus(quest: IRawQuest): QuestStatus {
   const { parties, expireWeek } = quest;
   const isExpired = expireWeek && expireWeek < CURRENT_WEEK;
+  const successParty = parties.find((p) => p.status === QuestStatus.Success);
 
-  if (!parties.length) {
-    if (isExpired) return QuestStatus.Expired;
-    return QuestStatus.Unclaimed;
+  if (successParty) return QuestStatus.Success;
+
+  if (isExpired) {
+    if (!parties.length) return QuestStatus.Expired;
+    return QuestStatus.Failed;
   }
 
-  const successParty = parties.find((p) => p.status === QuestStatus.Success);
-  if (isExpired && !successParty) return QuestStatus.Failed;
-  if (parties.length === 1) return parties[0].status;
+  const thisWeekParties = parties.filter((p) => p.startWeek === CURRENT_WEEK);
+  if (!thisWeekParties.length) return QuestStatus.Unclaimed;
+  if (thisWeekParties.length === 1) return thisWeekParties[0].status;
   return QuestStatus.Claimed;
 }
