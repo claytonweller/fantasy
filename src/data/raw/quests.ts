@@ -2,6 +2,7 @@ import {
   IDbMetric,
   IDbQuest,
   IDbQuestParty,
+  MetricRuleId,
   QuestClaimType,
   QuestStatus,
   QuestTypes,
@@ -241,6 +242,7 @@ export const rawQuests: IRawQuest[] = [
     name: "A Noble Escort",
     reward: 500,
     postedWeek: 1,
+    expireWeek: 1,
     claimType: QuestClaimType.Clan,
     questType: QuestTypes.Guard,
     questRank: Ranks.B,
@@ -251,11 +253,28 @@ export const rawQuests: IRawQuest[] = [
       {
         id: "p1-q1-1",
         startWeek: 1,
-        status: QuestStatus.Claimed,
+        endWeek: 1,
+        status: QuestStatus.Failed,
         // notes: string,
         // endWeek: number,
         clanId: "c6",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.CiviliansDead,
+            value: 10,
+            week: 1
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 16,
+            week: 1
+          },
+          {
+            metricRuleId: MetricRuleId.PropertyDamaged,
+            value: 112,
+            week: 1
+          },
+        ],
       },
     ],
   },

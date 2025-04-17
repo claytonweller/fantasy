@@ -51,15 +51,36 @@ function calculateSingleWeekMetrics(params: {
 }) {
   const { week, clan, quests } = params;
   const { adventurers, rank } = clan;
+  
+  let deathCount = 0;
+  let totalGold = 0;
+  let civiliansSaved = 0
+  let civiliansDead = 0
+  
   const completeQuests = quests.filter((q) => {
     const parties = questsById[q.id].parties;
     const clanParties = parties.filter((p) => p.clanId === clan.id);
+    clanParties.forEach(p =>{
+      p.metrics.forEach((m) => {
+        if (m.metricRuleId === MetricRuleId.RewardGold){
+          totalGold += m.value;
+        }
+        if (m.metricRuleId === MetricRuleId.PropertyDamaged) {
+          totalGold -= m.value;
+        }
+        if (m.metricRuleId === MetricRuleId.CivilianSaved) {
+          civiliansSaved += m.value;
+        }
+        if (m.metricRuleId === MetricRuleId.CiviliansDead) {
+          civiliansDead += m.value;
+        }
+      })
+    })
     const complete = clanParties.find((p) => p.status === QuestStatus.Success);
     return !!complete;
   });
   const activeAdventurers: Set<string> = new Set();
-  let deathCount = 0;
-  let totalGold = 0;
+
   adventurers.forEach((a) => {
     const aQuests = questsByAdventurerId[a.id];
     aQuests.forEach((q) => {
@@ -111,6 +132,16 @@ function calculateSingleWeekMetrics(params: {
     {
       metricRuleId: MetricRuleId.RewardGold,
       value: totalGold,
+      week,
+    },
+    {
+      metricRuleId: MetricRuleId.CivilianSaved,
+      value: civiliansSaved,
+      week,
+    },
+    {
+      metricRuleId: MetricRuleId.CiviliansDead,
+      value: civiliansDead,
       week,
     },
   ];

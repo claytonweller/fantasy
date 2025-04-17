@@ -5,6 +5,7 @@ import { adventurersByPartyId } from "./queries/adventurers";
 import { clansById } from "./queries/clans";
 import { researchByTag } from "./queries/research";
 import { rawQuests, IRawQuest, IRawQuestParty } from "./raw/quests";
+import { CURRENT_WEEK } from "config";
 
 export function getQuests(): IQuest[] {
   const compositeQuests: IQuest[] = formatQuests(rawQuests);
@@ -27,7 +28,7 @@ function formatQuests(unformattedQuests: IRawQuest[]): IQuest[] {
       (p) => p.status !== QuestStatus.Failed,
     )[0];
     const claimedByName = determineClaimedByName(q, activeParty);
-    const questStatus = determineStatus(activeParty);
+    const questStatus = determineStatus(q);
     const compositeParties = q.parties.map((p) => {
       return {
         ...p,
@@ -60,7 +61,18 @@ function determineClaimedByName(quest: IRawQuest, party?: IRawQuestParty) {
   return highestRankedAdventurer.name;
 }
 
-function determineStatus(party?: IRawQuestParty) {
-  if (!party) return QuestStatus.Unclaimed;
-  return party.status;
+function determineStatus(quest: IRawQuest): QuestStatus {
+  const {parties, expireWeek} = quest
+  const isExpired = expireWeek && expireWeek < CURRENT_WEEK
+  
+  if (!parties.length) {
+    if(isExpired) return QuestStatus.Expired
+    return QuestStatus.Unclaimed
+  }
+
+  const successParty = parties.find(p => p.status === QuestStatus.Success)
+  if(isExpired && !successParty) return QuestStatus.Failed
+  if (parties.length === 1) return parties[0].status
+  return QuestStatus.Claimed
+  
 }
