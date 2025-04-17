@@ -27,7 +27,8 @@ export function scrubQuests(params: IScrubParams) {
         return m.week <= week;
       });
       const status = shouldScrubMetrics ? QuestStatus.Claimed : p.status;
-      return { ...p, metrics, status };
+      const notes = shouldScrubMetrics ? undefined : p.notes;
+      return { ...p, metrics, status, notes };
     });
     return { ...q, parties };
   });

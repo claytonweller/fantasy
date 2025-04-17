@@ -255,7 +255,7 @@ export const rawQuests: IRawQuest[] = [
         startWeek: 1,
         endWeek: 1,
         status: QuestStatus.Failed,
-        // notes: string,
+        notes: 'It went very poorly',
         // endWeek: number,
         clanId: "c6",
         metrics: [

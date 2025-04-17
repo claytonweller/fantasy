@@ -53,8 +53,8 @@ function pointByGold(metric: IDbMetric, multiplier = 1) {
   // 453g => 3pt
   // 12345g = 5pt
   const moneyPoints = Math.floor(Math.log10(Math.abs(metric.value))) + 1;
-  if(metric.value < 0) return -1 * multiplier * moneyPoints
-  return multiplier * moneyPoints ;
+  if (metric.value < 0) return -1 * multiplier * moneyPoints;
+  return multiplier * moneyPoints;
 }
 
 export const rankMultipliers = {
