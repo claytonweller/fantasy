@@ -31,11 +31,11 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     className: "Ruffian",
     bio: "Kind of a prick",
     statusHistory: [
-      // {
-      //   status: AdventurerStatuses.Criminal,
-      //   startWeek: 1,
-      //   endWeek: 1
-      // },
+      {
+        status: AdventurerStatuses.Injured,
+        startWeek: 1,
+        endWeek: 1
+      },
     ],
     traits: [],
     questParties: [
@@ -437,10 +437,15 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     rank: Ranks.D,
     class: AdventurerClasses.Attacker,
     className: "Cavalier",
-    bio: `Don't ask why he's and adventurer now.`,
-    clanId: undefined,
+    bio: `Was a distinguished member for the royal army. Don't ask why he's and adventurer now.`,
     nicknames: [],
-    statusHistory: [],
+    statusHistory: [
+      {
+        status: AdventurerStatuses.Sick,
+        startWeek: 1,
+        endWeek: 1
+      },
+    ],
     traits: [],
     questParties: [],
   },
@@ -451,7 +456,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     rank: Ranks.D,
     class: AdventurerClasses.Attacker,
     className: "Duelist",
-    bio: `First son of Reginal Spintsmunge III. Owner of the fabled sword Needlewind. Undefeated duelist.`,
+    bio: `First son of Reginald Spintsmunge III. Owner of the fabled sword Needlewind. Undefeated duelist. Has a stable of 10 horses. He definitely knows their names. No need to ask. Enjoyer of fine wines. Has his own winery in the country... etc.`,
     clanId: "c6",
     nicknames: [],
     statusHistory: [],
@@ -473,7 +478,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Tired of fighting in the ring.`,
     clanId: "c9",
     nicknames: [],
-    statusHistory: [],
+    statusHistory: [
+      {
+        status: AdventurerStatuses.Injured,
+        startWeek: 1,
+        endWeek: 1
+      },
+    ],
     traits: [],
     questParties: [
       {
@@ -852,7 +863,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `P'Tark is a shade spirit. If it gets too bright he looses his form.`,
     clanId: "c1",
     nicknames: [],
-    statusHistory: [],
+    statusHistory: [
+      {
+        status: AdventurerStatuses.ManaDepletion,
+        startWeek: 1,
+        endWeek: 1
+      },
+    ],
     traits: [],
     questParties: [],
   },

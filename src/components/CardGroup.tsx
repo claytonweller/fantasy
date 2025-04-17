@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { CardTypes } from "../types/Card";
 import { IEnumFilter } from "hooks/useEnumFilterState";
 import { EnumFilterSelector } from "./EnumFilterSelector";
@@ -7,7 +6,7 @@ export default function CardGroup(props: {
   children: any;
   cardType: CardTypes;
   color: string;
-  cardTypeFilters: { [key in CardTypes]: boolean };
+  cardTypeFilters: { [value in CardTypes]: boolean };
   typeSpecificFilters?: IEnumFilter<string>[];
 }) {
   const { children, cardType, color, cardTypeFilters, typeSpecificFilters } =
