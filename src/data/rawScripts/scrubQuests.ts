@@ -1,6 +1,7 @@
 import { rawQuests } from "../raw/quests";
 import { writeFileSync } from "fs";
 import { IScrubParams } from "./types";
+import { QuestStatus } from "types/Quest";
 
 export function scrubQuests(params: IScrubParams) {
   console.info("Scrubbing Quests");
@@ -25,7 +26,8 @@ export function scrubQuests(params: IScrubParams) {
         if (shouldScrubMetrics) return m.week < week;
         return m.week <= week;
       });
-      return { ...p, metrics };
+      const status = shouldScrubMetrics ? QuestStatus.Claimed : p.status;
+      return { ...p, metrics, status };
     });
     return { ...q, parties };
   });
