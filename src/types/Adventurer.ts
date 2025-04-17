@@ -12,6 +12,8 @@ export interface IAdventurer extends IDbAdventurer {
   clan?: IDbClan;
   lastActiveWeek: number;
   quests: IAdventurerQuest[];
+  currentStatuses: AdventurerStatuses[];
+  statusHistory: IDbAdventurerStatusHistory[];
   research: IResearch[];
 }
 
@@ -31,8 +33,15 @@ export interface IDbAdventurer {
   className: string;
   clanId?: string;
   bio: string;
-  status: AdventurerStatuses[];
   traits: string[];
+}
+
+export interface IDbAdventurerStatusHistory {
+  id: string;
+  adventurerId: string;
+  startWeek: number;
+  endWeek?: number;
+  status: AdventurerStatuses;
 }
 
 export enum AdventurerClasses {

@@ -1,10 +1,16 @@
 import { EntityTypes } from "types/Research";
-import { IAdventurer, IAdventurerQuest } from "../types/Adventurer";
+import {
+  AdventurerStatuses,
+  IAdventurer,
+  IAdventurerQuest,
+  IDbAdventurerStatusHistory,
+} from "../types/Adventurer";
 import { adventurersById, adventurersByPartyId } from "./queries/adventurers";
 import { clansById } from "./queries/clans";
 import { questsByPartyId } from "./queries/quests";
 import { researchByTag } from "./queries/research";
 import { IRawAdventurer, rawAdventurers } from "./raw/adventurers";
+import { CURRENT_WEEK } from "config";
 
 export function getAdventurers(): IAdventurer[] {
   const adventurers = rawAdventurers.map(formatAdventurer);
@@ -19,6 +25,37 @@ export function getAdventurerById(id: string): IAdventurer {
 function formatAdventurer(a: IRawAdventurer): IAdventurer {
   const clan = a.clanId ? clansById[a.clanId] : undefined;
   const research = researchByTag[EntityTypes.Adventurer][a.id] || [];
+
+  return {
+    ...a,
+    ...formatStatuses(a),
+    ...formatQuests(a),
+    clan,
+    research,
+  };
+}
+
+function formatStatuses(a: IRawAdventurer) {
+  const currentStatuses: AdventurerStatuses[] = [];
+  const statusHistory: IDbAdventurerStatusHistory[] = [];
+
+  a.statusHistory.forEach((history) => {
+    const afterStart = history.startWeek <= CURRENT_WEEK;
+    const beforeEnd =
+      !history.endWeek || (history.endWeek && CURRENT_WEEK <= history.endWeek);
+    if (a.name.toLowerCase() === "gad") {
+      console.log(afterStart, beforeEnd);
+    }
+    if (afterStart && beforeEnd) {
+      currentStatuses.push(history.status);
+    }
+    statusHistory.push({ ...history, id: "PLACEHOLDER", adventurerId: a.id });
+  });
+
+  return { currentStatuses, statusHistory };
+}
+
+function formatQuests(a: IRawAdventurer) {
   let lastActiveWeek = 0;
 
   const quests: IAdventurerQuest[] = a.questParties.map((qp) => {
@@ -55,11 +92,5 @@ function formatAdventurer(a: IRawAdventurer): IAdventurer {
     };
   });
 
-  return {
-    ...a,
-    lastActiveWeek,
-    clan,
-    quests,
-    research,
-  };
+  return { quests, lastActiveWeek };
 }

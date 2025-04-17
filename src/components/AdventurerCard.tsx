@@ -25,7 +25,7 @@ export default function AdventurerCard(props: {
     currentWeek,
     typeSpecificFilters,
   } = props;
-  const { name, bio, clan, quests, rank, status, races } = adventurer;
+  const { name, bio, clan, quests, rank, currentStatuses, races } = adventurer;
   const metaMetrics: IMetricsWithMeta[] = quests.map((quest) => {
     return metaMetricsFromAdventurerQuest({ quest });
   });
@@ -37,7 +37,9 @@ export default function AdventurerCard(props: {
     />
   );
 
-  const formattedStatus = status.length ? status.join(", ") : "Normal";
+  const formattedStatus = currentStatuses.length
+    ? currentStatuses.join(", ")
+    : "Normal";
 
   const activityFilter = typeSpecificFilters?.find(
     (f) => f.name === "Activity",
@@ -65,7 +67,7 @@ export default function AdventurerCard(props: {
   );
   const isStatusMatch = setVisibilityFromFilterState(
     "Status",
-    status,
+    currentStatuses,
     typeSpecificFilters,
   );
 

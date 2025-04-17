@@ -3,12 +3,14 @@ import {
   AdventurerRaces,
   AdventurerStatuses,
   IDbAdventurer,
+  IDbAdventurerStatusHistory,
 } from "types/Adventurer";
 import { IDbMetric, IDbQuestPartyAdventurer, MetricRuleId } from "types/Quest";
 import { Ranks } from "types/Ranks";
 import { shuffleArray } from "utils/shuffleArray";
 
-export interface IRawAdventurer extends IDbAdventurer {
+export interface IRawAdventurer extends Omit<IDbAdventurer, "currentStatuses"> {
+  statusHistory: Omit<IDbAdventurerStatusHistory, "id" | "adventurerId">[];
   questParties: IRawParty[];
 }
 
@@ -28,7 +30,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     class: AdventurerClasses.Attacker,
     className: "Ruffian",
     bio: "Kind of a prick",
-    status: [],
+    statusHistory: [
+      // {
+      //   status: AdventurerStatuses.Criminal,
+      //   startWeek: 1,
+      //   endWeek: 1
+      // }
+    ],
     traits: [],
     questParties: [
       //   {
@@ -71,7 +79,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     className: "Puppet Master",
     bio: "A spider catches her prey through patience and planning.",
     clanId: "c2",
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -85,7 +93,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     className: "Hammerman",
     bio: `Got bones? Tjorn'll crush'em.`,
     clanId: "c2",
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -104,7 +112,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     className: "Sorcerer",
     bio: `Disowned 2nd son of the minor noble house, McStain.`,
     clanId: "c2",
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -123,7 +131,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     className: "Shield Masochist",
     bio: `She will always jump in the way of an arrow... Even if it's not heading for someone.`,
     clanId: "c1",
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -142,7 +150,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Loves making magical trinkets. (And garden paraphernalia)`,
     clanId: "c5",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -156,7 +164,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Lovely music. Morally vague. It's not a demon thing. Don't be racist.`,
     clanId: "c2",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -170,7 +178,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `There is no one swifter or deadlier with a bow.`,
     clanId: "c3",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -184,7 +192,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Once caught an earth dragon alive. Didn't have a way to transport it. But he did catch it.`,
     clanId: "c3",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -203,7 +211,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Usually doesn't completely lose control... Usually... Hopefully her brother is there to calm her down.`,
     clanId: "c3",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -217,7 +225,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `A stripy wall of a man. Easily distracted, but reliable when it matters.`,
     clanId: "c3",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -230,7 +238,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     className: "The Muscle",
     bio: `She's not smart. But she is big.`,
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -244,7 +252,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Loves making soups.`,
     clanId: "c7",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -263,7 +271,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `You've made a mess. Fixer is here... for a fee`,
     clanId: "c2",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -282,7 +290,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `He stands up for what's right and good, which of course are in no way subjective.`,
     clanId: "c4",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -296,7 +304,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `There is no more calming or nourishing presence than Luna. Though she can be a bit aloof.`,
     clanId: "c4",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -315,7 +323,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `A spear like a bolt of lighting. Loves high places.`,
     clanId: "c4",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -328,7 +336,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     className: "Local Tough",
     bio: `Was the head of a gang of orphans.`,
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -342,7 +350,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `The newest addition to the Blessed Sword Clan. She's young but shows great potential.`,
     clanId: "c4",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -361,7 +369,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Founder of the Mill clan. He was here before Morten was even a hamlet. Some say he was here before Heavens Cross was a country.`,
     clanId: "c1",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -375,7 +383,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `The good thing about being old as rocks is you know everything that can be made from them.`,
     clanId: "c5",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -394,7 +402,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `The Crestmor family is the largest nobel house in Morton. In order for a child of the family to be in line for succession they must demonstrate prowess in Time manipulation magic. `,
     clanId: "c6",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -413,7 +421,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Most mages carry tomes. Carlsbad carries a binder filled with fangs of various monsters.`,
     clanId: "c1",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -432,7 +440,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Don't ask why he's and adventurer now.`,
     clanId: undefined,
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -446,7 +454,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `First son of Reginal Spintsmunge III. Owner of the fabled sword Needlewind. Undefeated duelist.`,
     clanId: "c6",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -465,7 +473,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Tired of fighting in the ring.`,
     clanId: "c9",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -484,7 +492,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Sturdy hands. Swift pickaxe. Claims to be able to smell every metal known.`,
     clanId: "c5",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -503,7 +511,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `The youngest son of the Lasiter house, which is known for public service. Louis wishes to prove himself as an adventurer and join the Kings Guard in the capitol some day.`,
     clanId: "c6",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -522,7 +530,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `If a plant can be used for medicine, he's used it.`,
     clanId: "c8",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -541,7 +549,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Somehow if feels right that she gets the lion's share`,
     clanId: "c1",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -555,7 +563,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `New to town.`,
     clanId: "c1",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -574,7 +582,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Make sure you check our coinpurse.`,
     clanId: "c1",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -593,7 +601,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Demon spirits have their own chemistry. It doesn't always work as expected.`,
     clanId: "c5",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -607,7 +615,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `She's just started as an adventurer.`,
     clanId: "c8",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -626,7 +634,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `"You got something in your eyes?! It's probably DIRT HAHAHAHAH!"`,
     clanId: "c1",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -645,7 +653,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Anything you can do, They can do... also. --- They can also do anything you can do too. --- Yes they can. Yest they can. Yes they can.`,
     clanId: undefined,
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -659,7 +667,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `He's going to be the very best. The best there ever was.`,
     clanId: "c10",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -678,7 +686,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Constantly tinkering and creating new devices. They don't usually fail catastrophically... seriously. This one won't maim anyone.`,
     clanId: "c5",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -697,7 +705,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Sir Robin's squire. Also his maid.`,
     clanId: "c1",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -716,7 +724,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Master of the Explosive Fist style. Has trained many pupils, but currently has no successor.`,
     clanId: "c9",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -730,7 +738,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Brave, brave sir Robin.`,
     clanId: "c1",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -749,7 +757,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `He's out to prove everyone wrong. You can be bard and play the trumpet.`,
     clanId: "c1",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -768,7 +776,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `His smile sparkles. His hair is fabulous. He knows just how to swing his cape.`,
     clanId: "c6",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -787,7 +795,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `His magic tome store has gone out of business. So despite being very old he has decided to become an adventurer.`,
     clanId: undefined,
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -806,7 +814,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Just came of age. He has a great nose, and is very excited.`,
     clanId: undefined, // TODO CLAN
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -825,7 +833,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Because of their constitution dwarves are known to be able to eat food that's nearly inedible. But this wasn't enough for Julia. She studied for years in a faraway land to become a great chef.`,
     clanId: "c7",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -844,7 +852,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `P'Tark is a shade spirit. If it gets too bright he looses his form.`,
     clanId: "c1",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -858,7 +866,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Can a vegetable peeler be used to kill a man? Absolutely. But Pamela has given that up for a simpler life.`,
     clanId: "c7",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -877,7 +885,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `As hard to his as she is cute.`,
     clanId: "c1",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -891,7 +899,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Little is known about the Chairman other than his love for food.`,
     clanId: "c7",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -905,7 +913,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `The tiny hands are not a drawback, they just focus the force into a tiny area. Float like a butterfly, sting like a bee.`,
     clanId: "c9",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -919,7 +927,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Tiny hands, expert at neat stitches.`,
     clanId: "c8",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -938,7 +946,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `She may not get there first but she'll get there eventually, and when she does she'll heal whoever was hurt while they were waiting`,
     clanId: "c8",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -952,7 +960,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Can't heal you. But can ease your pain.`,
     clanId: "c8",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -971,7 +979,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `This twin always wears pink. Left handed.`,
     clanId: "c6",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -990,7 +998,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `This twin always wears blue. Right handed.`,
     clanId: "c6",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -1009,7 +1017,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Who ya' gonna' call?`,
     clanId: "c1",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -1023,7 +1031,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Refuses to wear shoes. Always wears a headband.`,
     clanId: "c9",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -1042,7 +1050,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Don't chop down a tree where Marlon can see you. Or the rest of the trees might take revenge.`,
     clanId: "c10",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -1056,7 +1064,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `On top of being an active member of the Church of the Holy Mother, Pendle Chilpin is one of the most acclaimed healing mages in all of Morton..`,
     clanId: "c8",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -1075,7 +1083,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `"Spicy!"`,
     clanId: "c7",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -1094,7 +1102,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `As long as he keeps his cool, he'll keep you safe.`,
     clanId: "c9",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -1112,7 +1120,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     className: "Puncher",
     bio: `He punches. That's it.`,
     clanId: "c9",
-    status: [],
+    statusHistory: [],
     nicknames: [],
     traits: [],
     questParties: [],
@@ -1127,7 +1135,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Competent water and ice mage. Obsessed with local water quality.`,
     clanId: "c10",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -1141,7 +1149,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `What has possessed this scrawny elf to become a front line defender after living for 276 years is anybody's guess.`,
     clanId: "c1",
     nicknames: [],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [],
   },
@@ -1155,7 +1163,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Philagula is a sentient bacteria which can infect a host and take over its mind, however the host immune system will eventually adapt and Philagula must escape.`,
     clanId: "c10",
     nicknames: ["Phil"],
-    status: [],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
