@@ -35,7 +35,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
       //   status: AdventurerStatuses.Criminal,
       //   startWeek: 1,
       //   endWeek: 1
-      // }
+      // },
     ],
     traits: [],
     questParties: [

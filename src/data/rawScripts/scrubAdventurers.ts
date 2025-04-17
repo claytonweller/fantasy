@@ -1,5 +1,5 @@
 import { questsByPartyId } from "data/queries/quests";
-import { rawAdventurers } from "data/raw/adventurers";
+import { IRawAdventurer, rawAdventurers } from "data/raw/adventurers";
 import { writeFileSync } from "fs";
 import { IScrubParams } from "./types";
 
@@ -12,26 +12,37 @@ export function scrubAdventurers(params: IScrubParams) {
 
   console.info("Scrubbing Adventurers");
 
-  const scrubbedAdventurers = rawAdventurers.map((a) => {
-    let questParties = a.questParties.filter((p) => {
-      const quest = questsByPartyId[p.partyId];
-      const party = quest.parties.find(
-        (questParty) => questParty.id === p.partyId,
-      );
-      if (!party || quest.postedWeek > week) return false;
-      if (shouldScrubParties) return party.startWeek < week;
-      return party.startWeek <= week;
-    });
-
-    questParties = questParties.map((p) => {
-      const metrics = p.metrics.filter((m) => {
-        if (shouldScrubMetrics) return m.week < week;
-        return m.week <= week;
+  const scrubbedAdventurers: IRawAdventurer[] = rawAdventurers.map((a) => {
+    const questParties = a.questParties
+      .filter((p) => {
+        const quest = questsByPartyId[p.partyId];
+        const party = quest.parties.find(
+          (questParty) => questParty.id === p.partyId,
+        );
+        if (!party || quest.postedWeek > week) return false;
+        if (shouldScrubParties) return party.startWeek < week;
+        return party.startWeek <= week;
+      })
+      .map((p) => {
+        const metrics = p.metrics.filter((m) => {
+          if (shouldScrubMetrics) return m.week < week;
+          return m.week <= week;
+        });
+        return { ...p, metrics };
       });
-      return { ...p, metrics };
-    });
 
-    return { ...a, questParties };
+    const statusHistory = a.statusHistory
+      .filter((h) => {
+        const startInFuture = h.startWeek <= week;
+        return startInFuture;
+      })
+      .map((h) => {
+        const endInFuture = h.endWeek && h.endWeek >= week;
+        if (endInFuture) return { ...h, endWeek: undefined };
+        return h;
+      });
+
+    return { ...a, statusHistory, questParties };
   });
 
   const output = `
@@ -40,15 +51,17 @@ export function scrubAdventurers(params: IScrubParams) {
     AdventurerRaces,
     AdventurerStatuses,
     IDbAdventurer,
+    IDbAdventurerStatusHistory,
   } from "types/Adventurer";
   import { IDbMetric, IDbQuestPartyAdventurer, MetricRuleId } from "types/Quest";
   import { Ranks } from "types/Ranks";
   import { shuffleArray } from "utils/shuffleArray";
 
-  export interface IRawAdventurer extends IDbAdventurer {
+  export interface IRawAdventurer extends Omit<IDbAdventurer, "currentStatuses"> {
+    statusHistory: Omit<IDbAdventurerStatusHistory, "id" | "adventurerId">[];
     questParties: IRawParty[];
   }
-  
+
   export interface IRawParty
     extends Omit<IDbQuestPartyAdventurer, "id" | "adventurerId"> {
     metrics: IDbMetric[];
