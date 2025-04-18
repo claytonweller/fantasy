@@ -59,8 +59,8 @@ function pointByGold(metric: IDbMetric, multiplier = 1) {
 
 export const rankMultipliers = {
   [Ranks.S]: 50,
-  [Ranks.A]: 16,
-  [Ranks.B]: 8,
+  [Ranks.A]: 25,
+  [Ranks.B]: 12,
   [Ranks.C]: 4,
   [Ranks.D]: 2,
   [Ranks.E]: 1,

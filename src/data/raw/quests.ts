@@ -231,7 +231,7 @@ export const rawQuests: IRawQuest[] = [
     questType: QuestTypes.Other,
     questRank: Ranks.C,
     postedBy: "Guildmaster Vahn",
-    description: `The head of the adventurer guild addressed the increase in monsters to the North of town, "Hey! Attention! Listen up you crazy buggers! Sorry didn't mean to hit you with that... Anyway, something's up with the Forest. The monsters are moving out of the depths to the edges near the road. Heck Elder K'Tar even seen some greater porcubears from the east check point. Get out there and figure out what the heck is going on. No heroics. We just need info. This is on the guild's tab."`,
+    description: `The head of the adventurer guild addressed the increase in monsters to the North of town, "Hey! Attention! Listen up you crazy buggers! Sorry didn't mean to hit you with that... Anyway, something's up with the Forest. The monsters are moving out of the depths to the edges near the road. Heck Vince Dawn even caught a greater porcubears near the east check point. Get out there and figure out what the heck is going on. No heroics. We just need info. This is on the guild's tab."`,
     // Composite
     parties: [],
   },
@@ -255,24 +255,25 @@ export const rawQuests: IRawQuest[] = [
         startWeek: 1,
         endWeek: 1,
         status: QuestStatus.Failed,
-        notes: 'It went incredibly poorly. They were ambushed by monsters on while traveling by the norther forest. 2 Nobles died along with many members of the retinue. A few people also vanished into the woods during the attack including adventurer Reginald Spintsmunge IV. To add insult to injury: Count Vanderbliff\'s Carriage was completely destroyed and for the remainder of the trip he was forced to ride with a lesser nobel.',
+        notes:
+          "It went incredibly poorly. The caravan was ambushed by unusually strong monsters while traveling by the northern forest. 2 Nobles died along with many members of the retinue. A few people also vanished into the woods during the attack including adventurer, Reginald Spintsmunge IV. To add insult to injury: Count Vanderbliff's Carriage was completely destroyed and for the remainder of the trip he was forced to ride with a lesser nobel.",
         // endWeek: number,
         clanId: "c6",
         metrics: [
           {
             metricRuleId: MetricRuleId.CiviliansDead,
             value: 10,
-            week: 1
+            week: 1,
           },
           {
             metricRuleId: MetricRuleId.CivilianSaved,
             value: 16,
-            week: 1
+            week: 1,
           },
           {
             metricRuleId: MetricRuleId.PropertyDamaged,
             value: 112,
-            week: 1
+            week: 1,
           },
         ],
       },
@@ -294,20 +295,33 @@ export const rawQuests: IRawQuest[] = [
       {
         id: "p1-q1-2",
         startWeek: 1,
-        status: QuestStatus.Claimed,
-        // notes: string,
-        // endWeek: number,
+        status: QuestStatus.Success,
+        notes:
+          "There were so many rats! They were so much bigger than expected! Sir Robin bravely ran away.",
         clanId: "c1",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 50,
+            week: 1,
+          },
+        ],
       },
       {
         id: "p2-q1-2",
         startWeek: 1,
-        status: QuestStatus.Claimed,
-        // notes: string,
+        status: QuestStatus.Success,
+        notes:
+          "There were so many rats! They were so much bigger than expected! The party's escape route was completely blocked and the team. Thanks to Chargla's brave (but stupid) sacrifice, Carlsbad and Tad Faddler were able to make it out alive. They're telling everyone about a gigantic rat with eyes all over its body deep in the sewers.",
         // endWeek: number,
         clanId: "c1",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 50,
+            week: 1,
+          },
+        ],
       },
     ],
   },
@@ -327,24 +341,47 @@ export const rawQuests: IRawQuest[] = [
       {
         id: "p1-q1-3",
         startWeek: 1,
-        status: QuestStatus.Claimed,
-        // notes: string,
+        status: QuestStatus.Success,
+        notes:
+          "Bandits attacked the shrine. Luckily Ash & Icenose were there to help!",
         // endWeek: number,
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 1,
+            week: 1,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 1,
+            week: 1,
+          },
+        ],
       },
       {
         id: "p2-q1-3",
         startWeek: 1,
-        status: QuestStatus.Claimed,
-        // notes: string,
-        // endWeek: number,
-        metrics: [],
+        status: QuestStatus.Success,
+        notes:
+          "Bandits attacked the shrine. Luckily Ash & Icenose were there to help!",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 1,
+            week: 1,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 1,
+            week: 1,
+          },
+        ],
       },
     ],
   },
   {
     id: "q1-4.1",
-    name: "Southern Merchant Caravan Escorts",
+    name: "Southern Merchant Caravan Escort",
     reward: 100,
     postedWeek: 1,
     expireWeek: 1,
@@ -352,22 +389,29 @@ export const rawQuests: IRawQuest[] = [
     questType: QuestTypes.Guard,
     questRank: Ranks.C,
     postedBy: "Trade Guild",
-    description: `With the Festival coming up in a couple of weeks we capable parties to guard the wagons as they come in. Southern Caravan from the Port city of Serpentina.`,
+    description: `With the Festival coming up in a couple of weeks we need capable parties to guard the wagons as they come in. Southern Caravan from the Port city of Serpentina.`,
     // Composite
     parties: [
       {
         id: "p1-q1-4",
         startWeek: 1,
-        status: QuestStatus.Claimed,
+        status: QuestStatus.Success,
         clanId: "c6",
-        // endWeek: number,
-        metrics: [],
+        notes:
+          "It was a completely uneventful trip. But despite that, Geoffrey managed to return with a black eye anyway.",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 100,
+            week: 1,
+          },
+        ],
       },
     ],
   },
   {
     id: "q1-4.2",
-    name: "Eastern Merchant Caravan Escorts",
+    name: "Eastern Merchant Caravan Escort",
     reward: 150,
     postedWeek: 1,
     expireWeek: 1,
@@ -375,23 +419,38 @@ export const rawQuests: IRawQuest[] = [
     questType: QuestTypes.Guard,
     questRank: Ranks.C,
     postedBy: "Trade Guild",
-    description: `With the Festival coming up in a couple of weeks we capable parties to guard the wagons as they come in. Eastern Caravan: From the capitol.`,
+    description: `With the Festival coming up in a couple of weeks we need capable parties to guard the wagons as they come in. Eastern Caravan: From the Capital city.`,
     // Composite
     parties: [
       {
         id: "p2-q1-4",
         startWeek: 1,
-        status: QuestStatus.Claimed,
+        status: QuestStatus.Success,
         clanId: "c9",
-        notes: "Eastern Caravan: From the capitol.",
-        // endWeek: number,
-        metrics: [],
+        notes: "Near the northern forest there were more beasts than usual. But luckily Barkskin was able to keep the entire party and Caravan safe.",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 150,
+            week: 1,
+          },
+          {
+            metricRuleId: MetricRuleId.PropertyDamaged,
+            value: 30,
+            week: 1,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 12,
+            week: 1,
+          }
+        ],
       },
     ],
   },
   {
     id: "q1-4.3",
-    name: "Western Merchant Caravan Escorts",
+    name: "Western Merchant Caravan Escort",
     reward: 100,
     postedWeek: 1,
     expireWeek: 1,
@@ -399,16 +458,28 @@ export const rawQuests: IRawQuest[] = [
     questType: QuestTypes.Guard,
     questRank: Ranks.C,
     postedBy: "Trade Guild",
-    description: `With the Festival coming up in a couple of weeks we capable parties to guard the wagons as they come in. Eastern Caravan: Western Caravan: From the mountains.`,
+    description: `With the Festival coming up in a couple of weeks we need capable parties to guard the wagons as they come in. Western Caravan: From the mountains.`,
     // Composite
     parties: [
       {
         id: "p3-q1-4",
         startWeek: 1,
         clanId: "c5",
-        status: QuestStatus.Claimed,
-        // endWeek: number,
-        metrics: [],
+        status: QuestStatus.Success,
+        notes:
+          "The A couple of the members of Clockwork Chisel were originally from the mountain stronghold of Furthbrand which is where the caravan set out from. On top of defending the merchants from bandits and beasts they also plied their trades and made some extra coin.",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 100,
+            week: 1,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 9,
+            week: 1,
+          },
+        ],
       },
     ],
   },
@@ -428,23 +499,41 @@ export const rawQuests: IRawQuest[] = [
       {
         id: "p1-q1-5",
         startWeek: 1,
-        status: QuestStatus.Claimed,
-        // endWeek: number,
-        metrics: [],
+        status: QuestStatus.Success,
+        notes: 'Elnar brought back what would normally have sold for hundreds of gold, but he wasn\'t doing it for the money.',
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 35,
+            week: 1,
+          },
+        ],
       },
       {
         id: "p2-q1-5",
         startWeek: 1,
-        status: QuestStatus.Claimed,
-        // endWeek: number,
-        metrics: [],
+        status: QuestStatus.Failed,
+        notes: 'Szuuth realized they had no idea what the were looking for and mostly brought back weeds. Sister Lasiter gave her a gold for the flowers because they were pretty.',
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 1,
+            week: 1,
+          },
+        ],
       },
       {
         id: "p3-q1-5",
         startWeek: 1,
-        status: QuestStatus.Claimed,
+        status: QuestStatus.Success,
         // endWeek: number,
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 10,
+            week: 1,
+          },
+        ],
       },
     ],
   },
@@ -464,10 +553,9 @@ export const rawQuests: IRawQuest[] = [
       {
         id: "p1-q1-6",
         startWeek: 1,
+        notes: 'They found the elusive Currymingo!',
         status: QuestStatus.Claimed,
         clanId: "c7",
-        notes: "Southern Caravan: from the port/ocean.",
-        // endWeek: number,
         metrics: [],
       },
     ],
@@ -475,7 +563,7 @@ export const rawQuests: IRawQuest[] = [
   {
     id: "q1-7",
     name: "Monster Management",
-    reward: 200,
+    reward: 300,
     postedWeek: 1,
     expireWeek: 1,
     claimType: QuestClaimType.Individual,
@@ -488,30 +576,54 @@ export const rawQuests: IRawQuest[] = [
       {
         id: "p1-q1-7",
         startWeek: 1,
-        status: QuestStatus.Claimed,
-        // endWeek: number,
-        metrics: [],
+        status: QuestStatus.Success,
+        notes: 'Vince captured a greater porcubear, which is not unusual. What IS unusual is that it was near the edge eastern checkpoint. Which is generally safe.',
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 120,
+            week: 1,
+          },
+        ],
       },
       {
         id: "p2-q1-7",
         startWeek: 1,
-        status: QuestStatus.Claimed,
-        // endWeek: number,
-        metrics: [],
+        status: QuestStatus.Success,
+        notes: 'Phil found and possessed a Flamboar and made it fight a Screamer. They killed eachother. He gave half of his reward money to Freya since he couldn\'t carry the bodies back alone.', 
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 50,
+            week: 1,
+          },
+        ],
       },
       {
         id: "p3-q1-7",
         startWeek: 1,
-        status: QuestStatus.Claimed,
-        // endWeek: number,
-        metrics: [],
+        status: QuestStatus.Success,
+        notes: 'Tjorn crushed a sludge tortoise if you can believe it.',
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 50,
+            week: 1,
+          },
+        ],
       },
       {
         id: "p4-q1-7",
         startWeek: 1,
-        status: QuestStatus.Claimed,
-        // endWeek: number,
-        metrics: [],
+        status: QuestStatus.Success,
+        notes: 'Sheila was bored with no Clan quests. Luna came along for company. The realized that neither of them was a good tracker. They just wound up having a nice picnic and killing a bunch of slimes',
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 3,
+            week: 1,
+          },
+        ],
       },
     ],
   },
@@ -524,22 +636,34 @@ export const rawQuests: IRawQuest[] = [
     questType: QuestTypes.Fetch,
     questRank: Ranks.C,
     postedBy: "Trimble Dinklesbean",
-    description: `"Someone has purloined our a priceless timepiece of great sentimental value. How it makes its way back to me I do not care, nor will I ask."`,
+    description: `"Someone has purloined a priceless timepiece of great... sentimental... value. How it makes its way back to me I do not care, nor will I ask."`,
     // Composite
     parties: [
       {
         id: "p1-q1-8",
         startWeek: 1,
-        status: QuestStatus.Claimed,
-        // endWeek: number,
-        metrics: [],
+        status: QuestStatus.Failed,
+        notes: 'Moira paid the right people to leave a door unlocked. She got the watch, but as she was bringing it back to Trimble it was mysteriously gone.',
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.PropertyDamaged,
+            value: 5,
+            week: 1,
+          },
+        ],
       },
       {
         id: "p2-q1-8",
         startWeek: 1,
-        status: QuestStatus.Claimed,
-        // endWeek: number,
-        metrics: [],
+        status: QuestStatus.Success,
+        notes: 'The fixer fixed the issue.',
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 50,
+            week: 1,
+          },
+        ],
       },
     ],
   },
@@ -558,8 +682,8 @@ export const rawQuests: IRawQuest[] = [
       {
         id: "p1-q1-9",
         startWeek: 1,
-        status: QuestStatus.Claimed,
-        // endWeek: number,
+        status: QuestStatus.Failed,
+        notes: 'Guy couldn\'t find the animal.',
         metrics: [],
       },
     ],

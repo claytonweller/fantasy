@@ -2,7 +2,7 @@ import { MetricRuleId, QuestMetricType } from "types/Quest";
 
 export const rawMetricRules: IRawMetricRule[] = [
   {
-    metricRuleId: MetricRuleId.MonsterKill,
+    metricRuleId: MetricRuleId.EnemyKill,
     questMetricType: QuestMetricType.PointByRank,
     multiplier: 0.25,
   },
@@ -25,6 +25,11 @@ export const rawMetricRules: IRawMetricRule[] = [
     metricRuleId: MetricRuleId.Death,
     questMetricType: QuestMetricType.Count,
     multiplier: -5,
+  },
+  {
+    metricRuleId: MetricRuleId.GoneMissing,
+    questMetricType: QuestMetricType.Count,
+    multiplier: -2,
   },
   {
     metricRuleId: MetricRuleId.AllyResurrect,
