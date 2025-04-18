@@ -63,7 +63,7 @@ export const rankMultipliers = {
   [Ranks.B]: 12,
   [Ranks.C]: 4,
   [Ranks.D]: 2,
-  [Ranks.E]: 1,
+  [Ranks.E]: 0.5,
 };
 
 type MetricCalculator = (metric: IDbMetric) => number;

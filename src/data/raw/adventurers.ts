@@ -38,36 +38,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
       },
     ],
     traits: [],
-    questParties: [
-      //   {
-      //     partyId: 'party2',
-      //     metrics:[
-      //       {
-      //         metricRuleId: MetricRuleId.EnemyKill,
-      //         value: 3,
-      //         rank: Ranks.D,
-      //         week: 1
-      //       }
-      //     ]
-      //   },
-      //   {
-      //     partyId: 'party5',
-      //     metrics:[
-      //       {
-      //         metricRuleId: MetricRuleId.EnemyKill,
-      //         value: 1,
-      //         rank: Ranks.E,
-      //         week: 1
-      //       },
-      //       {
-      //         metricRuleId: MetricRuleId.EnemyKill,
-      //         value: 2,
-      //         rank: Ranks.D,
-      //         week: 1
-      //       }
-      //     ]
-      //   },
-    ],
+    questParties: [],
   },
   {
     id: "a2",
@@ -586,8 +557,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Tired of fighting in the ring.`,
     clanId: "c9",
     nicknames: [],
-    statusHistory: [
-    ],
+    statusHistory: [],
     traits: [],
     questParties: [
       {
@@ -1445,8 +1415,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p2-q1-7",
-        metrics: [
-        ],
+        metrics: [],
       },
     ],
   },

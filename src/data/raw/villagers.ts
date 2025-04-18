@@ -16,11 +16,41 @@ export const rawVillagers: IRawVillager[] = [
       //   week: 1,
       //   picks: [
       //     {
-      //       pickId: '2',
-      //       pickType: RosterPickTypes.Adventurer,
-      //       position: RosterPositions.B1
+      //       pickId: "c1",
+      //       pickType: RosterPickTypes.Clan,
+      //       position: RosterPositions.Clan,
       //     },
-      //   ]
+      //     {
+      //       pickId: "a15",
+      //       pickType: RosterPickTypes.Adventurer,
+      //       position: RosterPositions.A,
+      //     },
+      //     {
+      //       pickId: "a9",
+      //       pickType: RosterPickTypes.Adventurer,
+      //       position: RosterPositions.B1,
+      //     },
+      //     {
+      //       pickId: "a14",
+      //       pickType: RosterPickTypes.Adventurer,
+      //       position: RosterPositions.B2,
+      //     },
+      //     {
+      //       pickId: "a5",
+      //       pickType: RosterPickTypes.Adventurer,
+      //       position: RosterPositions.C1,
+      //     },
+      //     {
+      //       pickId: "a13",
+      //       pickType: RosterPickTypes.Adventurer,
+      //       position: RosterPositions.C2,
+      //     },
+      //     {
+      //       pickId: "a23",
+      //       pickType: RosterPickTypes.Adventurer,
+      //       position: RosterPositions.C3,
+      //     },
+      //   ],
       // },
     ],
   },

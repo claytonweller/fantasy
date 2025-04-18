@@ -1,3 +1,4 @@
+import { Ranks } from "types/Ranks";
 import { formatRuleNameFromMetric } from "../components/MetricGrid";
 import { IMetric, IMetricsWithMeta } from "../types/Quest";
 
@@ -19,6 +20,9 @@ export function combineMetaMetrics(
       };
     });
   });
+  if (!metaMetrics[0]?.name) {
+    console.warn(metaMetrics);
+  }
   const combinedMetrics = Object.values(combinedMap);
   return {
     name: metaMetrics[0].name,

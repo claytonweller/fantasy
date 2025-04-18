@@ -121,7 +121,7 @@ function calculateAdventurerPickMetrics(
   adventurer: IAdventurer,
   position: RosterPositions,
   week: number,
-) {
+): IMetricsWithMeta {
   const all = adventurer.quests.map((q) => {
     return metaMetricsFromAdventurerQuest({
       name: adventurer.name,
@@ -130,7 +130,12 @@ function calculateAdventurerPickMetrics(
       week,
     });
   });
-  return combineMetaMetrics(all);
+  if (all.length) return combineMetaMetrics(all);
+  return {
+    name: adventurer.name,
+    rank: adventurer.rank,
+    metrics: [],
+  };
 }
 
 export interface IVillagerMetrics {

@@ -8,6 +8,7 @@ import {
   QuestTypes,
 } from "types/Quest";
 import { Ranks } from "types/Ranks";
+import { shuffleArray } from "utils/shuffleArray";
 
 export interface IRawQuest extends IDbQuest {
   parties: IRawQuestParty[];
@@ -17,7 +18,20 @@ export interface IRawQuestParty extends Omit<IDbQuestParty, "questId"> {
   metrics: IDbMetric[];
 }
 
-export const rawQuests: IRawQuest[] = [
+function shuffleByWeek(quests: IRawQuest[]):IRawQuest[]{
+  const separated:{[week:number]:IRawQuest[]} = {}
+  quests.forEach(q=>{
+    if(!separated[q.postedWeek]) separated[q.postedWeek] = []
+    separated[q.postedWeek].push(q)
+  })
+  const shuffled = Object.entries(separated)
+    .map(([_, quests]) => shuffleArray(quests))
+    .sort((a, b) => b[0].postedWeek - a[0].postedWeek)
+    
+  return shuffled.flat()
+}
+
+export const rawQuests: IRawQuest[] = shuffleByWeek([
   // Week 5
   {
     id: "q5-1",
@@ -427,7 +441,8 @@ export const rawQuests: IRawQuest[] = [
         startWeek: 1,
         status: QuestStatus.Success,
         clanId: "c9",
-        notes: "Near the northern forest there were more beasts than usual. But luckily Barkskin was able to keep the entire party and Caravan safe.",
+        notes:
+          "Near the northern forest there were more beasts than usual. But luckily Barkskin was able to keep the entire party and Caravan safe.",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -443,7 +458,7 @@ export const rawQuests: IRawQuest[] = [
             metricRuleId: MetricRuleId.CivilianSaved,
             value: 12,
             week: 1,
-          }
+          },
         ],
       },
     ],
@@ -500,7 +515,8 @@ export const rawQuests: IRawQuest[] = [
         id: "p1-q1-5",
         startWeek: 1,
         status: QuestStatus.Success,
-        notes: 'Elnar brought back what would normally have sold for hundreds of gold, but he wasn\'t doing it for the money.',
+        notes:
+          "Elnar brought back what would normally have sold for hundreds of gold, but he wasn't doing it for the money.",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -513,7 +529,8 @@ export const rawQuests: IRawQuest[] = [
         id: "p2-q1-5",
         startWeek: 1,
         status: QuestStatus.Failed,
-        notes: 'Szuuth realized they had no idea what the were looking for and mostly brought back weeds. Sister Lasiter gave her a gold for the flowers because they were pretty.',
+        notes:
+          "Szuuth realized they had no idea what the were looking for and mostly brought back weeds. Sister Lasiter gave her a gold for the flowers because they were pretty.",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -553,8 +570,8 @@ export const rawQuests: IRawQuest[] = [
       {
         id: "p1-q1-6",
         startWeek: 1,
-        notes: 'They found the elusive Currymingo!',
-        status: QuestStatus.Claimed,
+        notes: "They found the elusive Currymingo!",
+        status: QuestStatus.Success,
         clanId: "c7",
         metrics: [],
       },
@@ -577,7 +594,8 @@ export const rawQuests: IRawQuest[] = [
         id: "p1-q1-7",
         startWeek: 1,
         status: QuestStatus.Success,
-        notes: 'Vince captured a greater porcubear, which is not unusual. What IS unusual is that it was near the edge eastern checkpoint. Which is generally safe.',
+        notes:
+          "Vince captured a greater porcubear, which is not unusual. What IS unusual is that it was near the edge eastern checkpoint. Which is generally safe.",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -590,7 +608,8 @@ export const rawQuests: IRawQuest[] = [
         id: "p2-q1-7",
         startWeek: 1,
         status: QuestStatus.Success,
-        notes: 'Phil found and possessed a Flamboar and made it fight a Screamer. They killed eachother. He gave half of his reward money to Freya since he couldn\'t carry the bodies back alone.', 
+        notes:
+          "Phil found and possessed a Flamboar and made it fight a Screamer. They killed eachother. He gave half of his reward money to Freya since he couldn't carry the bodies back alone.",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -603,7 +622,7 @@ export const rawQuests: IRawQuest[] = [
         id: "p3-q1-7",
         startWeek: 1,
         status: QuestStatus.Success,
-        notes: 'Tjorn crushed a sludge tortoise if you can believe it.',
+        notes: "Tjorn crushed a sludge tortoise if you can believe it.",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -616,7 +635,8 @@ export const rawQuests: IRawQuest[] = [
         id: "p4-q1-7",
         startWeek: 1,
         status: QuestStatus.Success,
-        notes: 'Sheila was bored with no Clan quests. Luna came along for company. The realized that neither of them was a good tracker. They just wound up having a nice picnic and killing a bunch of slimes',
+        notes:
+          "Sheila was bored with no Clan quests. Luna came along for company. The realized that neither of them was a good tracker. They just wound up having a nice picnic and killing a bunch of slimes",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -643,7 +663,8 @@ export const rawQuests: IRawQuest[] = [
         id: "p1-q1-8",
         startWeek: 1,
         status: QuestStatus.Failed,
-        notes: 'Moira paid the right people to leave a door unlocked. She got the watch, but as she was bringing it back to Trimble it was mysteriously gone.',
+        notes:
+          "Moira paid the right people to leave a door unlocked. She got the watch, but as she was bringing it back to Trimble it was mysteriously gone.",
         metrics: [
           {
             metricRuleId: MetricRuleId.PropertyDamaged,
@@ -656,7 +677,7 @@ export const rawQuests: IRawQuest[] = [
         id: "p2-q1-8",
         startWeek: 1,
         status: QuestStatus.Success,
-        notes: 'The fixer fixed the issue.',
+        notes: "The fixer fixed the issue.",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -683,9 +704,9 @@ export const rawQuests: IRawQuest[] = [
         id: "p1-q1-9",
         startWeek: 1,
         status: QuestStatus.Failed,
-        notes: 'Guy couldn\'t find the animal.',
+        notes: "Guy couldn't find the animal.",
         metrics: [],
       },
     ],
   },
-];
+]);
