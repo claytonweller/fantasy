@@ -8,7 +8,7 @@ import {
   QuestTypes,
 } from "types/Quest";
 import { Ranks } from "types/Ranks";
-import { shuffleArray } from "utils/shuffleArray";
+import { shuffleQuestsByWeek } from "utils/shuffleQuestsByWeek";
 
 export interface IRawQuest extends IDbQuest {
   parties: IRawQuestParty[];
@@ -18,20 +18,7 @@ export interface IRawQuestParty extends Omit<IDbQuestParty, "questId"> {
   metrics: IDbMetric[];
 }
 
-function shuffleByWeek(quests: IRawQuest[]):IRawQuest[]{
-  const separated:{[week:number]:IRawQuest[]} = {}
-  quests.forEach(q=>{
-    if(!separated[q.postedWeek]) separated[q.postedWeek] = []
-    separated[q.postedWeek].push(q)
-  })
-  const shuffled = Object.entries(separated)
-    .map(([_, quests]) => shuffleArray(quests))
-    .sort((a, b) => b[0].postedWeek - a[0].postedWeek)
-    
-  return shuffled.flat()
-}
-
-export const rawQuests: IRawQuest[] = shuffleByWeek([
+export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
   // Week 5
   {
     id: "q5-1",
@@ -288,15 +275,15 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questType: QuestTypes.Fetch,
     questRank: Ranks.C,
     postedBy: "The Chairman",
-    description: `To make the ultimate dish.: you need the choicest ingredients! This weeks featured ingredient is... Fish!`,
+    description: `To make the ultimate dish: you need the choicest centerpieces! This weeks featured ingredient is... Fish!`,
     
     parties: [
       {
         id: "p1-q2-4",
         startWeek: 2,
-        notes: "They  !",
+        notes: "After much splishing they subdued the delicious fishious Pescadomos!",
         status: QuestStatus.Success,
-        // clanId: "c7",
+        clanId: "c7",
         metrics: [],
       },
     ],
@@ -388,7 +375,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
         startWeek: 2,
         notes: "They  !",
         status: QuestStatus.Success,
-        clanId: "c7",
+        // clanId: "c7",
         metrics: [],
       },
     ],
@@ -414,16 +401,31 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
 
         ],
       },
+    ],
+  },
+  {
+    id: "q2-8",
+    name: "Forest Cavern Vandalism",
+    reward: 10,
+    postedWeek: 2,
+    expireWeek: 2,
+    claimType: QuestClaimType.Clan,
+    questType: QuestTypes.Other,
+    questRank: Ranks.D,
+    postedBy: "Elder K'Tar",
+    description: `"The cavern which houses the mystic spring has been desecrated."`,
+    parties: [
       {
-        id: "p2-q2-7",
+        id: "p1-q2-8",
         startWeek: 2,
-        status: QuestStatus.Success,
-        notes: "The fixer fixed the issue.",
+        status: QuestStatus.Failed,
+        notes:
+          "",
         metrics: [
 
         ],
       },
-    ],
+    ]
   },
 
   // Week 1
@@ -758,7 +760,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     name: "Monster Management",
     reward: 300,
     postedWeek: 1,
-    expireWeek: 1,
+    expireWeek: 2,
     claimType: QuestClaimType.Individual,
     questType: QuestTypes.Kill,
     questRank: Ranks.C,

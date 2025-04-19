@@ -267,8 +267,8 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     races: [AdventurerRaces.Beastkin],
     rank: Ranks.D,
     class: AdventurerClasses.Attacker,
-    className: "Wolf Chef",
-    bio: `Loves making soups.`,
+    className: "Wolf Sous",
+    bio: `Loves making sauces.`,
     clanId: "c7",
     nicknames: [],
     statusHistory: [],
@@ -289,7 +289,12 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
       {
         partyId: "p1-q2-4",
         metrics: [
-
+          {
+            metricRuleId: MetricRuleId.EnemyKill,
+            value: 1,
+            rank: Ranks.C,
+            week: 1,
+          },
         ],
       },
     ],
@@ -1080,7 +1085,12 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
       {
         partyId: "p1-q2-4",
         metrics: [
-
+          {
+            metricRuleId: MetricRuleId.EnemyKill,
+            value: 2,
+            rank: Ranks.D,
+            week: 1,
+          },
         ],
       },
     ],
@@ -1132,7 +1142,12 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
       {
         partyId: "p1-q2-4",
         metrics: [
-
+          {
+            metricRuleId: MetricRuleId.EnemyKill,
+            value: 2,
+            rank: Ranks.D,
+            week: 1,
+          },
         ],
       },
     ],
@@ -1406,7 +1421,12 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
       {
         partyId: "p1-q2-4",
         metrics: [
-
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            value: 1,
+            rank: Ranks.C,
+            week: 1,
+          },
         ],
       },
     ],

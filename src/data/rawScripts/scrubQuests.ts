@@ -45,7 +45,7 @@ export function scrubQuests(params: IScrubParams) {
     QuestTypes,
   } from "types/Quest";
   import { Ranks } from "types/Ranks";
-  import { shuffleArray } from "utils/shuffleArray";
+  import { shuffleQuestsByWeek } from "utils/shuffleQuestsByWeek";
 
   export interface IRawQuest extends IDbQuest {
     parties: IRawQuestParty[];
@@ -55,20 +55,7 @@ export function scrubQuests(params: IScrubParams) {
     metrics: IDbMetric[];
   }
 
-  function shuffleByWeek(quests: IRawQuest[]):IRawQuest[]{
-    const separated:{[week:number]:IRawQuest[]} = {}
-    quests.forEach(q=>{
-      if(!separated[q.postedWeek]) separated[q.postedWeek] = []
-      separated[q.postedWeek].push(q)
-    })
-    const shuffled = Object.entries(separated)
-      .map(([_, quests]) => shuffleArray(quests))
-      .sort((a, b) => b[0].postedWeek - a[0].postedWeek)
-      
-    return shuffled.flat()
-  }
-
-  export const rawQuests = shuffleByWeek(${JSON.stringify(formattedQuests)} as IRawQuest[])
+  export const rawQuests: IRawQuest[] = shuffleQuestsByWeek(${JSON.stringify(formattedQuests)} as IRawQuest[])
   `;
 
   writeFileSync("src/data/raw/quests.ts", output);
