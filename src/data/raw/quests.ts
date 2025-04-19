@@ -43,7 +43,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.B,
     postedBy: "Sister Lasiter",
     description: `"Holy Mother bless us with your light. The bodies were not exhumed by any living hand, but are exhuming themselves. Currently the undead are contained within the cemetery walls, but I worry the gates won't hold of ever. Please be the blessed mother's purifying sword and put these souls to rest."`,
-    // Composite
+    
     parties: [],
   },
   {
@@ -56,7 +56,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.A,
     postedBy: "Guildmaster Vahn",
     description: `"Hey! Shut it! Hey! Hey! Don't make me smash another table! QUIET! Yeah, so I'm sure you've all heard about the cult by now. The cult of Jaborkapek? Did I say it right? Japortachenk? Joborkapelt? Ja- whatever, it doesn't matter what they're called. They summoned their mad god. Classic cult thing. I need you all to do what you do best and Kill this damn thing!"`,
-    // Composite
+    
     parties: [],
   },
   {
@@ -69,7 +69,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.C,
     postedBy: "Mayor Corque",
     description: `"You've spoken and I've heard you. You don't want to be devoured by horrible chimera monsters. I understand. I hope cowering for our lives from the amalgamated bodies for forest beasts can be viewed as an opportunity for growth as a community."`,
-    // Composite
+    
     parties: [],
   },
   {
@@ -82,7 +82,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.B,
     postedBy: "Guildmaster Vahn",
     description: `"Oh yeah! One more thing. The Jaterbajek... Jakerpapok... Jagoffadong whatever cultists. Gotta get rid of them along with the mad god."`,
-    // Composite
+    
     parties: [],
   },
   {
@@ -95,7 +95,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.A,
     postedBy: "Elder K'Tar",
     description: `"These Cultists have our forest god Mamut. In the sewers. The Azure wolf must be freed."`,
-    // Composite
+    
     parties: [],
   },
   {
@@ -108,7 +108,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.A,
     postedBy: "Cliff Vanderbliff",
     description: `"Get me out of here!"`,
-    // Composite
+    
     parties: [],
   },
 
@@ -123,7 +123,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.D,
     postedBy: "Sister Lasiter",
     description: `"Something is amiss in the city Graveyard. Bodies have been exhumed. Please keep watch, and may the holy mother watch you."`,
-    // Composite
+    
     parties: [],
   },
   {
@@ -136,7 +136,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.D,
     postedBy: "Elder K'Tar",
     description: `"The Azure Wolf Father Mamut is no longer in the town square. He must be returned to the Sacred Grove, or things will only get worse."`,
-    // Composite
+    
     parties: [],
   },
   {
@@ -149,7 +149,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.B,
     postedBy: "Mayor Corque",
     description: `"Everyone remain calm. I know. None of use want to be trapped inside the city walls. I hear you. We are sending some of our best to tell the capitol what's happening here."`,
-    // Composite
+    
     parties: [],
   },
   {
@@ -162,7 +162,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.B,
     postedBy: "Gorn Wigby",
     description: `"It appears the noisy gnat is spawning a brood. Those close to me are, not accustomed to such... discomfort. A talented (and discrete) pest handler would be well appreciated."`,
-    // Composite
+    
     parties: [],
   },
 
@@ -179,7 +179,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     description: `The Adventurer Guild has found that there is an enraged monster in the center of the Norther Forest: A gigantic blue wolf. 
     Guildmanster Vahn: "Hey! Shut Up! Hey! HEY!... sorry I'll pay for that... Ok. Anyway. I'm sure you've heard about the giant wolf. It's berserk and attacking anything that moves. It's scared all of the monsters out of the forest. Count Vanderbliff would like to say something.
     Count Vanderbliff: "This monster must be stopped. It killed my people. However, I will match the guild reward if it is captured alive."`,
-    // Composite
+    
     parties: [],
   },
   {
@@ -192,7 +192,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.C,
     postedBy: "Elder K'Tar",
     description: `There's corruption in the forest. I worry that it will reach the sacred grove.`,
-    // Composite
+    
     parties: [],
   },
   {
@@ -205,7 +205,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.C,
     postedBy: "Gorn Wigby",
     description: `"There is a pesky fly buzzing by my ear... I would pay handsomely to have it swatted."`,
-    // Composite
+    
     parties: [],
   },
 
@@ -215,39 +215,215 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     name: "That's a big rat",
     reward: 100,
     postedWeek: 2,
+    expireWeek: 2,
     claimType: QuestClaimType.Clan,
     questType: QuestTypes.Kill,
     questRank: Ranks.B,
     postedBy: "Mayor Corque",
     description: `"Ok, so the rats in the sewer... they combined into what people are telling me is a rat king. And it has, how do I put it diplomatically?... dispatched a couple adventurers and has doubled in size. Thankfully the nobles visiting from the capitol have been kind enough to foot the subjugation bill."`,
-    // Composite
-    parties: [],
+    
+    parties: [
+      {
+        id: "p1-q2-1",
+        startWeek: 2,
+        notes: "They  !",
+        status: QuestStatus.Success,
+        // clanId: "c7",
+        metrics: [],
+      },
+    ],
   },
   {
     id: "q2-2",
     name: "Missing Retinue",
     reward: 300,
     postedWeek: 2,
+    expireWeek: 2,
     claimType: QuestClaimType.Clan,
     questType: QuestTypes.Fetch,
     questRank: Ranks.C,
     postedBy: "Cliff Vanderbliff",
     description: `In transit from the Capitol to Morton, several members of the Counts Retinue went missing during a monster attack near the norther forest. "I wish to know their fate, and will pay a premium if their bodies are returned."`,
-    // Composite
-    parties: [],
+    
+    parties: [
+      {
+        id: "p1-q2-2",
+        startWeek: 2,
+        notes: "They  !",
+        status: QuestStatus.Success,
+        // clanId: "c7",
+        metrics: [],
+      },
+    ],
   },
   {
     id: "q2-3",
     name: "Inspect The Northern Forest",
-    reward: 100,
+    reward: 200,
     postedWeek: 2,
+    expireWeek: 2,
     claimType: QuestClaimType.Individual,
     questType: QuestTypes.Other,
     questRank: Ranks.C,
     postedBy: "Guildmaster Vahn",
-    description: `The head of the adventurer guild addressed the increase in monsters to the North of town, "Hey! Attention! Listen up you crazy buggers! Sorry didn't mean to hit you with that... Anyway, something's up with the Forest. The monsters are moving out of the depths to the edges near the road. Heck Vince Dawn even caught a greater porcubears near the east check point. Get out there and figure out what the heck is going on. No heroics. We just need info. This is on the guild's tab."`,
-    // Composite
-    parties: [],
+    description: `The head of the adventurer guild addressed the increase in monsters to the North of town, "Hey! Attention! Listen up you crazy buggers! Oh! Sorry didn't mean to hit you with that... Anyway, something's up with the Forest. The monsters are moving out of the depths to the edges near the road. Heck Vince Dawn even caught a greater porcubears near the east check point. Get out there and figure out what the heck is going on. No heroics. We just need info. This is on the guild's tab."`,
+    
+    parties: [
+      {
+        id: "p1-q2-3",
+        startWeek: 2,
+        notes: "They  !",
+        status: QuestStatus.Success,
+        metrics: [],
+      },
+    ],
+  },
+  {
+    id: "q2-4",
+    name: "Protein Quest",
+    reward: 0,
+    postedWeek: 2,
+    expireWeek: 2,
+    claimType: QuestClaimType.Clan,
+    questType: QuestTypes.Fetch,
+    questRank: Ranks.C,
+    postedBy: "The Chairman",
+    description: `To make the ultimate dish.: you need the choicest ingredients! This weeks featured ingredient is... Fish!`,
+    
+    parties: [
+      {
+        id: "p1-q2-4",
+        startWeek: 2,
+        notes: "They  !",
+        status: QuestStatus.Success,
+        // clanId: "c7",
+        metrics: [],
+      },
+    ],
+  },
+  {
+    id: "q2-5",
+    name: "Trouble in the Burbs",
+    reward: 70,
+    postedWeek: 2,
+    expireWeek: 2,
+    claimType: QuestClaimType.Individual,
+    questType: QuestTypes.Guard,
+    questRank: Ranks.D,
+    postedBy: "The Town Guard",
+    description: `Morton has grown quite a bit since the city wall was erected. So now many of the townsfolk are living outside. With the increased Beast activity from the North the guards are spread thin.`,
+    
+    parties: [
+      {
+        id: "p1-q2-4",
+        startWeek: 2,
+        notes: "They  !",
+        status: QuestStatus.Success,
+        // clanId: "c7",
+        metrics: [],
+      },
+    ],
+  },
+  {
+    id: "q2-6.1",
+    name: "Serpentina Visitor Escort",
+    reward: 70,
+    postedWeek: 2,
+    expireWeek: 2,
+    claimType: QuestClaimType.Clan,
+    questType: QuestTypes.Guard,
+    questRank: Ranks.D,
+    postedBy: "The Trade Guild",
+    description: `As Morton has become a common stop in trade routes, its Bounty festival has grown in popularity. Even people from the larger cities like the major port of Serpetina make the trip to enjoy the festivities.`,
+    
+    parties: [
+      {
+        id: "p1-q2-6.1",
+        startWeek: 2,
+        notes: "They  !",
+        status: QuestStatus.Success,
+        // clanId: "c7",
+        metrics: [],
+      },
+    ],
+  },
+  {
+    id: "q2-6.2",
+    name: "Valeon Visitor Escort",
+    reward: 120,
+    postedWeek: 2,
+    expireWeek: 2,
+    claimType: QuestClaimType.Clan,
+    questType: QuestTypes.Guard,
+    questRank: Ranks.D,
+    postedBy: "The Trade Guild",
+    description: `As Morton has become a common stop in trade routes, its Bounty festival has grown in popularity. Even people from the royal capitol of Valeon make the trip to enjoy the festivities.`,
+    
+    parties: [
+      {
+        id: "p1-q2-6.2",
+        startWeek: 2,
+        notes: "",
+        status: QuestStatus.Success,
+        // clanId: "c7",
+        metrics: [],
+      },
+    ],
+  },
+  {
+    id: "q2-6.3",
+    name: "Furthbrand Visitor Escorts",
+    reward: 100,
+    postedWeek: 2,
+    expireWeek: 2,
+    claimType: QuestClaimType.Clan,
+    questType: QuestTypes.Guard,
+    questRank: Ranks.D,
+    postedBy: "The Trade Guild",
+    description: `As Morton has become a common stop in trade routes, its Bounty festival has grown in popularity. Even people from the larger cities like the industrial powerhouse Furthbrand make the trip to enjoy the festivities.`,
+    
+    parties: [
+      {
+        id: "p1-q2-6.3",
+        startWeek: 2,
+        notes: "They  !",
+        status: QuestStatus.Success,
+        clanId: "c7",
+        metrics: [],
+      },
+    ],
+  },
+  {
+    id: "q2-7",
+    name: "Stolen Watch",
+    reward: 100,
+    postedWeek: 2,
+    claimType: QuestClaimType.Individual,
+    questType: QuestTypes.Fetch,
+    questRank: Ranks.C,
+    postedBy: "Dorf Mucklebunk",
+    description: `My Family watch has been stolen! I swear I saw Trimble Dinklesbean with it. The sneak was eyeing it at the lodge hall! I will pay handsomely if someone were to... persuade him... that it should return to its rightful owner.`,
+    parties: [
+      {
+        id: "p1-q2-7",
+        startWeek: 2,
+        status: QuestStatus.Failed,
+        notes:
+          "",
+        metrics: [
+
+        ],
+      },
+      {
+        id: "p2-q2-7",
+        startWeek: 2,
+        status: QuestStatus.Success,
+        notes: "The fixer fixed the issue.",
+        metrics: [
+
+        ],
+      },
+    ],
   },
 
   // Week 1
@@ -262,7 +438,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.B,
     postedBy: "Cliff Vanderbliff",
     description: `A group of nobles lead Count Clifford Vanderbliff and their retinue will be from the capitol to Morton to attend the annual festival. They require, "A competent local guard detail. Must be an established party, in good reputation, with knowledge of regional dangers."`,
-    // Composite
+    
     parties: [
       {
         id: "p1-q1-1",
@@ -270,7 +446,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
         endWeek: 1,
         status: QuestStatus.Failed,
         notes:
-          "It went incredibly poorly. The caravan was ambushed by unusually strong monsters while traveling by the northern forest. 2 Nobles died along with many members of the retinue. A few people also vanished into the woods during the attack including adventurer, Reginald Spintsmunge IV. To add insult to injury: Count Vanderbliff's Carriage was completely destroyed and for the remainder of the trip he was forced to ride with a lesser nobel.",
+          "It went incredibly poorly. The caravan was ambushed by unusually strong monsters while traveling by the northern forest. 2 Nobles died along with many members of the staff. A few people were also lost in the woods during the attack, including adventurer, Reginald Spintsmunge IV. To add insult to injury: Count Vanderbliff's Carriage was completely destroyed and for the remainder of the trip he was forced to ride with a lesser nobel.",
         // endWeek: number,
         clanId: "c6",
         metrics: [
@@ -304,7 +480,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.D,
     postedBy: "Mayor Corque",
     description: `"I hear you. We can't keep ignoring the sewer problem. The rats keep multiplying and getting bigger. They're attacking people in the street. Focus groups tell us this is not a great look for our town. We have to fix this before the Bounty Festival. What will people think if we have dog sized rats? One gold for every dead rat brought back this week."`,
-    // Composite
+    
     parties: [
       {
         id: "p1-q1-2",
@@ -350,7 +526,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.E,
     postedBy: "Elder K'Tar",
     description: `"The Shrine to Mamut is falling apart. I am old. I need help repairing it."`,
-    // Composite
+    
     parties: [
       {
         id: "p1-q1-3",
@@ -404,7 +580,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.C,
     postedBy: "Trade Guild",
     description: `With the Festival coming up in a couple of weeks we need capable parties to guard the wagons as they come in. Southern Caravan from the Port city of Serpentina.`,
-    // Composite
+    
     parties: [
       {
         id: "p1-q1-4",
@@ -434,7 +610,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.C,
     postedBy: "Trade Guild",
     description: `With the Festival coming up in a couple of weeks we need capable parties to guard the wagons as they come in. Eastern Caravan: From the Capital city.`,
-    // Composite
+    
     parties: [
       {
         id: "p2-q1-4",
@@ -474,7 +650,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.C,
     postedBy: "Trade Guild",
     description: `With the Festival coming up in a couple of weeks we need capable parties to guard the wagons as they come in. Western Caravan: From the mountains.`,
-    // Composite
+    
     parties: [
       {
         id: "p3-q1-4",
@@ -509,7 +685,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.D,
     postedBy: "Church of the Holy Mother",
     description: `We're running low on medical herbs. reward depends upon the quality of the herbs obtained.`,
-    // Composite
+    
     parties: [
       {
         id: "p1-q1-5",
@@ -565,7 +741,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.C,
     postedBy: "The Chairman",
     description: `To make the ultimate dish.: you need the ultimate spices!`,
-    // Composite
+    
     parties: [
       {
         id: "p1-q1-6",
@@ -588,7 +764,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.C,
     postedBy: "Trade Guild",
     description: `Since we'll be having many people from the region coming to Morton we should make the roads safer by culling the local monster numbers.`,
-    // Composite
+    
     parties: [
       {
         id: "p1-q1-7",
@@ -657,7 +833,7 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.C,
     postedBy: "Trimble Dinklesbean",
     description: `"Someone has purloined a priceless timepiece of great... sentimental... value. How it makes its way back to me I do not care, nor will I ask."`,
-    // Composite
+    
     parties: [
       {
         id: "p1-q1-8",
@@ -698,13 +874,20 @@ export const rawQuests: IRawQuest[] = shuffleByWeek([
     questRank: Ranks.E,
     postedBy: "Silky Bunnykin",
     description: `There's a child's drawing of a small, fuzzy, crying animal.`,
-    // Composite
+    
     parties: [
       {
         id: "p1-q1-9",
         startWeek: 1,
         status: QuestStatus.Failed,
-        notes: "Guy couldn't find the animal.",
+        notes: "Tinky never reported in to the Adventurers Guild.",
+        metrics: [],
+      },
+      {
+        id: "p2-q1-9",
+        startWeek: 1,
+        status: QuestStatus.Failed,
+        notes: "",
         metrics: [],
       },
     ],

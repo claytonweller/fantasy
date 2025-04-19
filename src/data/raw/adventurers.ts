@@ -241,9 +241,25 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     className: "The Muscle",
     bio: `She's not smart. But she is big.`,
     nicknames: [],
-    statusHistory: [],
+    statusHistory: [
+      {
+        status: AdventurerStatuses.Missing,
+        startWeek: 2,
+      }
+    ],
     traits: [],
-    questParties: [],
+    questParties: [
+      {
+        partyId: "p1-q1-9",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.GoneMissing,
+            value: 1,
+            week: 1,
+          },
+        ],
+      },
+    ],
   },
   {
     id: "a13",
@@ -267,6 +283,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
             rank: Ranks.E,
             week: 1,
           },
+          
+        ],
+      },
+      {
+        partyId: "p1-q2-4",
+        metrics: [
+
         ],
       },
     ],
@@ -532,7 +555,12 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `First son of Reginald Spintsmunge III. Owner of the fabled sword Needlewind. Undefeated duelist. Has a stable of 10 horses. He definitely knows their names. No need to ask. Enjoyer of fine wines. Has his own winery in the country... etc.`,
     clanId: "c6",
     nicknames: [],
-    statusHistory: [],
+    statusHistory: [
+      {
+        status: AdventurerStatuses.Missing,
+        startWeek: 2,
+      }
+    ],
     traits: [],
     questParties: [
       {
@@ -677,7 +705,12 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     nicknames: [],
     statusHistory: [],
     traits: [],
-    questParties: [],
+    questParties: [
+      // {
+      //   partyId: "p1-q2-7",
+      //   metrics: [],
+      // },
+    ],
   },
   {
     id: "a31",
@@ -692,10 +725,6 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
-      {
-        partyId: "p1-q1-9",
-        metrics: [],
-      },
     ],
   },
   {
@@ -935,17 +964,27 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `He's out to prove everyone wrong. You can be bard and play the trumpet.`,
     clanId: "c1",
     nicknames: [],
-    statusHistory: [],
+    statusHistory: [
+      {
+        status: AdventurerStatuses.Missing,
+        startWeek: 2,
+      }
+    ],
     traits: [],
     questParties: [
       {
-        partyId: "p1-q1-2",
+        partyId: "p2-q1-2",
         metrics: [
           {
             metricRuleId: MetricRuleId.EnemyKill,
             value: 1,
             rank: Ranks.E,
             week: 1,
+          },
+          {
+            metricRuleId: MetricRuleId.GoneMissing,
+            value: 1,
+            week: 1
           },
         ],
       },
@@ -1038,6 +1077,12 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
           },
         ],
       },
+      {
+        partyId: "p1-q2-4",
+        metrics: [
+
+        ],
+      },
     ],
   },
   {
@@ -1082,6 +1127,12 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
             rank: Ranks.C,
             week: 1,
           },
+        ],
+      },
+      {
+        partyId: "p1-q2-4",
+        metrics: [
+
         ],
       },
     ],
@@ -1351,6 +1402,12 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
       {
         partyId: "p1-q1-6",
         metrics: [],
+      },
+      {
+        partyId: "p1-q2-4",
+        metrics: [
+
+        ],
       },
     ],
   },

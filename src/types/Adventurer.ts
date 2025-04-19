@@ -59,6 +59,7 @@ export enum AdventurerStatuses {
   Criminal = "Criminal",
   Imprisoned = "Imprisoned",
   ManaDepletion = "ManaDepletion",
+  Missing = "Missing",
 }
 
 export enum AdventurerRaces {

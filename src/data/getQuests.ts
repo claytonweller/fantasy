@@ -8,7 +8,8 @@ import { rawQuests, IRawQuest, IRawQuestParty } from "./raw/quests";
 import { CURRENT_WEEK } from "config";
 
 export function getQuests(): IQuest[] {
-  const compositeQuests: IQuest[] = formatQuests(rawQuests);
+  const temporallyAccurateQuests = rawQuests.filter(q => q.postedWeek <= CURRENT_WEEK)
+  const compositeQuests: IQuest[] = formatQuests(temporallyAccurateQuests);
   return compositeQuests;
 }
 

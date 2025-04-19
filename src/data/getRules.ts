@@ -62,7 +62,7 @@ export const rankMultipliers = {
   [Ranks.A]: 25,
   [Ranks.B]: 12,
   [Ranks.C]: 4,
-  [Ranks.D]: 2,
+  [Ranks.D]: 1,
   [Ranks.E]: 0.5,
 };
 

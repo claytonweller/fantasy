@@ -55,18 +55,18 @@ function App() {
             makeSearchable={makeSearchable}
             currentWeek={currentWeek}
           />
+          <Quests
+            search={{ searchText, rankFilter: rankFilter.state }}
+            rules={rules}
+            cardTypeFilters={cardTypeFilter.state}
+            makeSearchable={makeSearchable}
+          />
           <Adventurers
             search={{ searchText, rankFilter: rankFilter.state }}
             rules={rules}
             cardTypeFilters={cardTypeFilter.state}
             makeSearchable={makeSearchable}
             currentWeek={currentWeek}
-          />
-          <Quests
-            search={{ searchText, rankFilter: rankFilter.state }}
-            rules={rules}
-            cardTypeFilters={cardTypeFilter.state}
-            makeSearchable={makeSearchable}
           />
         </div>
       </div>

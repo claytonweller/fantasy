@@ -68,7 +68,7 @@ export function scrubQuests(params: IScrubParams) {
     return shuffled.flat()
   }
 
-  export const rawQuests = ${JSON.stringify(formattedQuests)} as IRawQuest[]
+  export const rawQuests = shuffleByWeek(${JSON.stringify(formattedQuests)} as IRawQuest[])
   `;
 
   writeFileSync("src/data/raw/quests.ts", output);
