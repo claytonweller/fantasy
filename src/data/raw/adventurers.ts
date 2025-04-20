@@ -349,8 +349,9 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
         metrics: [],
       },
       {
+        lateAddition: true,
         partyId: "p2-q1-8",
-        metrics: [],
+        metrics: [] as IDbMetric[], // Ok... so some TS insanity happening here.
       },
     ],
   },
