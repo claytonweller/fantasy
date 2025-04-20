@@ -1,10 +1,6 @@
-import { EntityTypes, IDbResearch, IResearchTag } from "types/Research";
+import { EntityTypes, IResearch } from "types/Research";
 
-export interface IRawResearch extends IDbResearch {
-  tags: IResearchTag[]
-}
-
-export const rawResearch: IRawResearch[] = [
+export const rawResearch: IResearch[] = [
   {
     note: `Vlort is very lazy. He very rarely takes quests. He runs the Mill because its entertaining.`,
     weekHappened: 0,

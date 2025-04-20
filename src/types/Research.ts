@@ -1,13 +1,8 @@
 export interface IResearch {
   note: string;
-  isPublic?: boolean;
-  tags: IResearchTag[];
-}
-
-export interface IDbResearch {
-  note: string;
   weekHappened: number;
   weekPublic?: number;
+  tags: IResearchTag[];
 }
 
 export interface IResearchTag {
