@@ -1,9 +1,13 @@
-import { EntityTypes, IResearch } from "types/Research";
+import { EntityTypes, IDbResearch, IResearchTag } from "types/Research";
 
-export const rawResearch: IResearch[] = [
+export interface IRawResearch extends IDbResearch {
+  tags: IResearchTag[]
+}
+
+export const rawResearch: IRawResearch[] = [
   {
     note: `Vlort is very lazy. He very rarely takes quests. He runs the Mill because its entertaining.`,
-    isPublic: false,
+    weekHappened: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -13,7 +17,7 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `Corporal Margrave, fled from battle, his entire company was decimated, and he was discharged from the kings guard.`,
-    isPublic: false,
+    weekHappened: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -23,7 +27,7 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `Reginald Spintsmunge IV bought his way into the Radiantia Clan. He has never actually had a duel, and it is up for debate whether the Spintsmunges are really of nobel blood.`,
-    isPublic: false,
+    weekHappened: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -37,7 +41,7 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `Guy Norman is actually a high rank adventurer running away from a neighboring country. His real name is Hiro Flamburge.`,
-    isPublic: false,
+    weekHappened: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -47,7 +51,7 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `It's unfortunate that Juniper Montrose gets queasy at the sight of blood.`,
-    isPublic: false,
+    weekHappened: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -57,7 +61,7 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `No one wants to be in a party with them because they're creeped out.`,
-    isPublic: false,
+    weekHappened: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -67,7 +71,7 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `Kimberflorn isn't Clara's real last name. She's actually the daughter of Mara Wright, the Master of The Exploding fist. She was training under her mother until she fell in love with Sir Robin. She is hiding her true strength to not hurt his feelings.`,
-    isPublic: false,
+    weekHappened: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -85,7 +89,7 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `Mara Wright is Clara Kimberflorn's Mother. She does not approve of her daughter's love for Sir Robin. She is trying to figure out ways to sabotage their relationship.`,
-    isPublic: false,
+    weekHappened: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -103,7 +107,7 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `Sir Robin has no idea that Clara Kimberflorn is in love with him. Or that she's always saving his life.`,
-    isPublic: false,
+    weekHappened: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -116,8 +120,8 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `He's a terrible philanderer, and will only do quests if women are in the party. Said women often do not suffer a second outing.`,
-    isPublic: false,
+    note: `He's a terrible womanizer, and will only do quests if women are in the party. Said women often do not suffer a second outing.`,
+    weekHappened: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -127,7 +131,7 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `Szuuth was forced to torture people at the Capitol, and has fled to Morton.`,
-    isPublic: false,
+    weekHappened: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -137,7 +141,8 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `Arc Northstar is the leader of the Blessed Sword Clan`,
-    isPublic: true,
+    weekHappened: 0,
+    weekPublic: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -151,7 +156,8 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `Mara Wright is master of the Explosive Fist clan and dojo.`,
-    isPublic: true,
+    weekHappened: 0,
+    weekPublic: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -165,7 +171,8 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `Vlort is the "leader" of The Mill clan.`,
-    isPublic: true,
+    weekHappened: 0,
+    weekPublic: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -179,7 +186,8 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `Thorin Brassburn is the leader of the Clowork Chisel clan.`,
-    isPublic: true,
+    weekHappened: 0,
+    weekPublic: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -193,7 +201,8 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `Vince Dawn is the Leader of the Mythril Trap clan.`,
-    isPublic: true,
+    weekHappened: 0,
+    weekPublic: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -207,7 +216,8 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `Elise Shadowthread is the leader of the Night Cowl clan.`,
-    isPublic: true,
+    weekHappened: 0,
+    weekPublic: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -221,7 +231,8 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `Vivian Crestmor is the leader of the Radiantia clan.`,
-    isPublic: true,
+    weekHappened: 0,
+    weekPublic: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -235,7 +246,8 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `The Chairman is the leader and financier of the Crockpot clan.`,
-    isPublic: true,
+    weekHappened: 0,
+    weekPublic: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -249,7 +261,8 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `Mettalfang is Stoneclaw's older brother.`,
-    isPublic: true,
+    weekHappened: 0,
+    weekPublic: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -263,7 +276,8 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `The Duffenklampf twins are inseparable. They always do every thing together. Duke Duffenklampf attempted to marry off Anastasia, but literally couldn't physically pry her away from Alexandria. He forced them to get their own income.`,
-    isPublic: true,
+    weekHappened: 0,
+    weekPublic: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -277,7 +291,8 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `Tall Pine Marlon is the leader of The Glade clan`,
-    isPublic: true,
+    weekHappened: 0,
+    weekPublic: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,
@@ -291,7 +306,8 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `On top of being an active member of the Church of the Holy Mother, Pendle Chilpin is one of the most acclaimed healing mages in all of Morton.`,
-    isPublic: true,
+    weekHappened: 0,
+    weekPublic: 0,
     tags: [
       {
         entityType: EntityTypes.Adventurer,

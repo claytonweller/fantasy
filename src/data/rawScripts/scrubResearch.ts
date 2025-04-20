@@ -1,16 +1,32 @@
-import { IResearch } from "types/Research";
-import { rawResearch } from "../raw/research";
+import { IRawResearch, rawResearch } from "../raw/research";
 import { writeFileSync } from "fs";
+import { CURRENT_WEEK } from "config";
 
-const scrubbedResearch: IResearch[] = rawResearch.filter((r: IResearch) => {
-  return r.isPublic;
-});
+const scrubbedResearch: IRawResearch[] = rawResearch.filter(
+  (r: IRawResearch) => {
+    const hasNeverBeenPublic = !Number.isInteger(r.weekPublic);
+    const hasNotHappenedYet = r.weekHappened >= CURRENT_WEEK;
+    const isNotPublicYet = r.weekPublic && r.weekPublic > CURRENT_WEEK;
+    console.warn(
+      r.weekHappened,
+      r.weekPublic,
+      isNotPublicYet,
+      hasNotHappenedYet,
+    );
+    return !(hasNeverBeenPublic || isNotPublicYet || hasNotHappenedYet);
+  },
+);
+
 console.log("Scrubbing research secrets");
 
 const output = `
-import { IResearch } from "types/Research";
+import { EntityTypes, IDbResearch, IResearchTag } from "types/Research";
 
-export const rawResearch = ${JSON.stringify(scrubbedResearch)} as IResearch[]
+export interface IRawResearch extends IDbResearch {
+  tags: IResearchTag[]
+}
+
+export const rawResearch: IRawResearch[] = ${JSON.stringify(scrubbedResearch)} as IRawResearch[]
 `;
 
 writeFileSync("src/data/raw/research.ts", output);

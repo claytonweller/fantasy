@@ -1,10 +1,18 @@
 export interface IResearch {
   note: string;
   isPublic?: boolean;
-  tags: {
-    entityType: EntityTypes;
-    entityId: string;
-  }[];
+  tags: IResearchTag[];
+}
+
+export interface IDbResearch {
+  note: string;
+  weekHappened: number;
+  weekPublic?: number;
+}
+
+export interface IResearchTag {
+  entityType: EntityTypes;
+  entityId: string;
 }
 
 export enum EntityTypes {

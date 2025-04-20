@@ -30,7 +30,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.B,
     postedBy: "Sister Lasiter",
     description: `"Holy Mother bless us with your light. The bodies were not exhumed by any living hand, but are exhuming themselves. Currently the undead are contained within the cemetery walls, but I worry the gates won't hold of ever. Please be the blessed mother's purifying sword and put these souls to rest."`,
-    
+
     parties: [],
   },
   {
@@ -43,7 +43,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.A,
     postedBy: "Guildmaster Vahn",
     description: `"Hey! Shut it! Hey! Hey! Don't make me smash another table! QUIET! Yeah, so I'm sure you've all heard about the cult by now. The cult of Jaborkapek? Did I say it right? Japortachenk? Joborkapelt? Ja- whatever, it doesn't matter what they're called. They summoned their mad god. Classic cult thing. I need you all to do what you do best and Kill this damn thing!"`,
-    
+
     parties: [],
   },
   {
@@ -56,7 +56,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.C,
     postedBy: "Mayor Corque",
     description: `"You've spoken and I've heard you. You don't want to be devoured by horrible chimera monsters. I understand. I hope cowering for our lives from the amalgamated bodies for forest beasts can be viewed as an opportunity for growth as a community."`,
-    
+
     parties: [],
   },
   {
@@ -69,7 +69,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.B,
     postedBy: "Guildmaster Vahn",
     description: `"Oh yeah! One more thing. The Jaterbajek... Jakerpapok... Jagoffadong whatever cultists. Gotta get rid of them along with the mad god."`,
-    
+
     parties: [],
   },
   {
@@ -82,7 +82,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.A,
     postedBy: "Elder K'Tar",
     description: `"These Cultists have our forest god Mamut. In the sewers. The Azure wolf must be freed."`,
-    
+
     parties: [],
   },
   {
@@ -95,7 +95,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.A,
     postedBy: "Cliff Vanderbliff",
     description: `"Get me out of here!"`,
-    
+
     parties: [],
   },
 
@@ -110,7 +110,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.D,
     postedBy: "Sister Lasiter",
     description: `"Something is amiss in the city Graveyard. Bodies have been exhumed. Please keep watch, and may the holy mother watch you."`,
-    
+
     parties: [],
   },
   {
@@ -123,7 +123,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.D,
     postedBy: "Elder K'Tar",
     description: `"The Azure Wolf Father Mamut is no longer in the town square. He must be returned to the Sacred Grove, or things will only get worse."`,
-    
+
     parties: [],
   },
   {
@@ -136,7 +136,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.B,
     postedBy: "Mayor Corque",
     description: `"Everyone remain calm. I know. None of use want to be trapped inside the city walls. I hear you. We are sending some of our best to tell the capitol what's happening here."`,
-    
+
     parties: [],
   },
   {
@@ -149,7 +149,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.B,
     postedBy: "Gorn Wigby",
     description: `"It appears the noisy gnat is spawning a brood. Those close to me are, not accustomed to such... discomfort. A talented (and discrete) pest handler would be well appreciated."`,
-    
+
     parties: [],
   },
 
@@ -166,7 +166,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     description: `The Adventurer Guild has found that there is an enraged monster in the center of the Norther Forest: A gigantic blue wolf. 
     Guildmanster Vahn: "Hey! Shut Up! Hey! HEY!... sorry I'll pay for that... Ok. Anyway. I'm sure you've heard about the giant wolf. It's berserk and attacking anything that moves. It's scared all of the monsters out of the forest. Count Vanderbliff would like to say something.
     Count Vanderbliff: "This monster must be stopped. It killed my people. However, I will match the guild reward if it is captured alive."`,
-    
+
     parties: [],
   },
   {
@@ -179,7 +179,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.C,
     postedBy: "Elder K'Tar",
     description: `There's corruption in the forest. I worry that it will reach the sacred grove.`,
-    
+
     parties: [],
   },
   {
@@ -192,7 +192,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.C,
     postedBy: "Gorn Wigby",
     description: `"There is a pesky fly buzzing by my ear... I would pay handsomely to have it swatted."`,
-    
+
     parties: [],
   },
 
@@ -208,14 +208,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.B,
     postedBy: "Mayor Corque",
     description: `"Ok, so the rats in the sewer... they combined into what people are telling me is a rat king. And it has, how do I put it diplomatically?... dispatched a couple adventurers and has doubled in size. Thankfully the nobles visiting from the capitol have been kind enough to foot the subjugation bill."`,
-    
+
     parties: [
       {
         id: "p1-q2-1",
         startWeek: 2,
         notes: "They  !",
         status: QuestStatus.Success,
-        // clanId: "c7",
+        clanId: "c3",
         metrics: [],
       },
     ],
@@ -230,15 +230,15 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questType: QuestTypes.Fetch,
     questRank: Ranks.C,
     postedBy: "Cliff Vanderbliff",
-    description: `In transit from the Capitol to Morton, several members of the Counts Retinue went missing during a monster attack near the norther forest. "I wish to know their fate, and will pay a premium if their bodies are returned."`,
-    
+    description: `In transit from the Capitol to Morton, several members of the Counts Retinue went missing during a monster attack near the northern forest. "I wish to know their fate, and will pay a premium if their bodies are returned."`,
+
     parties: [
       {
         id: "p1-q2-2",
         startWeek: 2,
-        notes: "They  !",
+        notes: "TODO - Marcus goes missing",
         status: QuestStatus.Success,
-        // clanId: "c7",
+        clanId: "c2",
         metrics: [],
       },
     ],
@@ -254,7 +254,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.C,
     postedBy: "Guildmaster Vahn",
     description: `The head of the adventurer guild addressed the increase in monsters to the North of town, "Hey! Attention! Listen up you crazy buggers! Oh! Sorry didn't mean to hit you with that... Anyway, something's up with the Forest. The monsters are moving out of the depths to the edges near the road. Heck Vince Dawn even caught a greater porcubears near the east check point. Get out there and figure out what the heck is going on. No heroics. We just need info. This is on the guild's tab."`,
-    
+
     parties: [
       {
         id: "p1-q2-3",
@@ -276,12 +276,12 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.C,
     postedBy: "The Chairman",
     description: `To make the ultimate dish: you need the choicest centerpieces! This weeks featured ingredient is... Fish!`,
-    
     parties: [
       {
         id: "p1-q2-4",
         startWeek: 2,
-        notes: "After much splishing they subdued the delicious fishious Pescadomos!",
+        notes:
+          "After much splishing they subdued the delicious fishious Pescadomos!",
         status: QuestStatus.Success,
         clanId: "c7",
         metrics: [],
@@ -299,7 +299,6 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.D,
     postedBy: "The Town Guard",
     description: `Morton has grown quite a bit since the city wall was erected. So now many of the townsfolk are living outside. With the increased Beast activity from the North the guards are spread thin.`,
-    
     parties: [
       {
         id: "p1-q2-4",
@@ -322,7 +321,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.D,
     postedBy: "The Trade Guild",
     description: `As Morton has become a common stop in trade routes, its Bounty festival has grown in popularity. Even people from the larger cities like the major port of Serpetina make the trip to enjoy the festivities.`,
-    
+
     parties: [
       {
         id: "p1-q2-6.1",
@@ -345,7 +344,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.D,
     postedBy: "The Trade Guild",
     description: `As Morton has become a common stop in trade routes, its Bounty festival has grown in popularity. Even people from the royal capitol of Valeon make the trip to enjoy the festivities.`,
-    
+
     parties: [
       {
         id: "p1-q2-6.2",
@@ -368,7 +367,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.D,
     postedBy: "The Trade Guild",
     description: `As Morton has become a common stop in trade routes, its Bounty festival has grown in popularity. Even people from the larger cities like the industrial powerhouse Furthbrand make the trip to enjoy the festivities.`,
-    
+
     parties: [
       {
         id: "p1-q2-6.3",
@@ -395,11 +394,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p1-q2-7",
         startWeek: 2,
         status: QuestStatus.Failed,
-        notes:
-          "",
-        metrics: [
-
-        ],
+        notes: "",
+        metrics: [],
       },
     ],
   },
@@ -419,13 +415,11 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p1-q2-8",
         startWeek: 2,
         status: QuestStatus.Failed,
-        notes:
-          "",
-        metrics: [
-
-        ],
+        clanId: "c10",
+        notes: "",
+        metrics: [],
       },
-    ]
+    ],
   },
 
   // Week 1
@@ -440,7 +434,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.B,
     postedBy: "Cliff Vanderbliff",
     description: `A group of nobles lead Count Clifford Vanderbliff and their retinue will be from the capitol to Morton to attend the annual festival. They require, "A competent local guard detail. Must be an established party, in good reputation, with knowledge of regional dangers."`,
-    
+
     parties: [
       {
         id: "p1-q1-1",
@@ -482,7 +476,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.D,
     postedBy: "Mayor Corque",
     description: `"I hear you. We can't keep ignoring the sewer problem. The rats keep multiplying and getting bigger. They're attacking people in the street. Focus groups tell us this is not a great look for our town. We have to fix this before the Bounty Festival. What will people think if we have dog sized rats? One gold for every dead rat brought back this week."`,
-    
+
     parties: [
       {
         id: "p1-q1-2",
@@ -528,7 +522,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.E,
     postedBy: "Elder K'Tar",
     description: `"The Shrine to Mamut is falling apart. I am old. I need help repairing it."`,
-    
+
     parties: [
       {
         id: "p1-q1-3",
@@ -582,7 +576,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.C,
     postedBy: "Trade Guild",
     description: `With the Festival coming up in a couple of weeks we need capable parties to guard the wagons as they come in. Southern Caravan from the Port city of Serpentina.`,
-    
+
     parties: [
       {
         id: "p1-q1-4",
@@ -612,7 +606,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.C,
     postedBy: "Trade Guild",
     description: `With the Festival coming up in a couple of weeks we need capable parties to guard the wagons as they come in. Eastern Caravan: From the Capital city.`,
-    
+
     parties: [
       {
         id: "p2-q1-4",
@@ -652,7 +646,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.C,
     postedBy: "Trade Guild",
     description: `With the Festival coming up in a couple of weeks we need capable parties to guard the wagons as they come in. Western Caravan: From the mountains.`,
-    
+
     parties: [
       {
         id: "p3-q1-4",
@@ -687,7 +681,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.D,
     postedBy: "Church of the Holy Mother",
     description: `We're running low on medical herbs. reward depends upon the quality of the herbs obtained.`,
-    
+
     parties: [
       {
         id: "p1-q1-5",
@@ -743,7 +737,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.C,
     postedBy: "The Chairman",
     description: `To make the ultimate dish.: you need the ultimate spices!`,
-    
+
     parties: [
       {
         id: "p1-q1-6",
@@ -757,8 +751,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
   },
   {
     id: "q1-7",
-    name: "Monster Management",
-    reward: 300,
+    name: "Pre-festival Monster Management",
+    reward: 500,
     postedWeek: 1,
     expireWeek: 2,
     claimType: QuestClaimType.Individual,
@@ -766,14 +760,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.C,
     postedBy: "Trade Guild",
     description: `Since we'll be having many people from the region coming to Morton we should make the roads safer by culling the local monster numbers.`,
-    
+
     parties: [
       {
         id: "p1-q1-7",
         startWeek: 1,
         status: QuestStatus.Success,
         notes:
-          "Vince captured a greater porcubear, which is not unusual. What IS unusual is that it was near the edge eastern checkpoint. Which is generally safe.",
+          "Vince captured a greater porcubear, which is not unusual. What IS unusual is that it was near the EDGE of the northern forest at the eastern checkpoint. Which is generally safe.",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -787,7 +781,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         startWeek: 1,
         status: QuestStatus.Success,
         notes:
-          "Phil found and possessed a Flamboar and made it fight a Screamer. They killed eachother. He gave half of his reward money to Freya since he couldn't carry the bodies back alone.",
+          "Phil found and possessed a flamboar and made it fight a screamer. They killed eachother. He gave half of his reward money to Freya since he couldn't carry the bodies back alone.",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -800,7 +794,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p3-q1-7",
         startWeek: 1,
         status: QuestStatus.Success,
-        notes: "Tjorn crushed a sludge tortoise if you can believe it.",
+        notes: "Tjorn crushed a bismuth tortoise if you can believe it.",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -823,6 +817,28 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
           },
         ],
       },
+      {
+        id: "p5-q1-7",
+        startWeek: 1,
+        status: QuestStatus.Success,
+        notes:
+          "Guy, the new guy, managed to bring down a whole pack of sveldtvulfs and save Landorin in the process.",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 40,
+            week: 1,
+          },
+        ],
+      },
+      {
+        id: "p6-q1-7",
+        startWeek: 1,
+        status: QuestStatus.Failed,
+        notes:
+          "Landorin bit off more than he could chew when he tried to take on a pack of sveldtvulfs. Luckily guy norman showed up to help.",
+        metrics: [],
+      },
     ],
   },
   {
@@ -835,7 +851,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.C,
     postedBy: "Trimble Dinklesbean",
     description: `"Someone has purloined a priceless timepiece of great... sentimental... value. How it makes its way back to me I do not care, nor will I ask."`,
-    
+
     parties: [
       {
         id: "p1-q1-8",
@@ -876,7 +892,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.E,
     postedBy: "Silky Bunnykin",
     description: `There's a child's drawing of a small, fuzzy, crying animal.`,
-    
+
     parties: [
       {
         id: "p1-q1-9",
