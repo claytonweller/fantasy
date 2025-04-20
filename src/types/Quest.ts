@@ -45,6 +45,7 @@ export interface IDbQuestPartyAdventurer {
   id: string;
   adventurerId: string;
   partyId: string;
+  lateAddition?: boolean;
   // Links to a list of metrics
 }
 

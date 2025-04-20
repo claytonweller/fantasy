@@ -2,6 +2,20 @@ import { EntityTypes, IResearch } from "types/Research";
 
 export const rawResearch: IResearch[] = [
   {
+    note: `Reginald Spintsmunge IV, is part of the Cliff Vanderbliff's Cult. When he goes missing during the Nobel escort quest it's to loop in with the rest of the members to operate in the shadows.`,
+    weekHappened: 1,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a25",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q1-1",
+      },
+    ],
+  },
+  {
     note: `Vlort is very lazy. He very rarely takes quests. He runs the Mill because its entertaining.`,
     weekHappened: 0,
     tags: [

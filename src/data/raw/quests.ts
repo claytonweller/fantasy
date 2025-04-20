@@ -822,7 +822,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         startWeek: 1,
         status: QuestStatus.Success,
         notes:
-          "Guy, the new guy, managed to bring down a whole pack of sveldtvulfs and save Landorin in the process.",
+          "Landorin bit off more than he could chew when he tried to take on a pack of sveldtvulfs. Luckily Guy Norman, he new guy, showed up to help. He managed to single handedly bring down the entire pack and save Landorin in the process. Guy split the reward anyway.",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -830,14 +830,6 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
             week: 1,
           },
         ],
-      },
-      {
-        id: "p6-q1-7",
-        startWeek: 1,
-        status: QuestStatus.Failed,
-        notes:
-          "Landorin bit off more than he could chew when he tried to take on a pack of sveldtvulfs. Luckily guy norman showed up to help.",
-        metrics: [],
       },
     ],
   },

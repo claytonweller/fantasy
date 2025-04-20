@@ -60,7 +60,8 @@ function Card(props: {
         {research.map((r, i) => {
           return (
             <li key={"r" + i} style={{ textAlign: "left" }}>
-              <b>Week {r.weekHappened} - </b>{r.note}
+              <b>Week {r.weekHappened} - </b>
+              {r.note}
             </li>
           );
         })}
