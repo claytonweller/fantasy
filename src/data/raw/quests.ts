@@ -236,7 +236,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q2-2",
         startWeek: 2,
-        notes: "TODO - Marcus goes missing",
+        // TODO Needs resolution
+        notes: "After the abysmal performance of the Radiantia Clan, Count Vanderbliff was approached by Marcus McStain, and proposed finding the missing retinue. They started where the attack happened and went north from there into the forest. ",
         status: QuestStatus.Success,
         clanId: "c2",
         metrics: [],
@@ -848,29 +849,10 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q1-8",
         startWeek: 1,
-        status: QuestStatus.Failed,
-        notes:
-          "Moira paid the right people to leave a door unlocked. She got the watch, but as she was bringing it back to Trimble it was mysteriously gone.",
-        metrics: [
-          {
-            metricRuleId: MetricRuleId.PropertyDamaged,
-            value: 5,
-            week: 1,
-          },
-        ],
-      },
-      {
-        id: "p2-q1-8",
-        startWeek: 1,
         status: QuestStatus.Success,
-        notes: "The fixer fixed the issue.",
-        metrics: [
-          {
-            metricRuleId: MetricRuleId.RewardGold,
-            value: 50,
-            week: 1,
-          },
-        ],
+        notes:
+          "Moira paid the right people to leave a door unlocked. She got the watch. She assumed the delivered it to a servant, but it was actually Jan Fandle in disguise, who in turn handed the watch in for the reward.",
+        metrics: [],
       },
     ],
   },

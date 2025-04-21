@@ -348,11 +348,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
         partyId: "p1-q2-2",
         metrics: [],
       },
-      {
-        lateAddition: true,
-        partyId: "p2-q1-8",
-        metrics: [] as IDbMetric[], // Ok... so some TS insanity happening here.
-      },
+
     ],
   },
   {
@@ -748,10 +744,18 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
-      // {
-      //   partyId: "p1-q2-7",
-      //   metrics: [],
-      // },
+
+      {
+        lateAddition: true,
+        partyId: "p1-q1-8",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 50,
+            week: 1,
+          },
+        ] as IDbMetric[], // Ok... so some TS insanity happening here.
+      },
     ],
   },
   {
@@ -802,7 +806,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q1-8",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.PropertyDamaged,
+            value: 5,
+            week: 1,
+          },
+        ],
       },
     ],
   },
