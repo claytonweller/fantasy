@@ -43,9 +43,6 @@ function formatStatuses(a: IRawAdventurer) {
     const afterStart = history.startWeek <= CURRENT_WEEK;
     const beforeEnd =
       !history.endWeek || (history.endWeek && CURRENT_WEEK <= history.endWeek);
-    if (a.name.toLowerCase() === "gad") {
-      console.log(afterStart, beforeEnd);
-    }
     if (afterStart && beforeEnd) {
       currentStatuses.push(history.status);
     }

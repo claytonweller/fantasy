@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import "./App.css";
 import { CardTypes } from "./types/Card";
 import Search from "./components/Search";
@@ -12,6 +12,7 @@ import { useEnumFilterState } from "hooks/useEnumFilterState";
 import Adventurers from "components/Adventurers";
 import Clans from "components/Clans";
 import { CURRENT_WEEK } from "config";
+import { useEscapeKeyPress } from "hooks/useEscapeKeyPress";
 
 function App() {
   const [searchText, setSearchText] = useState("");
@@ -19,8 +20,10 @@ function App() {
   const rankFilter = useEnumFilterState(Ranks, "Ranks");
   const [currentWeek] = useState(CURRENT_WEEK);
   const makeSearchable = makeSearchableText(setSearchText);
-
+  useEscapeKeyPress(() => setSearchText(''))
   const rules = getRules();
+
+
 
   return (
     <div className="App">

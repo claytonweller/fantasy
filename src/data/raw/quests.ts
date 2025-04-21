@@ -418,8 +418,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p1-q2-7",
         startWeek: 2,
         status: QuestStatus.Success,
-        notes:
-          "Syd got a couple of his orphan friends to distract Trimble and while he wasn't looking he yoinked the Watch. He went to the guild and Jan pretended to be a receptionist. She claimed the reward for herself.",
+        notes: "Gad tailed Trimble Dinklesbean for a while then when the mark went down the wrong alley he roughed him up and took the watch. Unbeknownst to Gad, he was also being tailed by Moira. As he was heading to the guild to report she pick pocketed the watch. She assumed the delivered it to one of Dorf's servants, but it was actually Jan Fandle in disguise, who in turn handed the watch in for the reward.",
         metrics: [],
       },
     ],
@@ -439,7 +438,6 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q2-8",
         startWeek: 2,
-        // TODO Adventurers
         // TODO notes
         status: QuestStatus.Failed,
         clanId: "c10",
@@ -877,8 +875,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p1-q1-8",
         startWeek: 1,
         status: QuestStatus.Success,
-        notes:
-          "Moira paid the right people to leave a door unlocked. She got the watch. She assumed the delivered it to a servant, but it was actually Jan Fandle in disguise, who in turn handed the watch in for the reward.",
+        notes: "Syd got a couple of his orphan friends to distract Trimble and while he wasn't looking he yoinked the Watch. He went to the guild and Jan pretended to be a receptionist. She claimed the reward for herself.",
         metrics: [],
       },
     ],
