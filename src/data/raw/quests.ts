@@ -252,7 +252,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     expireWeek: 2,
     claimType: QuestClaimType.Individual,
     questType: QuestTypes.Other,
-    questRank: Ranks.C,
+    questRank: Ranks.B,
     postedBy: "Guildmaster Vahn",
     description: `The head of the adventurer guild addressed the increase in monsters to the North of town, "Hey! Attention! Listen up you crazy buggers! Oh! Sorry didn't mean to hit you with that... Anyway, something's up with the Forest. The monsters are moving out of the depths to the edges near the road. Heck Vince Dawn even caught a greater porcubears near the east check point. Get out there and figure out what the heck is going on. No heroics. We just need info. This is on the guild's tab."`,
     parties: [
@@ -303,7 +303,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     description: `Morton has grown quite a bit since the city wall was erected. So now many of the townsfolk are living outside. With the increased Beast activity from the North the guards are spread thin.`,
     parties: [
       {
-        id: "p1-q2-4",
+        id: "p1-q2-5",
         startWeek: 2,
         // TODO notes
         notes: "TODO - Lucky they were there",
@@ -311,7 +311,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         metrics: [],
       },
       {
-        id: "p2-q2-4",
+        id: "p2-q2-5",
         startWeek: 2,
         // TODO notes
         notes: "TODO - Lucky they were there",
@@ -319,7 +319,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         metrics: [],
       },
       {
-        id: "p3-q2-4",
+        id: "p3-q2-5",
         startWeek: 2,
         // TODO notes
         notes: "TODO - Lucky they were there",

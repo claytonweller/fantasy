@@ -84,6 +84,7 @@ function calculateSingleWeekMetrics(params: {
   adventurers.forEach((a) => {
     const aQuests = questsByAdventurerId[a.id];
     aQuests.forEach((q) => {
+      if(!q?.parties) console.warn('Incorrect partyId', a);
       q.parties.forEach((p) => {
         if (p.startWeek === week) {
           activeAdventurers.add(a.id);
