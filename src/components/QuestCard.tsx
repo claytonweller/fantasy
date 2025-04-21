@@ -28,6 +28,7 @@ export default function QuestCard(props: {
     description,
     questRank,
     status,
+    claimType
   } = quest;
 
   const partyComponents = createPartyComponents({
@@ -45,8 +46,13 @@ export default function QuestCard(props: {
     status,
     typeSpecificFilters,
   );
+  const isClaimTypeMatch = setVisibilityFromFilterState(
+    "ClaimType",
+    claimType,
+    typeSpecificFilters,
+  );
 
-  const isVisible = isStatusMatch && isQuestTypeMatch;
+  const isVisible = isStatusMatch && isQuestTypeMatch && isClaimTypeMatch;
 
   return (
     <div style={{ display: isVisible ? "block" : "none" }}>
