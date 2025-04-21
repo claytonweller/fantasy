@@ -208,12 +208,12 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.B,
     postedBy: "Mayor Corque",
     description: `"Ok, so the rats in the sewer... they combined into what people are telling me is a rat king. And it has, how do I put it diplomatically?... dispatched a couple adventurers and has doubled in size. Thankfully the nobles visiting from the capitol have been kind enough to foot the subjugation bill."`,
-
     parties: [
       {
         id: "p1-q2-1",
         startWeek: 2,
-        notes: "They  !",
+        // TODO notes
+        notes: "TODO - What happened?",
         status: QuestStatus.Success,
         clanId: "c3",
         metrics: [],
@@ -231,13 +231,13 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.C,
     postedBy: "Cliff Vanderbliff",
     description: `In transit from the Capitol to Morton, several members of the Counts Retinue went missing during a monster attack near the northern forest. "I wish to know their fate, and will pay a premium if their bodies are returned."`,
-
     parties: [
       {
         id: "p1-q2-2",
         startWeek: 2,
-        // TODO Needs resolution
-        notes: "After the abysmal performance of the Radiantia Clan, Count Vanderbliff was approached by Marcus McStain, and proposed finding the missing retinue. They started where the attack happened and went north from there into the forest. ",
+        // TODO notes (Find Mamut)
+        notes:
+          "After the abysmal performance of the Radiantia Clan, Count Vanderbliff was approached by Marcus McStain, and proposed finding the missing retinue. They started where the attack happened and went north from there into the forest. ",
         status: QuestStatus.Success,
         clanId: "c2",
         metrics: [],
@@ -255,12 +255,13 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.C,
     postedBy: "Guildmaster Vahn",
     description: `The head of the adventurer guild addressed the increase in monsters to the North of town, "Hey! Attention! Listen up you crazy buggers! Oh! Sorry didn't mean to hit you with that... Anyway, something's up with the Forest. The monsters are moving out of the depths to the edges near the road. Heck Vince Dawn even caught a greater porcubears near the east check point. Get out there and figure out what the heck is going on. No heroics. We just need info. This is on the guild's tab."`,
-
     parties: [
       {
         id: "p1-q2-3",
         startWeek: 2,
-        notes: "They  !",
+        // TODO Adventurers
+        // TODO notes
+        notes: "TODO - Getting attacked by cultists",
         status: QuestStatus.Success,
         metrics: [],
       },
@@ -304,9 +305,25 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q2-4",
         startWeek: 2,
-        notes: "They  !",
+        // TODO notes
+        notes: "TODO - Lucky they were there",
         status: QuestStatus.Success,
-        // clanId: "c7",
+        metrics: [],
+      },
+      {
+        id: "p2-q2-4",
+        startWeek: 2,
+        // TODO notes
+        notes: "TODO - Lucky they were there",
+        status: QuestStatus.Success,
+        metrics: [],
+      },
+      {
+        id: "p3-q2-4",
+        startWeek: 2,
+        // TODO notes
+        notes: "TODO - Lucky they were there",
+        status: QuestStatus.Success,
         metrics: [],
       },
     ],
@@ -327,6 +344,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q2-6.1",
         startWeek: 2,
+        // TODO Adventurers
+        // TODO notes
         notes: "They  !",
         status: QuestStatus.Success,
         // clanId: "c7",
@@ -350,6 +369,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q2-6.2",
         startWeek: 2,
+        // TODO Adventurers
+        // TODO notes
         notes: "",
         status: QuestStatus.Success,
         // clanId: "c7",
@@ -373,6 +394,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q2-6.3",
         startWeek: 2,
+        // TODO Adventurers
+        // TODO notes
         notes: "They  !",
         status: QuestStatus.Success,
         // clanId: "c7",
@@ -394,6 +417,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q2-7",
         startWeek: 2,
+        // TODO Adventurers
+        // TODO notes
         status: QuestStatus.Failed,
         notes: "",
         metrics: [],
@@ -410,11 +435,13 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questType: QuestTypes.Other,
     questRank: Ranks.D,
     postedBy: "Elder K'Tar",
-    description: `"The cavern which houses the mystic spring has been desecrated."`,
+    description: `"The cavern housing the mystic spring has been desecrated."`,
     parties: [
       {
         id: "p1-q2-8",
         startWeek: 2,
+        // TODO Adventurers
+        // TODO notes
         status: QuestStatus.Failed,
         clanId: "c10",
         notes: "",
@@ -762,6 +789,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     postedBy: "Trade Guild",
     description: `Since we'll be having many people from the region coming to Morton we should make the roads safer by culling the local monster numbers.`,
 
+    // TODO - Wweek2 adventurers
     parties: [
       {
         id: "p1-q1-7",
@@ -856,6 +884,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       },
     ],
   },
+
+  // TODO - Wweek2 adventurers
   {
     id: "q1-9",
     name: "Missing Pet",

@@ -118,7 +118,12 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     className: "Shield Masochist",
     bio: `She will always jump in the way of an arrow... Even if it's not heading for someone.`,
     clanId: "c1",
-    statusHistory: [],
+    statusHistory: [
+      {
+        status: AdventurerStatuses.Dead,
+        startWeek: 2,
+      },
+    ],
     traits: [],
     questParties: [
       {
@@ -581,7 +586,12 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
       },
     ],
     traits: [],
-    questParties: [],
+    questParties: [
+      {
+        partyId: "p3-q2-4",
+        metrics: [],
+      },
+    ],
   },
   {
     id: "a25",
@@ -772,6 +782,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p2-q2-4",
+        metrics: [],
+      },
+      {
         partyId: "p5-q1-7",
         lateAddition: true,
         metrics: [
@@ -887,7 +901,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     nicknames: [],
     statusHistory: [],
     traits: [],
-    questParties: [],
+    questParties: [
+      {
+        lateAddition: true,
+        partyId: "p3-q2-4",
+        metrics: [],
+      },
+    ],
   },
   {
     id: "a37",
@@ -1313,7 +1333,12 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     nicknames: [],
     statusHistory: [],
     traits: [],
-    questParties: [],
+    questParties: [
+      {
+        partyId: "p1-q2-4",
+        metrics: [],
+      },
+    ],
   },
   {
     id: "a54",
