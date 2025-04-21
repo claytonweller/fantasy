@@ -410,17 +410,16 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     postedWeek: 2,
     claimType: QuestClaimType.Individual,
     questType: QuestTypes.Fetch,
-    questRank: Ranks.C,
+    questRank: Ranks.D,
     postedBy: "Dorf Mucklebunk",
     description: `My Family watch has been stolen! I swear I saw Trimble Dinklesbean with it. The sneak was eyeing it at the lodge hall! I will pay handsomely if someone were to... persuade him... that it should return to its rightful owner.`,
     parties: [
       {
         id: "p1-q2-7",
         startWeek: 2,
-        // TODO Adventurers
-        // TODO notes
-        status: QuestStatus.Failed,
-        notes: "",
+        status: QuestStatus.Success,
+        notes:
+          "Syd got a couple of his orphan friends to distract Trimble and while he wasn't looking he yoinked the Watch. He went to the guild and Jan pretended to be a receptionist. She claimed the reward for herself.",
         metrics: [],
       },
     ],
@@ -869,7 +868,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     postedWeek: 1,
     claimType: QuestClaimType.Individual,
     questType: QuestTypes.Fetch,
-    questRank: Ranks.C,
+    questRank: Ranks.D,
     postedBy: "Trimble Dinklesbean",
     description: `"Someone has purloined a priceless timepiece of great... sentimental... value. How it makes its way back to me I do not care, nor will I ask."`,
 

@@ -353,7 +353,6 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
         partyId: "p1-q2-2",
         metrics: [],
       },
-
     ],
   },
   {
@@ -421,7 +420,18 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     nicknames: [],
     statusHistory: [],
     traits: [],
-    questParties: [],
+    questParties: [
+      {
+        partyId: "p1-q2-7",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.PropertyDamaged,
+            value: 10,
+            week: 1,
+          },
+        ],
+      },
+    ],
   },
   {
     id: "a19",
@@ -744,7 +754,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
   {
     id: "a30",
     name: `Jan Fandle`,
-    races: [AdventurerRaces.Human],
+    races: [AdventurerRaces.Human, AdventurerRaces.Halfling],
     rank: Ranks.D,
     class: AdventurerClasses.Generalist,
     className: "Smooth talker",
@@ -754,7 +764,18 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
-
+      //
+      {
+        lateAddition: true,
+        partyId: "p1-q2-7",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 100,
+            week: 1,
+          },
+        ],
+      },
       {
         lateAddition: true,
         partyId: "p1-q1-8",
@@ -764,7 +785,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
             value: 50,
             week: 1,
           },
-        ] as IDbMetric[], // Ok... so some TS insanity happening here.
+        ],
       },
     ],
   },
