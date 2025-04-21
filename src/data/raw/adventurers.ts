@@ -45,7 +45,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
           {
             metricRuleId: MetricRuleId.PropertyDamaged,
             value: 10,
-            week: 1,
+            week: 2,
           },
         ],
       },
@@ -341,7 +341,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
             metricRuleId: MetricRuleId.EnemyKill,
             value: 1,
             rank: Ranks.C,
-            week: 1,
+            week: 2,
           },
         ],
       },
@@ -378,7 +378,12 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     nicknames: [],
     statusHistory: [],
     traits: [],
-    questParties: [],
+    questParties: [
+      {
+        partyId: "p1-q2-3",
+        metrics: [],
+      },
+    ],
   },
   {
     id: "a16",
@@ -394,15 +399,8 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
-        partyId: "p4-q1-7",
-        metrics: [
-          {
-            metricRuleId: MetricRuleId.EnemyKill,
-            rank: Ranks.E,
-            value: 2,
-            week: 1,
-          },
-        ],
+        partyId: "p1-q2-2",
+        metrics: [],
       },
     ],
   },
@@ -418,7 +416,19 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     nicknames: [],
     statusHistory: [],
     traits: [],
-    questParties: [],
+    questParties: [
+      {
+        partyId: "p4-q1-7",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyKill,
+            rank: Ranks.E,
+            value: 8,
+            week: 1,
+          },
+        ],
+      },
+    ],
   },
   {
     id: "a18",
@@ -457,6 +467,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
+      {
+        partyId: "p1-q2-3",
+        metrics: [],
+      },
       {
         partyId: "p4-q1-7",
         metrics: [
@@ -540,6 +554,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
+      {
+        partyId: "p3-q2-3",
+        metrics: [],
+      },
       {
         partyId: "p1-q1-1",
         metrics: [
@@ -783,7 +801,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
           {
             metricRuleId: MetricRuleId.RewardGold,
             value: 100,
-            week: 1,
+            week: 2,
           },
         ],
       },
@@ -857,7 +875,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
           {
             metricRuleId: MetricRuleId.PropertyDamaged,
             value: 5,
-            week: 1,
+            week: 2,
           },
         ],
       },
@@ -1053,7 +1071,9 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     nicknames: [],
     statusHistory: [],
     traits: [],
-    questParties: [],
+    questParties: [
+
+    ],
   },
   {
     id: "a41",
@@ -1130,6 +1150,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
+      {
+        partyId: "p3-q2-3",
+        metrics: [],
+      },
       {
         partyId: "p1-q1-4",
         metrics: [],
@@ -1211,7 +1235,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
             metricRuleId: MetricRuleId.EnemyKill,
             value: 2,
             rank: Ranks.D,
-            week: 1,
+            week: 2,
           },
         ],
       },
@@ -1268,7 +1292,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
             metricRuleId: MetricRuleId.EnemyKill,
             value: 2,
             rank: Ranks.D,
-            week: 1,
+            week: 2,
           },
         ],
       },
@@ -1314,13 +1338,20 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     nicknames: [],
     statusHistory: [],
     traits: [],
-    questParties: [],
+    questParties: [
+      {
+        partyId: "p2-q2-3",
+        metrics: [
+
+        ],
+      },
+    ],
   },
   {
     id: "a52",
     name: `Norn Bornelby`,
     races: [AdventurerRaces.Halfling],
-    rank: Ranks.D,
+    rank: Ranks.C,
     class: AdventurerClasses.Support,
     className: "Field Medic",
     bio: `Tiny hands, expert at neat stitches.`,
@@ -1329,6 +1360,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
+      {
+        partyId: "p3-q2-3",
+        metrics: [],
+      },
       {
         partyId: "p2-q1-4",
         metrics: [
@@ -1557,7 +1592,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
             metricRuleId: MetricRuleId.AllyHealed,
             value: 1,
             rank: Ranks.C,
-            week: 1,
+            week: 2,
           },
         ],
       },
@@ -1576,6 +1611,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
+      {
+        partyId: "p2-q2-3",
+        metrics: [],
+      },
       {
         partyId: "p2-q1-4",
         metrics: [

@@ -259,9 +259,24 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q2-3",
         startWeek: 2,
-        // TODO Adventurers
         // TODO notes
         notes: "TODO - Getting attacked by cultists",
+        status: QuestStatus.Success,
+        metrics: [],
+      },
+      {
+        id: "p2-q2-3",
+        startWeek: 2,
+        // TODO notes
+        notes: "TODO - Getting attacked by cultists",
+        status: QuestStatus.Success,
+        metrics: [],
+      },
+      {
+        id: "p3-q2-3",
+        startWeek: 2,
+        // TODO notes
+        notes: "Vivian is determined to redeem herself. Geoffrey is determined to get laid.",
         status: QuestStatus.Success,
         metrics: [],
       },
@@ -283,7 +298,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p1-q2-4",
         startWeek: 2,
         notes:
-          "After much splishing they subdued the delicious fishious Pescadomos!",
+          "After much splishing they subdued the vicious but delicious fishious Pescadomos!",
         status: QuestStatus.Success,
         clanId: "c7",
         metrics: [],

@@ -15,11 +15,12 @@ export function metaMetricsFromClan(clan: IClan, currentWeek: number) {
   const { quests } = clan;
   const sortedQuests = sortQuestsByWeek({ currentWeek, quests });
 
-  const metrics: IMetricsWithMeta[] = Object.entries(sortedQuests).map(
-    ([week, quests]) => {
-      return calculateSingleWeekMetrics({ week: Number(week), clan, quests });
-    },
-  );
+  const metrics: IMetricsWithMeta[] = Object.entries(sortedQuests)
+    .sort((a, b)=> parseInt(b[0]) - parseInt(a[0]))
+    .map(([week, quests]) => {
+        return calculateSingleWeekMetrics({ week: Number(week), clan, quests });
+      },
+    );
 
   return metrics;
 }
