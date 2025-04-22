@@ -60,7 +60,7 @@ export const rawClans: IDbClan[] = shuffleArray([
   {
     id: "c10",
     rank: Ranks.C,
-    name: "The Glade",
+    name: "Verdant Glade",
     mission: `Nature does not serve us, we serve nature.`,
   },
 ]);

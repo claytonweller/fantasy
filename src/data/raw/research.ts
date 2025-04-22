@@ -2,6 +2,17 @@ import { EntityTypes, IResearch } from "types/Research";
 
 export const rawResearch: IResearch[] = [
   {
+    note: `Most of the members of the Clockwork Chisel aren't doing quests this week so that they can get ready for Bounty Festival. It's a really good time for business for craftsmen.`,
+    weekHappened: 2,
+    tags: [
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c5",
+      },
+
+    ],
+  },
+  {
     note: `Reginald Spintsmunge IV, is part of the Cliff Vanderbliff's Cult. When he goes missing during the Nobel escort quest it's to loop in with the rest of the members to operate in the shadows.`,
     weekHappened: 1,
     tags: [
@@ -300,7 +311,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `Tall Pine Marlon is the leader of The Glade clan`,
+    note: `Tall Pine Marlon is the leader of Verdant Glade clan`,
     weekHappened: 0,
     weekPublic: 0,
     tags: [
