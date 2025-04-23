@@ -2,7 +2,7 @@ import { IEnumFilter } from "hooks/useEnumFilterState";
 import { IRules } from "../data/getRules";
 import { adventurersById } from "../data/queries/adventurers";
 import { CardTypes } from "../types/Card";
-import { IQuest } from "../types/Quest";
+import { IQuest, QuestStatus } from "../types/Quest";
 import { Ranks } from "../types/Ranks";
 import { ISearchParams } from "../types/SearchParams";
 import { addCommasToNumber } from "../utils/addCommasToNumber";
@@ -10,6 +10,7 @@ import { sortByRank } from "../utils/sortByRank";
 import Card from "./Card";
 import MetricGrid from "./MetricGrid";
 import { setVisibilityFromFilterState } from "utils/setVisibilityFromFilterState";
+import { CURRENT_WEEK } from "config";
 
 export default function QuestCard(props: {
   quest: IQuest;
@@ -28,7 +29,7 @@ export default function QuestCard(props: {
     description,
     questRank,
     status,
-    claimType
+    claimType,
   } = quest;
 
   const partyComponents = createPartyComponents({
@@ -53,7 +54,11 @@ export default function QuestCard(props: {
   );
 
   const isVisible = isStatusMatch && isQuestTypeMatch && isClaimTypeMatch;
-
+  const expired = [
+    QuestStatus.Expired,
+    QuestStatus.Success,
+    QuestStatus.Failed,
+  ].includes(status);
   return (
     <div style={{ display: isVisible ? "block" : "none" }}>
       <Card
@@ -64,6 +69,7 @@ export default function QuestCard(props: {
         type={CardTypes.Quest}
         name={name}
         research={quest.research}
+        expired={expired}
       >
         <div>
           <b>Reward</b>: {addCommasToNumber(reward)}g

@@ -20,10 +20,8 @@ function App() {
   const rankFilter = useEnumFilterState(Ranks, "Ranks");
   const [currentWeek] = useState(CURRENT_WEEK);
   const makeSearchable = makeSearchableText(setSearchText);
-  useEscapeKeyPress(() => setSearchText(''))
+  useEscapeKeyPress(() => setSearchText(""));
   const rules = getRules();
-
-
 
   return (
     <div className="App">

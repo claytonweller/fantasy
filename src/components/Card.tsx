@@ -11,6 +11,7 @@ function Card(props: {
   name?: string;
   type?: string;
   data?: any;
+  expired?: boolean;
   research: IResearch[];
   search: ISearchParams;
 }) {
@@ -22,6 +23,7 @@ function Card(props: {
     data = {},
     search,
     research,
+    expired,
   } = props;
   const [showData, setShowData] = useState(false);
   const [showFull, setShowFull] = useState(false);
@@ -73,16 +75,33 @@ function Card(props: {
 
   return (
     <div onClick={onCardClick} style={style}>
-      <h2>{name}</h2>
+      <h2
+        style={{
+          color: expired ? "#998" : "white",
+        }}
+      >
+        {name}
+      </h2>
       <span
         style={{
           display: isDevEnv ? "block" : "none",
+          position: "absolute",
+          left: 5,
+          top: 5,
+        }}
+      >
+        {data.id}
+      </span>
+      <span
+        style={{
+          fontWeight: "bold",
+          fontSize: "large",
           position: "absolute",
           right: 5,
           top: 5,
         }}
       >
-        {rank} - {data.id}
+        {rank}
       </span>
       <div style={{ display: showFull ? "block" : "none" }}>
         <div>

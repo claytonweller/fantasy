@@ -276,7 +276,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p3-q2-3",
         startWeek: 2,
         // TODO notes
-        notes: "Vivian is determined to redeem herself. Geoffrey is determined to get laid.",
+        notes:
+          "Vivian is determined to redeem herself. Geoffrey is determined to get laid.",
         status: QuestStatus.Success,
         metrics: [],
       },
@@ -359,11 +360,10 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q2-6.1",
         startWeek: 2,
-        // TODO Adventurers
         // TODO notes
         notes: "They  !",
         status: QuestStatus.Success,
-        // clanId: "c7",
+        clanId: "c1",
         metrics: [],
       },
     ],
@@ -376,7 +376,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     expireWeek: 2,
     claimType: QuestClaimType.Clan,
     questType: QuestTypes.Guard,
-    questRank: Ranks.D,
+    questRank: Ranks.C,
     postedBy: "The Trade Guild",
     description: `As Morton has become a common stop in trade routes, its Bounty festival has grown in popularity. Even people from the royal capitol of Valeon make the trip to enjoy the festivities.`,
 
@@ -384,11 +384,10 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q2-6.2",
         startWeek: 2,
-        // TODO Adventurers
         // TODO notes
         notes: "",
         status: QuestStatus.Success,
-        // clanId: "c7",
+        clanId: "c6",
         metrics: [],
       },
     ],
@@ -409,11 +408,10 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q2-6.3",
         startWeek: 2,
-        // TODO Adventurers
         // TODO notes
         notes: "They  !",
         status: QuestStatus.Success,
-        // clanId: "c7",
+        clanId: "c1",
         metrics: [],
       },
     ],
@@ -423,6 +421,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     name: "Stolen Watch",
     reward: 100,
     postedWeek: 2,
+    expireWeek: 2,
     claimType: QuestClaimType.Individual,
     questType: QuestTypes.Fetch,
     questRank: Ranks.D,
@@ -433,7 +432,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p1-q2-7",
         startWeek: 2,
         status: QuestStatus.Success,
-        notes: "Gad tailed Trimble Dinklesbean for a while then when the mark went down the wrong alley he roughed him up and took the watch. Unbeknownst to Gad, he was also being tailed by Moira. As he was heading to the guild to report she pick pocketed the watch. She assumed the delivered it to one of Dorf's servants, but it was actually Jan Fandle in disguise, who in turn handed the watch in for the reward.",
+        notes:
+          "Gad tailed Trimble Dinklesbean for a while then when the mark went down the wrong alley he roughed him up and took the watch. Unbeknownst to Gad, he was also being tailed by Moira. As he was heading to the guild to report she pick pocketed the watch. She assumed the delivered it to one of Dorf's servants, but it was actually Jan Fandle in disguise, who in turn handed the watch in for the reward.",
         metrics: [],
       },
     ],
@@ -448,7 +448,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questType: QuestTypes.Other,
     questRank: Ranks.D,
     postedBy: "Elder K'Tar",
-    description: `"The cavern housing the mystic spring has been desecrated."`,
+    description: `"The cavern housing the mystic spring has been desecrated. I can't clean it up by myself."`,
     parties: [
       {
         id: "p1-q2-8",
@@ -483,7 +483,6 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         status: QuestStatus.Failed,
         notes:
           "It went incredibly poorly. The caravan was ambushed by unusually strong monsters while traveling by the northern forest. 2 Nobles died along with many members of the staff. A few people were also lost in the woods during the attack, including adventurer, Reginald Spintsmunge IV. To add insult to injury: Count Vanderbliff's Carriage was completely destroyed and for the remainder of the trip he was forced to ride with a lesser nobel.",
-        // endWeek: number,
         clanId: "c6",
         metrics: [
           {
@@ -493,7 +492,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
           },
           {
             metricRuleId: MetricRuleId.CivilianSaved,
-            value: 16,
+            value: 12,
             week: 1,
           },
           {
@@ -800,8 +799,6 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.C,
     postedBy: "Trade Guild",
     description: `Since we'll be having many people from the region coming to Morton we should make the roads safer by culling the local monster numbers.`,
-
-    // TODO - Wweek2 adventurers
     parties: [
       {
         id: "p1-q1-7",
@@ -872,6 +869,27 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
           },
         ],
       },
+      {
+        id: "p6-q1-7",
+        startWeek: 2,
+        status: QuestStatus.Claimed,
+        notes:
+          "Looks like Drea learned how to track. Because she was able to take down a caustipede before it could cary a swineherd to its larval brood.",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 110,
+            week: 1,
+          },
+        ],
+      },
+      {
+        id: "p7-q1-7",
+        startWeek: 2,
+        status: QuestStatus.Claimed,
+        notes: " ",
+        metrics: [],
+      },
     ],
   },
   {
@@ -879,6 +897,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     name: "A family heirloom",
     reward: 50,
     postedWeek: 1,
+    expireWeek: 1,
     claimType: QuestClaimType.Individual,
     questType: QuestTypes.Fetch,
     questRank: Ranks.D,
@@ -890,16 +909,15 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p1-q1-8",
         startWeek: 1,
         status: QuestStatus.Success,
-        notes: "Syd got a couple of his orphan friends to distract Trimble and while he wasn't looking he yoinked the Watch. He went to the guild and Jan pretended to be a receptionist. She claimed the reward for herself.",
+        notes:
+          "Syd got a couple of his orphan friends to distract Trimble and while he wasn't looking he yoinked the Watch. He went to the guild and Jan pretended to be a receptionist. She claimed the reward for herself.",
         metrics: [],
       },
     ],
   },
-
-  // TODO - Wweek2 adventurers
   {
     id: "q1-9",
-    name: "Missing Pet",
+    name: "Lost Pet",
     reward: 0,
     postedWeek: 1,
     claimType: QuestClaimType.Individual,
@@ -918,7 +936,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       },
       {
         id: "p2-q1-9",
-        startWeek: 1,
+        startWeek: 2,
         status: QuestStatus.Failed,
         notes: "",
         metrics: [],

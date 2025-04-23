@@ -33,6 +33,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [
       {
         status: AdventurerStatuses.Injured,
+        startWeek: 3,
+      },
+      {
+        status: AdventurerStatuses.Injured,
         startWeek: 1,
         endWeek: 1,
       },
@@ -418,6 +422,28 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p6-q1-7",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyKill,
+            rank: Ranks.B,
+            value: 1,
+            week: 2,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyKill,
+            rank: Ranks.E,
+            value: 10,
+            week: 2,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 1,
+            week: 2,
+          },
+        ],
+      },
+      {
         partyId: "p4-q1-7",
         metrics: [
           {
@@ -592,7 +618,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Most mages carry tomes. Carlsbad carries a binder filled with fangs of various monsters.`,
     clanId: "c1",
     nicknames: [],
-    statusHistory: [],
+    statusHistory: [
+      {
+        status: AdventurerStatuses.ManaDepletion,
+        startWeek: 2,
+        endWeek: 2,
+      },
+    ],
     traits: [],
     questParties: [
       {
@@ -702,6 +734,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p7-q1-7",
+        metrics: [],
+      },
+      {
         partyId: "p3-q1-4",
         metrics: [
           {
@@ -737,6 +773,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
+      {
+        partyId: "p1-q2-6.2",
+        metrics: [],
+      },
       {
         partyId: "p1-q1-1",
         metrics: [
@@ -775,6 +815,19 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        lateAddition: true,
+        partyId: "p1-q2-6.3",
+
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            rank: Ranks.A,
+            value: 100,
+            week: 2,
+          },
+        ],
+      },
+      {
         partyId: "p1-q1-5",
         metrics: [],
       },
@@ -793,7 +846,6 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
-      //
       {
         lateAddition: true,
         partyId: "p1-q2-7",
@@ -909,6 +961,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p1-q2-6.2",
+        metrics: [],
+      },
+      {
         partyId: "p1-q1-4",
         metrics: [],
       },
@@ -924,7 +980,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `"You got something in your eyes?! It's probably DIRT HAHAHAHAH!"`,
     clanId: "c1",
     nicknames: [],
-    statusHistory: [],
+    statusHistory: [
+      {
+        status: AdventurerStatuses.Injured,
+        startWeek: 2,
+        endWeek: 2,
+      },
+    ],
     traits: [],
     questParties: [
       {
@@ -1047,6 +1109,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p1-q2-6.1",
+        metrics: [],
+      },
+      {
         partyId: "p1-q1-2",
         metrics: [
           {
@@ -1072,7 +1138,11 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
-
+      {
+        lateAddition: true,
+        partyId: "p1-q2-6.1",
+        metrics: [],
+      },
     ],
   },
   {
@@ -1088,6 +1158,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
+      {
+        partyId: "p1-q2-6.1",
+        metrics: [],
+      },
       {
         partyId: "p1-q1-2",
         metrics: [
@@ -1119,6 +1193,11 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     ],
     traits: [],
     questParties: [
+      {
+        lateAddition: true,
+        partyId: "p1-q2-1",
+        metrics: [],
+      },
       {
         partyId: "p2-q1-2",
         metrics: [
@@ -1192,6 +1271,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p1-q2-6.3",
+        metrics: [],
+      },
+      {
         partyId: "p2-q1-3",
         metrics: [
           {
@@ -1259,7 +1342,12 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
       },
     ],
     traits: [],
-    questParties: [],
+    questParties: [
+      {
+        partyId: "p1-q2-6.3",
+        metrics: [],
+      },
+    ],
   },
   {
     id: "a48",
@@ -1310,7 +1398,12 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     nicknames: [],
     statusHistory: [],
     traits: [],
-    questParties: [],
+    questParties: [
+      {
+        partyId: "p1-q2-6.3",
+        metrics: [],
+      },
+    ],
   },
   {
     id: "a50",
@@ -1341,9 +1434,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p2-q2-3",
-        metrics: [
-
-        ],
+        metrics: [],
       },
     ],
   },
@@ -1441,6 +1532,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p1-q2-6.2",
+        metrics: [],
+      },
+      {
         partyId: "p1-q1-4",
         metrics: [],
       },
@@ -1459,6 +1554,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
+      {
+        partyId: "p1-q2-6.2",
+        metrics: [],
+      },
       {
         partyId: "p1-q1-4",
         metrics: [],
@@ -1489,9 +1588,24 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Refuses to wear shoes. Always wears a headband.`,
     clanId: "c9",
     nicknames: [],
-    statusHistory: [],
+    statusHistory: [
+      {
+        status: AdventurerStatuses.Missing,
+        startWeek: 3,
+      },
+    ],
     traits: [],
     questParties: [
+      {
+        partyId: "p2-q1-9",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.GoneMissing,
+            value: 1,
+            week: 2,
+          },
+        ],
+      },
       {
         partyId: "p2-q1-4",
         metrics: [
@@ -1649,9 +1763,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q2-5",
-        metrics: [
-
-        ],
+        metrics: [],
       },
     ],
   },

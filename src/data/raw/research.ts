@@ -2,6 +2,141 @@ import { EntityTypes, IResearch } from "types/Research";
 
 export const rawResearch: IResearch[] = [
   {
+    note: `Corporal Margrave made the mistake of tipping the street performing mime. Now the mime is following him around doing everything he's doing.`,
+    weekHappened: 2,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a24",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a36",
+      },
+    ],
+  },
+  {
+    note: `Mara has decided to tail her daughter and see what this Sir Robin is all about.`,
+    weekHappened: 2,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a40",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a39",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a41",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q2-6.1",
+      },
+    ],
+  },
+  {
+    note: `Elnar overheard Icenose, Squeakela, and P'Tark, all inexperienced members of the mill planning to take on an escort quest to Furthbrand, and is planning to join them if no other experienced adventurers do.`,
+    weekHappened: 2,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a29",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a45",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a49",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a47",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q2-6.3",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c1",
+      },
+    ],
+  },
+  {
+    note: `Some people swear they're hearing the sound of a trumpet coming out of the sewers. Derb is down there trapped by the rats. Every time he stops playing they start trying to eat him.`,
+    weekHappened: 2,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a24",
+      },
+    ],
+  },
+  {
+    note: `Juniper became fast friends with the Duffenklampf twins after they all had a terrible experience with Geoffry while on the road to Serpentina`,
+    weekHappened: 1,
+    tags: [
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q1-4.1",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a34",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a55",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a56",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a43",
+      },
+    ],
+  },
+  {
+    note: `Now the picture has a picture a sad little beastkin girl who is also crying.`,
+    weekHappened: 2,
+    weekPublic: 2,
+    tags: [
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q1-9",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a12",
+      },
+    ],
+  },
+  {
+    note: `Silky Bunnykin is the avatar of Jachectapolk. She is luring in sacrifices.`,
+    weekHappened: 1,
+    tags: [
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q1-9",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a12",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a58",
+      },
+    ],
+  },
+  {
     note: `Most of the members of the Clockwork Chisel aren't doing quests this week so that they can get ready for Bounty Festival. It's a really good time for business for craftsmen.`,
     weekHappened: 2,
     tags: [
@@ -9,7 +144,6 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Clan,
         entityId: "c5",
       },
-
     ],
   },
   {
@@ -326,7 +460,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `On top of being an active member of the Church of the Holy Mother, Pendle Chilpin is one of the most acclaimed healing mages in all of Morton.`,
+    note: `On top of being an active member of the Church of the Holy Mother, Pendle Chilpin is one of the most acclaimed healing mages in all of Morton as well as the leader of the Breath of Life clan.`,
     weekHappened: 0,
     weekPublic: 0,
     tags: [

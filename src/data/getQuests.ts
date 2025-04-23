@@ -69,7 +69,7 @@ function determineStatus(quest: IRawQuest): QuestStatus {
   const isExpired = expireWeek && expireWeek < CURRENT_WEEK;
   const successParty = parties.find((p) => p.status === QuestStatus.Success);
 
-  if (successParty) return QuestStatus.Success;
+  if (successParty && isExpired) return QuestStatus.Success;
 
   if (isExpired) {
     if (!parties.length) return QuestStatus.Expired;

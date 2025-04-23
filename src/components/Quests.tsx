@@ -16,7 +16,7 @@ export default function Quests(props: {
   const { cardTypeFilters, search, rules, makeSearchable } = props;
   const statusFilter = useEnumFilterState(QuestStatus, "Status");
   const questTypeFilter = useEnumFilterState(QuestTypes, "QuestType");
-  const claimTypeFilter = useEnumFilterState(QuestClaimType, "ClaimType")
+  const claimTypeFilter = useEnumFilterState(QuestClaimType, "ClaimType");
   const typeSpecificFilters = [statusFilter, questTypeFilter, claimTypeFilter];
   const quests = getQuests();
   const allQuests = quests.map((q, i) => {

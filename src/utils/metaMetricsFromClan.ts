@@ -16,11 +16,10 @@ export function metaMetricsFromClan(clan: IClan, currentWeek: number) {
   const sortedQuests = sortQuestsByWeek({ currentWeek, quests });
 
   const metrics: IMetricsWithMeta[] = Object.entries(sortedQuests)
-    .sort((a, b)=> parseInt(b[0]) - parseInt(a[0]))
+    .sort((a, b) => parseInt(b[0]) - parseInt(a[0]))
     .map(([week, quests]) => {
-        return calculateSingleWeekMetrics({ week: Number(week), clan, quests });
-      },
-    );
+      return calculateSingleWeekMetrics({ week: Number(week), clan, quests });
+    });
 
   return metrics;
 }
@@ -85,7 +84,7 @@ function calculateSingleWeekMetrics(params: {
   adventurers.forEach((a) => {
     const aQuests = questsByAdventurerId[a.id];
     aQuests.forEach((q) => {
-      if(!q?.parties) console.warn('Incorrect partyId', a);
+      if (!q?.parties) console.warn("Incorrect partyId", a);
       q.parties.forEach((p) => {
         if (p.startWeek === week) {
           activeAdventurers.add(a.id);
