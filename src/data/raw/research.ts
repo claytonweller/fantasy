@@ -2,6 +2,28 @@ import { EntityTypes, IResearch } from "types/Research";
 
 export const rawResearch: IResearch[] = [
   {
+    note: `Geoffrey made an unwelcome pass at Norn, and Vivian stood up for her. Yet another female friendship solidified by a terrible man.`,
+    weekHappened: 2,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a22",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a52",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a43",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q2-3",
+      },
+    ],
+  },
+  {
     note: `Marcus is trying to get in good graces with Count Vanderbliff. He wouldn't say he's a believer in the cult. But he's viewing his membership and cooperation with the cult as a pragmatic tool to regain standing with the Nobility. They know about Mamut, and are hoping that marcus can get it to go into a rage.`,
     weekHappened: 2,
     tags: [
