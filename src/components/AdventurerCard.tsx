@@ -1,6 +1,10 @@
 import { IEnumFilter } from "hooks/useEnumFilterState";
 import { IRules } from "../data/getRules";
-import { ActivityStates, AdventurerStatuses, IAdventurer } from "../types/Adventurer";
+import {
+  ActivityStates,
+  AdventurerStatuses,
+  IAdventurer,
+} from "../types/Adventurer";
 import { CardTypes } from "../types/Card";
 import { IMetricsWithMeta } from "../types/Quest";
 import { ISearchParams } from "../types/SearchParams";
@@ -73,7 +77,9 @@ export default function AdventurerCard(props: {
 
   const isVisible =
     isClassMatch && isRaceMatch && isStatusMatch && isActivityMatch;
-  const expired = !!adventurer.currentStatuses.includes(AdventurerStatuses.Dead)
+  const expired = !!adventurer.currentStatuses.includes(
+    AdventurerStatuses.Dead,
+  );
   return (
     <div style={{ display: isVisible ? "block" : "none" }}>
       <Card

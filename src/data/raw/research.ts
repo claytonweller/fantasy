@@ -2,6 +2,20 @@ import { EntityTypes, IResearch } from "types/Research";
 
 export const rawResearch: IResearch[] = [
   {
+    note: `Marcus is trying to get in good graces with Count Vanderbliff. He wouldn't say he's a believer in the cult. But he's viewing his membership and cooperation with the cult as a pragmatic tool to regain standing with the Nobility. They know about Mamut, and are hoping that marcus can get it to go into a rage.`,
+    weekHappened: 2,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a4",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q2-2",
+      },
+    ],
+  },
+  {
     note: `Corporal Margrave made the mistake of tipping the street performing mime. Now the mime is following him around doing everything he's doing.`,
     weekHappened: 2,
     tags: [

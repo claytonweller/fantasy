@@ -28,7 +28,16 @@ export default function MetricGrid(params: {
     );
   });
   return (
-    <div style={{ display: "flex", overflowX: "auto" }}>
+    <div
+      style={{
+        display: "flex",
+        overflowX: "auto",
+        border: "solid",
+        borderColor: "black",
+        padding: "5px",
+        backgroundColor: "rgba(50,50,40,0.2)",
+      }}
+    >
       <table>
         <thead>
           <tr>{headers}</tr>

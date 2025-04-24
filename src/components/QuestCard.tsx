@@ -10,7 +10,6 @@ import { sortByRank } from "../utils/sortByRank";
 import Card from "./Card";
 import MetricGrid from "./MetricGrid";
 import { setVisibilityFromFilterState } from "utils/setVisibilityFromFilterState";
-import { CURRENT_WEEK } from "config";
 
 export default function QuestCard(props: {
   quest: IQuest;
@@ -139,8 +138,10 @@ function createPartyComponents(params: {
         }}
       >
         <div>
-          <div>Status: {p.status}</div>
-          {notes}
+          <div>
+            <b>Status: {p.status}</b>
+          </div>
+          <div style={{ padding: "10px" }}>{notes}</div>
           <MetricGrid
             metaMetrics={metaMetrics}
             makeSearchable={makeSearchable}

@@ -45,7 +45,7 @@ export default function ClanCard({
       <div>
         <b>Quests</b>: {questTitles}
       </div>
-      <div>
+      <div style={{ padding: "10px" }}>
         <b>Mission</b>: {mission}
       </div>
       <MetricGrid

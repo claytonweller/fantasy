@@ -212,11 +212,17 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q2-1",
         startWeek: 2,
-        // TODO notes
-        notes: "TODO - What happened?",
+        notes:
+          "The Mythril trap went to the section of the sewer where the previous parties had gotten surrounded and initially found nothing. Not even the typical rats. But after a bit of searching they began to hear the sound of music in the distance. They followed it and eventually came to a large chamber that looked more like an entrance to a ruin than a sewer. In the corner of the chamber was a mountain of rats slowly swaying to the sound of a weakly playing trumpet. An exhausted, Derb Alperd poked his head around the rodent mound and when he saw the other adventurers he shouted in delight. In that moment The Rats coalesced into the shape of a giant rat, hissed, andwa swarmed the emaciated bard. The Mythril Trap adventurers leapt into action and subdued the Rat King.",
         status: QuestStatus.Success,
         clanId: "c3",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 100,
+            week: 2,
+          },
+        ],
       },
     ],
   },
@@ -235,12 +241,23 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q2-2",
         startWeek: 2,
-        // TODO notes (Find Mamut)
+
         notes:
-          "After the abysmal performance of the Radiantia Clan, Count Vanderbliff was approached by Marcus McStain, and proposed finding the missing retinue. They started where the attack happened and went north from there into the forest. ",
+          "After the abysmal performance of the Radiantia Clan, Count Vanderbliff was approached by Marcus McStain, and proposed finding the missing retinue. They started where the attack happened and went north from there into the forest. There a couple signs: a blood trail here. Some torn silk there. They all lead deeper into the forest. There's the sound of screaming, and a one of the missing nobles rushes out. He's soon followed by splintering trees as a gigantic blue and white wolf beast the size of a building bursts forth. The party escapes, worse for wear. The Noble does not. They wait for the wolf to leave, and go back to the clearing and retrieve whats left of the body. The count says little upon their return and pays them the agreed reward.",
         status: QuestStatus.Success,
         clanId: "c2",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 300,
+            week: 2,
+          },
+          {
+            metricRuleId: MetricRuleId.CiviliansDead,
+            value: 1,
+            week: 2,
+          },
+        ],
       },
     ],
   },
@@ -259,27 +276,44 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q2-3",
         startWeek: 2,
-        // TODO notes
-        notes: "TODO - Getting attacked by cultists",
+        notes:
+          "Shiela and Arc set off into the woods. Other than the oddly aggressive beasts, they didn't find anything of note, but they lost track of time and had to set up camp for the night. In a brief moment when Shiela nodded off during her turn as watch they were ambushed. Arc immediately took care of all of the assailants, but it was Sheila that noticed they were oddly well groomed for being bandits.",
         status: QuestStatus.Success,
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 50,
+            week: 2,
+          },
+        ],
       },
       {
         id: "p2-q2-3",
         startWeek: 2,
-        // TODO notes
-        notes: "TODO - Getting attacked by cultists",
+        notes:
+          "Barkskin and Fissure decided to check the lumber yard and the mill. They were completely deserted. Planks were left half cut in the rain, and tools were strewn around on the ground. A couple of nearby trees look like they had been ripped out of the ground.",
         status: QuestStatus.Success,
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 50,
+            week: 2,
+          },
+        ],
       },
       {
         id: "p3-q2-3",
         startWeek: 2,
-        // TODO notes
         notes:
-          "Vivian is determined to redeem herself. Geoffrey is determined to get laid.",
+          "Vivian is determined to redeem herself and show that she is worthy of her position as the heir to the Crestmor family. She hired Norn to accompany her. Geoffrey insisted he come along for their safety. Geoffrey returned considerably later than the two women. They reported seeing blood on the trees and a few eviscerated monster corpses.",
         status: QuestStatus.Success,
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 75,
+            week: 2,
+          },
+        ],
       },
     ],
   },
