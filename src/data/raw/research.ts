@@ -2,6 +2,30 @@ import { EntityTypes, IResearch } from "types/Research";
 
 export const rawResearch: IResearch[] = [
   {
+    note: `Gorn is a fake name of a cult member working on behalf of Count Vanderbliff.`,
+    weekHappened: 3,
+    tags: [
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q3-3",
+      },
+    ],
+  },
+  {
+    note: `Derb can now control rats at will using his trumpet.`,
+    weekHappened: 3,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a42",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q2-1",
+      },
+    ],
+  },
+  {
     note: `Sheila noticed that even though the bandits wearing hides, they were surprisingly well kempt, but she didn't say anything to Arc.`,
     weekHappened: 2,
     tags: [
@@ -127,7 +151,7 @@ export const rawResearch: IResearch[] = [
     tags: [
       {
         entityType: EntityTypes.Adventurer,
-        entityId: "a24",
+        entityId: "a42",
       },
     ],
   },

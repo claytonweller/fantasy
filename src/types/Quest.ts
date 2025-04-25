@@ -110,7 +110,7 @@ export enum QuestMetricType {
 // to be flexible so point totals can vary by league, week, season, etc.
 export enum MetricRuleId {
   // Adventurer/individual metrics
-  EnemyKill = "EnemyKill",
+  EnemyDefeat = "EnemyDefeat",
   ChestOpened = "ChestOpened",
   TrapDisarmed = "TrapDisarmed",
   TrapTriggered = "TrapTriggered",

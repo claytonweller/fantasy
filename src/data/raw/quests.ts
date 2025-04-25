@@ -159,6 +159,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     name: "Capture Forest Monster",
     reward: 1500,
     postedWeek: 3,
+    expireWeek: 3,
     claimType: QuestClaimType.Clan,
     questType: QuestTypes.Kill,
     questRank: Ranks.A,
@@ -166,31 +167,206 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     description: `The Adventurer Guild has found that there is an enraged monster in the center of the Norther Forest: A gigantic blue wolf. 
     Guildmanster Vahn: "Hey! Shut Up! Hey! HEY!... sorry I'll pay for that... Ok. Anyway. I'm sure you've heard about the giant wolf. It's berserk and attacking anything that moves. It's scared all of the monsters out of the forest. Count Vanderbliff would like to say something.
     Count Vanderbliff: "This monster must be stopped. It killed my people. However, I will match the guild reward if it is captured alive."`,
-    parties: [],
+    parties: [
+      {
+        id: "p1-q3-1",
+        startWeek: 3,
+        notes:
+          "TODO - Mythril Trap brings it in alive.",
+        status: QuestStatus.Success,
+        clanId: "c3",
+        metrics: [
+
+        ],
+      },
+    ],
   },
   {
     id: "q3-2",
     name: "Protect Sacred Grove",
-    reward: 5,
+    reward: 15,
     postedWeek: 3,
+    expireWeek: 3,
     claimType: QuestClaimType.Clan,
     questType: QuestTypes.Guard,
     questRank: Ranks.C,
     postedBy: "Elder K'Tar",
     description: `"Corruption spreads in the forest. I worry that it will reach the sacred grove."`,
-    parties: [],
+    parties: [
+      {
+        id: "p1-q3-2",
+        startWeek: 3,
+        notes:
+          "TODO - Verdant Glade tries to protect Mamut's grove, but it's more than they can manage. Cult attack. Return of Reginald Spintsmunge?",
+        status: QuestStatus.Failed,
+        clanId: "c10",
+        metrics: [
+
+        ],
+      },
+    ],
   },
   {
     id: "q3-3",
     name: "A Pesky Fly",
     reward: 100,
     postedWeek: 3,
+    expireWeek: 3,
     claimType: QuestClaimType.Individual,
     questType: QuestTypes.Kill,
     questRank: Ranks.C,
     postedBy: "Gorn Wigby",
     description: `"There is a pesky fly buzzing by my ear... I would pay handsomely to have it swatted."`,
+    parties: [
+      {
+        id: "p1-q3-3",
+        startWeek: 3,
+        notes:
+          "TODO - Gorn is a fake name by a cultist to hid that this is actually from Vanderbliff. Marcus takes the quest but fails.",
+        status: QuestStatus.Failed,
+        clanId: "c2",
+        metrics: [
+
+        ],
+      },
+    ],
+  },
+  {
+    id: "q3-4",
+    name: "Allez Cuisine!",
+    reward: 130,
+    postedWeek: 3,
+    expireWeek: 3,
+    claimType: QuestClaimType.Individual,
+    questType: QuestTypes.Other,
+    questRank: Ranks.C,
+    postedBy: "The Chairman",
+    description: `It's a cookoff Julia Pepper's child, the iron chef is taking on any challengers. At the festival. The "Who's cuisine will reign supreme?!"`,
+    parties: [
+      {
+        id: "p1-q3-4",
+        startWeek: 3,
+        notes:
+          "TODO - the team is triumphant",
+        status: QuestStatus.Success,
+        clanId: "c7",
+        metrics: [],
+      },
+    ],
+  },
+  {
+    id: "q3-5",
+    name: "Peace Time? NO! Time Piece Revenge!",
+    reward: 50,
+    postedWeek: 3,
+    expireWeek: 3,
+    claimType: QuestClaimType.Clan,
+    questType: QuestTypes.Fetch,
+    questRank: Ranks.D,
+    postedBy: "Trimble Dinklesbean",
+    description: `"Get me that damn watch!"`,
+    parties: [
+      {
+        id: "p1-q3-5",
+        startWeek: 3,
+        notes:
+          "TODO - Syd, Gad, Fixer, Jan, Moira",
+        status: QuestStatus.Success,
+        clanId: "c7",
+        metrics: [],
+      },
+    ],
+  },
+  {
+    id: "q3-6.1",
+    name: "Where is my husband?",
+    reward: 10,
+    postedWeek: 3,
+    claimType: QuestClaimType.Individual,
+    questType: QuestTypes.Fetch,
+    questRank: Ranks.D,
+    postedBy: "Cynthia Durkle",
+    description: `My husband Charles hasn't been home in a week. Last I heard he was heading out to the sawmill.`,
     parties: [],
+  },
+  {
+    id: "q3-7",
+    name: "Extra Festival Security",
+    reward: 300,
+    postedWeek: 3,
+    claimType: QuestClaimType.Individual,
+    questType: QuestTypes.Guard,
+    questRank: Ranks.C,
+    postedBy: "Trade guild",
+    description: `It's going to be busy in Morton this week with the festival. We'll need capable people to guard the merchants and their wares.`,
+    parties: [],
+  },
+  {
+    id: "q3-8",
+    name: "Bounty Battle",
+    reward: 500,
+    postedWeek: 3,
+    claimType: QuestClaimType.Individual,
+    questType: QuestTypes.Other,
+    questRank: Ranks.S,
+    postedBy: "The Bureau for a Better Bounty Battle",
+    description: `One of the big draws the the Morton Bounty Festival is the one on one fighting tournament. It's a winner takes all event, and happens over the course of the week. Anyone can enter regardless of their skill, rank, social status, or race. Everyone has the right to get kicked in the head. Mara Wright will be the referee (and make sure no one gets killed)`,
+    parties: [
+      {
+        id: "p1-q3-8",
+        startWeek: 3,
+        notes:
+          "TODO - Ken",
+        status: QuestStatus.Success,
+        clanId: "c9",
+        metrics: [],
+      },
+      {
+        id: "p2-q3-8",
+        startWeek: 3,
+        notes:
+          "TODO - Fissure",
+        status: QuestStatus.Success,
+        clanId: "c9",
+        metrics: [],
+      },
+      {
+        id: "p3-q3-8",
+        startWeek: 3,
+        notes:
+          "TODO - Lydia",
+        status: QuestStatus.Success,
+        clanId: "c9",
+        metrics: [],
+      },
+      {
+        id: "p4-q3-8",
+        startWeek: 3,
+        notes:
+          "TODO - Barkskin",
+        status: QuestStatus.Success,
+        clanId: "c9",
+        metrics: [],
+      },
+      {
+        id: "p5-q3-8",
+        startWeek: 3,
+        notes:
+          "TODO - Steve",
+        status: QuestStatus.Success,
+        clanId: "c9",
+        metrics: [],
+      },
+      {
+        id: "p6-q3-8",
+        startWeek: 3,
+        notes:
+          "TODO - Sir Robin -> Clara",
+        status: QuestStatus.Success,
+        clanId: "c9",
+        metrics: [],
+      },
+    ],
   },
 
   // Week 2
@@ -345,7 +521,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     name: "Trouble in the Burbs",
     reward: 70,
     postedWeek: 2,
-    expireWeek: 2,
+    expireWeek: 3,
     claimType: QuestClaimType.Individual,
     questType: QuestTypes.Guard,
     questRank: Ranks.D,
@@ -564,7 +740,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
             week: 2,
           },
           {
-            metricRuleId: MetricRuleId.EnemyKill,
+            metricRuleId: MetricRuleId.EnemyDefeat,
             value: 1,
             rank: Ranks.B,
             week: 2,
@@ -573,6 +749,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       },
     ],
   },
+  // TODO - add in a missing person thing
 
   // Week 1
   {
@@ -1062,6 +1239,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     name: "Lost Pet",
     reward: 0,
     postedWeek: 1,
+    expireWeek: 3,
     claimType: QuestClaimType.Individual,
     questType: QuestTypes.Fetch,
     questRank: Ranks.E,

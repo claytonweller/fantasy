@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import { CardTypes } from "./types/Card";
 import Search from "./components/Search";

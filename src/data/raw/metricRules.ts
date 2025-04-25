@@ -2,7 +2,7 @@ import { MetricRuleId, QuestMetricType } from "types/Quest";
 
 export const rawMetricRules: IRawMetricRule[] = [
   {
-    metricRuleId: MetricRuleId.EnemyKill,
+    metricRuleId: MetricRuleId.EnemyDefeat,
     questMetricType: QuestMetricType.PointByRank,
     multiplier: 0.25,
   },
