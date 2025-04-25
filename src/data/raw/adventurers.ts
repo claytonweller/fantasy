@@ -924,7 +924,14 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q2-6.2",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyKill,
+            value: 1,
+            rank: Ranks.C,
+            week: 1,
+          },
+        ],
       },
       {
         partyId: "p1-q1-1",
@@ -966,12 +973,21 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
       {
         lateAddition: true,
         partyId: "p1-q2-6.3",
-
         metrics: [
           {
             metricRuleId: MetricRuleId.AllyHealed,
-            rank: Ranks.A,
-            value: 100,
+            rank: Ranks.E,
+            value: 3,
+            week: 2,
+          },
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 50,
+            week: 2,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 3,
             week: 2,
           },
         ],
@@ -1118,7 +1134,14 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q2-6.2",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            value: 1,
+            rank: Ranks.C,
+            week: 1,
+          },
+        ],
       },
       {
         partyId: "p1-q1-4",
@@ -1279,7 +1302,20 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q2-6.1",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyKill,
+            value: 2,
+            rank: Ranks.E,
+            week: 2,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyKill,
+            value: 2,
+            rank: Ranks.D,
+            week: 2,
+          },
+        ],
       },
       {
         partyId: "p1-q1-2",
@@ -1310,7 +1346,14 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
       {
         lateAddition: true,
         partyId: "p1-q2-6.1",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyKill,
+            value: 4,
+            rank: Ranks.D,
+            week: 2,
+          },
+        ],
       },
     ],
   },
@@ -1437,7 +1480,12 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     className: "Aged Wizard",
     bio: `His magic tome store has gone out of business. So despite being very old he has decided to become an adventurer.`,
     nicknames: [],
-    statusHistory: [],
+    statusHistory: [
+      {
+        status: AdventurerStatuses.Missing,
+        startWeek: 3,
+      },
+    ],
     traits: [],
     questParties: [
       {
@@ -1471,7 +1519,14 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q2-6.3",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyKill,
+            value: 2,
+            rank: Ranks.E,
+            week: 2,
+          },
+        ],
       },
       {
         partyId: "p2-q1-3",
@@ -1539,12 +1594,24 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
         startWeek: 1,
         endWeek: 1,
       },
+      {
+        status: AdventurerStatuses.ManaDepletion,
+        startWeek: 3,
+        endWeek: 3,
+      },
     ],
     traits: [],
     questParties: [
       {
         partyId: "p1-q2-6.3",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyKill,
+            value: 2,
+            week: 2,
+            rank: Ranks.E
+          },
+        ],
       },
     ],
   },
@@ -1595,12 +1662,18 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `As hard to his as she is cute.`,
     clanId: "c1",
     nicknames: [],
-    statusHistory: [],
+    statusHistory: [      {
+      status: AdventurerStatuses.Injured,
+      startWeek: 3,
+      endWeek: 3,
+    },],
     traits: [],
     questParties: [
       {
         partyId: "p1-q2-6.3",
-        metrics: [],
+        metrics: [
+
+        ],
       },
     ],
   },
@@ -1746,7 +1819,14 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q2-6.2",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyKill,
+            value: 3,
+            rank: Ranks.D,
+            week: 1,
+          },
+        ],
       },
       {
         partyId: "p1-q1-4",
@@ -1769,7 +1849,14 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q2-6.2",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyKill,
+            value: 3,
+            rank: Ranks.D,
+            week: 1,
+          },
+        ],
       },
       {
         partyId: "p1-q1-4",
@@ -1798,20 +1885,23 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     rank: Ranks.D,
     class: AdventurerClasses.Attacker,
     className: "Street Fighter",
-    bio: `Refuses to wear shoes. Always wears a headband.`,
+    bio: `Refuses to wear shoes. Always wears red.`,
     clanId: "c9",
     nicknames: [],
     statusHistory: [
-      {
-        status: AdventurerStatuses.Missing,
-        startWeek: 3,
-      },
+
     ],
     traits: [],
     questParties: [
       {
         partyId: "p8-q1-7",
         metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyKill,
+            value: 18,
+            rank: Ranks.E,
+            week: 2,
+          },
         ],
       },
       {

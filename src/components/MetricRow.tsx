@@ -1,3 +1,4 @@
+import { roundToHundredths } from "utils/roundToHundredths";
 import { IRules } from "../data/getRules";
 import { IMetricsWithMeta } from "../types/Quest";
 import { Ranks } from "../types/Ranks";

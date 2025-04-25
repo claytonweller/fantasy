@@ -44,12 +44,12 @@ export const rawMetricRules: IRawMetricRule[] = [
   {
     metricRuleId: MetricRuleId.CivilianSaved,
     questMetricType: QuestMetricType.Count,
-    multiplier: 1,
+    multiplier: 0.5,
   },
   {
     metricRuleId: MetricRuleId.CiviliansDead,
     questMetricType: QuestMetricType.Count,
-    multiplier: -2,
+    multiplier: -1,
   },
   {
     metricRuleId: MetricRuleId.RewardGold,
@@ -64,12 +64,12 @@ export const rawMetricRules: IRawMetricRule[] = [
   {
     metricRuleId: MetricRuleId.QuestsAccepted,
     questMetricType: QuestMetricType.Count,
-    multiplier: -1,
+    multiplier: -2,
   },
   {
     metricRuleId: MetricRuleId.QuestsComplete,
     questMetricType: QuestMetricType.Count,
-    multiplier: 1.5,
+    multiplier: 2.5,
   },
   {
     metricRuleId: MetricRuleId.ActiveMembers,

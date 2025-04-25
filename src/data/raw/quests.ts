@@ -422,16 +422,25 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.D,
     postedBy: "The Trade Guild",
     description: `As Morton has become a common stop in trade routes, its Bounty festival has grown in popularity. Even people from the larger cities like the major port of Serpetina make the trip to enjoy the festivities. The merchants come in a week early`,
-
     parties: [
       {
         id: "p1-q2-6.1",
         startWeek: 2,
-        // TODO notes
-        notes: "Clara & Sir Robin. Mara butts in.",
+        notes: "The caravan was targeted by Bandits. Sir Robin was hit on the head and passed out. Clara defended him and the rest of the caravan. At the end she was about to get hit by an arrow when Mara stepped in and caught it out of mid air. Mara pointed at Sir Robin's unconscious body and said, 'This is the man you love?' To which Clara replied 'Mah-om' while clobbering right in the jaw.",
         status: QuestStatus.Success,
         clanId: "c1",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 70,
+            week: 2,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 6,
+            week: 2,
+          },
+        ],
       },
     ],
   },
@@ -446,16 +455,25 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.C,
     postedBy: "The Trade Guild",
     description: `As Morton has become a common stop in trade routes, its Bounty festival has grown in popularity. Even people from the royal capitol of Valeon make the trip to enjoy the festivities. The merchants come in a week early`,
-
     parties: [
       {
         id: "p1-q2-6.2",
         startWeek: 2,
-        // TODO notes
-        notes: "Duffenklampf twins, Juniper, Louis ",
+        notes: "The road from Valeon has become quite dangerous since it goes by the edge of the northern forest. But Louis was not caught by surprise by this like with the Noble escort last week. The Duffenklampf twins scouted ahead and when there was any sign of monsters the went off the main road. They only got caught by surprise once, and despite Juniper barfing and passing out while treating a minor injury on Louis' arm, no one was really hurt.",
         status: QuestStatus.Success,
         clanId: "c6",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 120,
+            week: 2,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 8,
+            week: 2,
+          },
+        ],
       },
     ],
   },
@@ -470,16 +488,25 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.D,
     postedBy: "The Trade Guild",
     description: `As Morton has become a common stop in trade routes, its Bounty festival has grown in popularity. Even people from the larger cities like the industrial powerhouse Furthbrand make the trip to enjoy the festivities. The merchants come in a week early.`,
-
     parties: [
       {
         id: "p1-q2-6.3",
         startWeek: 2,
-        // TODO notes
-        notes: "P'Tark, Squeakela, Icenose, and Elnar to help at the end.",
-        status: QuestStatus.Success,
+        notes: "P'Tark, Squeakela, and Icenose bit off more than they could chew. The mountain roads are treacherous in the best of times, but with a quick onset storm they couldn't keep all the merchants safe, let alone the cargo. Luckily Elnar though to go check on them when they were late coming back.",
+        status: QuestStatus.Failed,
         clanId: "c1",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.PropertyDamaged,
+            value: 200,
+            week: 2,
+          },
+          {
+            metricRuleId: MetricRuleId.CiviliansDead,
+            value: 3,
+            week: 2,
+          },
+        ],
       },
     ],
   },
@@ -540,7 +567,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questType: QuestTypes.Guard,
     questRank: Ranks.B,
     postedBy: "Cliff Vanderbliff",
-    description: `A group of nobles lead Count Clifford Vanderbliff and their retinue will be from the capitol to Morton to attend the annual festival. They require, "A competent local guard detail. Must be an established party, in good reputation, with knowledge of regional dangers."`,
+    description: `A group of nobles lead Count Clifford Vanderbliff and their retinue will be from Valeon (the capitol) to Morton to attend the annual festival. They require, "A competent local guard detail. Must be an established party, in good reputation, with knowledge of regional dangers."`,
 
     parties: [
       {
@@ -967,9 +994,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p8-q1-7",
         startWeek: 2,
         status: QuestStatus.Claimed,
-        // TODO - notes
-        notes: " ",
-        metrics: [],
+        notes: "Someone has to kill those slimes!",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 7,
+            week: 2,
+          }
+        ],
       },
     ],
   },
