@@ -2,6 +2,24 @@ import { EntityTypes, IResearch } from "types/Research";
 
 export const rawResearch: IResearch[] = [
   {
+    note: `Sheila noticed that even though the bandits wearing hides, they were surprisingly well kempt, but she didn't say anything to Arc.`,
+    weekHappened: 2,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a19",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a15",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q2-3",
+      },
+    ],
+  },
+  {
     note: `Geoffrey made an unwelcome pass at Norn, and Vivian stood up for her. Yet another female friendship solidified by a terrible man.`,
     weekHappened: 2,
     tags: [
@@ -168,7 +186,7 @@ export const rawResearch: IResearch[] = [
       },
       {
         entityType: EntityTypes.Adventurer,
-        entityId: "a58",
+        entityId: "a44",
       },
     ],
   },

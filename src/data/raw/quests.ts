@@ -277,7 +277,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p1-q2-3",
         startWeek: 2,
         notes:
-          "Shiela and Arc set off into the woods. Other than the oddly aggressive beasts, they didn't find anything of note, but they lost track of time and had to set up camp for the night. In a brief moment when Shiela nodded off during her turn as watch they were ambushed. Arc immediately took care of all of the assailants, but it was Sheila that noticed they were oddly well groomed for being bandits.",
+          "Shiela and Arc set off into the woods. Other than the oddly aggressive beasts, they didn't find anything of note, but they lost track of time and had to set up camp for the night. In a brief moment when Shiela nodded off during her turn as watch they were ambushed. Arc immediately took care of all of the assailants, before Sheila could even wake up. He thought they were beasts, but realized they were people dressed in monster hides.",
         status: QuestStatus.Success,
         metrics: [
           {
@@ -355,32 +355,65 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q2-5",
         startWeek: 2,
-        // TODO notes
-        notes: "TODO - Lucky they were there",
+        notes:
+          "Steve punched a hole in a slime. Steve punched a hole in a moncoon. Steve punched a hole in a blade deer. Steve accidentally punched a hole in a house.",
         status: QuestStatus.Success,
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 15,
+            week: 2,
+          },
+          {
+            metricRuleId: MetricRuleId.PropertyDamaged,
+            value: 7,
+            week: 2,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 1,
+            week: 2,
+          },
+        ],
       },
       {
         id: "p2-q2-5",
         startWeek: 2,
-        // TODO notes
-        notes: "TODO - Lucky they were there",
+        notes:
+          "There were a lot of extra monsters. Guy had no problem dispatching them. He also saved a couple of village kids trapped in a barley field.",
         status: QuestStatus.Success,
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 15,
+            week: 2,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 3,
+            week: 2,
+          },
+        ],
       },
       {
         id: "p3-q2-5",
         startWeek: 2,
-        // TODO notes
-        notes: "TODO - Lucky they were there",
+        notes:
+          "Margrave was followed by a mime. Every time he killed a monster the mime killed one too.",
         status: QuestStatus.Success,
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 30,
+            week: 2,
+          },
+        ],
       },
     ],
   },
   {
     id: "q2-6.1",
-    name: "Serpentina Visitor Escort",
+    name: "Serpentina Merchant Escort",
     reward: 70,
     postedWeek: 2,
     expireWeek: 2,
@@ -388,14 +421,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questType: QuestTypes.Guard,
     questRank: Ranks.D,
     postedBy: "The Trade Guild",
-    description: `As Morton has become a common stop in trade routes, its Bounty festival has grown in popularity. Even people from the larger cities like the major port of Serpetina make the trip to enjoy the festivities.`,
+    description: `As Morton has become a common stop in trade routes, its Bounty festival has grown in popularity. Even people from the larger cities like the major port of Serpetina make the trip to enjoy the festivities. The merchants come in a week early`,
 
     parties: [
       {
         id: "p1-q2-6.1",
         startWeek: 2,
         // TODO notes
-        notes: "They  !",
+        notes: "Clara & Sir Robin. Mara butts in.",
         status: QuestStatus.Success,
         clanId: "c1",
         metrics: [],
@@ -404,7 +437,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
   },
   {
     id: "q2-6.2",
-    name: "Valeon Visitor Escort",
+    name: "Valeon Merchant Escort",
     reward: 120,
     postedWeek: 2,
     expireWeek: 2,
@@ -412,14 +445,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questType: QuestTypes.Guard,
     questRank: Ranks.C,
     postedBy: "The Trade Guild",
-    description: `As Morton has become a common stop in trade routes, its Bounty festival has grown in popularity. Even people from the royal capitol of Valeon make the trip to enjoy the festivities.`,
+    description: `As Morton has become a common stop in trade routes, its Bounty festival has grown in popularity. Even people from the royal capitol of Valeon make the trip to enjoy the festivities. The merchants come in a week early`,
 
     parties: [
       {
         id: "p1-q2-6.2",
         startWeek: 2,
         // TODO notes
-        notes: "",
+        notes: "Duffenklampf twins, Juniper, Louis ",
         status: QuestStatus.Success,
         clanId: "c6",
         metrics: [],
@@ -428,7 +461,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
   },
   {
     id: "q2-6.3",
-    name: "Furthbrand Visitor Escorts",
+    name: "Furthbrand Merchant Escort",
     reward: 100,
     postedWeek: 2,
     expireWeek: 2,
@@ -436,14 +469,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questType: QuestTypes.Guard,
     questRank: Ranks.D,
     postedBy: "The Trade Guild",
-    description: `As Morton has become a common stop in trade routes, its Bounty festival has grown in popularity. Even people from the larger cities like the industrial powerhouse Furthbrand make the trip to enjoy the festivities.`,
+    description: `As Morton has become a common stop in trade routes, its Bounty festival has grown in popularity. Even people from the larger cities like the industrial powerhouse Furthbrand make the trip to enjoy the festivities. The merchants come in a week early.`,
 
     parties: [
       {
         id: "p1-q2-6.3",
         startWeek: 2,
         // TODO notes
-        notes: "They  !",
+        notes: "P'Tark, Squeakela, Icenose, and Elnar to help at the end.",
         status: QuestStatus.Success,
         clanId: "c1",
         metrics: [],
@@ -640,7 +673,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
   },
   {
     id: "q1-4.1",
-    name: "Southern Merchant Caravan Escort",
+    name: "Serpentina Supply Caravan Escort",
     reward: 100,
     postedWeek: 1,
     expireWeek: 1,
@@ -648,7 +681,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questType: QuestTypes.Guard,
     questRank: Ranks.C,
     postedBy: "Trade Guild",
-    description: `With the Festival coming up in a couple of weeks we need capable parties to guard the wagons as they come in. Southern Caravan from the Port city of Serpentina.`,
+    description: `With the Festival coming up in a couple of weeks we need capable parties to guard the wagons as merchants head out to get supplies. Southern Caravan from the Port city of Serpentina.`,
 
     parties: [
       {
@@ -670,7 +703,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
   },
   {
     id: "q1-4.2",
-    name: "Eastern Merchant Caravan Escort",
+    name: "Valeon supply Caravan Escort",
     reward: 150,
     postedWeek: 1,
     expireWeek: 1,
@@ -678,7 +711,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questType: QuestTypes.Guard,
     questRank: Ranks.C,
     postedBy: "Trade Guild",
-    description: `With the Festival coming up in a couple of weeks we need capable parties to guard the wagons as they come in. Eastern Caravan: From the Capital city.`,
+    description: `With the Festival coming up in a couple of weeks we need capable parties to guard the wagons as merchants head out to get supplies. Eastern Caravan: From Valeon, the Capital city.`,
 
     parties: [
       {
@@ -710,7 +743,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
   },
   {
     id: "q1-4.3",
-    name: "Western Merchant Caravan Escort",
+    name: "Furthbrand supply Caravan Escort",
     reward: 100,
     postedWeek: 1,
     expireWeek: 1,
@@ -718,7 +751,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questType: QuestTypes.Guard,
     questRank: Ranks.C,
     postedBy: "Trade Guild",
-    description: `With the Festival coming up in a couple of weeks we need capable parties to guard the wagons as they come in. Western Caravan: From the mountains.`,
+    description: `With the Festival coming up in a couple of weeks we need capable parties to guard the wagons as merchants head out to get supplies. Western Caravan: to the mountains, and the industrial powerhouse Furthbrand`,
 
     parties: [
       {
@@ -880,7 +913,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         startWeek: 1,
         status: QuestStatus.Success,
         notes:
-          "Sheila was bored with no Clan quests. Luna came along for company. The realized that neither of them was a good tracker. They just wound up having a nice picnic and killing a bunch of slimes",
+          "Sheila was bored with no Clan quests. Drea came along for company. They just wound up having a nice picnic and killing a bunch of slimes",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -908,12 +941,12 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         startWeek: 2,
         status: QuestStatus.Claimed,
         notes:
-          "Looks like Drea learned how to track. Because she was able to take down a caustipede before it could cary a swineherd to its larval brood.",
+          "Drea was able to take down a caustipede before it could cary a swineherd to its larval brood.",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
             value: 110,
-            week: 1,
+            week: 2,
           },
         ],
       },
@@ -921,6 +954,20 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p7-q1-7",
         startWeek: 2,
         status: QuestStatus.Claimed,
+        notes: "Bjork is the only member of Clockwork Chisel who isn't preparing for the festival. So she wen out and fought some long burrow munchers.",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 30,
+            week: 2,
+          },
+        ],
+      },
+      {
+        id: "p8-q1-7",
+        startWeek: 2,
+        status: QuestStatus.Claimed,
+        // TODO - notes
         notes: " ",
         metrics: [],
       },
@@ -972,7 +1019,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p2-q1-9",
         startWeek: 2,
         status: QuestStatus.Failed,
-        notes: "",
+        notes: "Who's Goldorf again?",
         metrics: [],
       },
     ],

@@ -85,7 +85,7 @@ export default function AdventurerCard(props: {
       <Card
         color="#554433"
         search={search}
-        data={adventurer}
+        data={{...adventurer, quests:[]}}
         rank={rank}
         name={name}
         type={CardTypes.Adventurer}
