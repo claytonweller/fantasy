@@ -83,20 +83,20 @@ export default function AdventurerCard(props: {
 
   // We do this so the search function doesn't eventually return all
   // Adventurers for ever query
-  const reducedQuests = quests.map(q =>{
+  const reducedQuests = quests.map((q) => {
     return {
-      ...q, 
+      ...q,
       parties: undefined,
-      details: { ...q.details, parties: undefined}
-    }
-  })
+      details: { ...q.details, parties: undefined },
+    };
+  });
 
   return (
     <div style={{ display: isVisible ? "block" : "none" }}>
       <Card
         color="#554433"
         search={search}
-        data={{...adventurer, quests:reducedQuests}}
+        data={{ ...adventurer, quests: reducedQuests }}
         rank={rank}
         name={name}
         type={CardTypes.Adventurer}

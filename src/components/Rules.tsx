@@ -100,22 +100,22 @@ function WeeklyFlow() {
     <>
       <h3>Weekly Flow</h3>
       <TitleList
-        title="Monday"
+        title="Monday-Tuesday"
         bullets={[
           "Previous Week Recapped",
           "New Quests posted. All quests have a rank, and whether they are for individuals or clans.",
           "Villagers send Research prompts to League Master",
         ]}
-      ></TitleList>
+      />
 
       <TitleList
-        title="Tues-Thursday"
+        title="Wednesday-Thursday"
         bullets={[
           "Adventurers sign up for quests. They can pick more than one. Clans or Adventurers can only claim quests within 1 rank of their own.",
           "League Master will respond to all Research prompts",
           "Villagers send in roster picks to League Master",
         ]}
-      ></TitleList>
+      />
 
       <TitleList
         title="Fri-Sun"
@@ -124,7 +124,7 @@ function WeeklyFlow() {
           "League Master will put rosters online",
           "Villagers pray that they made the right picks!",
         ]}
-      ></TitleList>
+      />
     </>
   );
 }

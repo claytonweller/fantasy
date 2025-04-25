@@ -977,7 +977,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
           {
             metricRuleId: MetricRuleId.AllyHealed,
             rank: Ranks.E,
-            value: 3,
+            value: 6,
             week: 2,
           },
           {
@@ -1938,7 +1938,9 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q2-8",
-        metrics: [],
+        metrics: [
+
+        ],
       },
     ],
   },

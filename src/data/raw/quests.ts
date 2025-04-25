@@ -547,11 +547,27 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q2-8",
         startWeek: 2,
-        // TODO notes
-        status: QuestStatus.Failed,
+        status: QuestStatus.Success,
         clanId: "c10",
-        notes: "",
-        metrics: [],
+        notes: "The second Freya saw this quest posted she immediately claimed it. K'Tar brought them to the mystic spring which had strange runes scrawled all over the back of the cave. There was a strong scent of sulphur coming off the water. Shortly after they began the cleanup, a monster which appear to be a random assortment of human limbs attached to a viscose slime burst out of the pool and lunged at the Elder. The party acted with perfect teamwork.",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 1,
+            week: 2,
+          },
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 10,
+            week: 2,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyKill,
+            value: 1,
+            rank: Ranks.B,
+            week: 2,
+          },
+        ],
       },
     ],
   },
