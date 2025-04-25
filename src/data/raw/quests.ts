@@ -166,7 +166,6 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     description: `The Adventurer Guild has found that there is an enraged monster in the center of the Norther Forest: A gigantic blue wolf. 
     Guildmanster Vahn: "Hey! Shut Up! Hey! HEY!... sorry I'll pay for that... Ok. Anyway. I'm sure you've heard about the giant wolf. It's berserk and attacking anything that moves. It's scared all of the monsters out of the forest. Count Vanderbliff would like to say something.
     Count Vanderbliff: "This monster must be stopped. It killed my people. However, I will match the guild reward if it is captured alive."`,
-
     parties: [],
   },
   {
@@ -178,8 +177,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questType: QuestTypes.Guard,
     questRank: Ranks.C,
     postedBy: "Elder K'Tar",
-    description: `There's corruption in the forest. I worry that it will reach the sacred grove.`,
-
+    description: `"Corruption spreads in the forest. I worry that it will reach the sacred grove."`,
     parties: [],
   },
   {
@@ -192,7 +190,6 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.C,
     postedBy: "Gorn Wigby",
     description: `"There is a pesky fly buzzing by my ear... I would pay handsomely to have it swatted."`,
-
     parties: [],
   },
 
