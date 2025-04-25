@@ -17,7 +17,6 @@ export const questsByPartyId = rawQuests.reduce(
 
 export const questsByClanId = rawQuests.reduce(
   (prev, q) => {
-    if (q.claimType !== QuestClaimType.Clan) return prev;
     const updated = { ...prev };
     q.parties.forEach((p) => {
       if (!p.clanId) return;

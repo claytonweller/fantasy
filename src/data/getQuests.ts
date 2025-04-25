@@ -17,11 +17,14 @@ export function getQuests(): IQuest[] {
 
 export function getQuestsByClanId(clanId: string): IQuest[] {
   const clanQuests = rawQuests.filter((q) => {
-    const isClanQuest = q.claimType === QuestClaimType.Clan;
     const isClaimedByClan = !!q.parties.find((p) => p.clanId === clanId);
-    return isClanQuest && isClaimedByClan;
+    return  isClaimedByClan;
   });
-  return formatQuests(clanQuests);
+  const questsWithOnlyClanParties = clanQuests.map(q=>{
+    const clanParties = q.parties.filter(p => p.clanId === clanId)
+    return {...q, parties: clanParties}
+  })
+  return formatQuests(questsWithOnlyClanParties);
 }
 
 function formatQuests(unformattedQuests: IRawQuest[]): IQuest[] {

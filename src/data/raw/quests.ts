@@ -279,6 +279,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes:
           "Shiela and Arc set off into the woods. Other than the oddly aggressive beasts, they didn't find anything of note, but they lost track of time and had to set up camp for the night. In a brief moment when Shiela nodded off during her turn as watch they were ambushed. Arc immediately took care of all of the assailants, before Sheila could even wake up. He thought they were beasts, but realized they were people dressed in monster hides.",
         status: QuestStatus.Success,
+        clanId: 'c4',
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -293,6 +294,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes:
           "Barkskin and Fissure decided to check the lumber yard and the mill. They were completely deserted. Planks were left half cut in the rain, and tools were strewn around on the ground. A couple of nearby trees look like they had been ripped out of the ground.",
         status: QuestStatus.Success,
+        clanId: 'c9',
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -307,6 +309,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes:
           "Vivian is determined to redeem herself and show that she is worthy of her position as the heir to the Crestmor family. She hired Norn to accompany her. Geoffrey insisted he come along for their safety. Geoffrey returned considerably later than the two women. They reported seeing blood on the trees and a few eviscerated monster corpses.",
         status: QuestStatus.Success,
+        clanId: 'c6',
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -358,6 +361,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes:
           "Steve punched a hole in a slime. Steve punched a hole in a moncoon. Steve punched a hole in a blade deer. Steve accidentally punched a hole in a house.",
         status: QuestStatus.Success,
+        clanId: 'c9',
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -382,6 +386,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes:
           "There were a lot of extra monsters. Guy had no problem dispatching them. He also saved a couple of village kids trapped in a barley field.",
         status: QuestStatus.Success,
+        clanId: 'c1',
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -677,6 +682,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p1-q1-3",
         startWeek: 1,
         status: QuestStatus.Success,
+        clanId: 'c10',
         notes:
           "Bandits attacked the shrine. Luckily Ash & Icenose were there to help!",
         // endWeek: number,
@@ -697,6 +703,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p2-q1-3",
         startWeek: 1,
         status: QuestStatus.Success,
+        clanId: 'c1',
         notes:
           "Bandits attacked the shrine. Luckily Ash & Icenose were there to help!",
         metrics: [
@@ -836,6 +843,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p1-q1-5",
         startWeek: 1,
         status: QuestStatus.Success,
+        clanId: 'c8',
         notes:
           "Elnar brought back what would normally have sold for hundreds of gold, but he wasn't doing it for the money.",
         metrics: [
@@ -850,6 +858,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p2-q1-5",
         startWeek: 1,
         status: QuestStatus.Failed,
+        clanId: 'c8',
         notes:
           "Szuuth realized they had no idea what the were looking for and mostly brought back weeds. Sister Lasiter gave her a gold for the flowers because they were pretty.",
         metrics: [
@@ -864,7 +873,6 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p3-q1-5",
         startWeek: 1,
         status: QuestStatus.Success,
-        // endWeek: number,
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -914,6 +922,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p1-q1-7",
         startWeek: 1,
         status: QuestStatus.Success,
+        clanId: 'c3',
         notes:
           "Vince captured a greater porcubear, which is not unusual. What IS unusual is that it was near the EDGE of the northern forest at the eastern checkpoint. Which is generally safe.",
         metrics: [
@@ -928,6 +937,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p2-q1-7",
         startWeek: 1,
         status: QuestStatus.Success,
+        clanId: 'c10',
         notes:
           "Phil found and possessed a flamboar and made it fight a screamer. They killed eachother. He gave half of his reward money to Freya since he couldn't carry the bodies back alone.",
         metrics: [
@@ -942,6 +952,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p3-q1-7",
         startWeek: 1,
         status: QuestStatus.Success,
+        clanId: 'c2',
         notes: "Tjorn crushed a bismuth tortoise if you can believe it.",
         metrics: [
           {
@@ -955,6 +966,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p4-q1-7",
         startWeek: 1,
         status: QuestStatus.Success,
+        clanId: 'c4',
         notes:
           "Sheila was bored with no Clan quests. Drea came along for company. They just wound up having a nice picnic and killing a bunch of slimes",
         metrics: [
@@ -969,6 +981,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p5-q1-7",
         startWeek: 1,
         status: QuestStatus.Success,
+        clanId: 'c1',
         notes:
           "Landorin bit off more than he could chew when he tried to take on a pack of sveldtvulfs. Luckily Guy Norman, he new guy, showed up to help. He managed to single handedly bring down the entire pack and save Landorin in the process. Guy split the reward anyway.",
         metrics: [
@@ -983,6 +996,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p6-q1-7",
         startWeek: 2,
         status: QuestStatus.Claimed,
+        clanId: 'c4',
         notes:
           "Drea was able to take down a caustipede before it could cary a swineherd to its larval brood.",
         metrics: [
@@ -997,6 +1011,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p7-q1-7",
         startWeek: 2,
         status: QuestStatus.Claimed,
+        clanId: 'c5',
         notes: "Bjork is the only member of Clockwork Chisel who isn't preparing for the festival. So she wen out and fought some long burrow munchers.",
         metrics: [
           {
@@ -1010,6 +1025,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p8-q1-7",
         startWeek: 2,
         status: QuestStatus.Claimed,
+        clanId: 'c9',
         notes: "Someone has to kill those slimes!",
         metrics: [
           {

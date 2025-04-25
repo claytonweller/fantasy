@@ -5,7 +5,7 @@ import {
   IAdventurerQuest,
   IDbAdventurerStatusHistory,
 } from "../types/Adventurer";
-import { adventurersById, adventurersByPartyId } from "./queries/adventurers";
+import { adventurersByClanId, adventurersById, adventurersByPartyId } from "./queries/adventurers";
 import { clansById } from "./queries/clans";
 import { questsByPartyId } from "./queries/quests";
 import { researchByTag } from "./queries/research";
@@ -21,6 +21,12 @@ export function getAdventurerById(id: string): IAdventurer {
   const adventurer = adventurersById[id];
   return formatAdventurer(adventurer);
 }
+
+export function getAdventurerByClanId(clanId: string): IAdventurer[]{
+  const clanAdventurers = adventurersByClanId[clanId]
+  return clanAdventurers.map(a => formatAdventurer(adventurersById[a.id]))
+}
+
 
 function formatAdventurer(a: IRawAdventurer): IAdventurer {
   const clan = a.clanId ? clansById[a.clanId] : undefined;
