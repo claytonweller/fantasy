@@ -366,6 +366,24 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         clanId: "c9",
         metrics: [],
       },
+      {
+        id: "p7-q3-8",
+        startWeek: 3,
+        notes:
+          "TODO - ?????",
+        status: QuestStatus.Success,
+        clanId: "c9",
+        metrics: [],
+      },
+      {
+        id: "p8-q3-8",
+        startWeek: 3,
+        notes:
+          "TODO - ?????",
+        status: QuestStatus.Success,
+        clanId: "c9",
+        metrics: [],
+      },
     ],
   },
 

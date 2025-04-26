@@ -21,7 +21,9 @@ export default function ClanCard({
 }) {
   const { name, rank, mission, adventurers, quests } = clan;
   const adventurerNames = adventurers.map((a, i) => (
-    <div key={"aName" + i}>{makeSearchable(a.name)}</div>
+    <div key={"aName" + i}>
+      {makeSearchable(a.name)} - {a.rank}
+    </div>
   ));
   const questNames = [...new Set(quests.map((q) => q.name))];
   const questTitles = questNames.map((name, i) => (
