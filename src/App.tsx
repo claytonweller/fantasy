@@ -31,11 +31,40 @@ function App() {
           color: "white",
         }}
       >
-        <Search
+
+        <div style={{
+          display: 'flex',
+          flex: 'wrap',
+          justifyContent:'center',
+          paddingTop: 30
+        }}>
+                          <Search
           searchText={searchText}
           setSearchText={setSearchText}
           enumFilters={[cardTypeFilter, rankFilter]}
         />
+          <div style={{padding: 10}}>
+            <a
+              href="https://forms.gle/fMMDrWwtHMFxj8X68"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Research Form (Mon/Tues)
+            </a>
+          </div>
+          <div style={{padding: 10}}>
+            <a
+              href="https://forms.gle/JogH7PWcuetJSL7r5"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Roster Pick Form (Thu/Fri)
+            </a>
+          </div>
+        </div>
+
+
+
         <Rules rules={rules} rankMultipliers={rankMultipliers} />
         <div
           style={{

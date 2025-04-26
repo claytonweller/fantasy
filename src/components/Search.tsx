@@ -22,13 +22,14 @@ export default function Search(props: {
       style={{
         display: "flex",
         justifyItems: "center",
-        padding: "40px 10px 10px 10px",
+        padding: 10,
       }}
     >
       <div
         style={{
           position: "fixed",
           top: 0,
+          left: 0,
           backgroundColor: "black",
           zIndex: 1000,
           // margin: '5px',

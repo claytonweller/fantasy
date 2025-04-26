@@ -7,9 +7,9 @@ export interface IResearch {
 }
 
 export interface IResearchPrompt {
-  villagerId: string,
-  week: number,
-  text: string,
+  villagerId: string;
+  week: number;
+  text: string;
 }
 
 export interface IResearchTag {
