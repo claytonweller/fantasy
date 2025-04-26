@@ -31,19 +31,20 @@ function App() {
           color: "white",
         }}
       >
-
-        <div style={{
-          display: 'flex',
-          flex: 'wrap',
-          justifyContent:'center',
-          paddingTop: 30
-        }}>
-                          <Search
-          searchText={searchText}
-          setSearchText={setSearchText}
-          enumFilters={[cardTypeFilter, rankFilter]}
-        />
-          <div style={{padding: 10}}>
+        <div
+          style={{
+            display: "flex",
+            flex: "wrap",
+            justifyContent: "center",
+            paddingTop: 30,
+          }}
+        >
+          <Search
+            searchText={searchText}
+            setSearchText={setSearchText}
+            enumFilters={[cardTypeFilter, rankFilter]}
+          />
+          <div style={{ padding: 10 }}>
             <a
               href="https://forms.gle/fMMDrWwtHMFxj8X68"
               target="_blank"
@@ -52,7 +53,7 @@ function App() {
               Research Form (Mon/Tues)
             </a>
           </div>
-          <div style={{padding: 10}}>
+          <div style={{ padding: 10 }}>
             <a
               href="https://forms.gle/JogH7PWcuetJSL7r5"
               target="_blank"
@@ -62,8 +63,6 @@ function App() {
             </a>
           </div>
         </div>
-
-
 
         <Rules rules={rules} rankMultipliers={rankMultipliers} />
         <div
