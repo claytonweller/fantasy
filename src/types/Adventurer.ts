@@ -69,6 +69,7 @@ export enum AdventurerRaces {
   Elf = "Elf",
   Spirit = "Spirit",
   Halfling = "Halfling",
+  Orc = "Orc",
   Unknown = "Unknown",
 }
 

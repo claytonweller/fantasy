@@ -10,6 +10,7 @@ function Card(props: {
   rank?: Ranks;
   name?: string;
   type?: string;
+  showRank?: boolean;
   data?: any;
   expired?: boolean;
   research: IResearch[];
@@ -22,6 +23,7 @@ function Card(props: {
     name = "",
     data = {},
     search,
+    showRank = true,
     research,
     expired,
   } = props;
@@ -92,21 +94,25 @@ function Card(props: {
       >
         {data.id}
       </span>
-      <span
-        style={{
-          fontWeight: "bold",
-          fontSize: "large",
-          position: "absolute",
-          right: 5,
-          top: 5,
-        }}
-      >
-        {rank}
-      </span>
+      {showRank && (
+        <span
+          style={{
+            fontWeight: "bold",
+            fontSize: "large",
+            position: "absolute",
+            right: 5,
+            top: 5,
+          }}
+        >
+          {rank}
+        </span>
+      )}
       <div style={{ display: showFull ? "block" : "none" }}>
-        <div>
-          <b>Rank:</b> {rank}
-        </div>
+        {showRank && (
+          <div>
+            <b>Rank:</b> {rank}
+          </div>
+        )}
         {children}
         {researchComponent}
         <div style={{ display: isDevEnv ? "block" : "none" }}>

@@ -30,7 +30,17 @@ export default function VillagerCard(props: {
       name={`${name} - ${villagerMetrics.total}pts`}
       type={CardTypes.Villager}
       research={villager.research}
+      showRank={false}
     >
+      <div>
+        <b>Player Name</b> - {villager.playerName}{" "}
+      </div>
+      <div>
+        <b>Profession</b> - {villager.profession}{" "}
+      </div>
+      <div>
+        <b>Race</b> - {villager.races}{" "}
+      </div>
       <div>
         <b>Running Total : {villagerMetrics.total}</b>
       </div>

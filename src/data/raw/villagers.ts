@@ -1,3 +1,4 @@
+import { AdventurerRaces } from "types/Adventurer";
 import {
   IDbRoster,
   IDbRosterPick,
@@ -6,11 +7,24 @@ import {
 } from "types/Roster";
 import { IDbVillager } from "types/Villager";
 
+export interface IRawVillager extends IDbVillager {
+  rosters: IRawRoster[];
+}
+
+export interface IRawRoster extends Omit<IDbRoster, "id" | "villagerId"> {
+  picks: IRawRosterPick[];
+}
+
+export interface IRawRosterPick
+  extends Omit<IDbRosterPick, "id" | "rosterId"> {}
+
 export const rawVillagers: IRawVillager[] = [
   {
     id: "v1",
-    name: "Wilder",
+    name: "Angus Jeter",
     playerName: "Wilder",
+    profession: "Changeless restaurateur",
+    races: [AdventurerRaces.Dwarf],
     rosters: [
       // {
       //   week: 1,
@@ -56,49 +70,50 @@ export const rawVillagers: IRawVillager[] = [
   },
   {
     id: "v2",
-    name: "Catie",
+    name: "Melody",
     playerName: "Catie",
+    profession: "Busybody stage mistress",
+    races: [AdventurerRaces.Human],
     rosters: [],
   },
   {
     id: "v3",
-    name: "Dan",
+    name: "Tizquik",
     playerName: "Dan",
+    profession: "Temporarily between everything",
+    races: [AdventurerRaces.Dwarf],
     rosters: [],
   },
   {
     id: "v4",
-    name: "Sophie",
+    name: "Mogriel Thunderbutt",
     playerName: "Sophie",
+    profession: "Bog scraper (aspiring comfort woman)",
+    races: [AdventurerRaces.Human],
     rosters: [],
   },
   {
     id: "v5",
-    name: "Adam",
+    name: "Gartock Bloodthorn",
     playerName: "Adam",
+    profession: "Watchmaker apprentice (gear boy)",
+    races: [AdventurerRaces.Orc],
     rosters: [],
   },
   {
     id: "v6",
-    name: "Jake",
+    name: 'Jake "The Snake" Charmer',
     playerName: "Jake",
+    profession: "Pest remover/depositor",
+    races: [AdventurerRaces.Human],
     rosters: [],
   },
   {
     id: "v7",
-    name: "Courtney",
+    name: "Kaleidoscope Luminsdotter",
     playerName: "Courtney",
+    profession: "Stained glass craftsman (3rd apprentice)",
+    races: [AdventurerRaces.Human],
     rosters: [],
   },
 ];
-
-export interface IRawVillager extends IDbVillager {
-  rosters: IRawRoster[];
-}
-
-export interface IRawRoster extends Omit<IDbRoster, "id" | "villagerId"> {
-  picks: IRawRosterPick[];
-}
-
-export interface IRawRosterPick
-  extends Omit<IDbRosterPick, "id" | "rosterId"> {}

@@ -1,8 +1,15 @@
 export interface IResearch {
   note: string;
+  villagerPrompts?: IResearchPrompt[];
   weekHappened: number;
   weekPublic?: number;
   tags: IResearchTag[];
+}
+
+export interface IResearchPrompt {
+  villagerId: string,
+  week: number,
+  text: string,
 }
 
 export interface IResearchTag {
