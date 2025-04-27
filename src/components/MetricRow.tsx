@@ -1,8 +1,8 @@
-import { roundToHundredths } from "utils/roundToHundredths";
 import { IRules } from "../data/getRules";
 import { IMetricsWithMeta } from "../types/Quest";
 import { Ranks } from "../types/Ranks";
 import { formatRuleNameFromMetric, IMetricRow } from "./MetricGrid";
+import { CURRENT_WEEK } from "config";
 
 export default function MetricRow(params: {
   meta: IMetricsWithMeta;
@@ -11,9 +11,9 @@ export default function MetricRow(params: {
   makeSearchable: (text: string) => JSX.Element;
 }) {
   const { meta, emptyRow, makeSearchable, rules } = params;
+  const week = meta.week;
   // We spread here to create a shallow copy so our
   // mutations don't affect other rows
-  const week = meta.metrics[0] ? meta.metrics[0].week : 0;
   const row: IMetricRow = {
     ...emptyRow,
     week,

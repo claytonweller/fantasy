@@ -52,8 +52,9 @@ export interface IDbQuestPartyAdventurer {
 
 export interface IMetricsWithMeta {
   name: string;
-  rank?: Ranks | RosterPositions;
+  week: number;
   metrics: IMetric[];
+  rank?: Ranks | RosterPositions;
 }
 
 export type IMetric =
@@ -123,7 +124,7 @@ export enum MetricRuleId {
   CivilianSaved = "CivilianSaved",
   CiviliansDead = "CiviliansDead",
   RewardGold = "RewardGold",
-  PropertyDamaged = "PropertyDamaged",
+  CostsOrDamages = "CostsOrDamages",
 
   // Clan Metrics
   QuestsAccepted = "QuestsAccepted",

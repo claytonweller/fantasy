@@ -76,6 +76,7 @@ function computeVillagerMetrics(props: { rules: IRules; villager: IVillager }) {
             name: "clan",
             rank: RosterPositions.Clan,
             metrics: [],
+            week: r.week,
           };
         },
       );
@@ -114,6 +115,7 @@ function calculateClanPickMetrics(clan: IClan, week: number) {
     name: clan.name,
     rank: RosterPositions.Clan,
     metrics: weekMetrics[0].metrics,
+    week
   };
 }
 
@@ -135,6 +137,7 @@ function calculateAdventurerPickMetrics(
     name: adventurer.name,
     rank: adventurer.rank,
     metrics: [],
+    week
   };
 }
 

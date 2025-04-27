@@ -115,6 +115,7 @@ function createPartyComponents(params: {
         return {
           name: a.name,
           rank: a.rank,
+          week: p.startWeek,
           metrics: metrics || [],
         };
       }) || [];
@@ -123,6 +124,7 @@ function createPartyComponents(params: {
     const partyMetrics = {
       name: "Party",
       rank: highestAdventurerRank,
+      week: p.startWeek,
       metrics: p.metrics.map((m) => ({ ...m, questPartyId: "Placeholder" })),
     };
     const metaMetrics = [partyMetrics, ...adventurerMetrics];

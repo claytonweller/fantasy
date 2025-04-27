@@ -272,7 +272,6 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes:
           "TODO - Syd, Gad, Fixer, Jan, Moira",
         status: QuestStatus.Success,
-        clanId: "c7",
         metrics: [],
       },
     ],
@@ -299,7 +298,30 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.C,
     postedBy: "Trade guild",
     description: `It's going to be busy in Morton this week with the festival. We'll need capable people to guard the merchants and their wares.`,
-    parties: [],
+    parties: [
+      {
+        id: "p1-q3-7",
+        startWeek: 3,
+        notes:
+          "TODO - Louis, Vivian",
+        status: QuestStatus.Failed,
+        clanId: "c6",
+        metrics: [
+
+        ],
+      },
+      {
+        id: "p2-q3-7",
+        startWeek: 3,
+        notes:
+          "TODO - Sheila, Drea",
+        status: QuestStatus.Failed,
+        clanId: "c4",
+        metrics: [
+
+        ],
+      },
+    ],
   },
   {
     id: "q3-8",
@@ -310,14 +332,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questType: QuestTypes.Other,
     questRank: Ranks.S,
     postedBy: "The Bureau for a Better Bounty Battle",
-    description: `One of the big draws the the Morton Bounty Festival is the one on one fighting tournament. It's a winner takes all event, and happens over the course of the week. Anyone can enter regardless of their skill, rank, social status, or race. Everyone has the right to get kicked in the head. Mara Wright will be the referee (and make sure no one gets killed)`,
+    description: `One of the big draws the the Morton Bounty Festival is the one on one fighting tournament. It's a winner takes all event, and happens over the course of the week. Anyone can enter regardless of their skill, rank, social status, or race. Everyone has the right to get kicked in the head.`,
     parties: [
       {
         id: "p1-q3-8",
         startWeek: 3,
         notes:
-          "TODO - Ken",
-        status: QuestStatus.Success,
+          "TODO - Ken. Loses in First round to Clara",
+        status: QuestStatus.Failed,
         clanId: "c9",
         metrics: [],
       },
@@ -325,8 +347,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p2-q3-8",
         startWeek: 3,
         notes:
-          "TODO - Fissure",
-        status: QuestStatus.Success,
+          "TODO - Fissure. Beats Lydia, then Barksking. Clara in the finals.",
+        status: QuestStatus.Claimed,
         clanId: "c9",
         metrics: [],
       },
@@ -334,8 +356,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p3-q3-8",
         startWeek: 3,
         notes:
-          "TODO - Lydia",
-        status: QuestStatus.Success,
+          "TODO - Lydia Loses to Fissure in the first round.",
+        status: QuestStatus.Failed,
         clanId: "c9",
         metrics: [],
       },
@@ -343,8 +365,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p4-q3-8",
         startWeek: 3,
         notes:
-          "TODO - Barkskin",
-        status: QuestStatus.Success,
+          "TODO - Barkskin. Beats Shelly in the first round, but loses to Fissure.",
+        status: QuestStatus.Failed,
         clanId: "c9",
         metrics: [],
       },
@@ -352,8 +374,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p5-q3-8",
         startWeek: 3,
         notes:
-          "TODO - Steve",
-        status: QuestStatus.Success,
+          "TODO - Steve. Loses to Geoffry in the first round",
+        status: QuestStatus.Failed,
         clanId: "c9",
         metrics: [],
       },
@@ -361,27 +383,84 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p6-q3-8",
         startWeek: 3,
         notes:
-          "TODO - Sir Robin -> Clara",
-        status: QuestStatus.Success,
-        clanId: "c9",
+          "TODO - Sir Robin -> Clara. Robin bails in the first round. Blames it on indigestion or that he was 'just passing through'. Clara takes over. Beats Ken in the first round. Beats Geoffrey in the second round. Fights fissure in the finals.",
+        status: QuestStatus.Claimed,
+        clanId: "c1",
         metrics: [],
       },
       {
         id: "p7-q3-8",
         startWeek: 3,
         notes:
-          "TODO - ?????",
-        status: QuestStatus.Success,
-        clanId: "c9",
+          "TODO - Geoffrey. Beats Steve in the first round. In the second he loses SOUNDLY to Clara.",
+        status: QuestStatus.Failed,
+        clanId: "c6",
         metrics: [],
       },
       {
         id: "p8-q3-8",
         startWeek: 3,
         notes:
-          "TODO - ?????",
+          "TODO - Shelly. Loses to Barkskin in the first round. But then treats all the injuries of the other fighters for the rest of the time.",
+        status: QuestStatus.Failed,
+        clanId: "c8",
+        metrics: [],
+      },
+    ],
+  },
+  {
+    id: "q3-9",
+    name: "Adventurer guild sales squad",
+    reward: 0,
+    postedWeek: 3,
+    claimType: QuestClaimType.Individual,
+    questType: QuestTypes.Other,
+    questRank: Ranks.S,
+    postedBy: "Adventurer guild",
+    description: `The Adventurer guild has a prominent position in town right off the town square. Every year during the Bounty Festival they allow adventurers to use the space for selling monster parts, items they've crafted or found, or to perform. The Guild takes a flat fee plus a small percentage of all income. Any Rank adventurer can participate.`,
+    parties: [
+      {
+        id: "p1-q3-9",
+        startWeek: 3,
+        notes:
+          "TODO - All of Clockwork Chisel",
         status: QuestStatus.Success,
-        clanId: "c9",
+        clanId: "c5",
+        metrics: [],
+      },
+      {
+        id: "p2-q3-9",
+        startWeek: 3,
+        notes:
+          "TODO - ?????? Mime performances",
+        status: QuestStatus.Success,
+        metrics: [],
+      },
+      {
+        id: "p3-q3-9",
+        startWeek: 3,
+        notes:
+          "TODO - Derb Alperd",
+        status: QuestStatus.Success,
+        clanId: "c1",
+        metrics: [],
+      },
+      {
+        id: "p4-q3-9",
+        startWeek: 3,
+        notes:
+          "TODO - Elnar",
+        status: QuestStatus.Success,
+        clanId: "c8",
+        metrics: [],
+      },
+      {
+        id: "p5-q3-9",
+        startWeek: 3,
+        notes:
+          "TODO - Duffenklampf Twins. Sword dance. ?????? joins in.",
+        status: QuestStatus.Success,
+        clanId: "c8",
         metrics: [],
       },
     ],
@@ -560,7 +639,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
             week: 2,
           },
           {
-            metricRuleId: MetricRuleId.PropertyDamaged,
+            metricRuleId: MetricRuleId.CostsOrDamages,
             value: 7,
             week: 2,
           },
@@ -603,6 +682,44 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
             value: 30,
             week: 2,
           },
+        ],
+      },
+      {
+        id: "p4-q2-5",
+        startWeek: 3,
+        notes:
+          "TODO - Guy",
+        status: QuestStatus.Success,
+        clanId: 'c1',
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 111,
+            week: 3,
+          },
+
+        ],
+      },
+      {
+        id: "p5-q2-5",
+        startWeek: 3,
+        notes:
+          "TODO - Tad - Dies",
+        status: QuestStatus.Failed,
+        clanId: 'c1',
+        metrics: [
+
+        ],
+      },
+      {
+        id: "p6-q2-5",
+        startWeek: 3,
+        notes:
+          "TODO - Landorin, Dies, but is resurrected by Luna",
+        status: QuestStatus.Failed,
+        clanId: 'c1',
+        metrics: [
+
         ],
       },
     ],
@@ -693,7 +810,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         clanId: "c1",
         metrics: [
           {
-            metricRuleId: MetricRuleId.PropertyDamaged,
+            metricRuleId: MetricRuleId.CostsOrDamages,
             value: 200,
             week: 2,
           },
@@ -803,7 +920,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
             week: 1,
           },
           {
-            metricRuleId: MetricRuleId.PropertyDamaged,
+            metricRuleId: MetricRuleId.CostsOrDamages,
             value: 112,
             week: 1,
           },
@@ -970,7 +1087,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
             week: 1,
           },
           {
-            metricRuleId: MetricRuleId.PropertyDamaged,
+            metricRuleId: MetricRuleId.CostsOrDamages,
             value: 30,
             week: 1,
           },

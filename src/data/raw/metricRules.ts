@@ -57,7 +57,7 @@ export const rawMetricRules: IRawMetricRule[] = [
     multiplier: 1,
   },
   {
-    metricRuleId: MetricRuleId.PropertyDamaged,
+    metricRuleId: MetricRuleId.CostsOrDamages,
     questMetricType: QuestMetricType.GoldConvert,
     multiplier: -1,
   },

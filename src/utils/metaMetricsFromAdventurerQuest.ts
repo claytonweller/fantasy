@@ -8,7 +8,7 @@ interface IAdventureQuestMetricsParams {
   quest: IAdventurerQuest;
   name?: string;
   rank?: Ranks | RosterPositions;
-  week?: number;
+  week: number;
 }
 export function metaMetricsFromAdventurerQuest(
   params: IAdventureQuestMetricsParams,
@@ -41,10 +41,11 @@ function formatMetaMetrics<T>(
   params: IAdventureQuestMetricsParams,
   metrics: T[],
 ) {
-  const { name, rank, quest } = params;
+  const { name, rank, quest, week} = params;
   return {
     name: name || quest.details.name,
     rank: rank || quest.details.questRank,
     metrics: metrics,
+    week,
   };
 }

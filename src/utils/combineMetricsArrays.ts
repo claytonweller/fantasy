@@ -28,5 +28,6 @@ export function combineMetaMetrics(
     name: metaMetrics[0].name,
     rank: metaMetrics[0].rank,
     metrics: combinedMetrics,
+    week: metaMetrics[0].week,
   };
 }

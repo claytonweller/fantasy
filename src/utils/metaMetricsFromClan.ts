@@ -59,13 +59,16 @@ function calculateSingleWeekMetrics(params: {
 
   const completeQuests = quests.filter((q) => {
     const parties = questsById[q.id].parties;
-    const clanParties = parties.filter((p) => p.clanId === clan.id);
+    const clanParties = parties.filter((p) => {
+      return p.clanId === clan.id && p.startWeek === week;
+    });
+
     clanParties.forEach((p) => {
       p.metrics.forEach((m) => {
         if (m.metricRuleId === MetricRuleId.RewardGold) {
           totalGold += m.value;
         }
-        if (m.metricRuleId === MetricRuleId.PropertyDamaged) {
+        if (m.metricRuleId === MetricRuleId.CostsOrDamages) {
           totalGold -= m.value;
         }
         if (m.metricRuleId === MetricRuleId.CivilianSaved) {
@@ -96,7 +99,7 @@ function calculateSingleWeekMetrics(params: {
             if (m.metricRuleId === MetricRuleId.Death) deathCount += m.value;
             if (m.metricRuleId === MetricRuleId.RewardGold)
               totalGold += m.value;
-            if (m.metricRuleId === MetricRuleId.PropertyDamaged)
+            if (m.metricRuleId === MetricRuleId.CostsOrDamages)
               totalGold -= m.value;
           });
         }
@@ -151,5 +154,6 @@ function calculateSingleWeekMetrics(params: {
     name: "Week" + week,
     rank,
     metrics: metrics.filter((m) => m.value !== 0),
+    week
   };
 }

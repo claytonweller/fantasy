@@ -2,6 +2,61 @@ import { EntityTypes, IResearch } from "types/Research";
 
 export const rawResearch: IResearch[] = [
   {
+    note: `Shelly and Barkskin fell for each other during the bounty Battle.`,
+    weekHappened: 3,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a53",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a63",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q3-8",
+      },
+    ],
+  },
+  {
+    note: `Mara will be the referee for the Bounty Battle (and make sure no one gets killed).`,
+    weekHappened: 3,
+    weekPublic: 3,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a40",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q3-8",
+      },
+    ],
+  },
+  {
+    note: `Mara has goaded Clara into claiming Sir Robin could win the Bounty Battle. Mara gets her daughter to agree to no longer have anything to do with the cowardly knight if they don't win the tournament.`,
+    weekHappened: 3,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a39",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a40",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a40",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q3-8",
+      },
+    ],
+  },
+  {
     note: `Gorn is a fake name of a cult member working on behalf of Count Vanderbliff.`,
     weekHappened: 3,
     tags: [
