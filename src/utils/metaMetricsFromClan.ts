@@ -1,6 +1,5 @@
 import {
   adventurersById,
-  adventurersByPartyId,
 } from "data/queries/adventurers";
 import { questsByAdventurerId, questsById } from "../data/queries/quests";
 import { IClan } from "../types/Clan";
@@ -31,15 +30,14 @@ function sortQuestsByWeek(params: { currentWeek: number; quests: IQuest[] }) {
   } = {};
   for (let i = 1; i <= currentWeek; i++) {
     weeks[i] = [];
+    quests.forEach((q) => {
+      if (!q.parties) return;
+      const valid = q.parties.find(p => p.startWeek === i)
+      if(valid) weeks[i].push(q);
+    });
   }
 
-  quests.forEach((q) => {
-    if (!q.parties) return;
-    q.parties.forEach((p) => {
-      if (!weeks[p.startWeek]) return;
-      weeks[p.startWeek].push(q);
-    });
-  });
+
 
   return weeks;
 }
@@ -83,25 +81,28 @@ function calculateSingleWeekMetrics(params: {
     return !!complete;
   });
   const activeAdventurers: Set<string> = new Set();
-
+  
   adventurers.forEach((a) => {
     const aQuests = questsByAdventurerId[a.id];
     aQuests.forEach((q) => {
       if (!q?.parties) console.warn("Incorrect partyId", a);
       q.parties.forEach((p) => {
         if (p.startWeek === week) {
-          activeAdventurers.add(a.id);
           const questDetails = adventurersById[a.id].questParties.find(
             (qp) => qp.partyId === p.id,
           );
 
-          questDetails?.metrics.forEach((m) => {
-            if (m.metricRuleId === MetricRuleId.Death) deathCount += m.value;
-            if (m.metricRuleId === MetricRuleId.RewardGold)
-              totalGold += m.value;
-            if (m.metricRuleId === MetricRuleId.CostsOrDamages)
-              totalGold -= m.value;
-          });
+          if(!activeAdventurers.has(a.id)){
+            questDetails?.metrics.forEach((m) => {
+              if (m.metricRuleId === MetricRuleId.Death) deathCount += m.value;
+              if (m.metricRuleId === MetricRuleId.RewardGold)
+                totalGold += m.value;
+              if (m.metricRuleId === MetricRuleId.CostsOrDamages)
+                totalGold -= m.value;
+            });
+          }
+
+          if(questDetails) activeAdventurers.add(a.id);
         }
       });
     });

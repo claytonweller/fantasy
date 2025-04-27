@@ -689,14 +689,9 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         startWeek: 3,
         notes:
           "TODO - Guy",
-        status: QuestStatus.Success,
+        status: QuestStatus.Failed,
         clanId: 'c1',
         metrics: [
-          {
-            metricRuleId: MetricRuleId.RewardGold,
-            value: 111,
-            week: 3,
-          },
 
         ],
       },
