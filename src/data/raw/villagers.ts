@@ -18,13 +18,12 @@ export interface IRawRoster extends Omit<IDbRoster, "id" | "villagerId"> {
 export interface IRawRosterPick
   extends Omit<IDbRosterPick, "id" | "rosterId"> {}
 
-
 export const rawVillagers: IRawVillager[] = [
   {
     id: "v1",
     name: "Angus Jeter",
     playerName: "Wilder",
-    profession: 'Changeless restaurateur',
+    profession: "Changeless restaurateur",
     races: [AdventurerRaces.Dwarf],
     rosters: [
       // {
@@ -73,7 +72,7 @@ export const rawVillagers: IRawVillager[] = [
     id: "v2",
     name: "Melody",
     playerName: "Catie",
-    profession: 'Busybody stage mistress',
+    profession: "Busybody stage mistress",
     races: [AdventurerRaces.Human],
     rosters: [],
   },
@@ -81,15 +80,15 @@ export const rawVillagers: IRawVillager[] = [
     id: "v3",
     name: "Tizquik",
     playerName: "Dan",
-    profession: 'Temporarily between everything',
+    profession: "Temporarily between everything",
     races: [AdventurerRaces.Dwarf],
     rosters: [],
   },
   {
     id: "v4",
-    name: "Mogriel Thunderbutt",
+    name: "Morgeal Thunderbottom",
     playerName: "Sophie",
-    profession: 'Bog scraper (aspiring comfort woman)',
+    profession: "Bog scraper (aspiring comfort woman)",
     races: [AdventurerRaces.Human],
     rosters: [],
   },
@@ -97,7 +96,7 @@ export const rawVillagers: IRawVillager[] = [
     id: "v5",
     name: "Gartock Bloodthorn",
     playerName: "Adam",
-    profession: 'Watchmaker apprentice (gear boy)',
+    profession: "Watchmaker apprentice (gear boy)",
     races: [AdventurerRaces.Orc],
     rosters: [],
   },
@@ -105,7 +104,7 @@ export const rawVillagers: IRawVillager[] = [
     id: "v6",
     name: 'Jake "The Snake" Charmer',
     playerName: "Jake",
-    profession: 'Pest remover/depositor',
+    profession: "Pest remover/depositor",
     races: [AdventurerRaces.Human],
     rosters: [],
   },
@@ -113,7 +112,7 @@ export const rawVillagers: IRawVillager[] = [
     id: "v7",
     name: "Kaleidoscope Luminsdotter",
     playerName: "Courtney",
-    profession: 'Stained glass craftsman (3rd apprentice)',
+    profession: "Stained glass craftsman (3rd apprentice)",
     races: [AdventurerRaces.Human],
     rosters: [],
   },

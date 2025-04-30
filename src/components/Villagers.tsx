@@ -115,7 +115,7 @@ function calculateClanPickMetrics(clan: IClan, week: number) {
     name: clan.name,
     rank: RosterPositions.Clan,
     metrics: weekMetrics[0].metrics,
-    week
+    week,
   };
 }
 
@@ -137,7 +137,7 @@ function calculateAdventurerPickMetrics(
     name: adventurer.name,
     rank: adventurer.rank,
     metrics: [],
-    week
+    week,
   };
 }
 

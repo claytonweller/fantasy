@@ -1,6 +1,4 @@
-import {
-  adventurersById,
-} from "data/queries/adventurers";
+import { adventurersById } from "data/queries/adventurers";
 import { questsByAdventurerId, questsById } from "../data/queries/quests";
 import { IClan } from "../types/Clan";
 import {
@@ -32,12 +30,10 @@ function sortQuestsByWeek(params: { currentWeek: number; quests: IQuest[] }) {
     weeks[i] = [];
     quests.forEach((q) => {
       if (!q.parties) return;
-      const valid = q.parties.find(p => p.startWeek === i)
-      if(valid) weeks[i].push(q);
+      const valid = q.parties.find((p) => p.startWeek === i);
+      if (valid) weeks[i].push(q);
     });
   }
-
-
 
   return weeks;
 }
@@ -81,7 +77,7 @@ function calculateSingleWeekMetrics(params: {
     return !!complete;
   });
   const activeAdventurers: Set<string> = new Set();
-  
+
   adventurers.forEach((a) => {
     const aQuests = questsByAdventurerId[a.id];
     aQuests.forEach((q) => {
@@ -92,7 +88,7 @@ function calculateSingleWeekMetrics(params: {
             (qp) => qp.partyId === p.id,
           );
 
-          if(!activeAdventurers.has(a.id)){
+          if (!activeAdventurers.has(a.id)) {
             questDetails?.metrics.forEach((m) => {
               if (m.metricRuleId === MetricRuleId.Death) deathCount += m.value;
               if (m.metricRuleId === MetricRuleId.RewardGold)
@@ -102,7 +98,7 @@ function calculateSingleWeekMetrics(params: {
             });
           }
 
-          if(questDetails) activeAdventurers.add(a.id);
+          if (questDetails) activeAdventurers.add(a.id);
         }
       });
     });
@@ -155,6 +151,6 @@ function calculateSingleWeekMetrics(params: {
     name: "Week" + week,
     rank,
     metrics: metrics.filter((m) => m.value !== 0),
-    week
+    week,
   };
 }

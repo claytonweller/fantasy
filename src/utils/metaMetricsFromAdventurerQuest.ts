@@ -41,7 +41,7 @@ function formatMetaMetrics<T>(
   params: IAdventureQuestMetricsParams,
   metrics: T[],
 ) {
-  const { name, rank, quest, week} = params;
+  const { name, rank, quest, week } = params;
   return {
     name: name || quest.details.name,
     rank: rank || quest.details.questRank,

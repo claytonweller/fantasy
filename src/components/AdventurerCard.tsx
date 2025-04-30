@@ -31,8 +31,10 @@ export default function AdventurerCard(props: {
   } = props;
   const { name, bio, clan, quests, rank, currentStatuses, races } = adventurer;
   const metaMetrics: IMetricsWithMeta[] = quests.map((quest) => {
-    
-    return metaMetricsFromAdventurerQuest({ quest, week: quest.parties[0].startWeek });
+    return metaMetricsFromAdventurerQuest({
+      quest,
+      week: quest.parties[0].startWeek,
+    });
   });
   const questSection = (
     <MetricGrid

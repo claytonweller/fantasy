@@ -171,13 +171,10 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q3-1",
         startWeek: 3,
-        notes:
-          "TODO - Mythril Trap brings it in alive.",
+        notes: "TODO - Mythril Trap brings it in alive.",
         status: QuestStatus.Success,
         clanId: "c3",
-        metrics: [
-
-        ],
+        metrics: [],
       },
     ],
   },
@@ -200,9 +197,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
           "TODO - Verdant Glade tries to protect Mamut's grove, but it's more than they can manage. Cult attack. Return of Reginald Spintsmunge?",
         status: QuestStatus.Failed,
         clanId: "c10",
-        metrics: [
-
-        ],
+        metrics: [],
       },
     ],
   },
@@ -225,9 +220,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
           "TODO - Gorn is a fake name by a cultist to hid that this is actually from Vanderbliff. Marcus takes the quest but fails.",
         status: QuestStatus.Failed,
         clanId: "c2",
-        metrics: [
-
-        ],
+        metrics: [],
       },
     ],
   },
@@ -246,8 +239,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q3-4",
         startWeek: 3,
-        notes:
-          "TODO - the team is triumphant",
+        notes: "TODO - the team is triumphant",
         status: QuestStatus.Success,
         clanId: "c7",
         metrics: [],
@@ -269,8 +261,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q3-5",
         startWeek: 3,
-        notes:
-          "TODO - Syd, Gad, Fixer, Jan, Moira",
+        notes: "TODO - Syd, Gad, Fixer, Jan, Moira",
         status: QuestStatus.Success,
         metrics: [],
       },
@@ -302,24 +293,18 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q3-7",
         startWeek: 3,
-        notes:
-          "TODO - Louis, Vivian",
+        notes: "TODO - Louis, Vivian",
         status: QuestStatus.Failed,
         clanId: "c6",
-        metrics: [
-
-        ],
+        metrics: [],
       },
       {
         id: "p2-q3-7",
         startWeek: 3,
-        notes:
-          "TODO - Sheila, Drea",
+        notes: "TODO - Sheila, Drea",
         status: QuestStatus.Failed,
         clanId: "c4",
-        metrics: [
-
-        ],
+        metrics: [],
       },
     ],
   },
@@ -337,8 +322,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q3-8",
         startWeek: 3,
-        notes:
-          "TODO - Ken. Loses in First round to Clara",
+        notes: "TODO - Ken. Loses in First round to Clara",
         status: QuestStatus.Failed,
         clanId: "c9",
         metrics: [],
@@ -355,8 +339,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p3-q3-8",
         startWeek: 3,
-        notes:
-          "TODO - Lydia Loses to Fissure in the first round.",
+        notes: "TODO - Lydia Loses to Fissure in the first round.",
         status: QuestStatus.Failed,
         clanId: "c9",
         metrics: [],
@@ -373,8 +356,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p5-q3-8",
         startWeek: 3,
-        notes:
-          "TODO - Steve. Loses to Geoffry in the first round",
+        notes: "TODO - Steve. Loses to Geoffry in the first round",
         status: QuestStatus.Failed,
         clanId: "c9",
         metrics: [],
@@ -422,8 +404,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q3-9",
         startWeek: 3,
-        notes:
-          "TODO - All of Clockwork Chisel",
+        notes: "TODO - All of Clockwork Chisel",
         status: QuestStatus.Success,
         clanId: "c5",
         metrics: [],
@@ -431,16 +412,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p2-q3-9",
         startWeek: 3,
-        notes:
-          "TODO - ?????? Mime performances",
+        notes: "TODO - ?????? Mime performances",
         status: QuestStatus.Success,
         metrics: [],
       },
       {
         id: "p3-q3-9",
         startWeek: 3,
-        notes:
-          "TODO - Derb Alperd",
+        notes: "TODO - Derb Alperd",
         status: QuestStatus.Success,
         clanId: "c1",
         metrics: [],
@@ -448,8 +427,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p4-q3-9",
         startWeek: 3,
-        notes:
-          "TODO - Elnar",
+        notes: "TODO - Elnar",
         status: QuestStatus.Success,
         clanId: "c8",
         metrics: [],
@@ -457,8 +435,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p5-q3-9",
         startWeek: 3,
-        notes:
-          "TODO - Duffenklampf Twins. Sword dance. ?????? joins in.",
+        notes: "TODO - Duffenklampf Twins. Sword dance. ?????? joins in.",
         status: QuestStatus.Success,
         clanId: "c8",
         metrics: [],
@@ -549,7 +526,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes:
           "Shiela and Arc set off into the woods. Other than the oddly aggressive beasts, they didn't find anything of note, but they lost track of time and had to set up camp for the night. In a brief moment when Shiela nodded off during her turn as watch they were ambushed. Arc immediately took care of all of the assailants, before Sheila could even wake up. He thought they were beasts, but realized they were people dressed in monster hides.",
         status: QuestStatus.Success,
-        clanId: 'c4',
+        clanId: "c4",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -564,7 +541,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes:
           "Barkskin and Fissure decided to check the lumber yard and the mill. They were completely deserted. Planks were left half cut in the rain, and tools were strewn around on the ground. A couple of nearby trees look like they had been ripped out of the ground.",
         status: QuestStatus.Success,
-        clanId: 'c9',
+        clanId: "c9",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -579,7 +556,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes:
           "Vivian is determined to redeem herself and show that she is worthy of her position as the heir to the Crestmor family. She hired Norn to accompany her. Geoffrey insisted he come along for their safety. Geoffrey returned considerably later than the two women. They reported seeing blood on the trees and a few eviscerated monster corpses.",
         status: QuestStatus.Success,
-        clanId: 'c6',
+        clanId: "c6",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -631,7 +608,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes:
           "Steve punched a hole in a slime. Steve punched a hole in a moncoon. Steve punched a hole in a blade deer. Steve accidentally punched a hole in a house.",
         status: QuestStatus.Success,
-        clanId: 'c9',
+        clanId: "c9",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -656,7 +633,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes:
           "There were a lot of extra monsters. Guy had no problem dispatching them. He also saved a couple of village kids trapped in a barley field.",
         status: QuestStatus.Success,
-        clanId: 'c1',
+        clanId: "c1",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -687,35 +664,26 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p4-q2-5",
         startWeek: 3,
-        notes:
-          "TODO - Guy",
+        notes: "TODO - Guy",
         status: QuestStatus.Failed,
-        clanId: 'c1',
-        metrics: [
-
-        ],
+        clanId: "c1",
+        metrics: [],
       },
       {
         id: "p5-q2-5",
         startWeek: 3,
-        notes:
-          "TODO - Tad - Dies",
+        notes: "TODO - Tad - Dies",
         status: QuestStatus.Failed,
-        clanId: 'c1',
-        metrics: [
-
-        ],
+        clanId: "c1",
+        metrics: [],
       },
       {
         id: "p6-q2-5",
         startWeek: 3,
-        notes:
-          "TODO - Landorin, Dies, but is resurrected by Luna",
+        notes: "TODO - Landorin, Dies, but is resurrected by Luna",
         status: QuestStatus.Failed,
-        clanId: 'c1',
-        metrics: [
-
-        ],
+        clanId: "c1",
+        metrics: [],
       },
     ],
   },
@@ -734,7 +702,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q2-6.1",
         startWeek: 2,
-        notes: "The caravan was targeted by Bandits. Sir Robin was hit on the head and passed out. Clara defended him and the rest of the caravan. At the end she was about to get hit by an arrow when Mara stepped in and caught it out of mid air. Mara pointed at Sir Robin's unconscious body and said, 'This is the man you love?' To which Clara replied 'Mah-om' while clobbering right in the jaw.",
+        notes:
+          "The caravan was targeted by Bandits. Sir Robin was hit on the head and passed out. Clara defended him and the rest of the caravan. At the end she was about to get hit by an arrow when Mara stepped in and caught it out of mid air. Mara pointed at Sir Robin's unconscious body and said, 'This is the man you love?' To which Clara replied 'Mah-om' while clobbering right in the jaw.",
         status: QuestStatus.Success,
         clanId: "c1",
         metrics: [
@@ -767,7 +736,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q2-6.2",
         startWeek: 2,
-        notes: "The road from Valeon has become quite dangerous since it goes by the edge of the northern forest. But Louis was not caught by surprise by this like with the Noble escort last week. The Duffenklampf twins scouted ahead and when there was any sign of monsters the went off the main road. They only got caught by surprise once, and despite Juniper barfing and passing out while treating a minor injury on Louis' arm, no one was really hurt.",
+        notes:
+          "The road from Valeon has become quite dangerous since it goes by the edge of the northern forest. But Louis was not caught by surprise by this like with the Noble escort last week. The Duffenklampf twins scouted ahead and when there was any sign of monsters the went off the main road. They only got caught by surprise once, and despite Juniper barfing and passing out while treating a minor injury on Louis' arm, no one was really hurt.",
         status: QuestStatus.Success,
         clanId: "c6",
         metrics: [
@@ -800,7 +770,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q2-6.3",
         startWeek: 2,
-        notes: "P'Tark, Squeakela, and Icenose bit off more than they could chew. The mountain roads are treacherous in the best of times, but with a quick onset storm they couldn't keep all the merchants safe, let alone the cargo. Luckily Elnar though to go check on them when they were late coming back.",
+        notes:
+          "P'Tark, Squeakela, and Icenose bit off more than they could chew. The mountain roads are treacherous in the best of times, but with a quick onset storm they couldn't keep all the merchants safe, let alone the cargo. Luckily Elnar though to go check on them when they were late coming back.",
         status: QuestStatus.Failed,
         clanId: "c1",
         metrics: [
@@ -857,7 +828,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         startWeek: 2,
         status: QuestStatus.Success,
         clanId: "c10",
-        notes: "The second Freya saw this quest posted she immediately claimed it. K'Tar brought them to the mystic spring which had strange runes scrawled all over the back of the cave. There was a strong scent of sulphur coming off the water. Shortly after they began the cleanup, a monster which appear to be a random assortment of human limbs attached to a viscose slime burst out of the pool and lunged at the Elder. The party acted with perfect teamwork.",
+        notes:
+          "The second Freya saw this quest posted she immediately claimed it. K'Tar brought them to the mystic spring which had strange runes scrawled all over the back of the cave. There was a strong scent of sulphur coming off the water. Shortly after they began the cleanup, a monster which appear to be a random assortment of human limbs attached to a viscose slime burst out of the pool and lunged at the Elder. The party acted with perfect teamwork.",
         metrics: [
           {
             metricRuleId: MetricRuleId.CivilianSaved,
@@ -986,7 +958,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p1-q1-3",
         startWeek: 1,
         status: QuestStatus.Success,
-        clanId: 'c10',
+        clanId: "c10",
         notes:
           "Bandits attacked the shrine. Luckily Ash & Icenose were there to help!",
         // endWeek: number,
@@ -1007,7 +979,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p2-q1-3",
         startWeek: 1,
         status: QuestStatus.Success,
-        clanId: 'c1',
+        clanId: "c1",
         notes:
           "Bandits attacked the shrine. Luckily Ash & Icenose were there to help!",
         metrics: [
@@ -1147,7 +1119,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p1-q1-5",
         startWeek: 1,
         status: QuestStatus.Success,
-        clanId: 'c8',
+        clanId: "c8",
         notes:
           "Elnar brought back what would normally have sold for hundreds of gold, but he wasn't doing it for the money.",
         metrics: [
@@ -1162,7 +1134,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p2-q1-5",
         startWeek: 1,
         status: QuestStatus.Failed,
-        clanId: 'c8',
+        clanId: "c8",
         notes:
           "Szuuth realized they had no idea what the were looking for and mostly brought back weeds. Sister Lasiter gave her a gold for the flowers because they were pretty.",
         metrics: [
@@ -1226,7 +1198,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p1-q1-7",
         startWeek: 1,
         status: QuestStatus.Success,
-        clanId: 'c3',
+        clanId: "c3",
         notes:
           "Vince captured a greater porcubear, which is not unusual. What IS unusual is that it was near the EDGE of the northern forest at the eastern checkpoint. Which is generally safe.",
         metrics: [
@@ -1241,7 +1213,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p2-q1-7",
         startWeek: 1,
         status: QuestStatus.Success,
-        clanId: 'c10',
+        clanId: "c10",
         notes:
           "Phil found and possessed a flamboar and made it fight a screamer. They killed eachother. He gave half of his reward money to Freya since he couldn't carry the bodies back alone.",
         metrics: [
@@ -1256,7 +1228,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p3-q1-7",
         startWeek: 1,
         status: QuestStatus.Success,
-        clanId: 'c2',
+        clanId: "c2",
         notes: "Tjorn crushed a bismuth tortoise if you can believe it.",
         metrics: [
           {
@@ -1270,7 +1242,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p4-q1-7",
         startWeek: 1,
         status: QuestStatus.Success,
-        clanId: 'c4',
+        clanId: "c4",
         notes:
           "Sheila was bored with no Clan quests. Drea came along for company. They just wound up having a nice picnic and killing a bunch of slimes",
         metrics: [
@@ -1285,7 +1257,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p5-q1-7",
         startWeek: 1,
         status: QuestStatus.Success,
-        clanId: 'c1',
+        clanId: "c1",
         notes:
           "Landorin bit off more than he could chew when he tried to take on a pack of sveldtvulfs. Luckily Guy Norman, he new guy, showed up to help. He managed to single handedly bring down the entire pack and save Landorin in the process. Guy split the reward anyway.",
         metrics: [
@@ -1300,7 +1272,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p6-q1-7",
         startWeek: 2,
         status: QuestStatus.Claimed,
-        clanId: 'c4',
+        clanId: "c4",
         notes:
           "Drea was able to take down a caustipede before it could cary a swineherd to its larval brood.",
         metrics: [
@@ -1315,8 +1287,9 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p7-q1-7",
         startWeek: 2,
         status: QuestStatus.Claimed,
-        clanId: 'c5',
-        notes: "Bjork is the only member of Clockwork Chisel who isn't preparing for the festival. So she wen out and fought some long burrow munchers.",
+        clanId: "c5",
+        notes:
+          "Bjork is the only member of Clockwork Chisel who isn't preparing for the festival. So she wen out and fought some long burrow munchers.",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -1329,14 +1302,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p8-q1-7",
         startWeek: 2,
         status: QuestStatus.Claimed,
-        clanId: 'c9',
+        clanId: "c9",
         notes: "Someone has to kill those slimes!",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
             value: 7,
             week: 2,
-          }
+          },
         ],
       },
     ],
