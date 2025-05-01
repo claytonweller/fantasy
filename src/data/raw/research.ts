@@ -242,7 +242,7 @@ export const rawResearch: IResearch[] = [
     ],
     tags: [
       {
-        entityType: EntityTypes.Quest,
+        entityType: EntityTypes.Adventurer,
         entityId: "a24",
       },
       {
@@ -285,6 +285,11 @@ export const rawResearch: IResearch[] = [
         week: 1,
         text: "Are there any whisperings about which (if any) of the clans or adventurers will be taking on the rat and/or monster problem? I hear a lot of gossip at The Broken Leg, so I would know!",
       },
+      {
+        villagerId: "v6",
+        week: 1,
+        text: "I see there is a bounty on rats. I put the word out that I have just the snakes for the job. Have any of the adventurers shown any interest?",
+      },
     ],
     tags: [
       {
@@ -295,10 +300,14 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v2",
       },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v6",
+      },
     ],
   },
   {
-    note: ``,
+    note: `The members of the Crockpot clan were stocking up on shrimp. Lots of shrimp. Like a crazy amount of shrimp. Looks like they're trying to lure in a rare monster which loves the little sea bugs.`,
     weekHappened: 1,
     villagerPrompts: [
       {
@@ -309,30 +318,42 @@ export const rawResearch: IResearch[] = [
     ],
     tags: [
       {
+        entityType: EntityTypes.Clan,
+        entityId: "c7",
+      },
+      {
         entityType: EntityTypes.Quest,
-        entityId: "TODO",
+        entityId: "q1-6",
+      },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v4",
       },
     ],
   },
   {
-    note: ``,
+    note: `You bother the local gossipmonger until she tells you, "Oddly enough he went to a series of shops specializing in rare oddities and luxury goods. Not the kind of place beginner adventurers usually go."`,
     weekHappened: 1,
     villagerPrompts: [
       {
         villagerId: "v4",
         week: 1,
-        text: "What was Guy Norman's first stop when coming into town. ",
+        text: "What was Guy Norman's first stop when coming into town.",
       },
     ],
     tags: [
       {
-        entityType: EntityTypes.Quest,
-        entityId: "TODO",
+        entityType: EntityTypes.Adventurer,
+        entityId: "a31",
+      },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v4",
       },
     ],
   },
   {
-    note: ``,
+    note: `You ask around in the pleasure Quarter about Geoffrey. THe women there immediately know who you're talking about and say, "You can have him." or just scowl at the mention of his name.`,
     weekHappened: 1,
     villagerPrompts: [
       {
@@ -343,30 +364,38 @@ export const rawResearch: IResearch[] = [
     ],
     tags: [
       {
-        entityType: EntityTypes.Quest,
-        entityId: "TODO",
+        entityType: EntityTypes.Adventurer,
+        entityId: "a43",
+      },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v4",
       },
     ],
   },
   {
-    note: ``,
+    note: `You hear correctly. Young, Ash Catsup was looking to do his first quest by himself. And the rest of the Clan encouraged him to take the shrine quest. He's telling everyone who will listen about it.`,
     weekHappened: 1,
     villagerPrompts: [
       {
         villagerId: "v6",
         week: 1,
-        text: "I heard a rumor that some one from Verdant Glade  would be repairing the forest shrine. Have you heard who it was?",
+        text: "I heard a rumor that some one from Verdant Glade would be repairing the forest shrine. Have you heard who it was?",
       },
     ],
     tags: [
       {
-        entityType: EntityTypes.Quest,
-        entityId: "TODO",
+        entityType: EntityTypes.Adventurer,
+        entityId: "a37",
+      },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v6",
       },
     ],
   },
   {
-    note: ``,
+    note: `While dealing with some roaches down at the stables you run into the caravan coordinator. He mentions, "Many of the clans will escort caravans, it pays good money to work with merchants. But between you and me the Clockwork Chisel guys get to double dip. They get the money from the escort, plus the get to sell their wares in Furthbrand. Make a killing while they keep people from being killed if you know what I mean."`,
     weekHappened: 1,
     villagerPrompts: [
       {
@@ -378,29 +407,20 @@ export const rawResearch: IResearch[] = [
     tags: [
       {
         entityType: EntityTypes.Quest,
-        entityId: "TODO",
+        entityId: "q1-4.3",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c5",
+      },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v6",
       },
     ],
   },
   {
-    note: ``,
-    weekHappened: 1,
-    villagerPrompts: [
-      {
-        villagerId: "v6",
-        week: 1,
-        text: "I see there is a bounty on rats. I put the word out that I have just the snakes for the job. Have any of the adventurers shown any interest?",
-      },
-    ],
-    tags: [
-      {
-        entityType: EntityTypes.Quest,
-        entityId: "TODO",
-      },
-    ],
-  },
-  {
-    note: ``,
+    note: `You hear from the guild receptionist. THere hasn't been much interest. Strangely enough no one saw the flier get put on the board. Which is weird, because the quest board is visible from everywhere in the main hall and it's nearly constantly being looked at.`,
     weekHappened: 1,
     villagerPrompts: [
       {
@@ -412,12 +432,16 @@ export const rawResearch: IResearch[] = [
     tags: [
       {
         entityType: EntityTypes.Quest,
-        entityId: "TODO",
+        entityId: "q1-9",
+      },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v7",
       },
     ],
   },
   {
-    note: ``,
+    note: `Ask anyone in Morton. The members of Verdant glade are definitely pretty radical with their monster rights talk. It often puts them at odds with other more conservative adventurers. Though despite their relatively low ranks everyone knows not to mess with them.`,
     weekHappened: 1,
     villagerPrompts: [
       {
@@ -428,13 +452,17 @@ export const rawResearch: IResearch[] = [
     ],
     tags: [
       {
-        entityType: EntityTypes.Quest,
-        entityId: "TODO",
+        entityType: EntityTypes.Clan,
+        entityId: "c10",
+      },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v7",
       },
     ],
   },
   {
-    note: ``,
+    note: `The Radiantia clan is an institution in Morton. They're one of the most historied clans in the entire guild. Many of the members are well known if not well liked. However The recent addition of Reginald Spintsmunge IV is strange indeed. No one has heard of the Spintsmunge family. Though local merchants don't ask because his money spends as well as any nobles.`,
     weekHappened: 1,
     villagerPrompts: [
       {
@@ -445,8 +473,12 @@ export const rawResearch: IResearch[] = [
     ],
     tags: [
       {
-        entityType: EntityTypes.Quest,
-        entityId: "TODO",
+        entityType: EntityTypes.Adventurer,
+        entityId: "a25",
+      },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v7",
       },
     ],
   },
