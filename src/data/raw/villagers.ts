@@ -26,46 +26,46 @@ export const rawVillagers: IRawVillager[] = [
     profession: "Changeless restaurateur",
     races: [AdventurerRaces.Dwarf],
     rosters: [
-      // {
-      //   week: 1,
-      //   picks: [
-      //     {
-      //       pickId: "c1",
-      //       pickType: RosterPickTypes.Clan,
-      //       position: RosterPositions.Clan,
-      //     },
-      //     {
-      //       pickId: "a15",
-      //       pickType: RosterPickTypes.Adventurer,
-      //       position: RosterPositions.A,
-      //     },
-      //     {
-      //       pickId: "a9",
-      //       pickType: RosterPickTypes.Adventurer,
-      //       position: RosterPositions.B1,
-      //     },
-      //     {
-      //       pickId: "a14",
-      //       pickType: RosterPickTypes.Adventurer,
-      //       position: RosterPositions.B2,
-      //     },
-      //     {
-      //       pickId: "a5",
-      //       pickType: RosterPickTypes.Adventurer,
-      //       position: RosterPositions.C1,
-      //     },
-      //     {
-      //       pickId: "a13",
-      //       pickType: RosterPickTypes.Adventurer,
-      //       position: RosterPositions.C2,
-      //     },
-      //     {
-      //       pickId: "a23",
-      //       pickType: RosterPickTypes.Adventurer,
-      //       position: RosterPositions.C3,
-      //     },
-      //   ],
-      // },
+      {
+        week: 1,
+        picks: [
+          {
+            pickId: "c6",
+            pickType: RosterPickTypes.Clan,
+            position: RosterPositions.Clan,
+          },
+          {
+            pickId: "a29",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.A,
+          },
+          {
+            pickId: "a22",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.B1,
+          },
+          {
+            pickId: "a9",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.B2,
+          },
+          {
+            pickId: "a46",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.C1,
+          },
+          {
+            pickId: "a3",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.C2,
+          },
+          {
+            pickId: "a5",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.C3,
+          },
+        ],
+      },
     ],
   },
   {
@@ -114,6 +114,47 @@ export const rawVillagers: IRawVillager[] = [
     playerName: "Courtney",
     profession: "Stained glass craftsman (3rd apprentice)",
     races: [AdventurerRaces.Human],
-    rosters: [],
+    rosters: [
+      {
+        week: 1,
+        picks: [
+          {
+            pickId: "c6",
+            pickType: RosterPickTypes.Clan,
+            position: RosterPositions.Clan,
+          },
+          {
+            pickId: "a22",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.A,
+          },
+          {
+            pickId: "a9",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.B1,
+          },
+          {
+            pickId: "a21",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.B2,
+          },
+          {
+            pickId: "a13",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.C1,
+          },
+          {
+            pickId: "a37",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.C2,
+          },
+          {
+            pickId: "a29",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.C3,
+          },
+        ],
+      },
+    ],
   },
 ];

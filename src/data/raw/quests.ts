@@ -1178,7 +1178,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: "They found the elusive Currymingo!",
         status: QuestStatus.Success,
         clanId: "c7",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            value: 1,
+            rank: Ranks.B,
+            week: 1,
+          },
+        ],
       },
     ],
   },

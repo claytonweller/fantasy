@@ -2,7 +2,7 @@ import { EntityTypes, IResearch } from "types/Research";
 
 export const rawResearch: IResearch[] = [
   {
-    note: `While removing a particularly noisy client from your establishment you overhear a gossipy lady comment: "Count Vanderbliff? I here he is not well known among commoners, especially outside of the capitol... but word is he is quite important to internal affairs at a high level"`,
+    note: `While removing a particularly noisy client from your establishment you overhear a gossipy lady comment: "Count Vanderbliff? I hear he is not well known among commoners, especially outside of the capitol... but word is he is quite important to internal affairs at a high level"`,
     weekHappened: 1,
     villagerPrompts: [
       {
@@ -156,7 +156,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `While snooping around the armory quarter Thorin Brassburn tells you, "Look, gear boy, everyone's saving up for the new stuff brought in by the merchants during the festival. I'm taking my stuff out the Furthbrand this week, myself along with the supply caravan. Going to make a load of money out there like I do every year."`,
+    note: `While snooping around the armory quarter Thorin Brassburn tells you, "Look, gear boy, everyone's saving up for the new stuff brought in by the merchants during the festival. I'm taking my stuff out to Furthbrand this week, myself along with the supply caravan. Going to make a load of money out there like I do every year."`,
     weekHappened: 1,
     villagerPrompts: [
       {
@@ -181,7 +181,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `It's a very busy week for the Breath of Life. They have members helping out on several on most of the caravan quests. Historically they do quite well when helping on long trips.`,
+    note: `It's a very busy week for the Breath of Life. They have members helping out on most of the caravan quests. Historically they do quite well when helping on long trips.`,
     weekHappened: 1,
     villagerPrompts: [
       {
@@ -277,7 +277,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `The big gossip you hear is that all of the established adventurers are NOT excited about going into the sewers. It's gross, dark, and confusing down there. So the people going in will probably not be the cream of the crop.`,
+    note: `The big gossip you hear is that all of the established adventurers are NOT excited about going into the sewers. It's gross, dark, and confusing down there. So the people going in will probably not be the cream of the crop. The experienced people will definitely be heading out of town to get monsters.`,
     weekHappened: 1,
     villagerPrompts: [
       {
@@ -307,7 +307,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `The members of the Crockpot clan were stocking up on shrimp. Lots of shrimp. Like a crazy amount of shrimp. Looks like they're trying to lure in a rare monster which loves the little sea bugs.`,
+    note: `The members of the Crockpot clan were stocking up on shrimp. Lots of shrimp. Like a crazy amount of shrimp. Looks like they're trying to lure in a rare monster which loves the little sea bugs. They look very excited and well prepared.`,
     weekHappened: 1,
     villagerPrompts: [
       {
@@ -420,7 +420,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `You hear from the guild receptionist. THere hasn't been much interest. Strangely enough no one saw the flier get put on the board. Which is weird, because the quest board is visible from everywhere in the main hall and it's nearly constantly being looked at.`,
+    note: `You hear from the guild receptionist. There hasn't been much interest. Strangely enough no one saw the flier get put on the board. Which is weird, because the quest board is visible from everywhere in the main hall and it's nearly constantly being looked at.`,
     weekHappened: 1,
     villagerPrompts: [
       {
@@ -441,7 +441,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `Ask anyone in Morton. The members of Verdant glade are definitely pretty radical with their monster rights talk. It often puts them at odds with other more conservative adventurers. Though despite their relatively low ranks everyone knows not to mess with them.`,
+    note: `Ask anyone in Morton. The members of Verdant glade are definitely pretty radical with all their monster rights talk. It often puts them at odds with other more conservative adventurers. Though despite their relatively low ranks everyone knows not to mess with them.`,
     weekHappened: 1,
     villagerPrompts: [
       {
@@ -475,6 +475,10 @@ export const rawResearch: IResearch[] = [
       {
         entityType: EntityTypes.Adventurer,
         entityId: "a25",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c6",
       },
       {
         entityType: EntityTypes.Villager,
