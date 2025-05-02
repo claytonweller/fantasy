@@ -72,6 +72,11 @@ export const rawMetricRules: IRawMetricRule[] = [
     multiplier: 2.5,
   },
   {
+    metricRuleId: MetricRuleId.QuestFailed,
+    questMetricType: QuestMetricType.PointByRank,
+    multiplier: -1,
+  },
+  {
     metricRuleId: MetricRuleId.ActiveMembers,
     questMetricType: QuestMetricType.Count,
     multiplier: 1,

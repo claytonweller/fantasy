@@ -187,7 +187,6 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
             value: 3000,
             week: 3,
           },
-          
         ],
       },
     ],
@@ -207,11 +206,16 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q3-2",
         startWeek: 3,
-        notes:
-          `The Verdant Glade set out for the Northern forest. After their disturbing experience in the mystic spring they had earned enough of Elder K'Tar's trust to be taken deep in to the forest to the grove. Upon their arrival the Elder said, "There's no sign of Mamut. He nev-" suddenly magic pits appeared below both him and Tall Pine Marlon. In a split second Freya jumped to push K'Tar out of the way. The magic void snapped shut cutting her instantly in half, leaving only her torso. Marlon avoided a similar fate with an instant vine net. They were then attacked by people in dark orange and purple robes. It was a close fight but the Verdant Glade come out on top, keeping the Elder safe. The remaining attackers fled after seeing their compatriots crushed by an ancient birch, including the mage who set the trap in the first place. Tall Pine wept when he saw that the Giant Father tree of the grove had been bored out in the middle and black ooze was dripping out of it.`,
+        notes: `The Verdant Glade set out for the Northern forest. After their disturbing experience in the mystic spring they had earned enough of Elder K'Tar's trust to be taken deep in to the forest to the grove. Upon their arrival the Elder said, "There's no sign of Mamut. He nev-" suddenly magic pits appeared below both him and Tall Pine Marlon. In a split second Freya jumped to push K'Tar out of the way. The magic void snapped shut cutting her instantly in half, leaving only her torso. Marlon avoided a similar fate with an instant vine net. They were then attacked by people in dark orange and purple robes. It was a close fight but the Verdant Glade come out on top, keeping the Elder safe. The remaining attackers fled after seeing their compatriots crushed by an ancient birch, including the mage who set the trap in the first place. Tall Pine wept when he saw that the Giant Father tree of the grove had been bored out in the middle and black ooze was dripping out of it.`,
         status: QuestStatus.Failed,
         clanId: "c10",
         metrics: [
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.C,
+            value: 1,
+            week: 3,
+          },
           {
             metricRuleId: MetricRuleId.TrapTriggered,
             value: 2,
@@ -251,9 +255,10 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         clanId: "c2",
         metrics: [
           {
-            metricRuleId: MetricRuleId.CostsOrDamages,
-            value: 10,
-            week: 2,
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.C,
+            value: 1,
+            week: 3,
           },
         ],
       },
@@ -274,7 +279,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q3-4",
         startWeek: 3,
-        notes: "The iron chef has held on to her title for another year. It was a fierce final match with the Brass Saucier of Serpentina, but Julia's cockatrice shank with gelatinous cube demi-glace was to powerful to ignore. She may have been the only champion, but the judges agree that no one was a loser.",
+        notes:
+          "The iron chef has held on to her title for another year. It was a fierce final match with the Brass Saucier of Serpentina, but Julia's cockatrice shank with gelatinous cube demi-glace was a revelation. She may have been the only champion, but the judges agree that no one was a loser.",
         status: QuestStatus.Success,
         clanId: "c7",
         metrics: [
@@ -303,9 +309,21 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q3-5",
         startWeek: 3,
-        notes: "TODO - Syd, Gad, Fixer, Jan, Moira",
-        status: QuestStatus.Success,
-        metrics: [],
+        notes: `Trimble, bandaged from being mugged by Gad last week, approached Jan directly about the request. She returned the watch in the first two weeks ago after all. But while they were talking Syd showed up, "Ah it's the guild lady! Where's my money?". Simultaneously down the street Gad tracked down Moira who he heard stole the watch form him. Moira spotted him coming and immediately ran away. As she was dashing by she saw Jan, "Hey! Servant lady, You didn't tell the guild and I didn't get my reward!" Jan was uncharacteristically speechless then Trimble recognizes Gad running his way, "The mugger! Guards!" Gad, enraged, tries to throw a knife at Moira, it misses and hits Mr. Dinklesbean right in between the eyes killing him instantly. The guards showed up to see this, "All of you are under arrest!" A brief pause... then Jan exclaimed, "Guards! Thank goodness you're here! These ruffians killed my husband!" Another pause... All the other adventurers bolted off in different directions.`,
+        status: QuestStatus.Failed,
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.D,
+            value: 1,
+            week: 3,
+          },
+          {
+            metricRuleId: MetricRuleId.CiviliansDead,
+            value: 1,
+            week: 3,
+          },
+        ],
       },
     ],
   },
@@ -337,7 +355,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p1-q3-7",
         startWeek: 3,
         notes: "TODO - Louis, Vivian",
-        status: QuestStatus.Failed,
+        status: QuestStatus.Success,
         clanId: "c6",
         metrics: [],
       },
@@ -345,7 +363,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p2-q3-7",
         startWeek: 3,
         notes: "TODO - Sheila, Drea",
-        status: QuestStatus.Failed,
+        status: QuestStatus.Success,
         clanId: "c4",
         metrics: [],
       },
@@ -369,7 +387,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: "TODO - Ken. Loses in First round to Clara",
         status: QuestStatus.Failed,
         clanId: "c9",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.D,
+            value: 1,
+            week: 3,
+          },
+        ],
       },
       {
         id: "p2-q3-8",
@@ -386,7 +411,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: "TODO - Lydia Loses to Fissure in the first round.",
         status: QuestStatus.Failed,
         clanId: "c9",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.E,
+            value: 1,
+            week: 3,
+          },
+        ],
       },
       {
         id: "p4-q3-8",
@@ -395,7 +427,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
           "TODO - Barkskin. Beats Shelly in the first round, but loses to Fissure.",
         status: QuestStatus.Failed,
         clanId: "c9",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.C,
+            value: 1,
+            week: 3,
+          },
+        ],
       },
       {
         id: "p5-q3-8",
@@ -403,7 +442,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: "TODO - Steve. Loses to Geoffry in the first round",
         status: QuestStatus.Failed,
         clanId: "c9",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.E,
+            value: 1,
+            week: 3,
+          },
+        ],
       },
       {
         id: "p6-q3-8",
@@ -421,7 +467,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
           "TODO - Geoffrey. Beats Steve in the first round. In the second he loses SOUNDLY to Clara.",
         status: QuestStatus.Failed,
         clanId: "c6",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.C,
+            value: 1,
+            week: 3,
+          },
+        ],
       },
       {
         id: "p8-q3-8",
@@ -430,7 +483,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
           "TODO - Shelly. Loses to Barkskin in the first round. But then treats all the injuries of the other fighters for the rest of the time.",
         status: QuestStatus.Failed,
         clanId: "c8",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.D,
+            value: 1,
+            week: 3,
+          },
+        ],
       },
     ],
   },
@@ -712,7 +772,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: "TODO - Guy",
         status: QuestStatus.Failed,
         clanId: "c1",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.D,
+            value: 1,
+            week: 3,
+          },
+        ],
       },
       {
         id: "p5-q2-5",
@@ -720,7 +787,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: "TODO - Tad - Dies",
         status: QuestStatus.Failed,
         clanId: "c1",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.D,
+            value: 1,
+            week: 3,
+          },
+        ],
       },
       {
         id: "p6-q2-5",
@@ -728,7 +802,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: "TODO - Landorin, Dies, but is resurrected by Luna",
         status: QuestStatus.Failed,
         clanId: "c1",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.D,
+            value: 1,
+            week: 3,
+          },
+        ],
       },
     ],
   },
@@ -808,7 +889,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     expireWeek: 2,
     claimType: QuestClaimType.Clan,
     questType: QuestTypes.Guard,
-    questRank: Ranks.D,
+    questRank: Ranks.C,
     postedBy: "The Trade Guild",
     description: `As Morton has become a common stop in trade routes, its Bounty festival has grown in popularity. Even people from the larger cities like the industrial powerhouse Furthbrand make the trip to enjoy the festivities. The merchants come in a week early.`,
     parties: [
@@ -820,6 +901,12 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         status: QuestStatus.Failed,
         clanId: "c1",
         metrics: [
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.D,
+            value: 1,
+            week: 2,
+          },
           {
             metricRuleId: MetricRuleId.CostsOrDamages,
             value: 200,
@@ -922,6 +1009,12 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         clanId: "c6",
         metrics: [
           {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.B,
+            value: 1,
+            week: 1,
+          },
+          {
             metricRuleId: MetricRuleId.CiviliansDead,
             value: 10,
             week: 1,
@@ -958,7 +1051,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         startWeek: 1,
         status: QuestStatus.Success,
         notes:
-          "There were so many rats! They were so much bigger than expected! Sir Robin bravely ran away.",
+          "There were so many rats! They were so much bigger than expected! Sir Robin bravely ran away. But they did kill the requested number of rats.",
         clanId: "c1",
         metrics: [
           {
@@ -973,8 +1066,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         startWeek: 1,
         status: QuestStatus.Success,
         notes:
-          "There were so many rats! They were so much bigger than expected! The party's escape route was completely blocked and the team. Thanks to Chargla's brave (but stupid) sacrifice, Carlsbad and Tad Faddler were able to make it out alive. They're telling everyone about a gigantic rat with eyes all over its body deep in the sewers.",
-        // endWeek: number,
+          "There were so many rats! They were so much bigger than expected! The party's escape route was completely blocked and the team. Thanks to Chargla's brave (but stupid) sacrifice, Carlsbad and Tad Faddler were able to make it out alive. They're telling everyone about a gigantic rat with eyes all over its body deep in the sewers. Despite this they did kill the requested number of rats.",
         clanId: "c1",
         metrics: [
           {
@@ -1006,7 +1098,6 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         clanId: "c10",
         notes:
           "Bandits attacked the shrine. Luckily Ash & Icenose were there to help!",
-        // endWeek: number,
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -1053,7 +1144,6 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.C,
     postedBy: "Trade Guild",
     description: `With the Festival coming up in a couple of weeks we need capable parties to guard the wagons as merchants head out to get supplies. Southern Caravan from the Port city of Serpentina.`,
-
     parties: [
       {
         id: "p1-q1-4",
@@ -1183,6 +1273,12 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes:
           "Szuuth realized they had no idea what the were looking for and mostly brought back weeds. Sister Lasiter gave her a gold for the flowers because they were pretty.",
         metrics: [
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.E,
+            value: 1,
+            week: 1,
+          },
           {
             metricRuleId: MetricRuleId.RewardGold,
             value: 1,
@@ -1407,14 +1503,28 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         startWeek: 1,
         status: QuestStatus.Failed,
         notes: "Tinky never reported in to the Adventurers Guild.",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.E,
+            value: 1,
+            week: 1,
+          },
+        ],
       },
       {
         id: "p2-q1-9",
         startWeek: 2,
         status: QuestStatus.Failed,
         notes: "Who's Goldorf again?",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.E,
+            value: 1,
+            week: 2,
+          },
+        ],
       },
     ],
   },

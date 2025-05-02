@@ -119,6 +119,7 @@ export enum MetricRuleId {
   AllyResurrect = "AllyResurrect",
   AllyHealed = "AllyHealed",
   GoneMissing = "GoneMissing",
+  QuestFailed = "QuestFailed",
 
   // Quest global/party metrics
   CivilianSaved = "CivilianSaved",
