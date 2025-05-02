@@ -68,7 +68,7 @@ function formatRoster(params: {
       key={"roster" + week}
     >
       <h3>Week {week} Roster</h3>
-      <div>
+      <div style={{ padding: 10 }}>
         <b>Weekly Total {total}</b>
       </div>
       <MetricGrid

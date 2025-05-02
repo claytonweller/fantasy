@@ -214,7 +214,7 @@ export const rawResearch: IResearch[] = [
     weekHappened: 1,
     villagerPrompts: [
       {
-        villagerId: "v5", 
+        villagerId: "v5",
         week: 1,
         text: "I ask around at a few of the pubs to see which E rank adventurer is the most ambitious and interested in moving up in rank.",
       },

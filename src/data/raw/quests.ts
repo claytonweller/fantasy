@@ -171,10 +171,24 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q3-1",
         startWeek: 3,
-        notes: "TODO - Mythril Trap brings it in alive.",
+        notes:
+          "If there was ever a quest for Mythril trap this was it. They would have gone to hunt the giant wolf even if there were no reward. They set out and immediately caught signs of it. Broken trees. Scattered bodies. Shay tracked the beast and vince laid traps. Everything was going according to plan. The snared beast and began hitting it with paralyzing and sleep arrows. But as it was looking like it would go down without much of a fight, the blue beast broke suddenly sent white hot bolts of plasma out from its body, completely ripping loose from the snares. Metalfang stepped in just in time to protect the rest of the party, and was knocked briefly unconscious, seeing this his sister went into a blind rage. The monster's electric blast had obviously taken the last of its energy. Vince shouted about needing to keep the beast alive. But Stoneclaw was was about to end it. Metalfang had regained his senses and jumped to hold his sister back before the killing blow. She kept lashing, severely wounding her brother and Vince in the process. In the end Brother Chilpin who they had paid to wait by the edge of the forest for just such an occasion patched them up. They brought the beast in and it was displayed in a giant electric proof cage at the closing night of the festival.",
         status: QuestStatus.Success,
         clanId: "c3",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            value: 1,
+            rank: Ranks.A,
+            week: 3,
+          },
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 3000,
+            week: 3,
+          },
+          
+        ],
       },
     ],
   },
@@ -194,10 +208,26 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p1-q3-2",
         startWeek: 3,
         notes:
-          "TODO - Verdant Glade tries to protect Mamut's grove, but it's more than they can manage. Cult attack. Return of Reginald Spintsmunge?",
+          `The Verdant Glade set out for the Northern forest. After their disturbing experience in the mystic spring they had earned enough of Elder K'Tar's trust to be taken deep in to the forest to the grove. Upon their arrival the Elder said, "There's no sign of Mamut. He nev-" suddenly magic pits appeared below both him and Tall Pine Marlon. In a split second Freya jumped to push K'Tar out of the way. The magic void snapped shut cutting her instantly in half, leaving only her torso. Marlon avoided a similar fate with an instant vine net. They were then attacked by people in dark orange and purple robes. It was a close fight but the Verdant Glade come out on top, keeping the Elder safe. The remaining attackers fled after seeing their compatriots crushed by an ancient birch, including the mage who set the trap in the first place. Tall Pine wept when he saw that the Giant Father tree of the grove had been bored out in the middle and black ooze was dripping out of it.`,
         status: QuestStatus.Failed,
         clanId: "c10",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.TrapTriggered,
+            value: 2,
+            week: 3,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 1,
+            week: 3,
+          },
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 15,
+            week: 3,
+          },
+        ],
       },
     ],
   },
@@ -216,11 +246,16 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q3-3",
         startWeek: 3,
-        notes:
-          "TODO - Gorn is a fake name by a cultist to hid that this is actually from Vanderbliff. Marcus takes the quest but fails.",
+        notes: `Marcus returned to the guild hall limping, surly, and covered in leaves.`,
         status: QuestStatus.Failed,
         clanId: "c2",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.CostsOrDamages,
+            value: 10,
+            week: 2,
+          },
+        ],
       },
     ],
   },
@@ -234,22 +269,29 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questType: QuestTypes.Other,
     questRank: Ranks.C,
     postedBy: "The Chairman",
-    description: `It's a cookoff Julia Pepper's child, the iron chef is taking on any challengers. At the festival. The "Who's cuisine will reign supreme?!"`,
+    description: `It's a cook off! Julia Pepperschild, the iron chef is taking on any challengers. At the festival. The "Who's cuisine will reign supreme?!"`,
     parties: [
       {
         id: "p1-q3-4",
         startWeek: 3,
-        notes: "TODO - the team is triumphant",
+        notes: "The iron chef has held on to her title for another year. It was a fierce final match with the Brass Saucier of Serpentina, but Julia's cockatrice shank with gelatinous cube demi-glace was to powerful to ignore. She may have been the only champion, but the judges agree that no one was a loser.",
         status: QuestStatus.Success,
         clanId: "c7",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            rank: Ranks.C,
+            value: 130,
+            week: 3,
+          },
+        ],
       },
     ],
   },
   {
     id: "q3-5",
     name: "Peace Time? NO! Time Piece Revenge!",
-    reward: 50,
+    reward: 150,
     postedWeek: 3,
     expireWeek: 3,
     claimType: QuestClaimType.Clan,
@@ -284,6 +326,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     name: "Extra Festival Security",
     reward: 300,
     postedWeek: 3,
+    expireWeek: 3,
     claimType: QuestClaimType.Individual,
     questType: QuestTypes.Guard,
     questRank: Ranks.C,
@@ -313,6 +356,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     name: "Bounty Battle",
     reward: 500,
     postedWeek: 3,
+    expireWeek: 3,
     claimType: QuestClaimType.Individual,
     questType: QuestTypes.Other,
     questRank: Ranks.S,
@@ -395,6 +439,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     name: "Adventurer guild sales squad",
     reward: 0,
     postedWeek: 3,
+    expireWeek: 3,
     claimType: QuestClaimType.Individual,
     questType: QuestTypes.Other,
     questRank: Ranks.S,
@@ -446,8 +491,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
   // Week 2
   {
     id: "q2-1",
-    name: "That's a big rat",
-    reward: 100,
+    name: "That's a big rat(s?)",
+    reward: 200,
     postedWeek: 2,
     expireWeek: 2,
     claimType: QuestClaimType.Clan,
