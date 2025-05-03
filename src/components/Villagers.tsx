@@ -8,6 +8,7 @@ import { IMetricsWithMeta } from "../types/Quest";
 import { RosterPositions } from "../types/Roster";
 import { calculateAdventurerPickMetrics } from "utils/calculateAdventurerPickMetrics";
 import { calculateClanPickMetrics } from "utils/calculateClanPickMetrics";
+import { calculateVillagerRosterMetrics } from "utils/calculateVillagerRosterMetrics";
 
 export default function Villagers(props: {
   search: ISearchParams;
@@ -56,41 +57,7 @@ function computeVillagerMetrics(props: { rules: IRules; villager: IVillager }) {
   } = props;
   const weekly = rosters
     .sort((a, b) => b.week - a.week)
-    .map((r) => {
-      const metaMetrics: IMetricsWithMeta[] = r.rosterPicks.map(
-        (rosterPick) => {
-          const { pick, position } = rosterPick;
-          if (pick.adventurer) {
-            return calculateAdventurerPickMetrics(
-              pick.adventurer,
-              r.week,
-              position,
-            );
-          }
-          if (pick.clan) return calculateClanPickMetrics(pick.clan, r.week, RosterPositions.Clan);
-          return {
-            name: "clan",
-            rank: RosterPositions.Clan,
-            metrics: [],
-            week: r.week,
-          };
-        },
-      );
-      const total = metaMetrics.reduce((tot, mm) => {
-        let subTotal = 0;
-        mm.metrics.forEach((m) => {
-          const pointCalculator = rules.calculators[m.metricRuleId];
-          const metricPoints = pointCalculator(m);
-          subTotal += metricPoints;
-        });
-        return tot + subTotal;
-      }, 0);
-      return {
-        total,
-        week: r.week,
-        metaMetrics,
-      };
-    });
+    .map((r) => calculateVillagerRosterMetrics(r, rules));
 
   const runningTotal = weekly.reduce((total, props) => {
     return total + props.total;

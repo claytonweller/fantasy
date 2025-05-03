@@ -221,7 +221,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
           },
           {
             metricRuleId: MetricRuleId.EnemyDefeat,
-            value: 10,
+            value: 18,
             week: 1,
             rank: Ranks.E,
           },
@@ -911,7 +911,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
         metrics: [
           {
             metricRuleId: MetricRuleId.EnemyDefeat,
-            value: 12,
+            value: 14,
             rank: Ranks.E,
             week: 1,
           },
@@ -1221,7 +1221,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     id: "a31",
     name: `Guy Norman`,
     races: [AdventurerRaces.Human],
-    rank: Ranks.D,
+    rank: Ranks.E,
     class: AdventurerClasses.Generalist,
     className: "Mercenary",
     bio: `New to town.`,
@@ -1385,7 +1385,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
         metrics: [
           {
             metricRuleId: MetricRuleId.EnemyDefeat,
-            value: 2,
+            value: 8,
             rank: Ranks.E,
             week: 1,
           },

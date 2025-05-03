@@ -1089,7 +1089,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
-            value: 50,
+            value: 27,
             week: 1,
           },
         ],
@@ -1104,7 +1104,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
-            value: 50,
+            value: 41,
             week: 1,
           },
         ],

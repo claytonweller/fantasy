@@ -80,6 +80,13 @@ function App() {
             flexWrap: "wrap",
           }}
         >
+          <Villagers
+            search={{ searchText }}
+            makeSearchable={makeSearchable}
+            rules={rules}
+            cardTypeFilters={cardTypeFilter.state}
+            villagers={villagers}
+          />
           <Weeks
             search={{ searchText, rankFilter: rankFilter.state }}
             rules={rules}
@@ -89,13 +96,6 @@ function App() {
             quests={quests}
             villagers={villagers}
             adventurers={adventurers}
-          />
-          <Villagers
-            search={{ searchText }}
-            makeSearchable={makeSearchable}
-            rules={rules}
-            cardTypeFilters={cardTypeFilter.state}
-            villagers={villagers}
           />
           <Clans
             search={{ searchText, rankFilter: rankFilter.state }}

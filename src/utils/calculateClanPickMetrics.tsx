@@ -3,7 +3,11 @@ import { metaMetricsFromClan } from "./metaMetricsFromClan";
 import { RosterPositions } from "types/Roster";
 import { Ranks } from "types/Ranks";
 
-export function calculateClanPickMetrics(clan: IClan, week: number, position: RosterPositions | Ranks) {
+export function calculateClanPickMetrics(
+  clan: IClan,
+  week: number,
+  position: RosterPositions | Ranks,
+) {
   const clanMetrics = metaMetricsFromClan(clan, week);
   const weekMetrics = clanMetrics.filter((cm) => {
     return cm.metrics.find((m) => m.week === week);

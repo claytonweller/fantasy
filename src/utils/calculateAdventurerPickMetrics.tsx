@@ -7,7 +7,7 @@ import { combineMetaMetrics } from "./combineMetricsArrays";
 
 export function calculateAdventurerPickMetrics(
   adventurer: IAdventurer,
-  week: number,  
+  week: number,
   position?: RosterPositions | Ranks,
 ): IMetricsWithMeta {
   const all = adventurer.quests.map((q) => {
