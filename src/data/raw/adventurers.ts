@@ -44,9 +44,20 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
-        // lateAddition: true,
+        lateAddition: true,
         partyId: "p1-q3-5",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.CostsOrDamages,
+            value: 50,
+            week: 3,
+          },
+          {
+            metricRuleId: MetricRuleId.CiviliansDead,
+            value: 1,
+            week: 3,
+          },
+        ],
       },
       {
         partyId: "p1-q2-7",
@@ -233,7 +244,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q3-9",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 200,
+            week: 3,
+          },
+        ],
       },
     ],
   },
@@ -547,9 +564,15 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
-        // lateAddition: true,
+        lateAddition: true,
         partyId: "p1-q3-5",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 100,
+            week: 3,
+          },
+        ],
       },
       {
         partyId: "p1-q2-2",
@@ -605,7 +628,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         // lateAddition: true,
-        partyId: "p5-q2-5",
+        partyId: "p5-q2-5", // Week 3
         metrics: [],
       },
     ],
@@ -676,9 +699,15 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
-        // lateAddition: true,
+        lateAddition: true,
         partyId: "p1-q3-5",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.CostsOrDamages,
+            value: 25,
+            week: 3,
+          },
+        ],
       },
       {
         partyId: "p1-q1-8",
@@ -762,7 +791,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q3-9",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 1276,
+            week: 3,
+          },
+        ],
       },
       {
         partyId: "p3-q1-4",
@@ -809,7 +844,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q3-7",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 1,
+            week: 3,
+          },
+        ],
       },
       {
         partyId: "p3-q2-3",
@@ -990,7 +1031,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q3-9",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 100,
+            week: 3,
+          },
+        ],
       },
       {
         partyId: "p7-q1-7",
@@ -1050,7 +1097,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
             metricRuleId: MetricRuleId.EnemyDefeat,
             value: 1,
             rank: Ranks.C,
-            week: 1,
+            week: 2,
           },
         ],
       },
@@ -1093,7 +1140,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p4-q3-9",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 400,
+            week: 3,
+          },
+        ],
       },
       {
         lateAddition: true,
@@ -1137,7 +1190,6 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
-        lateAddition: true,
         partyId: "p1-q3-5",
         metrics: [],
       },
@@ -1179,7 +1231,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
-        partyId: "p4-q2-5",
+        partyId: "p4-q2-5", // Week 3
         metrics: [],
       },
       {
@@ -1227,9 +1279,15 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
-        // lateAddition: true,
+        lateAddition: true,
         partyId: "p1-q3-5",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.CostsOrDamages,
+            value: 25,
+            week: 3,
+          },
+        ],
       },
       {
         partyId: "p1-q2-7",
@@ -1259,7 +1317,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q3-9",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 500,
+            week: 3,
+          },
+        ],
       },
     ],
   },
@@ -1283,7 +1347,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
             metricRuleId: MetricRuleId.AllyHealed,
             value: 1,
             rank: Ranks.C,
-            week: 1,
+            week: 2,
           },
         ],
       },
@@ -1344,7 +1408,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p2-q3-9",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 50,
+            week: 3,
+          },
+        ],
       },
       {
         lateAddition: true,
@@ -1384,7 +1454,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
         metrics: [
           {
             metricRuleId: MetricRuleId.EnemyDefeat,
-            value: 2,
+            value: 4,
             rank: Ranks.D,
             week: 3,
           },
@@ -1422,7 +1492,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q3-9",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 500,
+            week: 3,
+          },
+        ],
       },
       {
         partyId: "p3-q1-4",
@@ -1468,9 +1544,28 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
-        // lateAddition: true,
+        lateAddition: true,
         partyId: "p6-q3-8",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            value: 1,
+            rank: Ranks.D,
+            week: 3,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            value: 1,
+            rank: Ranks.C,
+            week: 3,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            value: 1,
+            rank: Ranks.B,
+            week: 3,
+          },
+        ],
       },
       {
         partyId: "p1-q2-6.1",
@@ -1577,13 +1672,20 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
       {
         status: AdventurerStatuses.Missing,
         startWeek: 2,
+        endWeek: 2,
       },
     ],
     traits: [],
     questParties: [
       {
         partyId: "p3-q3-9",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 65,
+            week: 3,
+          },
+        ],
       },
       {
         lateAddition: true,
@@ -1630,7 +1732,14 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p7-q3-8",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            value: 1,
+            week: 3,
+            rank: Ranks.E,
+          },
+        ],
       },
       {
         partyId: "p3-q2-3",
@@ -1699,7 +1808,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Just came of age. He has a great nose, and is very excited.`,
     clanId: "c1",
     nicknames: [],
-    statusHistory: [],
+    statusHistory: [
+      {
+        status: AdventurerStatuses.Injured,
+        startWeek: 3,
+        endWeek: 3,
+      },
+    ],
     traits: [],
     questParties: [
       {
@@ -1718,7 +1833,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
         metrics: [
           {
             metricRuleId: MetricRuleId.EnemyDefeat,
-            value: 1,
+            value: 3,
             rank: Ranks.D,
             week: 1,
           },
@@ -1830,7 +1945,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     rank: Ranks.D,
     class: AdventurerClasses.Attacker,
     className: "Fruit Ninja",
-    bio: `Can a vegetable peeler be used to kill a man? Absolutely. But Pamela has given that up for a simpler life.`,
+    bio: `Can a vegetable peeler be used to kill a man? Absolutely. But Bushi has given that up for a simpler life.`,
     clanId: "c7",
     nicknames: [],
     statusHistory: [],
@@ -1918,7 +2033,20 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p2-q3-8",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.E,
+            value: 1,
+            week: 3,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.C,
+            value: 1,
+            week: 3,
+          },
+        ],
       },
       {
         partyId: "p2-q2-3",
@@ -1997,7 +2125,32 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p8-q3-8",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            rank: Ranks.E,
+            value: 2,
+            week: 3,
+          },
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            rank: Ranks.D,
+            value: 1,
+            week: 3,
+          },
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            rank: Ranks.C,
+            value: 2,
+            week: 3,
+          },
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            rank: Ranks.B,
+            value: 1,
+            week: 3,
+          },
+        ],
       },
     ],
   },
@@ -2044,7 +2197,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
             metricRuleId: MetricRuleId.EnemyDefeat,
             value: 3,
             rank: Ranks.D,
-            week: 1,
+            week: 2,
           },
         ],
       },
@@ -2078,7 +2231,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
             metricRuleId: MetricRuleId.EnemyDefeat,
             value: 3,
             rank: Ranks.D,
-            week: 1,
+            week: 2,
           },
         ],
       },
@@ -2098,9 +2251,19 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Who ya' gonna' call?`,
     clanId: "c1",
     nicknames: [],
-    statusHistory: [],
+    statusHistory: [
+      {
+        status: AdventurerStatuses.MentalIllness,
+        startWeek: 4,
+      },
+    ],
     traits: [],
-    questParties: [],
+    questParties: [
+      {
+        partyId: "p3-q1-9",
+        metrics: [],
+      },
+    ],
   },
   {
     id: "a58",
@@ -2285,7 +2448,14 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p4-q3-8",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.D,
+            value: 1,
+            week: 3,
+          },
+        ],
       },
       {
         partyId: "p2-q2-3",
@@ -2294,7 +2464,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
             metricRuleId: MetricRuleId.EnemyDefeat,
             value: 2,
             rank: Ranks.D,
-            week: 1,
+            week: 2,
           },
         ],
       },

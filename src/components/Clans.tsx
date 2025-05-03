@@ -15,10 +15,10 @@ export default function Clans(props: {
   const { cardTypeFilters, search, rules, makeSearchable, currentWeek } = props;
 
   const clans = getClans();
-  const allClans = clans.map((c, i) => {
+  const allClans = clans.map((c) => {
     return (
       <ClanCard
-        key={`Clan${i}`}
+        key={`Clan${c.id}`}
         clan={c}
         search={search}
         currentWeek={currentWeek}

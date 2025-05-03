@@ -27,10 +27,10 @@ export default function Villagers(props: {
       return { villager, metrics };
     })
     .sort((a, b) => b.metrics.total - a.metrics.total)
-    .map((input, i) => {
+    .map((input) => {
       return (
         <VillagerCard
-          key={"VCard" + i}
+          key={"VCard" + input.villager.id}
           villager={input.villager}
           search={search}
           rules={rules}

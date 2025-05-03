@@ -19,10 +19,10 @@ export default function Quests(props: {
   const claimTypeFilter = useEnumFilterState(QuestClaimType, "ClaimType");
   const typeSpecificFilters = [statusFilter, questTypeFilter, claimTypeFilter];
   const quests = getQuests();
-  const allQuests = quests.map((q, i) => {
+  const allQuests = quests.map((q) => {
     return (
       <QuestCard
-        key={`Quest${i}`}
+        key={`Quest${q.id}`}
         quest={q}
         search={search}
         rules={rules}

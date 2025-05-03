@@ -31,10 +31,10 @@ export default function Adventurers(props: {
     activeFilter,
   ];
   const adventurers = getAdventurers();
-  const allAdventurers = adventurers.map((a, i) => {
+  const allAdventurers = adventurers.map((a) => {
     return (
       <AdventurerCard
-        key={`Adv${i}`}
+        key={`Adv${a.id}`}
         adventurer={a}
         search={search}
         makeSearchable={makeSearchable}

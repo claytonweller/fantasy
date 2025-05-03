@@ -37,14 +37,14 @@ function formatAdventurer(a: IRawAdventurer): IAdventurer {
 
   return {
     ...a,
-    ...formatStatuses(a),
+    ...formatAdventurerStatuses(a),
     ...formatQuests(a),
     clan,
     research,
   };
 }
 
-function formatStatuses(a: IRawAdventurer) {
+export function formatAdventurerStatuses(a: IRawAdventurer) {
   const currentStatuses: AdventurerStatuses[] = [];
   const statusHistory: IDbAdventurerStatusHistory[] = [];
 

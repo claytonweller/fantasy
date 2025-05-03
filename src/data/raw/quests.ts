@@ -309,17 +309,12 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q3-5",
         startWeek: 3,
-        notes: `Trimble, bandaged from being mugged by Gad last week, approached Jan directly about the request. She returned the watch in the first two weeks ago after all. But while they were talking Syd showed up, "Ah it's the guild lady! Where's my money?". Simultaneously down the street Gad tracked down Moira who he heard stole the watch form him. Moira spotted him coming and immediately ran away. As she was dashing by she saw Jan, "Hey! Servant lady, You didn't tell the guild and I didn't get my reward!" Jan was uncharacteristically speechless then Trimble recognizes Gad running his way, "The mugger! Guards!" Gad, enraged, tries to throw a knife at Moira, it misses and hits Mr. Dinklesbean right in between the eyes killing him instantly. The guards showed up to see this, "All of you are under arrest!" A brief pause... then Jan exclaimed, "Guards! Thank goodness you're here! These ruffians killed my husband!" Another pause... All the other adventurers bolted off in different directions.`,
+        notes: `Trimble, bandaged from being mugged by Gad last week, approached Jan directly about the request. She returned the watch in the first two weeks ago after all. But while they were talking Syd showed up, "Ah it's the guild lady! Where's my money?". Simultaneously down the street Gad tracked down Moira who he heard stole the watch form him. Moira spotted him coming and immediately ran away. As she was dashing by she saw Jan, "Hey! Servant lady, You didn't tell the guild and I didn't get my reward!" Jan was uncharacteristically speechless then Trimble recognizes Gad running his way, "The mugger! Guards!" Gad, enraged, tries to throw a knife at Moira, it misses and hits Mr. Dinklesbean right in between the eyes killing him instantly. The guards showed up to see this, "All of you are under arrest!" A brief pause... then Jan exclaimed, "Guards! Thank goodness you're here! These ruffians killed my husband!" Another pause... All the other adventurers bolted off in different directions. One by one Fixer grabbed them and brought them to a safe house. He then fixed the problem.`,
         status: QuestStatus.Failed,
         metrics: [
           {
             metricRuleId: MetricRuleId.QuestFailed,
             rank: Ranks.D,
-            value: 1,
-            week: 3,
-          },
-          {
-            metricRuleId: MetricRuleId.CiviliansDead,
             value: 1,
             week: 3,
           },
@@ -354,18 +349,31 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q3-7",
         startWeek: 3,
-        notes: "TODO - Louis, Vivian",
+        notes: "Louis walked some drunks home. Vivian stopped a mugging.",
         status: QuestStatus.Success,
         clanId: "c6",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 150,
+            week: 3,
+          },
+        ],
       },
       {
         id: "p2-q3-7",
         startWeek: 3,
-        notes: "TODO - Sheila, Drea",
+        notes:
+          "Sheila stymied some would be burglars at the accessory shop. Drea's presence at the city square was enough to keep even the surliest of partiers in line.",
         status: QuestStatus.Success,
         clanId: "c4",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 150,
+            week: 3,
+          },
+        ],
       },
     ],
   },
@@ -384,7 +392,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q3-8",
         startWeek: 3,
-        notes: "TODO - Ken. Loses in First round to Clara",
+        notes:
+          "Ken was expected to beat Sir Robin in the first round, but he loses his fight with the knight's maid squire, Clara, instead. He recognizes her right away, and does not seem surprised to lose.",
         status: QuestStatus.Failed,
         clanId: "c9",
         metrics: [
@@ -400,21 +409,29 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p2-q3-8",
         startWeek: 3,
         notes:
-          "TODO - Fissure. Beats Lydia, then Barksking. Clara in the finals.",
-        status: QuestStatus.Claimed,
-        clanId: "c9",
-        metrics: [],
-      },
-      {
-        id: "p3-q3-8",
-        startWeek: 3,
-        notes: "TODO - Lydia Loses to Fissure in the first round.",
+          "Fissure was far and away the favorite to win this year's tournament, most fighters can't even hit her. Fissure beat Lydia and Barkskin to make it to the finals against Clara. Before the match she gave a questioning glance to Mara. Mara just nodded, and Fissure shrugged and got in position.",
         status: QuestStatus.Failed,
         clanId: "c9",
         metrics: [
           {
             metricRuleId: MetricRuleId.QuestFailed,
-            rank: Ranks.E,
+            rank: Ranks.D,
+            value: 1,
+            week: 3,
+          },
+        ],
+      },
+      {
+        id: "p3-q3-8",
+        startWeek: 3,
+        notes:
+          "Lydia was put up against Fissure in the first round. She left the ring covered in tiny bruises.",
+        status: QuestStatus.Failed,
+        clanId: "c9",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.D,
             value: 1,
             week: 3,
           },
@@ -424,13 +441,13 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p4-q3-8",
         startWeek: 3,
         notes:
-          "TODO - Barkskin. Beats Shelly in the first round, but loses to Fissure.",
+          "Barkskin beat Shelly in the first round. But he couldn't land a single hit on Fissure. It took a while, but eventually he forfeited the round after being blinded and deafened by 4 precise strikes from the pixie.",
         status: QuestStatus.Failed,
         clanId: "c9",
         metrics: [
           {
             metricRuleId: MetricRuleId.QuestFailed,
-            rank: Ranks.C,
+            rank: Ranks.D,
             value: 1,
             week: 3,
           },
@@ -439,13 +456,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p5-q3-8",
         startWeek: 3,
-        notes: "TODO - Steve. Loses to Geoffry in the first round",
+        notes:
+          "Steve tried to punch Geoffrey. Geoffrey dodged. Steve couldn't punch out a win today.",
         status: QuestStatus.Failed,
         clanId: "c9",
         metrics: [
           {
             metricRuleId: MetricRuleId.QuestFailed,
-            rank: Ranks.E,
+            rank: Ranks.D,
             value: 1,
             week: 3,
           },
@@ -454,23 +472,27 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p6-q3-8",
         startWeek: 3,
-        notes:
-          "TODO - Sir Robin -> Clara. Robin bails in the first round. Blames it on indigestion or that he was 'just passing through'. Clara takes over. Beats Ken in the first round. Beats Geoffrey in the second round. Fights fissure in the finals.",
-        status: QuestStatus.Claimed,
+        notes: `Right before his match with Ken, Sir Robin claimed to have a terrible bout of indigestion. Mara looked at Clara and crossed her arms. The maid squire grumbled, "You never said which one of us had to win." Then she stepped in the ring. After beating Ken & Geoffrey soundly she set off against fissure. The fight was almost to fast for people to see. Clara's left arm and leg were quick paralyzed. But then at the last moment the Fissure went flying out of the ring and smashed into a wall. Clara scowled at Mara, grabbed her bag of gold and ran off without a word.`,
+        status: QuestStatus.Success,
         clanId: "c1",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 500,
+            week: 3,
+          },
+        ],
       },
       {
         id: "p7-q3-8",
         startWeek: 3,
-        notes:
-          "TODO - Geoffrey. Beats Steve in the first round. In the second he loses SOUNDLY to Clara.",
+        notes: `Geoffrey beat punching Steve in the first round. In the second round he was against Clara Kimberflorn. He began the match by saying, "Surely you jest! It wouldn't be right for me to fight such a delicate flow-." He awoke 10 minutes later missing a tooth.`,
         status: QuestStatus.Failed,
         clanId: "c6",
         metrics: [
           {
             metricRuleId: MetricRuleId.QuestFailed,
-            rank: Ranks.C,
+            rank: Ranks.D,
             value: 1,
             week: 3,
           },
@@ -480,7 +502,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p8-q3-8",
         startWeek: 3,
         notes:
-          "TODO - Shelly. Loses to Barkskin in the first round. But then treats all the injuries of the other fighters for the rest of the time.",
+          "Shelly and Barkskin had the longest match of the night. It was an endurance contest, and Shelly gave out in the end. Though she stayed around as healed all the fighters after their matches. ",
         status: QuestStatus.Failed,
         clanId: "c8",
         metrics: [
@@ -509,7 +531,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q3-9",
         startWeek: 3,
-        notes: "TODO - All of Clockwork Chisel",
+        notes:
+          "This was Clockwork Chisels time to shine. And shone they did! Their products were completely sold out by the end of the week.",
         status: QuestStatus.Success,
         clanId: "c5",
         metrics: [],
@@ -517,14 +540,15 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p2-q3-9",
         startWeek: 3,
-        notes: "TODO - ?????? Mime performances",
+        notes:
+          "The mime was creeping everyone out. But then they joined in perfectly with the Duffenklampf twins in their sword dance. Applause abounding.",
         status: QuestStatus.Success,
         metrics: [],
       },
       {
         id: "p3-q3-9",
         startWeek: 3,
-        notes: "TODO - Derb Alperd",
+        notes: "Derb's army of dancing rats disgusted and delighted in equal measure.",
         status: QuestStatus.Success,
         clanId: "c1",
         metrics: [],
@@ -532,7 +556,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p4-q3-9",
         startWeek: 3,
-        notes: "TODO - Elnar",
+        notes:
+          "Elnar made very good money selling potions this year. The aphrodisiacs were particularly popular.",
         status: QuestStatus.Success,
         clanId: "c8",
         metrics: [],
@@ -540,10 +565,17 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p5-q3-9",
         startWeek: 3,
-        notes: "TODO - Duffenklampf Twins. Sword dance. ?????? joins in.",
+        notes:
+          "The twins are know for their perfectly sync'd movements but no one knew they were so graceful.",
         status: QuestStatus.Success,
         clanId: "c8",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 100,
+            week: 3,
+          },
+        ],
       },
     ],
   },
@@ -1524,6 +1556,21 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
             value: 1,
             week: 2,
           },
+        ],
+      },
+      {
+        id: "p3-q1-9",
+        startWeek: 3,
+        status: QuestStatus.Failed,
+        notes: `Buster was found jabbering to himself after the festival. When people approached he would grab them and say something along the lines of, "The eyed mouth opens its pupil teeth. We must away to the lightning!"`,
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.E,
+            value: 1,
+            week: 3,
+          },
+
         ],
       },
     ],
