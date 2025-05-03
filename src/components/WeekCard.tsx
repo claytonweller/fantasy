@@ -33,6 +33,8 @@ export default function WeekCard(props: {
     makeSearchable,
   } = props;
 
+  
+
   return (
     <Card
       color="#333344"

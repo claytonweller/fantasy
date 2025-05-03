@@ -7,6 +7,7 @@ import { IQuest } from "../types/Quest";
 import { IAdventurer } from "../types/Adventurer";
 import { IClan } from "../types/Clan";
 import WeekCard from "./WeekCard";
+import { CURRENT_WEEK } from "config";
 
 export default function Weeks(props: {
   villagers: IVillager[];
@@ -29,6 +30,24 @@ export default function Weeks(props: {
     makeSearchable,
   } = props;
 
+  const weekCards = []
+  for (let i = 0; i < CURRENT_WEEK; i++) {
+    weekCards.push(
+      <WeekCard
+        week={i+1}
+        key={"WeekCard" + (i+1)}
+        villagers={villagers}
+        clans={clans}
+        quests={quests}
+        adventurers={adventurers}
+        search={search}
+        rules={rules}
+        makeSearchable={makeSearchable}
+      />
+    )
+    
+  }
+
   return (
     <div>
       <CardGroup
@@ -36,17 +55,7 @@ export default function Weeks(props: {
         cardType={CardTypes.Week}
         color="#222244"
       >
-        <WeekCard
-          week={1}
-          key={"WeekCard" + 1}
-          villagers={villagers}
-          clans={clans}
-          quests={quests}
-          adventurers={adventurers}
-          search={search}
-          rules={rules}
-          makeSearchable={makeSearchable}
-        />
+        {weekCards}
       </CardGroup>
     </div>
   );
