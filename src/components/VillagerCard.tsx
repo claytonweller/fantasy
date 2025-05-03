@@ -1,7 +1,6 @@
 import { IRules } from "../data/getRules";
 import { CardTypes } from "../types/Card";
 import { IMetricsWithMeta } from "../types/Quest";
-import { Ranks } from "../types/Ranks";
 import { ISearchParams } from "../types/SearchParams";
 import { IVillager } from "../types/Villager";
 import Card from "./Card";

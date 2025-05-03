@@ -1,26 +1,22 @@
 import { IRules } from "../data/getRules";
-import { getVillagers } from "../data/getVillagers";
 import { CardTypes } from "../types/Card";
 import { ISearchParams } from "../types/SearchParams";
 import CardGroup from "./CardGroup";
 import VillagerCard from "./VillagerCard";
 import { IVillager } from "../types/Villager";
-import { combineMetaMetrics } from "../utils/combineMetricsArrays";
-import { metaMetricsFromAdventurerQuest } from "../utils/metaMetricsFromAdventurerQuest";
 import { IMetricsWithMeta } from "../types/Quest";
-import { IAdventurer } from "../types/Adventurer";
 import { RosterPositions } from "../types/Roster";
-import { metaMetricsFromClan } from "../utils/metaMetricsFromClan";
-import { IClan } from "../types/Clan";
+import { calculateAdventurerPickMetrics } from "utils/calculateAdventurerPickMetrics";
+import { calculateClanPickMetrics } from "utils/calculateClanPickMetrics";
 
 export default function Villagers(props: {
   search: ISearchParams;
   rules: IRules;
   cardTypeFilters: { [key in CardTypes]: boolean };
+  villagers: IVillager[];
   makeSearchable: (text: string) => JSX.Element;
 }) {
-  const { cardTypeFilters, search, rules, makeSearchable } = props;
-  const villagers = getVillagers();
+  const { cardTypeFilters, search, rules, villagers, makeSearchable } = props;
   const allVillagers = villagers
     .map((villager) => {
       const metrics = computeVillagerMetrics({ rules, villager });
@@ -67,11 +63,11 @@ function computeVillagerMetrics(props: { rules: IRules; villager: IVillager }) {
           if (pick.adventurer) {
             return calculateAdventurerPickMetrics(
               pick.adventurer,
-              position,
               r.week,
+              position,
             );
           }
-          if (pick.clan) return calculateClanPickMetrics(pick.clan, r.week);
+          if (pick.clan) return calculateClanPickMetrics(pick.clan, r.week, RosterPositions.Clan);
           return {
             name: "clan",
             rank: RosterPositions.Clan,
@@ -103,41 +99,6 @@ function computeVillagerMetrics(props: { rules: IRules; villager: IVillager }) {
   return {
     total: runningTotal,
     weekly,
-  };
-}
-
-function calculateClanPickMetrics(clan: IClan, week: number) {
-  const clanMetrics = metaMetricsFromClan(clan, week);
-  const weekMetrics = clanMetrics.filter((cm) => {
-    return cm.metrics.find((m) => m.week === week);
-  });
-  return {
-    name: clan.name,
-    rank: RosterPositions.Clan,
-    metrics: weekMetrics[0].metrics,
-    week,
-  };
-}
-
-function calculateAdventurerPickMetrics(
-  adventurer: IAdventurer,
-  position: RosterPositions,
-  week: number,
-): IMetricsWithMeta {
-  const all = adventurer.quests.map((q) => {
-    return metaMetricsFromAdventurerQuest({
-      name: adventurer.name,
-      rank: position,
-      quest: q,
-      week,
-    });
-  });
-  if (all.length) return combineMetaMetrics(all);
-  return {
-    name: adventurer.name,
-    rank: adventurer.rank,
-    metrics: [],
-    week,
   };
 }
 

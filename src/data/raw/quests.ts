@@ -548,7 +548,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p3-q3-9",
         startWeek: 3,
-        notes: "Derb's army of dancing rats disgusted and delighted in equal measure.",
+        notes:
+          "Derb's army of dancing rats disgusted and delighted in equal measure.",
         status: QuestStatus.Success,
         clanId: "c1",
         metrics: [],
@@ -1570,7 +1571,6 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
             value: 1,
             week: 3,
           },
-
         ],
       },
     ],

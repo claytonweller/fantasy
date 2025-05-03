@@ -4,17 +4,19 @@ import { ISearchParams } from "types/SearchParams";
 import CardGroup from "./CardGroup";
 import { getClans } from "data/getClans";
 import ClanCard from "./ClanCard";
+import { IClan } from "types/Clan";
 
 export default function Clans(props: {
   search: ISearchParams;
   rules: IRules;
   cardTypeFilters: { [key in CardTypes]: boolean };
+  clans: IClan[];
   makeSearchable: (text: string) => JSX.Element;
   currentWeek: number;
 }) {
-  const { cardTypeFilters, search, rules, makeSearchable, currentWeek } = props;
+  const { cardTypeFilters, search, rules, makeSearchable, currentWeek, clans } =
+    props;
 
-  const clans = getClans();
   const allClans = clans.map((c) => {
     return (
       <ClanCard

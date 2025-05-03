@@ -10,6 +10,7 @@ import {
   AdventurerClasses,
   AdventurerRaces,
   AdventurerStatuses,
+  IAdventurer,
 } from "types/Adventurer";
 
 export default function Adventurers(props: {
@@ -17,9 +18,17 @@ export default function Adventurers(props: {
   rules: IRules;
   cardTypeFilters: { [key in CardTypes]: boolean };
   currentWeek: number;
+  adventurers: IAdventurer[];
   makeSearchable: (text: string) => JSX.Element;
 }) {
-  const { cardTypeFilters, search, rules, currentWeek, makeSearchable } = props;
+  const {
+    cardTypeFilters,
+    search,
+    rules,
+    currentWeek,
+    adventurers,
+    makeSearchable,
+  } = props;
   const raceFilter = useEnumFilterState(AdventurerRaces, "Race");
   const classFilter = useEnumFilterState(AdventurerClasses, "Class");
   const statusFilter = useEnumFilterState(AdventurerStatuses, "Status", true);
@@ -30,7 +39,6 @@ export default function Adventurers(props: {
     statusFilter,
     activeFilter,
   ];
-  const adventurers = getAdventurers();
   const allAdventurers = adventurers.map((a) => {
     return (
       <AdventurerCard

@@ -13,7 +13,7 @@ function Card(props: {
   showRank?: boolean;
   data?: any;
   expired?: boolean;
-  research: IResearch[];
+  research?: IResearch[];
   search: ISearchParams;
 }) {
   const {
@@ -55,20 +55,21 @@ function Card(props: {
     position: "relative",
   };
 
-  const researchComponent = !research.length ? (
+  const researchComponent = !research?.length ? (
     <></>
   ) : (
     <div>
       <h3>Research / Notes</h3>
       <ul>
-        {research.map((r, i) => {
-          return (
-            <li key={"r" + i} style={{ textAlign: "left" }}>
-              <b>Week {r.weekHappened} - </b>
-              {r.note}
-            </li>
-          );
-        })}
+        {research &&
+          research.map((r, i) => {
+            return (
+              <li key={"r" + i} style={{ textAlign: "left" }}>
+                <b>Week {r.weekHappened} - </b>
+                {r.note}
+              </li>
+            );
+          })}
       </ul>
     </div>
   );

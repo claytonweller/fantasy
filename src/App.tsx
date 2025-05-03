@@ -13,6 +13,11 @@ import Adventurers from "components/Adventurers";
 import Clans from "components/Clans";
 import { CURRENT_WEEK } from "config";
 import { useEscapeKeyPress } from "hooks/useEscapeKeyPress";
+import { getVillagers } from "data/getVillagers";
+import { getAdventurers } from "data/getAdventurers";
+import { getQuests } from "data/getQuests";
+import { getClans } from "data/getClans";
+import Weeks from "components/Weeks";
 
 function App() {
   const [searchText, setSearchText] = useState("");
@@ -22,6 +27,10 @@ function App() {
   const makeSearchable = makeSearchableText(setSearchText);
   useEscapeKeyPress(() => setSearchText(""));
   const rules = getRules();
+  const villagers = getVillagers();
+  const adventurers = getAdventurers();
+  const quests = getQuests();
+  const clans = getClans();
 
   return (
     <div className="App">
@@ -71,11 +80,22 @@ function App() {
             flexWrap: "wrap",
           }}
         >
+          <Weeks
+            search={{ searchText, rankFilter: rankFilter.state }}
+            rules={rules}
+            cardTypeFilters={cardTypeFilter.state}
+            makeSearchable={makeSearchable}
+            clans={clans}
+            quests={quests}
+            villagers={villagers}
+            adventurers={adventurers}
+          />
           <Villagers
             search={{ searchText }}
             makeSearchable={makeSearchable}
             rules={rules}
             cardTypeFilters={cardTypeFilter.state}
+            villagers={villagers}
           />
           <Clans
             search={{ searchText, rankFilter: rankFilter.state }}
@@ -83,12 +103,14 @@ function App() {
             cardTypeFilters={cardTypeFilter.state}
             makeSearchable={makeSearchable}
             currentWeek={currentWeek}
+            clans={clans}
           />
           <Quests
             search={{ searchText, rankFilter: rankFilter.state }}
             rules={rules}
             cardTypeFilters={cardTypeFilter.state}
             makeSearchable={makeSearchable}
+            quests={quests}
           />
           <Adventurers
             search={{ searchText, rankFilter: rankFilter.state }}
@@ -96,6 +118,7 @@ function App() {
             cardTypeFilters={cardTypeFilter.state}
             makeSearchable={makeSearchable}
             currentWeek={currentWeek}
+            adventurers={adventurers}
           />
         </div>
       </div>

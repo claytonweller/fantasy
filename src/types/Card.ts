@@ -3,4 +3,5 @@ export enum CardTypes {
   Clan = "Clan",
   Quest = "Quest",
   Adventurer = "Adventurer",
+  Week = "Week",
 }
