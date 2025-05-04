@@ -2,6 +2,19 @@ import { EntityTypes, IResearch } from "types/Research";
 
 export const rawResearch: IResearch[] = [
   {
+    note: `The picture is no longer there. On the quest board behind where it used to be there is an oily black smudge that the guild staff can't clean off.`,
+    weekHappened: 4,
+    weekPublic: 4,
+    villagerPrompts: [
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q1-9",
+      },
+    ],
+  },
+  {
     note: `While removing a particularly noisy client from your establishment you overhear a gossipy lady comment: "Count Vanderbliff? I hear he is not well known among commoners, especially outside of the capitol... but word is he is quite important to internal affairs at a high level"`,
     weekHappened: 1,
     villagerPrompts: [

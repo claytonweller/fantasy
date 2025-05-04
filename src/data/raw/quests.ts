@@ -802,7 +802,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p4-q2-5",
         startWeek: 3,
-        notes: "TODO - Guy",
+        notes: "Guy Norman saved the day. But he couldn't save everyone. The dawn after the monster hoard attack, he was seen burying a small body.",
         status: QuestStatus.Failed,
         clanId: "c1",
         metrics: [
@@ -810,6 +810,16 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
             metricRuleId: MetricRuleId.QuestFailed,
             rank: Ranks.D,
             value: 1,
+            week: 3,
+          },
+          {
+            metricRuleId: MetricRuleId.CiviliansDead,
+            value: 1, 
+            week: 3,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 10,
             week: 3,
           },
         ],
@@ -817,7 +827,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p5-q2-5",
         startWeek: 3,
-        notes: "TODO - Tad - Dies",
+        notes: "The monsters were on a whole different level this week. Tad never stood a chance. It didn't matter how much dirt he manced. He was skewered by a spire wolf and the crushed by wartoise.",
         status: QuestStatus.Failed,
         clanId: "c1",
         metrics: [
@@ -827,12 +837,17 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
             value: 1,
             week: 3,
           },
+          {
+            metricRuleId: MetricRuleId.CiviliansDead,
+            value: 4,
+            week: 3,
+          },
         ],
       },
       {
         id: "p6-q2-5",
         startWeek: 3,
-        notes: "TODO - Landorin, Dies, but is resurrected by Luna",
+        notes: "Landorin was not prepared for the wall of beasts inexplicably drawn to the city. A beastkin family of shepherds was about to be ravaged by a herd of flamboars. He used a light spell to steal the monsters attention and then was promptly trampled. Luckily Luna was taking a moment to get away from the noise of the festival by sitting on the city wall. She saw the bright light and then found Landorin's body in time to resurrect him. He immediately ran off and got killed 2 more times defending (distracting). Luna had to knock him out after the last resurrection and carry him to safety.",
         status: QuestStatus.Failed,
         clanId: "c1",
         metrics: [
@@ -840,6 +855,16 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
             metricRuleId: MetricRuleId.QuestFailed,
             rank: Ranks.D,
             value: 1,
+            week: 3,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 8,
+            week: 3,
+          },
+          {
+            metricRuleId: MetricRuleId.CiviliansDead,
+            value: 4,
             week: 3,
           },
         ],

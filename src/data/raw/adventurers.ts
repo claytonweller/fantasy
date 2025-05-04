@@ -627,9 +627,22 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
-        // lateAddition: true,
-        partyId: "p5-q2-5", // Week 3
-        metrics: [],
+        lateAddition: true,
+        partyId: "p6-q2-5", // Week 3
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.AllyResurrect,
+            rank: Ranks.E,
+            value: 3,
+            week: 2,
+          },
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            rank: Ranks.E,
+            value: 6,
+            week: 2,
+          },
+        ],
       },
     ],
   },
@@ -1232,7 +1245,20 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p4-q2-5", // Week 3
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            value: 6,
+            rank: Ranks.C,
+            week: 3,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            value: 4,
+            rank: Ranks.D,
+            week: 3,
+          },
+        ],
       },
       {
         partyId: "p2-q2-5",
@@ -1373,12 +1399,22 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
         startWeek: 2,
         endWeek: 2,
       },
+      {
+        status: AdventurerStatuses.Dead,
+        startWeek: 4,
+      },
     ],
     traits: [],
     questParties: [
       {
         partyId: "p5-q2-5",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.Death,
+            value: 1,
+            week: 3,
+          },
+        ],
       },
       {
         partyId: "p2-q1-2",
@@ -2579,11 +2615,18 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
         endWeek: 2,
       },
     ],
-    traits: [],
+    traits: [
+    ],
     questParties: [
       {
-        partyId: "p5-q2-5",
-        metrics: [],
+        partyId: "p6-q2-5",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.Death,
+            value: 3,
+            week: 3,
+          },
+        ],
       },
       {
         partyId: "p5-q1-7",
