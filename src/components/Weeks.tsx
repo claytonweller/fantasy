@@ -30,12 +30,12 @@ export default function Weeks(props: {
     makeSearchable,
   } = props;
 
-  const weekCards = []
+  const weekCards = [];
   for (let i = 0; i < CURRENT_WEEK; i++) {
     weekCards.push(
       <WeekCard
-        week={i+1}
-        key={"WeekCard" + (i+1)}
+        week={i + 1}
+        key={"WeekCard" + (i + 1)}
         villagers={villagers}
         clans={clans}
         quests={quests}
@@ -43,9 +43,8 @@ export default function Weeks(props: {
         search={search}
         rules={rules}
         makeSearchable={makeSearchable}
-      />
-    )
-    
+      />,
+    );
   }
 
   return (

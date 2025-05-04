@@ -33,8 +33,6 @@ export default function WeekCard(props: {
     makeSearchable,
   } = props;
 
-  
-
   return (
     <Card
       color="#333344"
@@ -43,8 +41,18 @@ export default function WeekCard(props: {
       type={CardTypes.Week}
       showRank={false}
     >
-      <ClanFacts clans={clans} week={week} rules={rules} />
-      <AdventurerFacts adventurers={adventurers} week={week} rules={rules} />
+      <ClanFacts
+        clans={clans}
+        week={week}
+        rules={rules}
+        makeSearchable={makeSearchable}
+      />
+      <AdventurerFacts
+        adventurers={adventurers}
+        week={week}
+        rules={rules}
+        makeSearchable={makeSearchable}
+      />
       <VillagerFacts villagers={villagers} week={week} rules={rules} />
     </Card>
   );
@@ -74,10 +82,7 @@ function VillagerFacts(props: {
     .map((v, i) => {
       return (
         <div style={{ padding: 5 }}>
-          <b>
-            {i + 1}. 
-          </b>{" "}
-          {v.name} - {v.points}
+          <b>{i + 1}.</b> {v.name} - {v.points}
         </div>
       );
     });
@@ -89,8 +94,13 @@ function VillagerFacts(props: {
   );
 }
 
-function ClanFacts(props: { clans: IClan[]; week: number; rules: IRules }) {
-  const { clans, week, rules } = props;
+function ClanFacts(props: {
+  clans: IClan[];
+  week: number;
+  rules: IRules;
+  makeSearchable: (text: string) => JSX.Element;
+}) {
+  const { clans, week, rules, makeSearchable } = props;
 
   const clansWithMetrics = clans.map((c) => {
     const weeklyMetrics = calculateClanPickMetrics(c, week, c.rank);
@@ -122,10 +132,10 @@ function ClanFacts(props: { clans: IClan[]; week: number; rules: IRules }) {
         <b>Average</b> - {average}
       </div>
       <div style={{ padding: 5 }}>
-        <b>Highest</b> - {highest.name}: {highest.points}
+        <b>Highest</b> - {makeSearchable(highest.name)}: {highest.points}
       </div>
       <div style={{ padding: 5 }}>
-        <b>Lowest</b> - {lowest.name}: {lowest.points}
+        <b>Lowest</b> - {makeSearchable(lowest.name)}: {lowest.points}
       </div>
     </div>
   );
@@ -140,8 +150,9 @@ function AdventurerFacts(props: {
   adventurers: IAdventurer[];
   week: number;
   rules: IRules;
+  makeSearchable: (text: string) => JSX.Element;
 }) {
-  const { adventurers, week, rules } = props;
+  const { adventurers, week, rules, makeSearchable } = props;
   const adventurersWithMetrics: AdventurerWithMetrics[] = adventurers.map(
     (a) => {
       const weeklyMetrics = calculateAdventurerPickMetrics(a, week, a.rank);
@@ -215,7 +226,7 @@ function AdventurerFacts(props: {
         String(key).charAt(0).toUpperCase() + String(key).slice(1);
       return (
         <div key={"fact" + week + key} style={{ padding: 5 }}>
-          <b>{uppercaseKey}</b> - {a.name}: {a.points}
+          <b>{uppercaseKey}</b> - {makeSearchable(a.name)}: {a.points}
         </div>
       );
     },
