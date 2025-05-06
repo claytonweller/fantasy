@@ -21,7 +21,9 @@ export function scrubAdventurers(params: IScrubParams) {
         );
 
         if (!party || quest.postedWeek > week) return false;
-        if (shouldScrubMetrics && p.lateAddition) return false;
+        if (shouldScrubMetrics && p.lateAddition && party.startWeek >= week) {
+          return false;
+        }
         if (shouldScrubParties) return party.startWeek < week;
         return party.startWeek <= week;
       })

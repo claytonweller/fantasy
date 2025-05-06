@@ -11,6 +11,9 @@ import { Ranks } from "types/Ranks";
 import { roundToHundredths } from "utils/roundToHundredths";
 import { calculateClanPickMetrics } from "utils/calculateClanPickMetrics";
 import { calculateVillagerRosterMetrics } from "utils/calculateVillagerRosterMetrics";
+import { IRosterPick } from "types/Roster";
+import { adventurersById } from "data/queries/adventurers";
+import { clansById } from "data/queries/clans";
 
 export default function WeekCard(props: {
   week: number;
@@ -65,8 +68,14 @@ function VillagerFacts(props: {
 }) {
   const { villagers, week, rules } = props;
 
+  const pickCounts: { [id: string]: number } = {};
+
   const villagerWithStats = villagers.map((v) => {
     const roster = v.rosters.find((r) => r.week === week);
+    roster?.rosterPicks.forEach((pick) => {
+      if (!pickCounts[pick.pickId]) pickCounts[pick.pickId] = 0;
+      pickCounts[pick.pickId] += 1;
+    });
     const points = roster
       ? calculateVillagerRosterMetrics(roster, rules).total
       : 0;
@@ -77,6 +86,24 @@ function VillagerFacts(props: {
     };
   });
 
+  // This code is about listing the most popular picks.
+  const sorted = Object.entries(pickCounts).sort((a, b) => b[1] - a[1]);
+  const allHighest = sorted.reduce(
+    (highest, entry) => {
+      if (!highest[0]) return [entry];
+      if (entry[1] < highest[0][1]) return highest;
+      return [...highest, entry];
+    },
+    [] as [string, number][],
+  );
+  const highestNames = allHighest
+    .map(([id]) => {
+      const entity = adventurersById[id] || clansById[id];
+      return entity.name;
+    })
+    .join(", ");
+  const highestCount = sorted[0] ? sorted[0][1] : 0;
+
   const villagerFacts = villagerWithStats
     .sort((a, b) => b.points - a.points)
     .map((v, i) => {
@@ -86,9 +113,13 @@ function VillagerFacts(props: {
         </div>
       );
     });
+
   return (
     <div>
       <h3 style={{ paddingTop: 20 }}>Villager Facts</h3>
+      <div style={{ padding: 5 }}>
+        <b>Most picked (@{highestCount}) -</b> {highestNames}
+      </div>
       {villagerFacts}
     </div>
   );

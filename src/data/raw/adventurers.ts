@@ -1059,7 +1059,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
             metricRuleId: MetricRuleId.EnemyDefeat,
             rank: Ranks.D,
             value: 6,
-            week: 1,
+            week: 2,
           },
         ],
       },

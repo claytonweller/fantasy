@@ -26,7 +26,7 @@ export default function VillagerCard(props: {
       color="#332233"
       search={search}
       data={villager}
-      name={`${name} - ${villagerMetrics.total}pts`}
+      name={`${name} (${villager.playerName}) - ${villagerMetrics.total}pts`}
       type={CardTypes.Villager}
       research={villager.research}
       showRank={false}
