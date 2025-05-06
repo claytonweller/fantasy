@@ -111,7 +111,17 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.D,
     postedBy: "Brother Merl",
     description: `"Something is amiss in the city Graveyard. Bodies have been exhumed. Please keep watch, and may the holy mother watch you."`,
-    parties: [],
+    parties: [
+      {
+        id: "p1-q4-1",
+        startWeek: 4,
+        notes: `TODO`,
+        status: QuestStatus.Claimed,
+        // clanId: "c2",
+        metrics: [
+        ],
+      },
+    ],
   },
   {
     id: "q4-2",
@@ -124,7 +134,17 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.D,
     postedBy: "Elder K'Tar",
     description: `"The Azure Wolf Father, Mamut, must be returned to the Sacred Grove, or things will only get worse. He was in the town square, but where is he now?"`,
-    parties: [],
+    parties: [
+      {
+        id: "p1-q4-2",
+        startWeek: 4,
+        notes: `TODO - Ash invites asks Icenose to help track Mamut down.`,
+        status: QuestStatus.Claimed,
+        clanId: "c10",
+        metrics: [
+        ],
+      },
+    ],
   },
   {
     id: "q4-3",
@@ -136,8 +156,18 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questType: QuestTypes.Fetch,
     questRank: Ranks.B,
     postedBy: "Mayor Corque",
-    description: `"Everyone remain calm. Please. Keep order. I know. I know. None of use want to be trapped inside the city walls. I hear you. We are sending some of our best to tell the capitol what's happening here."`,  
-    parties: [],
+    description: `"Everyone remain calm. Please. Keep order. I know. I know. None of us want to be trapped inside the city walls. I hear you. We are sending some of our best to tell the capitol what's happening here."`,  
+    parties: [
+      {
+        id: "p1-q4-3",
+        startWeek: 4,
+        notes: `TODO - stone claw, sleek wind shay, and vivian`,
+        status: QuestStatus.Claimed,
+        clanId: "c3",
+        metrics: [
+        ],
+      },
+    ],
   },
   {
     id: "q4-4",
@@ -150,7 +180,18 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.B,
     postedBy: "Gorn Wigby",
     description: `"It appears the noisy gnat is spawning a brood. Those close to me are, not accustomed to such... discomfort. A talented (and discrete) pest handler would be well appreciated."`,
-    parties: [],
+    parties: [
+      {
+        id: "p1-q4-4",
+        startWeek: 4,
+        notes: `TODO`,
+        status: QuestStatus.Claimed,
+        clanId: "c2",
+        metrics: [
+
+        ],
+      },
+    ],
   },
   {
     id: "q4-5",
@@ -162,8 +203,18 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questType: QuestTypes.Fetch,
     questRank: Ranks.C,
     postedBy: "Sister Lasiter",
-    description: `"There is a strange affliction spreading through the city. People suddenly collapsing, then if they don't receive treatment their trunk and neck are covered in dark, spidering lesions. We're nearly out of medicinal herbs. May the holy mother save us all."`,
-    parties: [],
+    description: `"There is a strange affliction spreading through the city. People suddenly collapsing. Then if they don't receive treatment, their trunk and neck are covered in dark, spidering lesions. We're nearly out of medicinal herbs. May the holy mother save us all."`,
+    parties: [
+      {
+        id: "p1-q4-5",
+        startWeek: 4,
+        notes: `TODO`,
+        status: QuestStatus.Claimed,
+        // clanId: "c2",
+        metrics: [
+        ],
+      },
+    ],
   },
   {
     id: "q4-6",
@@ -176,7 +227,18 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.B,
     postedBy: "Stimbar Kolnok",
     description: `Now we all know that the city is on lockdown. It's not safe to leave. We would never think of trying. But perhaps some enterprising adventurers would be willing to... show some out of town merchants like ourselves around town? Just a tour of the city and nothing more. We would pay handsomely for such a... tour.`,
-    parties: [],
+    parties: [
+      {
+        id: "p1-q4-6",
+        startWeek: 4,
+        notes: `TODO`,
+        status: QuestStatus.Claimed,
+        clanId: "c2",
+        metrics: [
+
+        ],
+      },
+    ],
   },
   {
     id: "q4-7",
@@ -189,7 +251,17 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.C,
     postedBy: "The Town Guard",
     description: `Look the town walls are pretty strong. But if even one of these tough monsters gets in here with all these trapped civilians it's going to be bad time.`,
-    parties: [],
+    parties: [
+      {
+        id: "p1-q4-7",
+        startWeek: 4,
+        notes: `TODO`,
+        status: QuestStatus.Claimed,
+        // clanId: "c2",
+        metrics: [
+        ],
+      },
+    ],
   },
   {
     id: "q4-8",
@@ -202,7 +274,17 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.D,
     postedBy: "Various",
     description: `The board is covered with missing persons postings. It doesn't help that the there are over five times as many people in the walls as usual. Most of whom are not familiar with the city, but that alone wouldn't account for this volume.`,
-    parties: [],
+    parties: [
+      {
+        id: "p1-q4-8",
+        startWeek: 4,
+        notes: `TODO`,
+        status: QuestStatus.Claimed,
+        // clanId: "c2",
+        metrics: [
+        ],
+      },
+    ],
   },
   {
     id: "q4-9",
@@ -215,7 +297,17 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.B,
     postedBy: "Guildmaster Vahn",
     description: `"Shut up. Hey. Quiet! That's coming out of your reward gold. It's your fault for not shutting your gob. You too! Shut it! Look It's not going to get better until we get some of these scared people out of here. But in order to do that we need to clear a safe enough path to somewhere else. Valeon is out of the question. That's right through the belly of the beast. Furthbrand is a dangerous enough trip even if it wasn't having horrible storms right now. So the only option is going south to Serpentina. Go out there and thin the beasts out, and hopefully Axel Gearlywhirl's monster deterring dohicky works well enough to keep the road clear long enough to get people out of here."`,
-    parties: [],
+    parties: [
+      {
+        id: "p1-q4-9",
+        startWeek: 4,
+        notes: `TODO`,
+        status: QuestStatus.Claimed,
+        clanId: "c4",
+        metrics: [
+        ],
+      },
+    ],
   },
   {
     id: "q4-10",
@@ -227,8 +319,18 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questType: QuestTypes.Kill,
     questRank: Ranks.C,
     postedBy: "Trade Guild",
-    description: `We don't know how long all these people are going to be trapped here. We're going to have a riot on our hands if we don't feed them.`,
-    parties: [],
+    description: `We don't know how long all these people are going to be trapped here. If we don't feed them, we're going to have a riot on our hands. Riots are terrible for business.`,
+    parties: [
+      {
+        id: "p1-q4-10",
+        startWeek: 4,
+        notes: `TODO`,
+        status: QuestStatus.Claimed,
+        clanId: "c7",
+        metrics: [
+        ],
+      },
+    ],
   },
   
   // Week 3
