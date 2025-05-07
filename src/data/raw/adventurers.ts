@@ -704,13 +704,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
             metricRuleId: MetricRuleId.AllyResurrect,
             rank: Ranks.E,
             value: 3,
-            week: 2,
+            week: 3,
           },
           {
             metricRuleId: MetricRuleId.AllyHealed,
             rank: Ranks.E,
             value: 6,
-            week: 2,
+            week: 3,
           },
         ],
       },
@@ -807,7 +807,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
           },
           {
             metricRuleId: MetricRuleId.GoneMissing,
-            value: 25,
+            value: 1,
             week: 3,
           },
         ],
@@ -1464,7 +1464,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
           },
           {
             metricRuleId: MetricRuleId.GoneMissing,
-            value: 25,
+            value: 1,
             week: 3,
           },
         ],

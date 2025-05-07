@@ -1083,7 +1083,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
           },
           {
             metricRuleId: MetricRuleId.CivilianSaved,
-            value: 8,
+            value: 6,
             week: 3,
           },
           {
