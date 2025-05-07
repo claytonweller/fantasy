@@ -1046,8 +1046,55 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
+    note: `Ever since Derb came up from the sewers Squeakela has been enfatuated with him.`,
+    weekHappened: 3,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a42",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q2-1",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a49",
+      },
+    ],
+  },
+  {
+    note: `Geoffrey made a pass at Mara after the Bounty Battle. He lost another tooth, and both of his eyes are swollen shut.`,
+    weekHappened: 3,
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a43",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q3-8",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a40",
+      },
+    ],
+  },
+  {
+    note: `The healers of Breath of life are overloaded with all the sickness that's spreading around town. They won't be able to help adventurers out this week.`,
+    weekHappened: 4,
+    tags: [
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c8",
+      },
+    ],
+  },
+  {
     note: `Derb can now control rats at will using his trumpet.`,
     weekHappened: 3,
+    weekPublic: 4,
     tags: [
       {
         entityType: EntityTypes.Adventurer,

@@ -103,21 +103,21 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
   {
     id: "q4-1",
     name: "Grave Robbers?",
-    reward: 5,
+    reward: 25,
     postedWeek: 4,
     expireWeek: 4,
     claimType: QuestClaimType.Clan,
     questType: QuestTypes.Guard,
-    questRank: Ranks.D,
+    questRank: Ranks.E,
     postedBy: "Brother Merl",
     description: `"Something is amiss in the city Graveyard. Bodies have been exhumed. Please keep watch, and may the holy mother watch you."`,
     parties: [
       {
         id: "p1-q4-1",
         startWeek: 4,
-        notes: `TODO`,
+        notes: `TODO - clara & sir robin - There a all kinds of undead coming up.`,
         status: QuestStatus.Claimed,
-        // clanId: "c2",
+        clanId: "c1",
         metrics: [
         ],
       },
@@ -149,7 +149,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
   {
     id: "q4-3",
     name: "Help from the capitol",
-    reward: 300,
+    reward: 1000,
     expireWeek: 4,
     postedWeek: 4,
     claimType: QuestClaimType.Individual,
@@ -161,9 +161,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q4-3",
         startWeek: 4,
-        notes: `TODO - stone claw, sleek wind shay, and vivian`,
+        notes: `TODO - stone claw, sleek wind shay, vivian`,
         status: QuestStatus.Claimed,
-        clanId: "c3",
         metrics: [
         ],
       },
@@ -184,7 +183,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q4-4",
         startWeek: 4,
-        notes: `TODO`,
+        notes: `TODO - elise`,
         status: QuestStatus.Claimed,
         clanId: "c2",
         metrics: [
@@ -208,9 +207,18 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q4-5",
         startWeek: 4,
-        notes: `TODO`,
+        notes: `TODO - Elnar, barksin, The two parties wind up going together. Shelly and barksking are very obviously a couple. Going to find a cure for Mara.`,
         status: QuestStatus.Claimed,
-        // clanId: "c2",
+        clanId: "c8",
+        metrics: [
+        ],
+      },
+      {
+        id: "p2-q4-5",
+        startWeek: 4,
+        notes: `TODO - Fissure, shelly - The two parties wind up going together. Shelly and barksking are very obviously a couple. `,
+        status: QuestStatus.Claimed,
+        clanId: "c9",
         metrics: [
         ],
       },
@@ -255,9 +263,26 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q4-7",
         startWeek: 4,
-        notes: `TODO`,
+        notes: `TODO - Louis`,
         status: QuestStatus.Claimed,
-        // clanId: "c2",
+        clanId: "c6",
+        metrics: [
+        ],
+      },
+      {
+        id: "p2-q4-7",
+        startWeek: 4,
+        notes: `TODO - Thorin & Bjork & Axel && Chiff`,
+        status: QuestStatus.Claimed,
+        clanId: "c5",
+        metrics: [
+        ],
+      },
+      {
+        id: "p3-q4-7",
+        startWeek: 4,
+        notes: `TODO - Margrave && ????`,
+        status: QuestStatus.Claimed,
         metrics: [
         ],
       },
@@ -278,9 +303,27 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q4-8",
         startWeek: 4,
-        notes: `TODO`,
+        notes: `TODO - carlsbad`,
         status: QuestStatus.Claimed,
-        // clanId: "c2",
+        clanId: "c1",
+        metrics: [
+        ],
+      },
+      {
+        id: "p2-q4-8",
+        startWeek: 4,
+        notes: `TODO - Guy Norman`,
+        status: QuestStatus.Claimed,
+        clanId: "c1",
+        metrics: [
+        ],
+      },
+      {
+        id: "p3-q4-8",
+        startWeek: 4,
+        notes: `TODO - Squekela, Derb`,
+        status: QuestStatus.Claimed,
+        clanId: "c1",
         metrics: [
         ],
       },
