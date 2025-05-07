@@ -16,6 +16,10 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v1",
       },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a64",
+      },
     ],
   },
   {
@@ -33,10 +37,18 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v1",
       },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a52",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a38",
+      },
     ],
   },
   {
-    note: `As you walk around town you keep hearing faint, echo-y sounds of trumpet playing. Even late at night. Where is it coming from?!`,
+    note: `As you walk around town you keep hearing faint, echo-y sounds of trumpet playing. The ghostly tooting seems to drift in from everywhere and nowhere? Even late at night. Where is it coming from?!`,
     weekHappened: 2,
     villagerPrompts: [
       {
@@ -458,7 +470,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `Bjork popped her head in to the stained glass shop. She was dropping of some ground pigments for dying glass. She mentioned she's the only member of Clockwork Chisel who doesn't have stuff to make this week before the festival. You noticed she brought her battle pick-axe with her.`,
+    note: `Bjork popped her head into the stained glass shop. She was dropping of some ground pigments for dying glass. She mentioned she's the only member of Clockwork Chisel who doesn't have stuff to make this week before the festival. You noticed she brought her battle pick-axe with her.`,
     weekHappened: 2,
     villagerPrompts: [
       {
