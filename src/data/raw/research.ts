@@ -2,13 +2,13 @@ import { EntityTypes, IResearch } from "types/Research";
 
 export const rawResearch: IResearch[] = [
   {
-    note: `TODO - WILDER`,
+    note: `Steve can often be seen working a speedbag or punching bag near the Exploding Fist Dojo. Despite being physically fit, he's an otherwise average sized human guy. Trimble Dinklesbean is a Gnome who has lucrative a trade selling tiny statues, he's about twice the size of Steve's fist. If Steve punched the little guy he would probably explode. Him exploding would not bother too many people, though he does seem to get into a lot of trouble for such a little guy.`,
     weekHappened: 2,
     villagerPrompts: [
       {
         villagerId: "v1",
         week: 2,
-        text: "TODO?",
+        text: "What is the size difference between Steve and Trimble Dinklesbean?",
       },
     ],
     tags: [
@@ -19,30 +19,13 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `TODO - WILDER`,
+    note: `You surreptitiously walk by Axel as he's talking to someone, "... and that's when the visor exploded into his eyes! If that healer... what was her name? Nern Bernalby? Marn Dorndergy? Shit. Anyway if she hadn't been there this guys eyes would have fallen out. She's a lifesaver... No don't turn that crank that way-!!" You couldn't hear much beyond the grinding sound and the sputtering gas.`,
     weekHappened: 2,
     villagerPrompts: [
       {
         villagerId: "v1",
         week: 2,
-        text: "TODO?",
-      },
-    ],
-    tags: [
-      {
-        entityType: EntityTypes.Villager,
-        entityId: "v1",
-      },
-    ],
-  },
-  {
-    note: `TODO - WILDER`,
-    weekHappened: 2,
-    villagerPrompts: [
-      {
-        villagerId: "v1",
-        week: 2,
-        text: "TODO?",
+        text: "Has Axel Girlywhirl successfully built and tested spy equipment?",
       },
     ],
     tags: [
@@ -320,7 +303,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `Periodically through the week you see Icenose Huskykin bragging to anyone who will listend about how he took out the bandits at the Forest Shrine last week. Though none of the experienced adventurers are listening, let alone partying up.`,
+    note: `Periodically through the week you see Icenose Huskykin bragging to anyone who will listend about how he took out the bandits at the Forest Shrine last week. He seems really excited about fighting monster this time. Though none of the experienced adventurers are listening, let alone partying up with the young beastkin.`,
     weekHappened: 2,
     villagerPrompts: [
       {
@@ -328,11 +311,24 @@ export const rawResearch: IResearch[] = [
         week: 2,
         text: "Who is partying hard after their last round of successes (and might be too drunk or hungover to perform well in the next round)?",
       },
+      {
+        villagerId: "v1",
+        week: 2,
+        text: "Does Icenose Huskykin have reasonable impulse control when encountering animals smaller than himself? ",
+      },
     ],
     tags: [
       {
         entityType: EntityTypes.Villager,
         entityId: "v5",
+      },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v1",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a45",
       },
     ],
   },
@@ -482,7 +478,7 @@ export const rawResearch: IResearch[] = [
       },
     ],
   },
-  
+
   {
     note: `The picture is no longer there. On the quest board behind where it used to be there is an oily black smudge that the guild staff can't clean off.`,
     weekHappened: 4,
