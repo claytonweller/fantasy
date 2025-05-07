@@ -2,11 +2,492 @@ import { EntityTypes, IResearch } from "types/Research";
 
 export const rawResearch: IResearch[] = [
   {
+    note: `TODO - WILDER`,
+    weekHappened: 2,
+    villagerPrompts: [
+      {
+        villagerId: "v1",
+        week: 2,
+        text: "TODO?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v1",
+      },
+    ],
+  },
+  {
+    note: `TODO - WILDER`,
+    weekHappened: 2,
+    villagerPrompts: [
+      {
+        villagerId: "v1",
+        week: 2,
+        text: "TODO?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v1",
+      },
+    ],
+  },
+  {
+    note: `TODO - WILDER`,
+    weekHappened: 2,
+    villagerPrompts: [
+      {
+        villagerId: "v1",
+        week: 2,
+        text: "TODO?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v1",
+      },
+    ],
+  },
+  {
+    note: `As you walk around town you keep hearing faint, echo-y sounds of trumpet playing. Even late at night. Where is it coming from?!`,
+    weekHappened: 2,
+    villagerPrompts: [
+      {
+        villagerId: "v2",
+        week: 2,
+        text: "Any chance Derb Alperd could still be alive? He plays trumpet, right? Could he be lulling the rats into a trap?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v2",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a42",
+      },
+    ],
+  },
+  {
+    note: `Steve McFist spills the beans. Many members of exploding fist are real go-getters, but the quest last week left them a little shaken. They know they got lucky.`,
+    weekHappened: 2,
+    villagerPrompts: [
+      {
+        villagerId: "v2",
+        week: 2,
+        text: "Is it likely that exploding fist will conquer again? Or are they ready for some R&R?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v2",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c9",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a64",
+      },
+    ],
+  },
+  {
+    note: `You overhear a conversation at a table late into the night, "It's boarshit. If I'm a part of another party, and they suggest that healers should get paid less again, I'll quit on the spot. How many times have I saved their asses? Hmmm? Without me they'd literally be full of holes!"`,
+    weekHappened: 2,
+    villagerPrompts: [
+      {
+        villagerId: "v2",
+        week: 2,
+        text: "What mid-low level adventurer might I notice at The Broken Leg that I think has more potential than everyone gives them credit for?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v2",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c8",
+      },
+    ],
+  },
+  {
+    note: `You did see Sheila excitedly dragging Arc into the Guild hall. She didn't seem particularly jubilant on the way out, but Arc was walking with purpose toward the northern gate and she eventually followed him.`,
+    weekHappened: 2,
+    villagerPrompts: [
+      {
+        villagerId: "v3",
+        week: 2,
+        text: "Those goody-two-shoes over at Blessed Sword didn't get much done last week.  But with several big monster quests around, I expect they're probably at the top of the list for some action.  I put out some feelers for any inside info on what they're up to, and what kind of shape they're in.",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v3",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c4",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a15",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a19",
+      },
+    ],
+  },
+  {
+    note: `You pay one of the wagon drivers a small coin and he tells you: The road to Furthbrad is treacherous and the weather is quite bad not a good place to set up a hideout. The road to Valeon typically has some bandits but most people worry about the beasts. If bandits are what you're worried about, the way Serpentina is where they typically pop up, but generally that road is shortest and safest.`,
+    weekHappened: 2,
+    villagerPrompts: [
+      {
+        villagerId: "v3",
+        week: 2,
+        text: "With merchants coming into town from all over, the bandits are foaming at the mouth.  Which of the 3 paths (Valeon, Furthbrand, or Serpentina) has the most monster and bandit activity?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v3",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q2-6.3",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q2-6.2",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q2-6.1",
+      },
+    ],
+  },
+  {
+    note: `You ask some pest control professionals about killing the rat. One tells you that for their money it's gotta be Vince Dawn. But their buddy pipes in saying they're full of shit, and it will totally be one of those tigers he's always with. A third pipes in that they're both wrong and it will be the Pretty Elf. This argument continues long after you leave.`,
+    weekHappened: 2,
+    villagerPrompts: [
+      {
+        villagerId: "v3",
+        week: 2,
+        text: "Mayor Corque and his useless bunch of hangers-on seem surprisingly concerned about the rat king.  They haven't given a rat's ass about all the rats when it was just us in the streets who had to look at them.  Who has the best chance of dispatching the rat king?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v3",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a9",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a10",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a11",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a8",
+      },
+    ],
+  },
+  {
+    note: `You remember a story you heard from some old dude when you were bragging about your tooth. Apparently before the church of the Holy Mother moved in the people whole lived in morton had a religion with many different gods. One was a water deity who was very shy, but loved all creatures. She was only a minor god and a servant to a different god or something... and you can't recall more than that.`,
+    weekHappened: 2,
+    villagerPrompts: [
+      {
+        villagerId: "v4",
+        week: 2,
+        text: "I once hid from a thunderstorm in the Cavern with the Sacred Spring. I splashed water on me face and me teeth grew back for exactly 1 day(no one believes me). For who else is the spring sacred?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v4",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q2-8",
+      },
+    ],
+  },
+  {
+    note: `The members of Verdant Glade are sometimes unpopular for all their Monster's rights talk. This often means they take on less profitable quests.`,
+    weekHappened: 2,
+    villagerPrompts: [
+      {
+        villagerId: "v4",
+        week: 2,
+        text: "What clan would rather negotiate with the beasts than kill them?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v4",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c10",
+      },
+    ],
+  },
+  {
+    note: `Elise can certainly come off as sneaky because she doesn't talk much. And sure, she's helped smuggled her fair share of contraband for shifty Nobles. Oh yeah, and also she'll definitely kill someone for the right price. But... wait what was I talking about? Oh yeah. She ONLY kisses with tongue, and she'll never teach. She's looking pretty vivacious this week.`,
+    weekHappened: 2,
+    villagerPrompts: [
+      {
+        villagerId: "v4",
+        week: 2,
+        text: "Elise Shadowthread seems sneaky. Should her fellow clans folk trust her?  Should I trust her? Does she know how to kiss with tongue and would she tell me how?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v4",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a2",
+      },
+    ],
+  },
+  {
+    note: `Exploding fist, was seen buying a bunch of healing potions after their trip. Those things are expensive. Though word on the street is Fissure was disappointed she missed the action last week.`,
+    weekHappened: 2,
+    villagerPrompts: [
+      {
+        villagerId: "v5",
+        week: 2,
+        text: "Did any members of the Exploding Fist level up or gain notable new equipment after their successes?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v5",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c9",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a51",
+      },
+    ],
+  },
+  {
+    note: `You try to talk to Vince Dawn about the Northern Forest. He makes you buy him a beer. Then then asks you about Orc culture. He makes you buy him another beer. He blabs a bit about trapping in the Drifting Desert. He makes you buy him another beer. Then as he's leaving he says, "You should have bought that old koot K'Tar a beer. I have no idea what's going on."`,
+    weekHappened: 2,
+    villagerPrompts: [
+      {
+        villagerId: "v5",
+        week: 2,
+        text: "Does Vince Dawn have a theory as to what is happening in the forest north of town?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v5",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a9",
+      },
+    ],
+  },
+  {
+    note: `Periodically through the week you see Icenose Huskykin bragging to anyone who will listend about how he took out the bandits at the Forest Shrine last week. Though none of the experienced adventurers are listening, let alone partying up.`,
+    weekHappened: 2,
+    villagerPrompts: [
+      {
+        villagerId: "v5",
+        week: 2,
+        text: "Who is partying hard after their last round of successes (and might be too drunk or hungover to perform well in the next round)?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v5",
+      },
+    ],
+  },
+  {
+    note: `Clockwork Chisel is hunkering down this week to get all their wares ready for the festival. Though Bjork is more of a gatherer than a crafter so she might go solo.`,
+    weekHappened: 2,
+    villagerPrompts: [
+      {
+        villagerId: "v6",
+        week: 2,
+        text: "Clockwork chisel likes to do merchant escorts. Will they be taking one this week?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v6",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a27",
+      },
+    ],
+  },
+  {
+    note: `You see Vince Dawn wandering around town looking for new traps this week. Though he doesn't take you up on your offer-conda.`,
+    weekHappened: 2,
+    villagerPrompts: [
+      {
+        villagerId: "v6",
+        week: 2,
+        text: "A rat king sounds like a job for a really big snake, which I just so happen to have… is there any one looking to rent it to help them defeat the monster?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v6",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a9",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q2-1",
+      },
+    ],
+  },
+  {
+    note: `The rumor mill is indeed churning this week. Julia and the Crockpot clan all have some big fish to fry this week. Though Julia is rarely the one who deals the killing blow, shes more often the one doing the work after its dead.`,
+    weekHappened: 2,
+    villagerPrompts: [
+      {
+        villagerId: "v6",
+        week: 2,
+        text: "I heard a rumor that Julia Pepperschild will be taking on the protein quest to further her reputation as the iron chef. Is it true?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v6",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a46",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "p1-q2-4",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c7",
+      },
+    ],
+  },
+  {
+    note: `You often see Tundrapaw angling down at the stream. Her bucket is always full of fish.`,
+    weekHappened: 2,
+    villagerPrompts: [
+      {
+        villagerId: "v7",
+        week: 2,
+        text: "Who's the best fisher person?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v7",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q2-4",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a13",
+      },
+    ],
+  },
+  {
+    note: `Two weeks ago Night Cowl had a huge win. No one knows the specifics, but they were partying hard last week. Morale is still high. They look well rested and ready to go. On top of that it looks like Marcus McStain has a little bit of his connections left with the nobility.`,
+    weekHappened: 2,
+    villagerPrompts: [
+      {
+        villagerId: "v7",
+        week: 2,
+        text: "How's night cowls morale?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v7",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c2",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a4",
+      },
+    ],
+  },
+  {
+    note: `Bjork popped her head in to the stained glass shop. She was dropping of some ground pigments for dying glass. She mentioned she's the only member of Clockwork Chisel who doesn't have stuff to make this week before the festival. You noticed she brought her battle pick-axe with her.`,
+    weekHappened: 2,
+    villagerPrompts: [
+      {
+        villagerId: "v7",
+        week: 2,
+        text: "Has anyone been shopping for stained glass recently?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v7",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a27",
+      },
+    ],
+  },
+  
+  {
     note: `The picture is no longer there. On the quest board behind where it used to be there is an oily black smudge that the guild staff can't clean off.`,
     weekHappened: 4,
     weekPublic: 4,
-    villagerPrompts: [
-    ],
+    villagerPrompts: [],
     tags: [
       {
         entityType: EntityTypes.Quest,

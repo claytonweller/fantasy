@@ -564,7 +564,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
           {
             metricRuleId: MetricRuleId.EnemyDefeat,
             value: 1,
-            rank: Ranks.C,
+            rank: Ranks.B,
             week: 2,
           },
         ],
@@ -1797,6 +1797,11 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
         lateAddition: true,
         partyId: "p1-q2-1",
         metrics: [
+          {
+            metricRuleId: MetricRuleId.TrapDisarmed,
+            value: 1,
+            week: 2,
+          },
           {
             metricRuleId: MetricRuleId.EnemyDefeat,
             value: 4,

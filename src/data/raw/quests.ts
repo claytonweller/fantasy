@@ -785,7 +785,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
-            value: 100,
+            value: 200,
             week: 2,
           },
         ],
@@ -815,7 +815,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
-            value: 300,
+            value: 600,
             week: 2,
           },
           {
@@ -902,7 +902,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p1-q2-4",
         startWeek: 2,
         notes:
-          "After much splishing they subdued the vicious but delicious fishious Pescadomos!",
+          "After much splishing they subdued the vicious but delicious fishious Pescadomos! Tundrapaw was reeling it in for over 4 hours.",
         status: QuestStatus.Success,
         clanId: "c7",
         metrics: [],
@@ -1222,7 +1222,6 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       },
     ],
   },
-  // TODO - add in a missing person thing
 
   // Week 1
   {
