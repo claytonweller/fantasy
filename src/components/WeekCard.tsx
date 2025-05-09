@@ -11,7 +11,12 @@ import { Ranks } from "types/Ranks";
 import { roundToHundredths } from "utils/roundToHundredths";
 import { calculateClanPickMetrics } from "utils/calculateClanPickMetrics";
 import { calculateVillagerRosterMetrics } from "utils/calculateVillagerRosterMetrics";
-import { IRosterPick } from "types/Roster";
+import {
+  IRoster,
+  IRosterPick,
+  RosterPickTypes,
+  RosterPositions,
+} from "types/Roster";
 import { adventurersById } from "data/queries/adventurers";
 import { clansById } from "data/queries/clans";
 
@@ -36,6 +41,19 @@ export default function WeekCard(props: {
     makeSearchable,
   } = props;
 
+  const adventurerFacts = calculateAdventurerFacts({
+    adventurers,
+    week,
+    rules,
+    makeSearchable,
+  });
+  const clanFacts = calculateClanFacts({ clans, week, rules, makeSearchable });
+  const bestRosterFacts = calculateBestRoster(
+    adventurerFacts.allSorted,
+    clanFacts.sortedClans,
+    makeSearchable,
+  );
+
   return (
     <Card
       color="#333344"
@@ -44,21 +62,91 @@ export default function WeekCard(props: {
       type={CardTypes.Week}
       showRank={false}
     >
-      <ClanFacts
-        clans={clans}
-        week={week}
-        rules={rules}
-        makeSearchable={makeSearchable}
-      />
-      <AdventurerFacts
-        adventurers={adventurers}
-        week={week}
-        rules={rules}
-        makeSearchable={makeSearchable}
-      />
+      {clanFacts.display}
+      {adventurerFacts.display}
       <VillagerFacts villagers={villagers} week={week} rules={rules} />
+      {bestRosterFacts.display}
     </Card>
   );
+}
+
+function calculateBestRoster(
+  sortedAdventurers: AdventurerWithMetrics[],
+  sortedClans: ClanWithMetrics[],
+  makeSearchable: (text: string) => JSX.Element,
+) {
+  const bestAdventurerPicks = [
+    {
+      pick: {} as AdventurerWithMetrics,
+      validRanks: [Ranks.C, Ranks.D, Ranks.E],
+      position: RosterPositions.C1,
+    },
+    {
+      pick: {} as AdventurerWithMetrics,
+      validRanks: [Ranks.C, Ranks.D, Ranks.E],
+      position: RosterPositions.C2,
+    },
+    {
+      pick: {} as AdventurerWithMetrics,
+      validRanks: [Ranks.C, Ranks.D, Ranks.E],
+      position: RosterPositions.C3,
+    },
+    {
+      pick: {} as AdventurerWithMetrics,
+      validRanks: [Ranks.B, Ranks.C, Ranks.D, Ranks.E],
+      position: RosterPositions.B1,
+    },
+    {
+      pick: {} as AdventurerWithMetrics,
+      validRanks: [Ranks.B, Ranks.C, Ranks.D, Ranks.E],
+      position: RosterPositions.B2,
+    },
+    {
+      pick: {} as AdventurerWithMetrics,
+      validRanks: [Ranks.A, Ranks.B, Ranks.C, Ranks.D, Ranks.E],
+      position: RosterPositions.A,
+    },
+  ];
+
+  sortedAdventurers.forEach((a) => {
+    for (const position of bestAdventurerPicks) {
+      const isValidRank = position.validRanks.includes(a.rank);
+      const positionIsOpen = !position.pick.points;
+      if (isValidRank && positionIsOpen) {
+        position.pick = a;
+        break;
+      }
+    }
+  });
+
+  const bestRoster = [
+    ...bestAdventurerPicks,
+    {
+      pick: sortedClans[0],
+      position: RosterPositions.Clan,
+    },
+  ];
+
+  let total = 0;
+  const bestRosterRows = bestRoster.map((p) => {
+    total += p.pick.points;
+    return (
+      <div key={`pick${p.pick?.id}`}>
+        <b>{p.position}:</b> {makeSearchable(p.pick.name)} - {p.pick?.points}
+      </div>
+    );
+  });
+
+  const display = (
+    <div>
+      <h3 style={{ paddingTop: 20 }}>Best Possible Roster</h3>
+      <div>
+        <b>Total</b> - {total}
+      </div>
+      {bestRosterRows}
+    </div>
+  );
+  return { display, bestRoster };
 }
 
 function VillagerFacts(props: {
@@ -125,7 +213,11 @@ function VillagerFacts(props: {
   );
 }
 
-function ClanFacts(props: {
+interface ClanWithMetrics extends IClan {
+  points: number;
+}
+
+function calculateClanFacts(props: {
   clans: IClan[];
   week: number;
   rules: IRules;
@@ -133,7 +225,7 @@ function ClanFacts(props: {
 }) {
   const { clans, week, rules, makeSearchable } = props;
 
-  const clansWithMetrics = clans.map((c) => {
+  const clansWithMetrics: ClanWithMetrics[] = clans.map((c) => {
     const weeklyMetrics = calculateClanPickMetrics(c, week, c.rank);
     let points = 0;
     weeklyMetrics.metrics.forEach((m) => {
@@ -146,17 +238,19 @@ function ClanFacts(props: {
       points,
     };
   });
+
+  const sortedClans = clansWithMetrics.sort((a, b) => {
+    return b.points - a.points;
+  });
   let totalPoints = 0;
-  let highest = { points: 0 } as IClan & { points: number };
-  let lowest = { points: 100 } as IClan & { points: number };
   clansWithMetrics.forEach((c) => {
     totalPoints += c.points;
-    if (c.points > highest.points) highest = c;
-    if (c.points < lowest.points) lowest = c;
   });
   const average = roundToHundredths(totalPoints / clans.length);
+  const highest = sortedClans[0];
+  const lowest = sortedClans[sortedClans.length - 1];
 
-  return (
+  const display = (
     <div>
       <h3 style={{ paddingTop: 20 }}>Clan Facts</h3>
       <div style={{ padding: 5 }}>
@@ -170,6 +264,7 @@ function ClanFacts(props: {
       </div>
     </div>
   );
+  return { display, sortedClans };
 }
 
 interface AdventurerWithMetrics extends IAdventurer {
@@ -177,7 +272,7 @@ interface AdventurerWithMetrics extends IAdventurer {
   isActive: boolean;
 }
 
-function AdventurerFacts(props: {
+function calculateAdventurerFacts(props: {
   adventurers: IAdventurer[];
   week: number;
   rules: IRules;
@@ -202,71 +297,53 @@ function AdventurerFacts(props: {
     },
   );
 
-  let totalPoints = 0;
-  let activeCount = 0;
-  const adventurerFacts: { [key: string]: IAdventurer & { points: number } } = {
-    highest: { points: 0 } as IAdventurer & { points: number },
-    secondHighest: { points: 0 } as IAdventurer & { points: number },
-    thirdHighest: { points: 0 } as IAdventurer & { points: number },
-    lowest: { points: 0 } as IAdventurer & { points: number },
-    highestA: { points: 0 } as IAdventurer & { points: number },
-    highestB: { points: 0 } as IAdventurer & { points: number },
-    highestC: { points: 0 } as IAdventurer & { points: number },
-    highestD: { points: 0 } as IAdventurer & { points: number },
-    highestE: { points: 0 } as IAdventurer & { points: number },
+  const allSorted = adventurersWithMetrics.sort((a, b) => {
+    return b.points - a.points;
+  });
+
+  const rankSorted: { [value in Ranks]: AdventurerWithMetrics[] } = {
+    [Ranks.S]: [],
+    [Ranks.A]: [],
+    [Ranks.B]: [],
+    [Ranks.C]: [],
+    [Ranks.D]: [],
+    [Ranks.E]: [],
   };
 
-  adventurersWithMetrics.forEach((a) => {
+  let totalPoints = 0;
+  let activeCount = 0;
+  allSorted.forEach((a) => {
     const { points } = a;
     totalPoints += points;
     if (a.isActive) activeCount += 1;
-    if (adventurerFacts.thirdHighest.points < points) {
-      if (adventurerFacts.secondHighest.points < points) {
-        adventurerFacts.thirdHighest = adventurerFacts.secondHighest;
-        if (adventurerFacts.highest.points < points) {
-          adventurerFacts.secondHighest = adventurerFacts.highest;
-          adventurerFacts.highest = a;
-        } else {
-          adventurerFacts.secondHighest = a;
-        }
-      } else {
-        adventurerFacts.thirdHighest = a;
-      }
-    }
-
-    if (adventurerFacts.lowest.points > points) {
-      adventurerFacts.lowest = a;
-    }
-
-    if (adventurerFacts.lowest.points > points) adventurerFacts.lowest = a;
-    if (a.rank === Ranks.A && adventurerFacts.highestA.points < points)
-      adventurerFacts.highestA = a;
-    if (a.rank === Ranks.B && adventurerFacts.highestB.points < points)
-      adventurerFacts.highestB = a;
-    if (a.rank === Ranks.C && adventurerFacts.highestC.points < points)
-      adventurerFacts.highestC = a;
-    if (a.rank === Ranks.D && adventurerFacts.highestD.points < points)
-      adventurerFacts.highestD = a;
-    if (a.rank === Ranks.E && adventurerFacts.highestE.points < points)
-      adventurerFacts.highestE = a;
+    rankSorted[a.rank].push(a);
   });
 
-  const adventurerFactsDisplay = Object.entries(adventurerFacts).map(
-    ([key, a]) => {
-      const uppercaseKey =
-        String(key).charAt(0).toUpperCase() + String(key).slice(1);
-      return (
-        <div key={"fact" + week + key} style={{ padding: 5 }}>
-          <b>{uppercaseKey}</b> - {makeSearchable(a.name)}: {a.points}
-        </div>
-      );
-    },
-  );
+  const facts: [string, AdventurerWithMetrics][] = [
+    ["highest", allSorted[0]],
+    ["secondHighest", allSorted[1]],
+    ["thirdHighest", allSorted[2]],
+    ["lowest", allSorted[allSorted.length - 1]],
+    ["highestA", rankSorted[Ranks.A][0]],
+    ["highestB", rankSorted[Ranks.B][0]],
+    ["highestC", rankSorted[Ranks.C][0]],
+    ["highestD", rankSorted[Ranks.D][0]],
+    ["highestE", rankSorted[Ranks.E][0]],
+  ];
+
+  const adventurerFactsDisplay = facts.map(([key, a]) => {
+    const uppercaseKey =
+      String(key).charAt(0).toUpperCase() + String(key).slice(1);
+    return (
+      <div key={"fact" + week + key} style={{ padding: 5 }}>
+        <b>{uppercaseKey}</b> - {makeSearchable(a.name)}: {a.points}
+      </div>
+    );
+  });
 
   const average = roundToHundredths(totalPoints / adventurers.length);
   const averageActive = roundToHundredths(totalPoints / activeCount);
-
-  return (
+  const display = (
     <div>
       <h3 style={{ paddingTop: 20 }}>Adventurer Facts</h3>
       <div style={{ padding: 5 }}>
@@ -278,4 +355,6 @@ function AdventurerFacts(props: {
       {adventurerFactsDisplay}
     </div>
   );
+
+  return { display, rankSorted, allSorted };
 }

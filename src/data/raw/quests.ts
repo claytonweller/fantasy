@@ -118,8 +118,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: `TODO - clara & sir robin - There a all kinds of undead coming up.`,
         status: QuestStatus.Claimed,
         clanId: "c1",
-        metrics: [
-        ],
+        metrics: [],
       },
     ],
   },
@@ -141,8 +140,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: `TODO - Ash invites asks Icenose to help track Mamut down.`,
         status: QuestStatus.Claimed,
         clanId: "c10",
-        metrics: [
-        ],
+        metrics: [],
       },
     ],
   },
@@ -156,15 +154,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questType: QuestTypes.Fetch,
     questRank: Ranks.B,
     postedBy: "Mayor Corque",
-    description: `"Everyone remain calm. Please. Keep order. I know. I know. None of us want to be trapped inside the city walls. I hear you. We are sending some of our best to tell the capitol what's happening here."`,  
+    description: `"Everyone remain calm. Please. Keep order. I know. I know. None of us want to be trapped inside the city walls. I hear you. We are sending some of our best to tell the capitol what's happening here."`,
     parties: [
       {
         id: "p1-q4-3",
         startWeek: 4,
         notes: `TODO - stone claw, sleek wind shay, vivian`,
         status: QuestStatus.Claimed,
-        metrics: [
-        ],
+        metrics: [],
       },
     ],
   },
@@ -186,9 +183,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: `TODO - elise`,
         status: QuestStatus.Claimed,
         clanId: "c2",
-        metrics: [
-
-        ],
+        metrics: [],
       },
     ],
   },
@@ -210,8 +205,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: `TODO - Elnar, barksin, The two parties wind up going together. Shelly and barksking are very obviously a couple. Going to find a cure for Mara.`,
         status: QuestStatus.Claimed,
         clanId: "c8",
-        metrics: [
-        ],
+        metrics: [],
       },
       {
         id: "p2-q4-5",
@@ -219,8 +213,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: `TODO - Fissure, shelly - The two parties wind up going together. Shelly and barksking are very obviously a couple. `,
         status: QuestStatus.Claimed,
         clanId: "c9",
-        metrics: [
-        ],
+        metrics: [],
       },
     ],
   },
@@ -242,9 +235,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: `TODO`,
         status: QuestStatus.Claimed,
         clanId: "c2",
-        metrics: [
-
-        ],
+        metrics: [],
       },
     ],
   },
@@ -266,8 +257,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: `TODO - Louis`,
         status: QuestStatus.Claimed,
         clanId: "c6",
-        metrics: [
-        ],
+        metrics: [],
       },
       {
         id: "p2-q4-7",
@@ -275,16 +265,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: `TODO - Thorin & Bjork & Axel && Chiff`,
         status: QuestStatus.Claimed,
         clanId: "c5",
-        metrics: [
-        ],
+        metrics: [],
       },
       {
         id: "p3-q4-7",
         startWeek: 4,
         notes: `TODO - Margrave && ????`,
         status: QuestStatus.Claimed,
-        metrics: [
-        ],
+        metrics: [],
       },
     ],
   },
@@ -306,8 +294,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: `TODO - carlsbad`,
         status: QuestStatus.Claimed,
         clanId: "c1",
-        metrics: [
-        ],
+        metrics: [],
       },
       {
         id: "p2-q4-8",
@@ -315,8 +302,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: `TODO - Guy Norman`,
         status: QuestStatus.Claimed,
         clanId: "c1",
-        metrics: [
-        ],
+        metrics: [],
       },
       {
         id: "p3-q4-8",
@@ -324,8 +310,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: `TODO - Squekela, Derb`,
         status: QuestStatus.Claimed,
         clanId: "c1",
-        metrics: [
-        ],
+        metrics: [],
       },
     ],
   },
@@ -347,8 +332,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: `TODO`,
         status: QuestStatus.Claimed,
         clanId: "c4",
-        metrics: [
-        ],
+        metrics: [],
       },
     ],
   },
@@ -370,12 +354,11 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: `TODO`,
         status: QuestStatus.Claimed,
         clanId: "c7",
-        metrics: [
-        ],
+        metrics: [],
       },
     ],
   },
-  
+
   // Week 3
   {
     id: "q3-1",
@@ -1026,7 +1009,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p4-q2-5",
         startWeek: 3,
-        notes: "Guy Norman saved the day. But he couldn't save everyone. The dawn after the monster hoard attack, he was seen burying a small body.",
+        notes:
+          "Guy Norman saved the day. But he couldn't save everyone. The dawn after the monster hoard attack, he was seen burying a small body.",
         status: QuestStatus.Failed,
         clanId: "c1",
         metrics: [
@@ -1038,7 +1022,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
           },
           {
             metricRuleId: MetricRuleId.CiviliansDead,
-            value: 1, 
+            value: 1,
             week: 3,
           },
           {
@@ -1051,7 +1035,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p5-q2-5",
         startWeek: 3,
-        notes: "The monsters were on a whole different level this week. Tad never stood a chance. It didn't matter how much dirt he manced. He was skewered by a spire wolf and the crushed by wartoise.",
+        notes:
+          "The monsters were on a whole different level this week. Tad never stood a chance. It didn't matter how much dirt he manced. He was skewered by a spire wolf and the crushed by wartoise.",
         status: QuestStatus.Failed,
         clanId: "c1",
         metrics: [
@@ -1071,7 +1056,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p6-q2-5",
         startWeek: 3,
-        notes: "Landorin was not prepared for the wall of beasts inexplicably drawn to the city. A beastkin family of shepherds was about to be ravaged by a herd of flamboars. He used a light spell to steal the monsters attention and then was promptly trampled. Luckily Luna was taking a moment to get away from the noise of the festival by sitting on the city wall. She saw the bright light and then found Landorin's body in time to resurrect him. He immediately ran off and got killed 2 more times defending (distracting). Luna had to knock him out after the last resurrection and carry him to safety.",
+        notes:
+          "Landorin was not prepared for the wall of beasts inexplicably drawn to the city. A beastkin family of shepherds was about to be ravaged by a herd of flamboars. He used a light spell to steal the monsters attention and then was promptly trampled. Luckily Luna was taking a moment to get away from the noise of the festival by sitting on the city wall. She saw the bright light and then found Landorin's body in time to resurrect him. He immediately ran off and got killed 2 more times defending (distracting). Luna had to knock him out after the last resurrection and carry him to safety.",
         status: QuestStatus.Failed,
         clanId: "c1",
         metrics: [
