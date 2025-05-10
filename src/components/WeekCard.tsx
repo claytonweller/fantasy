@@ -131,7 +131,7 @@ function calculateBestRoster(
   const bestRosterRows = bestRoster.map((p) => {
     total += p.pick.points;
     return (
-      <div key={`pick${p.pick?.id}`}>
+      <div key={`pick${p.pick?.id}`} style={{ padding: 5 }}>
         <b>{p.position}:</b> {makeSearchable(p.pick.name)} - {p.pick?.points}
       </div>
     );
@@ -165,7 +165,7 @@ function VillagerFacts(props: {
       pickCounts[pick.pickId] += 1;
     });
     const points = roster
-      ? calculateVillagerRosterMetrics(roster, rules).total
+      ? roundToHundredths(calculateVillagerRosterMetrics(roster, rules).total)
       : 0;
 
     return {

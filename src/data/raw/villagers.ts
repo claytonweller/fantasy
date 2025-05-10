@@ -244,6 +244,46 @@ export const rawVillagers: IRawVillager[] = [
           },
         ],
       },
+      {
+        week: 2,
+        picks: [
+          {
+            pickId: "c3",
+            pickType: RosterPickTypes.Clan,
+            position: RosterPositions.Clan,
+          },
+          {
+            pickId: "a15",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.A,
+          },
+          {
+            pickId: "a14",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.B1,
+          },
+          {
+            pickId: "a2",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.B2,
+          },
+          {
+            pickId: "a19",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.C1,
+          },
+          {
+            pickId: "a41",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.C2,
+          },
+          {
+            pickId: "a28",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.C3,
+          },
+        ],
+      },
     ],
   },
   {
@@ -372,6 +412,46 @@ export const rawVillagers: IRawVillager[] = [
           },
           {
             pickId: "a34",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.C2,
+          },
+          {
+            pickId: "a45",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.C3,
+          },
+        ],
+      },
+      {
+        week: 2,
+        picks: [
+          {
+            pickId: "c9",
+            pickType: RosterPickTypes.Clan,
+            position: RosterPositions.Clan,
+          },
+          {
+            pickId: "a15",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.A,
+          },
+          {
+            pickId: "a51",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.B1,
+          },
+          {
+            pickId: "a9",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.B2,
+          },
+          {
+            pickId: "a7",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.C1,
+          },
+          {
+            pickId: "a28",
             pickType: RosterPickTypes.Adventurer,
             position: RosterPositions.C2,
           },
@@ -515,6 +595,46 @@ export const rawVillagers: IRawVillager[] = [
           },
           {
             pickId: "a29",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.C3,
+          },
+        ],
+      },
+      {
+        week: 2,
+        picks: [
+          {
+            pickId: "c6",
+            pickType: RosterPickTypes.Clan,
+            position: RosterPositions.Clan,
+          },
+          {
+            pickId: "a8",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.A,
+          },
+          {
+            pickId: "a17",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.B1,
+          },
+          {
+            pickId: "a51",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.B2,
+          },
+          {
+            pickId: "a27",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.C1,
+          },
+          {
+            pickId: "a3",
+            pickType: RosterPickTypes.Adventurer,
+            position: RosterPositions.C2,
+          },
+          {
+            pickId: "a13",
             pickType: RosterPickTypes.Adventurer,
             position: RosterPositions.C3,
           },

@@ -1,3 +1,4 @@
+import { roundToHundredths } from "utils/roundToHundredths";
 import { IRules } from "../data/getRules";
 import { CardTypes } from "../types/Card";
 import { IMetricsWithMeta } from "../types/Quest";
@@ -21,12 +22,13 @@ export default function VillagerCard(props: {
     return formatRoster({ ...p, makeSearchable, rules });
   });
 
+  const total = roundToHundredths(villagerMetrics.total);
   return (
     <Card
       color="#332233"
       search={search}
       data={villager}
-      name={`${name} (${villager.playerName}) - ${villagerMetrics.total}pts`}
+      name={`${name} (${villager.playerName}) - ${total}pts`}
       type={CardTypes.Villager}
       research={villager.research}
       showRank={false}
@@ -41,7 +43,8 @@ export default function VillagerCard(props: {
         <b>Race</b> - {villager.races}{" "}
       </div>
       <div>
-        <b>Running Total : {villagerMetrics.total}</b>
+        <b>Running Total : </b>
+        {total}
       </div>
       {weeklyRosters}
     </Card>
@@ -68,7 +71,7 @@ function formatRoster(params: {
     >
       <h3>Week {week} Roster</h3>
       <div style={{ padding: 10 }}>
-        <b>Weekly Total {total}</b>
+        <b>Weekly Total {roundToHundredths(total)}</b>
       </div>
       <MetricGrid
         metaMetrics={metaMetrics}

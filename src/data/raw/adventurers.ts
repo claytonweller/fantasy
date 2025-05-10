@@ -1253,7 +1253,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
-        partyId: "p1-q4-5",
+        partyId: "p2-q4-5",
         metrics: [],
       },
       {
@@ -1577,7 +1577,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         lateAddition: true,
-        partyId: "p3-q4-7",
+        partyId: "p1-q4-7",
         metrics: [],
       },
       {
@@ -2358,7 +2358,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
-        partyId: "p2-q4-5",
+        partyId: "p1-q4-5",
         metrics: [],
       },
       {

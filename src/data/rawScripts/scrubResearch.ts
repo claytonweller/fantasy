@@ -4,10 +4,9 @@ import { CURRENT_WEEK } from "config";
 import { IResearch } from "types/Research";
 
 const scrubbedResearch: IResearch[] = rawResearch.filter((r: IResearch) => {
-  const hasNotHappenedYet = r.weekHappened >= CURRENT_WEEK;
-  const hasNeverBeenPublic = !Number.isInteger(r.weekPublic);
-  const isNotPublicYet = r.weekPublic && r.weekPublic > CURRENT_WEEK;
-  return !(hasNeverBeenPublic || isNotPublicYet || hasNotHappenedYet);
+  const isPublicNow = r.weekPublic && r.weekPublic <= CURRENT_WEEK;
+  const hasHappened = r.weekHappened < CURRENT_WEEK;
+  return isPublicNow && hasHappened;
 });
 
 console.log("Scrubbing research secrets");

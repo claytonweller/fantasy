@@ -115,7 +115,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q4-1",
         startWeek: 4,
-        notes: `TODO - clara & sir robin - There a all kinds of undead coming up.`,
+        notes: `Sir Robin Bravely took the only E rank quest available. They went to the graveyard.`,
         status: QuestStatus.Claimed,
         clanId: "c1",
         metrics: [],
@@ -124,7 +124,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
   },
   {
     id: "q4-2",
-    name: "Where is Mamut?",
+    name: "Find Mamut",
     reward: 5,
     postedWeek: 4,
     expireWeek: 4,
@@ -146,8 +146,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
   },
   {
     id: "q4-3",
-    name: "Help from the capitol",
-    reward: 1000,
+    name: "Reinforcements... please!",
+    reward: 750,
     expireWeek: 4,
     postedWeek: 4,
     claimType: QuestClaimType.Individual,
@@ -202,7 +202,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q4-5",
         startWeek: 4,
-        notes: `TODO - Elnar, barksin, The two parties wind up going together. Shelly and barksking are very obviously a couple. Going to find a cure for Mara.`,
+        notes: `TODO - shelly, barksin, The two parties wind up going together. Shelly and barksking are very obviously a couple. Going to find a cure for Mara.`,
         status: QuestStatus.Claimed,
         clanId: "c8",
         metrics: [],
@@ -210,7 +210,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p2-q4-5",
         startWeek: 4,
-        notes: `TODO - Fissure, shelly - The two parties wind up going together. Shelly and barksking are very obviously a couple. `,
+        notes: `TODO - Fissure, Elnar  - The two parties wind up going together. Shelly and barksking are very obviously a couple. `,
         status: QuestStatus.Claimed,
         clanId: "c9",
         metrics: [],
@@ -249,12 +249,12 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questType: QuestTypes.Guard,
     questRank: Ranks.C,
     postedBy: "The Town Guard",
-    description: `Look the town walls are pretty strong. But if even one of these tough monsters gets in here with all these trapped civilians it's going to be bad time.`,
+    description: `Look, the town walls are pretty strong. But with all these trapped civilians, if even one of these tough monsters gets in here, it's going to be bad time.`,
     parties: [
       {
         id: "p1-q4-7",
         startWeek: 4,
-        notes: `TODO - Louis`,
+        notes: `TODO - Louis && ????`,
         status: QuestStatus.Claimed,
         clanId: "c6",
         metrics: [],
@@ -270,7 +270,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p3-q4-7",
         startWeek: 4,
-        notes: `TODO - Margrave && ????`,
+        notes: `TODO - Margrave`,
         status: QuestStatus.Claimed,
         metrics: [],
       },
@@ -278,7 +278,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
   },
   {
     id: "q4-8",
-    name: "So many missing people",
+    name: "Where is everyone?",
     reward: 350,
     expireWeek: 4,
     postedWeek: 4,
@@ -515,7 +515,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q3-5",
         startWeek: 3,
-        notes: `Trimble, bandaged from being mugged by Gad last week, approached Jan directly about the request. She returned the watch in the first two weeks ago after all. But while they were talking Syd showed up, "Ah it's the guild lady! Where's my money?". Simultaneously down the street Gad tracked down Moira who he heard stole the watch form him. Moira spotted him coming and immediately ran away. As she was dashing by she saw Jan, "Hey! Servant lady, You didn't tell the guild and I didn't get my reward!" Jan was uncharacteristically speechless then Trimble recognizes Gad running his way, "The mugger! Guards!" Gad, enraged, tries to throw a knife at Moira, it misses and hits Mr. Dinklesbean right in between the eyes killing him instantly. The guards showed up to see this, "All of you are under arrest!" A brief pause... then Jan exclaimed, "Guards! Thank goodness you're here! These ruffians killed my husband!" Another pause... All the other adventurers bolted off in different directions. One by one Fixer grabbed them and brought them to a safe house. He then fixed the problem.`,
+        notes: `Trimble, bandaged from being mugged by Gad last week, approached Jan directly about the request. She returned the watch in the first two weeks ago after all. But while they were talking Syd showed up, "Ah it's the guild lady! Where's my money?". Simultaneously down the street Gad tracked down Moira who he heard stole the watch form him. Moira spotted him coming and immediately ran away. As she was dashing by she saw Jan, "Hey! Servant lady, You didn't tell the guild and I didn't get my reward!" Jan was uncharacteristically speechless then Trimble recognizes Gad running his way, "The mugger! Guards!" Gad, enraged, tries to throw a knife at Moira, it misses and hits Mr. Dinklesbean right in between the eyes killing him instantly. The guards showed up to see this, "All of you are under arrest!" A brief pause... then Jan exclaimed, "Guards! Thank goodness you're here! These ruffians killed my husband!" Another pause... All the other adventurers bolted off in different directions. One by one Fixer grabbed them and brought them to a safe house. He then fixed the problem. Later he and Jan were seen sharing a drink with Dorf Mucklebunk.`,
         status: QuestStatus.Failed,
         metrics: [
           {
@@ -1097,7 +1097,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p1-q2-6.1",
         startWeek: 2,
         notes:
-          "The caravan was targeted by Bandits. Sir Robin was hit on the head and passed out. Clara defended him and the rest of the caravan. At the end she was about to get hit by an arrow when Mara stepped in and caught it out of mid air. Mara pointed at Sir Robin's unconscious body and said, 'This is the man you love?' To which Clara replied 'Mah-om' while clobbering right in the jaw.",
+          "The caravan was targeted by Bandits. Sir Robin was hit on the head and passed out. Clara defended him and the rest of the caravan. At the end she was about to get hit by an arrow when Mara stepped in and caught it out of mid air. Mara pointed at Sir Robin's unconscious body and said, 'This is the man you love?' To which Clara replied 'Mah-om' while clobbering a briggand right in the jaw.",
         status: QuestStatus.Success,
         clanId: "c1",
         metrics: [

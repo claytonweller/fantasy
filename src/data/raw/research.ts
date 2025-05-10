@@ -493,7 +493,7 @@ export const rawResearch: IResearch[] = [
 
   {
     note: `The picture is no longer there. On the quest board behind where it used to be there is an oily black smudge that the guild staff can't clean off.`,
-    weekHappened: 4,
+    weekHappened: 3,
     weekPublic: 4,
     villagerPrompts: [],
     tags: [
@@ -1008,7 +1008,7 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `Mara will be the referee for the Bounty Battle (and make sure no one gets killed).`,
-    weekHappened: 3,
+    weekHappened: 2,
     weekPublic: 3,
     tags: [
       {
@@ -1101,7 +1101,7 @@ export const rawResearch: IResearch[] = [
   },
   {
     note: `Derb can now control rats at will using his trumpet.`,
-    weekHappened: 3,
+    weekHappened: 2,
     weekPublic: 4,
     tags: [
       {
@@ -1273,7 +1273,7 @@ export const rawResearch: IResearch[] = [
   {
     note: `Now the picture has a picture a sad little beastkin girl who is also crying.`,
     weekHappened: 2,
-    weekPublic: 2,
+    weekPublic: 3,
     tags: [
       {
         entityType: EntityTypes.Quest,
