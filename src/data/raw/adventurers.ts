@@ -1048,7 +1048,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     rank: Ranks.D,
     class: AdventurerClasses.Attacker,
     className: "Tooth Mage",
-    bio: `Most mages carry tomes. Carlsbad carries a binder filled with fangs of various monsters.`,
+    bio: `Most mages carry tomes. This one carries a binder filled with fangs, teeth, and tusks, of various monsters.`,
     clanId: "c1",
     nicknames: [],
     statusHistory: [
@@ -1313,7 +1313,25 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
         metrics: [
           {
             metricRuleId: MetricRuleId.AllyHealed,
-            rank: Ranks.B,
+            rank: Ranks.E,
+            value: 1,
+            week: 4,
+          },
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            rank: Ranks.D,
+            value: 3,
+            week: 4,
+          },
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            rank: Ranks.C,
+            value: 1,
+            week: 4,
+          },
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            rank: Ranks.A,
             value: 1,
             week: 4,
           },
