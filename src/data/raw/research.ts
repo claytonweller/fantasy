@@ -2,6 +2,40 @@ import { EntityTypes, IResearch } from "types/Research";
 
 export const rawResearch: IResearch[] = [
   {
+    note: `Buster saw the true face of Jachectapolk while trying to find the lost pet. He was able to physically escape but his mind wasn't so lucky`,
+    weekHappened: 3,
+    villagerPrompts: [],
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a57",
+      },
+    ],
+  },
+  {
+    note: `The strange sickness spreading through town is spreading the healers thin, so they're not taking quests this week.`,
+    weekHappened: 4,
+    villagerPrompts: [],
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a61",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a34",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a54",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a52",
+      },
+    ],
+  },
+  {
     note: `Steve can often be seen working a speedbag or punching bag near the Exploding Fist Dojo. Despite being physically fit, he's an otherwise average sized human guy. Trimble Dinklesbean is a Gnome who has lucrative a trade selling tiny statues, he's about twice the size of Steve's fist. If Steve punched the little guy he would probably explode. Him exploding would not bother too many people, though he does seem to get into a lot of trouble for such a little guy.`,
     weekHappened: 2,
     villagerPrompts: [

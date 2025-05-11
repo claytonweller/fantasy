@@ -115,10 +115,16 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q4-1",
         startWeek: 4,
-        notes: `Sir Robin Bravely took the only E rank quest available. They went to the graveyard.`,
-        status: QuestStatus.Claimed,
+        notes: `Sir Robin bravely took the only E rank quest available. They went to the graveyard. Everything seemed normal... until corpses started emerging from the ground. Sir Robing made a tactical retreat while Clara bashed some skeletons and ghouls. Oddly, the corpses were sticking together with a purple ooze which abosrbed all the dismembered pieces of the downed undead. Luckily the cemetery has a fairly high wall, and Clara had the foresight to bar the gate. So the problem is contained... for now.`,
+        status: QuestStatus.Success,
         clanId: "c1",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 25,
+            week: 4,
+          },
+        ],
       },
     ],
   },
@@ -137,10 +143,16 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q4-2",
         startWeek: 4,
-        notes: `TODO - Ash invites asks Icenose to help track Mamut down.`,
-        status: QuestStatus.Claimed,
+        notes: `Verdant Glade immediately takes the quest to find the god of the Northern forest. They need a good tracker and Ash suggest Icenose. The young beastkin eaglerly agrees to lend his sharp sense of smell to the cause. He leads them to the Noble quarter of town, they wait until nightfall to continue their investigation. The trail leads to the Mansion where Count Vanderbliff is staying, they hop the fence and sneak behind the building. They find a hidden doorway in the back of the maintenance shed which leads deep underground. At the base of the stairs there is a series of corridors. They here strange chanting, and quietly sneak to where it's coming from. In a large chamber, illuminated by torches, there are 40 or so people in the same orange and purple robes from the Sacred Grove. They are chanting and drawing a giant magic circle on the floor in the center stands a small rabbitkin girl with glowing eyes surrounded by unconscious bodies of missing townspeople and adventurers. At the far side of the room Mamut is chained to the wall and floor. His fur is stained red with blood. What appears to be a high priest holds aloft a curved spear. Followers wait at the ready with bowls. It is now clear what the robed figures are using to paint their magic circle. Just as the spear is about to lash again, Ash shouts, "No!" Every hooded figure freezes then slowly turn their heads in unison to face the intruders. The high priest just takes off his hood, "You're too late! Jachectapolk will begin the joining!" It's Count Vanderbliff! He slashes at the beast, blood sprays all over him, all the torches extinguish, then the bloody circle glows brighter and brighter. Screams can be heard as a roiling roiling purple ooze pulses out of the body of the rabbitkin, it rips everyone it touches into pieces and pulls them into its mass. The robed ones are not spared if they are too close. The Verdant Glad run as the mass follows them up and out of the catacombs. They make it near enough to the surface that Tall Pine can use the tree roots from above to collapse the tunneling stairway behind them. They rush to the Adventure guild to tell everyone what they have seen.`,
+        status: QuestStatus.Success,
         clanId: "c10",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 5,
+            week: 4,
+          },
+        ],
       },
     ],
   },
@@ -159,9 +171,15 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q4-3",
         startWeek: 4,
-        notes: `TODO - stone claw, sleek wind shay, vivian`,
-        status: QuestStatus.Claimed,
-        metrics: [],
+        notes: `Stoneclaw and Sleekwind are obvious choices as they spend lots of time hunting in the Northern forest, but Vivian demands to come along, because "Who in their right mind is going to listen to you? I mean just look at... all this..." She gestures generally to the two huntresses. They laugh at the noblewoman, but shrug and let her tag along. Stoneclaw snorts, "Be sure to stay close. Don't want you blaming me if you get hurt." The Monsters in the forest are in an absolute frenzy, but they successfully make it to Valeon. They immediately make for the Royal castle. The guards laugh when the trappers ask for an audience. Vivian stops time, and changes into a formal dress, then appears between the two. The guards immediately know who she is and let her in. She smirks at Stoneclaw, "Be sure to stay close. Don't want you blaming me if you get hurt."`,
+        status: QuestStatus.Success,
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 750,
+            week: 4,
+          },
+        ],
       },
     ],
   },
@@ -180,10 +198,16 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q4-4",
         startWeek: 4,
-        notes: `TODO - elise`,
-        status: QuestStatus.Claimed,
+        notes: `Elise's reward was deposited into the Night Cowl safe at the Guild hall. This isn't unusual for her. She likes to stay in the shadows.`,
+        status: QuestStatus.Success,
         clanId: "c2",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 500,
+            week: 4,
+          },
+        ],
       },
     ],
   },
@@ -202,18 +226,40 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q4-5",
         startWeek: 4,
-        notes: `TODO - shelly, barksin, The two parties wind up going together. Shelly and barksking are very obviously a couple. Going to find a cure for Mara.`,
-        status: QuestStatus.Claimed,
+        notes: `Shelly and Barkskin have been inseparable since the Bounty Battle. Romance knows no time but the present. Their first date was gathering healing herbs whilst dispatching berserk beasts.`,
+        status: QuestStatus.Success,
         clanId: "c8",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 30,
+            week: 4,
+          },
+        ],
       },
       {
         id: "p2-q4-5",
         startWeek: 4,
-        notes: `TODO - Fissure, Elnar  - The two parties wind up going together. Shelly and barksking are very obviously a couple. `,
-        status: QuestStatus.Claimed,
+        notes: `As Fissure and Elnar were about to leave to look for medicinal herbs, Elder K'tar stopped them. "Take me with you." They didn't have a reason to refuse. He led them directly to the newly cleaned Mystic Spring. Before the adventurers could ask what they were doing there he immediately started chanting. A couple of moments later, the water burbled and formed itself into the shape of a six armed woman. She looked at the two adventurers and then leaned forward and kissed K'tar on the forehead. Then glowing gold water poured from her fingertips into a large waterskin that the elder was holding. The liquid woman winked and then sunk back into the spring. "Let's head ba--" and his arm fell to the ground with a light thud. In a flash Fissure launched herself into the dark recesses of the cavern, while Chilpin rushed to the old orc's side to stanch the bleeding. K'Tar pushed the waterskin into Chiplin's arms, "For Mamut. He must return to the grove." Another flash from the back of the cave and a thin line of red appeared at K'Tar's neck. The light immediately left his eyes. Fissure called out from the back of the cave, "Elnar Run! I'll hold her off!" Chilpin scrambled back to the Morton alone and terrified. Fissure still hasn't returned.`,
+        status: QuestStatus.Success,
         clanId: "c9",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 70,
+            week: 4,
+          },
+          {
+            metricRuleId: MetricRuleId.CiviliansDead,
+            value: 1,
+            week: 4,
+          },
+          {
+            metricRuleId: MetricRuleId.TrapTriggered,
+            value: 1,
+            week: 4,
+          },
+        ],
       },
     ],
   },
@@ -232,10 +278,21 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q4-6",
         startWeek: 4,
-        notes: `TODO`,
-        status: QuestStatus.Claimed,
+        notes: `The Night Cowl crew got, "lost" during their tour and wound up outside the city walls. It became obvious very quickly that this was a terrible place to go sightseeing. All of the "tourists" were immediately killed by ravenous monsters. Luckily fixer had negotiated to receive half of their wages before the jaunt began.`,
+        status: QuestStatus.Failed,
         clanId: "c2",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 500,
+            week: 4,
+          },
+          {
+            metricRuleId: MetricRuleId.CiviliansDead,
+            value: 10,
+            week: 4,
+          },
+        ],
       },
     ],
   },
@@ -262,7 +319,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p2-q4-7",
         startWeek: 4,
-        notes: `TODO - Thorin & Bjork & Axel && Chiff`,
+        notes: `TODO - Thorin & Bjork & Axel & Chiff`,
         status: QuestStatus.Claimed,
         clanId: "c5",
         metrics: [],
@@ -765,7 +822,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p4-q3-9",
         startWeek: 3,
         notes:
-          "Elnar made very good money selling potions this year. The aphrodisiacs were particularly popular.",
+          "Elnar made very good money selling potions this year. Oddly many people are feeling under the weather.",
         status: QuestStatus.Success,
         clanId: "c8",
         metrics: [],

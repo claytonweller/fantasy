@@ -1,3 +1,4 @@
+import { roundToHundredths } from "utils/roundToHundredths";
 import { IRules } from "../data/getRules";
 import { IMetricsWithMeta } from "../types/Quest";
 import { Ranks } from "../types/Ranks";
@@ -28,6 +29,8 @@ export default function MetricRow(params: {
     row.points += metricPoints;
     row[formatRuleNameFromMetric(m)] = `${m.value}`;
   });
+
+  row.points = roundToHundredths(row.points)
 
   const cells = Object.values(row).map((value, i) => {
     return <td key={`cell${i}`}>{value}</td>;
