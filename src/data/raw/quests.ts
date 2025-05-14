@@ -103,7 +103,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
   {
     id: "q4-1",
     name: "Grave Robbers?",
-    reward: 25,
+    reward: 10,
     postedWeek: 4,
     expireWeek: 4,
     claimType: QuestClaimType.Clan,
@@ -121,7 +121,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
-            value: 25,
+            value: 10,
             week: 4,
           },
         ],
@@ -211,7 +211,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       },
     ],
   },
-  { 
+  {
     id: "q4-5",
     name: "Wasting Away",
     reward: 100,
@@ -283,6 +283,12 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         clanId: "c2",
         metrics: [
           {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.B,
+            value: 1,
+            week: 4,
+          },
+          {
             metricRuleId: MetricRuleId.RewardGold,
             value: 500,
             week: 4,
@@ -311,25 +317,73 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q4-7",
         startWeek: 4,
-        notes: `TODO - Louis && ????`,
+        notes: `Louis paid the mime a coin during the Bounty festival, and they started following the knight around copying him. The mime even followed him to the wall. Every time he killed a monster, so did the mime. Though how they blocked the acid spray with an imaginary shield was anyone's guess.`,
         status: QuestStatus.Success,
         clanId: "c6",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 2,
+            week: 4,
+          },
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 20,
+            week: 4,
+          },
+        ],
       },
       {
         id: "p2-q4-7",
         startWeek: 4,
-        notes: `TODO - Thorin & Bjork & Axel & Chiff`,
+        notes: `Clockwork Chisel set up on the northeastern wall, which was the side most beset by monsters. Everything was going well... until one of Axel's bomb turrets failed catastrophically. The blast injured everyone around it, blew a hole hold in the wall, and sent Bjork flying into the middle of the monster swarm. Chiff quickly patched up the wall with the last of his magic power, as Thorin tried to hold back the monster rush, but a few rabid beasts managed to get in. Thorin managed to make it out to Bjork and they made it back to the safely.`,
         status: QuestStatus.Failed,
         clanId: "c5",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.C,
+            value: 1,
+            week: 4,
+          },
+          {
+            metricRuleId: MetricRuleId.CiviliansDead,
+            value: 10,
+            week: 4,
+          },
+          {
+            metricRuleId: MetricRuleId.CostsOrDamages,
+            value: 1000,
+            week: 4,
+          },
+        ],
       },
       {
         id: "p3-q4-7",
         startWeek: 4,
-        notes: `TODO - Margrave - Dies but nothing gets through.`,
+        notes: `Corporal Margrave fought bravely. He gave his life to keep the wall from falling to an enraged batterhino. He drenched himself in oil, lit himself on fire, and jumped off the wall and put the full force of his body behind his spear as it struck the beast directly in the eye. He was found impaled on the giant beasts horn the next morning.`,
         status: QuestStatus.Success,
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 10,
+            week: 4,
+          },
+        ],
+      },
+      {
+        id: "p4-q4-7",
+        startWeek: 4,
+        notes: `The break in the wall was just up the way from the Church, where all of those afflicted with the sickness were being held, including Mara Wright. Who hearing the screams immediately sprung into action. She fought bravely, but the monsters and the sickness were too much for her to tackle alone. She died in the jaws of a ferrous komododon. Just as the light was fading from her eyes, Clara returned from the cemetery, she yelled, "Mom! No!" She ripped the giant lizard's lower jaw off, hoisted the beast over her head, and then suplexed it so hard only it's hind legs were visible in the blood crater. Only Clara heard what her mother said before Mara passed away moments later.`,
+        clanId: "c9",
+        status: QuestStatus.Success,
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 20,
+            week: 4,
+          },
+        ],
       },
     ],
   },
@@ -348,26 +402,59 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q4-8",
         startWeek: 4,
-        notes: `TODO - Fails to find anyone. Uses a tooth, it leads him to the sewers but he's not going back in there.`,
+        notes: `Carlsbad took a job from a rich merchant to find his lost son. Luckily the merchant had saved the sons baby teeth, which allowed the tooth mage to easily follow a trail. It led directly to the sewers. Carlsbad, after his experiences with the rat quest decided to cut his losses.`,
         status: QuestStatus.Failed,
         clanId: "c1",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.D,
+            value: 1,
+            week: 4,
+          },
+        ],
       },
       {
         id: "p2-q4-8",
         startWeek: 4,
-        notes: `TODO - Guy Norman Fights a bunch of cult members. Rescues people before they can be taken to the magic circle ritual`,
+        notes: `Guy Norman spends some time interviewing several of the people who posted the missing persons requests. Notices that there's a pattern where they're predominantly from poorer neighborhoods surrounding the Noble quarter. After knocking some skulls in the underbelly of the city he gets a lead on a shifty organization paying good money for random kidnappings. He makes a solo raid on a strange catacomb where a bunch of fanatics in robes are holding citizens and a couple of adventurers in cages. He kicks butt, and sets them free.`,
         status: QuestStatus.Success,
         clanId: "c1",
         metrics: [],
       },
       {
+        id: "p2.1-q4-8",
+        startWeek: 4,
+        notes: `Reginald Spintzmunge, was one of the butts that Guy Norman kicked in his raid. He was taken prisoner and was more than happy to tell everyone who would listen the about the Cult of Jachektapolk and its plans (in so far as he understood them... which might not have been well)`,
+        status: QuestStatus.Failed,
+        clanId: "c6",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.D,
+            value: 1,
+            week: 4,
+          },
+        ],
+      },
+      {
         id: "p3-q4-8",
         startWeek: 4,
-        notes: `TODO - Squekela, Derb - They search in the sewers. Hear the insanity. Find Mamut set him free just before Jachectapolk can merge with him.`,
+        notes: `Squeakela asked derb to help her find some lost beastkin. Derb sent the rats out into the city and after a day they came back and led the duo into the sewer. Eventually they made it back to the large chamber where the rat king was killed, and the rats showed them a hidden door leading into the catacombs, and after a series branching paths they made it to a make shift prison filled with beastkin prisoners. Derb sic'd his rats on them and while they were distracted Squeakela got the keys. They released the beastkin. As they were escaping they heard some strange chanting, and then screams. The looked though a large archway and were next to a huge blue and white wolf. They couldn't make out what wast happening, but there was a lot of yelling, pulsing lights, and strange squelching noises. Then a terrified, posh looking man in a robe ran past them... he looked a lot like Count Vaderbliff. Squeakela used the prison key to unlock the wolf, which gave her a serious look, then hobbled out into the sewers. Derb and Squeakela led the beastkin prisoners to the relative safety of town.`,
         status: QuestStatus.Success,
         clanId: "c1",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 20,
+            week: 4,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 9,
+            week: 4,
+          },
+        ],
       },
     ],
   },
@@ -386,10 +473,17 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q4-9",
         startWeek: 4,
-        notes: `TODO`,
-        status: QuestStatus.Claimed,
+        notes: `Blessed Sword is so good it's almost boring some times. That's why it came as surprise when they were unable to deliver. It's not that they couldn't kill the monsters: there were simply so many beasts which were so furious, that the plan itself was doomed to fail. Arc was so furious with them he blew up three houses. The rest of the party had to restrain Arc to get him to throw in the towel. Looks like the "festival" is going to go into its third week.`,
+        status: QuestStatus.Failed,
         clanId: "c4",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.B,
+            value: 1,
+            week: 4,
+          },
+        ],
       },
     ],
   },
@@ -408,10 +502,22 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q4-10",
         startWeek: 4,
-        notes: `TODO`,
-        status: QuestStatus.Claimed,
+        notes: `The Crockpot clan went "fishing" off the the wall and brought up, a vulpeon, a warted gobloid (which they threw back), a couple mandrake drakes, and grooved onion turtle. They made a giant stew and set up an emergency soup kitchen. Even the Chairman rolled up his sleeves and got his hands dirty.`,
+        status: QuestStatus.Success,
         clanId: "c7",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 50,
+            week: 4,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.B,
+            value: 1,
+            week: 4,
+          },
+        ],
       },
     ],
   },

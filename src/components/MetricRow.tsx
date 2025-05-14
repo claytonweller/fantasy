@@ -30,7 +30,7 @@ export default function MetricRow(params: {
     row[formatRuleNameFromMetric(m)] = `${m.value}`;
   });
 
-  row.points = roundToHundredths(row.points)
+  row.points = roundToHundredths(row.points);
 
   const cells = Object.values(row).map((value, i) => {
     return <td key={`cell${i}`}>{value}</td>;

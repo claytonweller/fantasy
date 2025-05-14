@@ -2,6 +2,21 @@ import { EntityTypes, IResearch } from "types/Research";
 
 export const rawResearch: IResearch[] = [
   {
+    note: `Philagula tried to take ahold of Mamut during the Jachektapolk joining ceremony. But he got stuck inside.`,
+    weekHappened: 4,
+    villagerPrompts: [],
+    tags: [
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a60",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q4-2",
+      },
+    ],
+  },
+  {
     note: `Buster saw the true face of Jachectapolk while trying to find the lost pet. He was able to physically escape but his mind wasn't so lucky`,
     weekHappened: 3,
     villagerPrompts: [],

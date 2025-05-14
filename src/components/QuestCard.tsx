@@ -101,7 +101,8 @@ function createPartyComponents(params: {
 }) {
   const { quest, makeSearchable, rules } = params;
   const { parties } = quest;
-  return parties.map((p, i) => {
+  const partiesWithMembers = parties.filter((p) => p.adventurers?.length);
+  return partiesWithMembers.map((p, i) => {
     const adventurerMetrics =
       p.adventurers?.map((a) => {
         const compositeAdventurer = adventurersById[a.id];
