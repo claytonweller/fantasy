@@ -2,6 +2,365 @@ import { EntityTypes, IResearch } from "types/Research";
 
 export const rawResearch: IResearch[] = [
   {
+    note: `TODO - Chilpin`,
+    weekHappened: 3,
+    villagerPrompts: [
+      {
+        villagerId: "v1",
+        week: 3,
+        text: "How is Vince Dawn feeling after two weeks of rockin it?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v1",
+      },
+    ],
+  },
+  {
+    note: `TODO - steer him away from phil`,
+    weekHappened: 3,
+    villagerPrompts: [
+      {
+        villagerId: "v1",
+        week: 3,
+        text: "How is the hosts immune system doing for Philagula? Will she be in good form this week?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v1",
+      },
+    ],
+  },
+  {
+    note: `TODO - Note the other people selling things at the guild hall, and note Julia Pepper's child.`,
+    weekHappened: 3,
+    villagerPrompts: [
+      {
+        villagerId: "v1",
+        week: 3,
+        text: "How is Anastasia Von Duffenklampf feeling this week?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v1",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 3,
+    villagerPrompts: [
+      {
+        villagerId: "v2",
+        week: 3,
+        text: "What is known (or assumed?) about how to track and capture this wolf? Has it been done before?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v2",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 3,
+    villagerPrompts: [
+      {
+        villagerId: "v2",
+        week: 3,
+        text: "Is Arc Northstar known as a consistently powerful adventurer, or does he tend to lose steam the more he works?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v2",
+      },
+    ],
+  },  {
+    note: `TODO`,
+    weekHappened: 3,
+    villagerPrompts: [
+      {
+        villagerId: "v2",
+        week: 3,
+        text: "What's something unexpected that I overheard at the broken leg this week?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v2",
+      },
+    ],
+  },
+  {
+    note: `TODO - Talk about the drawing.`,
+    weekHappened: 3,
+    villagerPrompts: [
+      {
+        villagerId: "v3",
+        week: 3,
+        text: "These weird little quests are starting to get pretty eerie. The damn watch feels like a distraction, and the lost pet with the creepy drawings hints at something pretty sinister. Any rumors on the street about which of the D and E tier quests might point to something bigger?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v3",
+      },
+    ],
+  },
+  {
+    note: `TODO - Nudge toward stone claw.`,
+    weekHappened: 3,
+    villagerPrompts: [
+      {
+        villagerId: "v3",
+        week: 3,
+        text: "Mythril Trap is one of the only powerful clans with no one injured, and some of the quests seem right up their alley. Especially the big blue wolf. What kind of trouble are they going to be up to this week?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v3",
+      },
+    ],
+  },
+  {
+    note: `TODO - Point him toward fissure`,
+    weekHappened: 3,
+    villagerPrompts: [
+      {
+        villagerId: "v3",
+        week: 3,
+        text: "Who do you like in the big fist fighting competition? Lot of good brawlers in this town",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v3",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 3,
+    villagerPrompts: [
+      {
+        villagerId: "v4",
+        week: 3,
+        text: "Vlort, founder of the Mill: why is his clan so diverse, so multi-skilled, and the other clans are more homogenous?  Was that intentional?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v4",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 3,
+    villagerPrompts: [
+      {
+        villagerId: "v4",
+        week: 3,
+        text: "I heard at the apothecary, someone saw a blue white wolf in the woods and they saw someone whispering in its ear. Who was it?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v4",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 3,
+    villagerPrompts: [
+      {
+        villagerId: "v4",
+        week: 3,
+        text: "Guy Norman is obviously a skilled man. He's destined for great things. What is he most skilled at: A)strategy? B) Blade? C)Ambush? D)Tracking?  E) Teamwork (I am skilled at spooning a man, while feeding him stew. Tell your friends)",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v4",
+      },
+    ],
+  },
+  {
+    note: `TODO - Note Clara.`,
+    weekHappened: 3,
+    villagerPrompts: [
+      {
+        villagerId: "v5",
+        week: 3,
+        text: "Is the Bounty Battle always won by an A or S ranker?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v5",
+      },
+    ],
+  },
+  {
+    note: `TODO - Nudge him toward guy norman`,
+    weekHappened: 3,
+    villagerPrompts: [
+      {
+        villagerId: "v5",
+        week: 3,
+        text: "What are the biggest security concerns for the festival?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v5",
+      },
+    ],
+  },
+  {
+    note: `TODO - Nudge toward brother Chilpin, then shay.`,
+    weekHappened: 3,
+    villagerPrompts: [
+      {
+        villagerId: "v5",
+        week: 3,
+        text: "Are any adventurers/clans excited or enthusiastic about trying to capture the monster in the forest?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v5",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 3,
+    villagerPrompts: [
+      {
+        villagerId: "v6",
+        week: 3,
+        text: "What are the grade A adventurers up to this week?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v6",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 3,
+    villagerPrompts: [
+      {
+        villagerId: "v6",
+        week: 3,
+        text: "Who are the lower tier adventurers to watch?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v6",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 3,
+    villagerPrompts: [
+      {
+        villagerId: "v6",
+        week: 3,
+        text: "Where is my mind…?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v6",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 3,
+    villagerPrompts: [
+      {
+        villagerId: "v7",
+        week: 3,
+        text: "Who's killed the most monsters?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v7",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 3,
+    villagerPrompts: [
+      {
+        villagerId: "v7",
+        week: 3,
+        text: "I heard someone cleared out the market and bought all the spices.",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v7",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 3,
+    villagerPrompts: [
+      {
+        villagerId: "v7",
+        week: 3,
+        text: "I really don't like arc. What is his high falooting problem and why won't he let me glory hole blast his asshole?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v7",
+      },
+    ],
+  },
+
+
+  
+  {
     note: `Philagula tried to take ahold of Mamut during the Jachektapolk joining ceremony. But he got stuck inside.`,
     weekHappened: 4,
     villagerPrompts: [],

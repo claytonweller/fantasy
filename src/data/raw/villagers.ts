@@ -288,7 +288,7 @@ export const rawVillagers: IRawVillager[] = [
   },
   {
     id: "v4",
-    name: "Morgeal Thunderbottom",
+    name: "Mogreal Thunderbottom",
     playerName: "Sophie",
     profession: "Bog scraper (aspiring comfort woman)",
     races: [AdventurerRaces.Human],
