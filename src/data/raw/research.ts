@@ -2,7 +2,7 @@ import { EntityTypes, IResearch } from "types/Research";
 
 export const rawResearch: IResearch[] = [
   {
-    note: `TODO - Chilpin`,
+    note: `While getting treated for a strange rash at the church infirmary, you mention Vince offhandedly. One of the sisters perks up at the name and says, "Vince Dawn? He was in here the other day talking to Brother Chilpin. Apparently Mythril Trap wanted a healer to be on standby incase something went wrong with a big quest."`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -10,16 +10,37 @@ export const rawResearch: IResearch[] = [
         week: 3,
         text: "How is Vince Dawn feeling after two weeks of rockin it?",
       },
+      {
+        villagerId: "v5",
+        week: 3,
+        text: "Are any adventurers/clans excited or enthusiastic about trying to capture the monster in the forest?",
+      },
     ],
     tags: [
       {
         entityType: EntityTypes.Villager,
         entityId: "v1",
       },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v5",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a9",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a61",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c3",
+      },
     ],
   },
   {
-    note: `TODO - steer him away from phil`,
+    note: `Phil, their current host (a wooly badger), and the rest of Verdant glade all look a little rough around the edges. Apparently their work last week has left them pretty bushed.`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -33,10 +54,18 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v1",
       },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a60",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c10",
+      },
     ],
   },
   {
-    note: `TODO - Note the other people selling things at the guild hall, and note Julia Pepper's child.`,
+    note: `Anastasia is feeling about as well as Alexandria... and vice versa. They're both very excited for the festival and plan to take it easy since they made pretty good money last week. You overhear them talking about their excitement about Julia Pepperschild competing again.`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -50,10 +79,22 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v1",
       },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a46",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a56",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a55",
+      },
     ],
   },
   {
-    note: `TODO`,
+    note: `At the market you see a trapper selling pelts and ask him about the wolf. He mentions that he's heard rumors of a giant wolf in the Norther Forest before this, but has never met anyone (credible) who's seen it before. He's convinced the only clan that stands a chance is Mythril Trap`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -67,10 +108,18 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v2",
       },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c3",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q3-1",
+      },
     ],
   },
   {
-    note: `TODO`,
+    note: `Everyone in town knows Arc is a fish that's too big for the Morton pond. The question is not if, but when he is finally going to go on a true Hero's quest. The only being in town who might even pose a real threat to him is Vlort, but that's debatable, since the primordial very rarely bothers to do much other than loaf around and watch all the mortals do mortal stuff... like dying.`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -84,9 +133,17 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v2",
       },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a15",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a20",
+      },
     ],
   },  {
-    note: `TODO`,
+    note: `You overhear a fight out in the street outside the Broken Leg. Mara Wright is shouting at someone, "Girl. What're ya doin'? Just come take my spot at the dojo. We both know yer stronger'n me now... what? No. No he's not. He's about as tough as a soggy piece of bread... he couldn't possible win the Bounty Battle. You could, but... fine. Sure I'll let it go if one of you wins the thing."`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -94,16 +151,41 @@ export const rawResearch: IResearch[] = [
         week: 3,
         text: "What's something unexpected that I overheard at the broken leg this week?",
       },
+      {
+        villagerId: "v5",
+        week: 3,
+        text: "Is the Bounty Battle always won by an A or S ranker?",
+      },
     ],
     tags: [
       {
         entityType: EntityTypes.Villager,
         entityId: "v2",
       },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v5",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a39",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a40",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a41",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q3-8",
+      },
     ],
   },
   {
-    note: `TODO - Talk about the drawing.`,
+    note: `You mention the drawing to the guild receptionist. They remark that no one knows who put it up. And when they take it down it always gets replaced. Also it's not put up with a pin like other quests. It's stuck on there and behind it is a sticky, dark mark which the guild staff cannot seem to remove no matter how hard they try.`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -117,10 +199,14 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v3",
       },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q1-9",
+      },
     ],
   },
   {
-    note: `TODO - Nudge toward stone claw.`,
+    note: `You talk to a man bringing in a bunch of pelts for sale at the Festival, "Mythril Trap is gonna' bag that wolf. Mark my words. They're the only clan what can do it reckon. Also, I hear tell that tiger lady is really fired up, feeling pretty let down 'bout not having big prey last week an all."`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -137,7 +223,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `TODO - Point him toward fissure`,
+    note: `You overhear a conversation at the gambling hall as they set up for the event, "Weird year this. Normally there'd be more travlin' adventurers to compete, but this year it's all local. It's strange to say it, maybe it'll be boring. Who can even stand up to that little pixie?" His fellow compatriot replies, "Yeah. Since Mara banned Arc, and her daughter's missin' and all. Not a lot of the regular heavy hitters in there."`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -154,7 +240,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `TODO`,
+    note: `Some say those with eternity loose their lust for life, but Vlort is the devil advocating otherwise. Where there is an ale to be drunk, Vlort will be there. Where there's a new story of mishaps or triumphs being told, Vlort appears. Vlort loves watching mortals expressing their mortality. Vlort just wants stuff to happen because it's fun. A clan seemed a good way to have a front row seat for viewing interesting people into interesting situations. Also, rumor has it Vlort already saved the world, so he's bored of that.`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -168,10 +254,18 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v4",
       },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "a20",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c1",
+      },
     ],
   },
   {
-    note: `TODO`,
+    note: `The owner of the apothecary commented after that 'someone' left, "That person must have been taking their medicinal tinctures with booze, because by all accounts this wolf is eleven shades of pissed off. At least that's what everyone sane is saying. Personally, I hope Sleek Wind Shay takes that quest so we don't have to worry any more. She's incredible. Also have you seen her skin? Divine."`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -185,10 +279,18 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v4",
       },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "a8",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q3-1",
+      },
     ],
   },
   {
-    note: `TODO`,
+    note: `You hand out your multiple choice pamphlet in the middle of town square. Many ignore you. Most who take it immediately throw it in the bin. Those who look at it appear confused. Someone knocks you from behind and all the pamphlets scatter onto the street. Only one stranger helps you pick them up. He looks at one of them, "I like to think it's F) all of the above. But I don't know if I'm allowed to take this survey." He winks, and leaves.`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -202,27 +304,14 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v4",
       },
-    ],
-  },
-  {
-    note: `TODO - Note Clara.`,
-    weekHappened: 3,
-    villagerPrompts: [
       {
-        villagerId: "v5",
-        week: 3,
-        text: "Is the Bounty Battle always won by an A or S ranker?",
-      },
-    ],
-    tags: [
-      {
-        entityType: EntityTypes.Villager,
-        entityId: "v5",
+        entityType: EntityTypes.Adventurer,
+        entityId: "a31",
       },
     ],
   },
   {
-    note: `TODO - Nudge him toward guy norman`,
+    note: `Depends upon who you ask. But you decide to ask a town guard... they know security right? She replies, "The big issue is the merchants, the trade guild, and all the rich visitors pay a premium for personal guards IN the city. That siphons away any extra help we might'a paid for to keep the people outside the wall safe. This year especially with the monsters crazy like they are... I worry someones gonna get hurt. Last week we just barely kept things together. Can't believe that Norman guy is just E rank. We were lucky to have him."`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -236,27 +325,18 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v5",
       },
-    ],
-  },
-  {
-    note: `TODO - Nudge toward brother Chilpin, then shay.`,
-    weekHappened: 3,
-    villagerPrompts: [
       {
-        villagerId: "v5",
-        week: 3,
-        text: "Are any adventurers/clans excited or enthusiastic about trying to capture the monster in the forest?",
+        entityType: EntityTypes.Adventurer,
+        entityId: "a31",
       },
-    ],
-    tags: [
       {
-        entityType: EntityTypes.Villager,
-        entityId: "v5",
+        entityType: EntityTypes.Quest,
+        entityId: "q2-5",
       },
     ],
   },
   {
-    note: `TODO`,
+    note: `Mara is reffing the Bounty Battle. Arc looked at the quest board and sighed. Vlort has already been pre-gaming for the past two weeks. The only A Rank adventurer questing is Sleek Wind Shay. Everyone agrees that if anyone can capture the berserk wolf in the Northern Forest it's her.`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -270,10 +350,18 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v6",
       },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a8",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "q3-1",
+      },
     ],
   },
   {
-    note: `TODO`,
+    note: `There will actually be quite a few lower rank adventurers performing at the festival this year! The Duffenklampf twins will be doing a sword dance, Derb will be playing some music and has been hiding something under a big overturned basket, plus that weird mime will be around. Of all of them most people are excited to see Julia Pepperschild take on the Brass Saucier.`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -287,10 +375,38 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v6",
       },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a46",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a55",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a56",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a42",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a36",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q3-9",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q3-4",
+      },
     ],
   },
   {
-    note: `TODO`,
+    note: `Many people in the city are remarking about a strange sensation they're having, where they feel like they're being drawn somewhere. It seems like a non-insignificant portion of the city is even newly experiencing sleep walking. You have a strange dream about a giant tree, it suddenly opens in an inexplicable uncorking, and out of the massive hole it oozes a terrible mass of human limbs. You awake with a sense of dread about the northern forest, and when your senses finally come to you find yourself standing near your snake shack.`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -304,10 +420,14 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v6",
       },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q3-2",
+      },
     ],
   },
   {
-    note: `TODO`,
+    note: `The guild receptionist whumps a huge ledger on the counter and rubs her hands together, "Time for some research." In the end you are left with a dizzying amount of statistics about long dead adventurers, but your big take away is are these: 1. Vlort has the most recorded kills. But he's immortal, so it's kind of cheating. 2. Mythril trap is the most active monster exterminators currently. 3. The staff a the guild are real dorks.`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -321,10 +441,18 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v7",
       },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a20",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c3",
+      },
     ],
   },
   {
-    note: `TODO`,
+    note: `That must be the work of the Brass Saucier from Serpentina. He's challenging Julia Pepperschild this year and he must be worried, so he's trying underhanded techniques.`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -338,10 +466,18 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v7",
       },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a46",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q3-4",
+      },
     ],
   },
   {
-    note: `TODO`,
+    note: `"Arc's asshole is busy with the stick that's up there.", remarked a nosey, wealthy stained glass patron, "I hear he has a real temper. Again. Probably because of the stick. Wouldn't want to be in the same neighborhood when he loses his composure. And no, I'm not saying this just because he turned me down for my portrait study. I'm an avid painter you know..." They kept blabbing, but it only got more pedantic from there.`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -357,8 +493,6 @@ export const rawResearch: IResearch[] = [
       },
     ],
   },
-
-
   
   {
     note: `Philagula tried to take ahold of Mamut during the Jachektapolk joining ceremony. But he got stuck inside.`,
