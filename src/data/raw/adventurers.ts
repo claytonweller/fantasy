@@ -1517,12 +1517,6 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
             value: 1,
             week: 4,
           },
-          {
-            metricRuleId: MetricRuleId.AllyHealed,
-            rank: Ranks.A,
-            value: 1,
-            week: 4,
-          },
         ],
       },
       {
@@ -1588,7 +1582,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
           {
             metricRuleId: MetricRuleId.RewardGold,
             value: 50,
-            week: 2,
+            week: 3,
           },
         ],
       },
@@ -3385,7 +3379,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
             metricRuleId: MetricRuleId.EnemyDefeat,
             value: 2,
             rank: Ranks.D,
-            week: 1,
+            week: 3,
           },
         ],
       },

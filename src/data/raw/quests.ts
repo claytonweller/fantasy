@@ -228,7 +228,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         startWeek: 4,
         notes: `Shelly and Barkskin have been inseparable since the Bounty Battle. Romance knows no time but the present. Their first date was gathering healing herbs whilst dispatching berserk beasts.`,
         status: QuestStatus.Success,
-        clanId: "c8",
+        clanId: "c9",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -242,7 +242,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         startWeek: 4,
         notes: `As Fissure and Elnar were about to leave to look for medicinal herbs, Elder K'tar stopped them. "Take me with you." They didn't have a reason to refuse. He led them directly to the newly cleaned Mystic Spring. Before the adventurers could ask what they were doing there he immediately started chanting. A couple of moments later, the water burbled and formed itself into the shape of a six armed woman. She looked at the two adventurers and then leaned forward and kissed K'tar on the forehead. Then glowing gold water poured from her fingertips into a large waterskin that the elder was holding. The liquid woman winked and then sunk back into the spring. "Let's head ba--" and his arm fell to the ground with a light thud. In a flash Fissure launched herself into the dark recesses of the cavern, while Chilpin rushed to the old orc's side to stanch the bleeding. K'Tar pushed the waterskin into Chiplin's arms, "For Mamut. He must return to the grove." Another flash from the back of the cave and a thin line of red appeared at K'Tar's neck. The light immediately left his eyes. Fissure called out from the back of the cave, "Elnar Run! I'll hold her off!" Chilpin scrambled back to Morton alone and terrified, but he was a healer through and through and used the Mystic Spring water to heal all those afflicted by the sickness... Fissure still hasn't returned.`,
         status: QuestStatus.Success,
-        clanId: "c9",
+        clanId: "c8",
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
@@ -252,6 +252,11 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
           {
             metricRuleId: MetricRuleId.CiviliansDead,
             value: 1,
+            week: 4,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 30,
             week: 4,
           },
           {
@@ -842,7 +847,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p6-q3-8",
         startWeek: 3,
-        notes: `Right before his match with Ken, Sir Robin claimed to have a terrible bout of indigestion. Mara looked at Clara and crossed her arms. The maid squire grumbled, "You never said which one of us had to win." Then she stepped in the ring. After beating Ken & Geoffrey soundly she set off against fissure. The fight was almost to fast for people to see. Clara's left arm and leg were quick paralyzed. But then at the last moment the Fissure went flying out of the ring and smashed into a wall. Clara scowled at Mara, grabbed her bag of gold and ran off without a word.`,
+        notes: `Right before his match with Ken, Sir Robin claimed to have a terrible bout of indigestion. Mara looked at Clara and crossed her arms. The maid squire grumbled, "Fine... I'll do it." Then she stepped in the ring. After beating Ken & Geoffrey soundly she set off against fissure. The fight was almost too fast for people to see. Clara's left arm and leg were quickly paralyzed. But then at the last moment the Fissure went flying out of the ring and smashed into a wall. Clara scowled at Mara, grabbed her bag of gold and ran off without a word.`,
         status: QuestStatus.Success,
         clanId: "c1",
         metrics: [

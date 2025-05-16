@@ -94,7 +94,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `At the market you see a trapper selling pelts and ask him about the wolf. He mentions that he's heard rumors of a giant wolf in the Norther Forest before this, but has never met anyone (credible) who's seen it before. He's convinced the only clan that stands a chance is Mythril Trap`,
+    note: `At the market you see a trapper selling pelts and ask him about the wolf. He mentions that he's heard rumors of a giant wolf in the Northern Forest before this, but has never met anyone (credible) who's seen it before. He's convinced the only clan that stands a chance is Mythril Trap`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -143,7 +143,7 @@ export const rawResearch: IResearch[] = [
       },
     ],
   },  {
-    note: `You overhear a fight out in the street outside the Broken Leg. Mara Wright is shouting at someone, "Girl. What're ya doin'? Just come take my spot at the dojo. We both know yer stronger'n me now... what? No. No he's not. He's about as tough as a soggy piece of bread... he couldn't possible win the Bounty Battle. You could, but... fine. Sure I'll let it go if one of you wins the thing."`,
+    note: `You overhear a fight out in the street outside the Broken Leg. Mara Wright is shouting at someone, "Girl. What're ya doin'? Just come take my spot at the dojo. We both know yer stronger'n me now... what? No. No he's not. He's about as tough as a soggy piece of bread... he couldn't possibly win the Bounty Battle. You could, but... fine. Sure I'll let it go if one of you wins the thing."`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -240,7 +240,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `Some say those with eternity loose their lust for life, but Vlort is the devil advocating otherwise. Where there is an ale to be drunk, Vlort will be there. Where there's a new story of mishaps or triumphs being told, Vlort appears. Vlort loves watching mortals expressing their mortality. Vlort just wants stuff to happen because it's fun. A clan seemed a good way to have a front row seat for viewing interesting people into interesting situations. Also, rumor has it Vlort already saved the world, so he's bored of that.`,
+    note: `Some say those with eternity lose their lust for life, but Vlort is the devil advocating otherwise. Where there is an ale to be drunk, Vlort will be there. Where there's a new story of mishaps or triumphs being told, Vlort appears. Vlort loves watching mortals expressing their mortality. Vlort just wants stuff to happen because it's fun. A clan seemed a good way to have a front row seat for viewing interesting people into interesting situations. Also, rumor has it Vlort already saved the world, so he's bored of that.`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -311,7 +311,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `Depends upon who you ask. But you decide to ask a town guard... they know security right? She replies, "The big issue is the merchants, the trade guild, and all the rich visitors pay a premium for personal guards IN the city. That siphons away any extra help we might'a paid for to keep the people outside the wall safe. This year especially with the monsters crazy like they are... I worry someones gonna get hurt. Last week we just barely kept things together. Can't believe that Norman guy is just E rank. We were lucky to have him."`,
+    note: `Depends upon who you ask. But you decide to ask a town guard... they know security, right? She replies, "The big issue is the merchants, the trade guild, and all the rich visitors pay a premium for personal guards IN the city. That siphons away any extra help we might'a paid for to keep the people outside the wall safe. This year especially with the monsters crazy like they are... I worry someones gonna get hurt. Last week we just barely kept things together. Can't believe that Norman guy is just E rank. We were lucky to have him."`,
     weekHappened: 3,
     villagerPrompts: [
       {
@@ -427,7 +427,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `The guild receptionist whumps a huge ledger on the counter and rubs her hands together, "Time for some research." In the end you are left with a dizzying amount of statistics about long dead adventurers, but your big take away is are these: 1. Vlort has the most recorded kills. But he's immortal, so it's kind of cheating. 2. Mythril trap is the most active monster exterminators currently. 3. The staff a the guild are real dorks.`,
+    note: `The guild receptionist whumps a huge ledger on the counter and rubs her hands together, "Time for some research." In the end you are left with a dizzying amount of statistics about long dead adventurers, but your big takeaways are these: 1. Vlort has the most recorded kills. But he's immortal, so it's kind of cheating. 2. Mythril trap is the most active monster exterminator currently. 3. The staff at the guild are real dorks.`,
     weekHappened: 3,
     villagerPrompts: [
       {
