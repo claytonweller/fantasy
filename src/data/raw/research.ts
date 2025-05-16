@@ -142,7 +142,8 @@ export const rawResearch: IResearch[] = [
         entityId: "a20",
       },
     ],
-  },  {
+  },
+  {
     note: `You overhear a fight out in the street outside the Broken Leg. Mara Wright is shouting at someone, "Girl. What're ya doin'? Just come take my spot at the dojo. We both know yer stronger'n me now... what? No. No he's not. He's about as tough as a soggy piece of bread... he couldn't possibly win the Bounty Battle. You could, but... fine. Sure I'll let it go if one of you wins the thing."`,
     weekHappened: 3,
     villagerPrompts: [
@@ -493,7 +494,7 @@ export const rawResearch: IResearch[] = [
       },
     ],
   },
-  
+
   {
     note: `Philagula tried to take ahold of Mamut during the Jachektapolk joining ceremony. But he got stuck inside.`,
     weekHappened: 4,

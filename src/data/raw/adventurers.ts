@@ -100,6 +100,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p1-q5-6",
+        metrics: [],
+      },
+      {
         partyId: "p1-q4-4",
         metrics: [
           {
@@ -148,6 +152,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     ],
     traits: [],
     questParties: [
+      {
+        partyId: "p1-q5-6",
+        metrics: [],
+      },
       {
         partyId: "p1-q4-6",
         metrics: [
@@ -207,6 +215,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     ],
     traits: [],
     questParties: [
+      {
+        partyId: "p1-q5-6",
+        metrics: [],
+      },
       {
         partyId: "p1-q3-3",
         metrics: [],
@@ -325,6 +337,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p1-q5-6",
+        metrics: [],
+      },
+      {
         partyId: "p1-q4-6",
         metrics: [],
       },
@@ -351,7 +367,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `There is no one swifter or deadlier with a bow.`,
     clanId: "c3",
     nicknames: [],
-    statusHistory: [],
+    statusHistory: [
+      {
+        status: AdventurerStatuses.OutOfTown,
+        startWeek: 5,
+        endWeek: 5,
+      },
+    ],
     traits: [],
     questParties: [
       {
@@ -421,6 +443,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p1-q5-5",
+        metrics: [],
+      },
+      {
         partyId: "p1-q3-1",
         metrics: [
           {
@@ -477,7 +503,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `Usually doesn't completely lose control... usually... Hopefully her brother is there to calm her down.`,
     clanId: "c3",
     nicknames: [],
-    statusHistory: [],
+    statusHistory: [
+      {
+        status: AdventurerStatuses.OutOfTown,
+        startWeek: 5,
+        endWeek: 5,
+      },
+    ],
     traits: [],
     questParties: [
       {
@@ -539,6 +571,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     ],
     traits: [],
     questParties: [
+      {
+        partyId: "p1-q5-5",
+        metrics: [],
+      },
       {
         partyId: "p1-q3-1",
         metrics: [
@@ -625,6 +661,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p1-q5-3",
+        metrics: [],
+      },
+      {
         partyId: "p1-q4-10",
         metrics: [
           {
@@ -677,6 +717,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p1-q5-6",
+        metrics: [],
+      },
+      {
         partyId: "p1-q4-6",
         metrics: [
           {
@@ -724,6 +768,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
+      {
+        partyId: "p1-q5-2",
+        metrics: [],
+      },
       {
         partyId: "p1-q4-9",
         metrics: [
@@ -785,6 +833,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p1-q5-2",
+        metrics: [],
+      },
+      {
         partyId: "p1-q4-9",
         metrics: [
           {
@@ -840,6 +892,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
+      {
+        partyId: "p1-q5-2",
+        metrics: [],
+      },
       {
         partyId: "p1-q4-9",
         metrics: [
@@ -960,6 +1016,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p1-q5-2",
+        metrics: [],
+      },
+      {
         partyId: "p1-q4-9",
         metrics: [
           {
@@ -1043,6 +1103,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p4-q5-3",
+        metrics: [],
+      },
+      {
         partyId: "p2-q4-7",
         metrics: [
           {
@@ -1109,7 +1173,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     bio: `The Crestmor family is the largest nobel house in Morton. In order for a child of the family to be in line for succession they must demonstrate prowess in Time manipulation magic. `,
     clanId: "c6",
     nicknames: [],
-    statusHistory: [],
+    statusHistory: [
+      {
+        status: AdventurerStatuses.OutOfTown,
+        startWeek: 5,
+        endWeek: 5,
+      },
+    ],
     traits: [],
     questParties: [
       {
@@ -1187,6 +1257,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     ],
     traits: [],
     questParties: [
+      {
+        partyId: "p1-q5-4",
+        metrics: [],
+      },
       {
         partyId: "p1-q4-8",
         metrics: [],
@@ -1319,6 +1393,11 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+
+        partyId: "p2-q5-4",
+        metrics: [],
+      },
+      {
         partyId: "p3-q3-8",
         metrics: [],
       },
@@ -1353,6 +1432,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     ],
     traits: [],
     questParties: [
+      {
+        partyId: "p4-q5-3",
+        metrics: [],
+      },
       {
         partyId: "p2-q4-7",
         metrics: [
@@ -1428,6 +1511,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p2-q5-1",
+        metrics: [],
+      },
+      {
         partyId: "p1-q4-7",
         metrics: [
           {
@@ -1496,6 +1583,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
+      {
+        partyId: "p1-q5-5",
+        metrics: [],
+      },
       {
         partyId: "p2-q4-5",
         metrics: [
@@ -1623,6 +1714,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
+      {
+        partyId: "p1-q5-4",
+        metrics: [],
+      },
       {
         partyId: "p2-q4-8",
         metrics: [
@@ -1769,6 +1864,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p4-q5-3",
+        metrics: [],
+      },
+      {
         partyId: "p1-q3-9",
         metrics: [
           {
@@ -1793,6 +1892,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
+      {
+        partyId: "p2-q5-1",
+        metrics: [],
+      },
       {
         partyId: "p1-q2-6.2",
         metrics: [
@@ -1931,6 +2034,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p1-q5-5",
+        metrics: [],
+      },
+      {
         partyId: "p1-q4-2",
         metrics: [],
       },
@@ -2061,6 +2168,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
+      {
+        partyId: "p2-q5-4",
+        metrics: [],
+      },
       {
         lateAddition: true,
         partyId: "p4-q4-7",
@@ -2212,6 +2323,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p1-q5-1",
+        metrics: [],
+      },
+      {
         partyId: "p1-q4-1",
         metrics: [
           {
@@ -2262,6 +2377,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     ],
     traits: [],
     questParties: [
+      {
+        partyId: "p1-q5-4",
+        metrics: [],
+      },
       {
         partyId: "p3-q4-8",
         metrics: [
@@ -2337,6 +2456,11 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     ],
     traits: [],
     questParties: [
+      {
+        partyId: "p2-q5-3",
+        metrics: [
+        ],
+      },
       {
         partyId: "p7-q3-8",
         metrics: [
@@ -2449,6 +2573,12 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p1-q5-5",
+        metrics: [
+ 
+        ],
+      },
+      {
         partyId: "p1-q4-2",
         metrics: [],
       },
@@ -2489,6 +2619,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
+      {
+        partyId: "p1-q5-3",
+        metrics: [],
+      },
       {
         partyId: "p1-q4-10",
         metrics: [
@@ -2572,6 +2706,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p1-q5-4",
+        metrics: [],
+      },
+      {
         partyId: "p1-q2-6.3",
         metrics: [
           {
@@ -2597,6 +2735,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
+      {
+        partyId: "p1-q5-3",
+        metrics: [],
+      },
       {
         partyId: "p1-q4-10",
         metrics: [
@@ -2656,6 +2798,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p1-q5-4",
+        metrics: [],
+      },
+      {
         partyId: "p3-q4-8",
         metrics: [
           {
@@ -2684,6 +2830,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
+      {
+        partyId: "p1-q5-3",
+        metrics: [],
+      },
       {
         partyId: "p1-q4-10",
         metrics: [
@@ -2715,6 +2865,11 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     ],
     traits: [],
     questParties: [
+      {
+        lateAddition: true,
+        partyId: "p2-q5-4",
+        metrics: [],
+      },
       {
         partyId: "p2-q4-5",
         metrics: [
@@ -2769,6 +2924,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p4-q5-3",
+        metrics: [],
+      },
+      {
         partyId: "p3-q2-3",
         metrics: [
           {
@@ -2817,6 +2976,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
+      {
+        partyId: "p2-q5-4",
+        metrics: [],
+      },
       {
         partyId: "p1-q4-5",
         metrics: [
@@ -2892,6 +3055,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p2-q5-1",
+        metrics: [],
+      },
+      {
         partyId: "p5-q3-9",
         metrics: [],
       },
@@ -2932,6 +3099,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p2-q5-1",
+        metrics: [],
+      },
+      {
         partyId: "p5-q3-9",
         metrics: [],
       },
@@ -2971,6 +3142,11 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        lateAddition: true,
+        partyId: "p1-q5-1",
+        metrics: [],
+      },
+      {
         partyId: "p3-q1-9",
         metrics: [],
       },
@@ -2995,6 +3171,11 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     ],
     traits: [],
     questParties: [
+      {
+
+        partyId: "p2-q5-4",
+        metrics: [],
+      },
       {
         partyId: "p1-q3-8",
         metrics: [],
@@ -3044,6 +3225,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        partyId: "p1-q5-5",
+        metrics: [],
+      },
+      {
         partyId: "p1-q4-2",
         metrics: [],
       },
@@ -3083,6 +3268,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     statusHistory: [],
     traits: [],
     questParties: [
+      {
+        partyId: "p4-q5-3",
+        metrics: [],
+      },
       {
         lateAddition: true,
         partyId: "p1-q3-1",
@@ -3172,6 +3361,11 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+
+        partyId: "p2-q5-4",
+        metrics: [],
+      },
+      {
         partyId: "p1-q4-5",
         metrics: [
           {
@@ -3242,6 +3436,11 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     nicknames: [],
     traits: [],
     questParties: [
+      {
+
+        partyId: "p2-q5-4",
+        metrics: [],
+      },
       {
         partyId: "p5-q3-8",
         metrics: [],
@@ -3328,6 +3527,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     ],
     traits: [],
     questParties: [
+      {
+        partyId: "p1-q5-4",
+        metrics: [],
+      },
       {
         partyId: "p6-q2-5",
         metrics: [

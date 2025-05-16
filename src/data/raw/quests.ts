@@ -25,78 +25,238 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     name: "Purify The Cemetery",
     reward: 10,
     postedWeek: 5,
+    expireWeek: 5,
     claimType: QuestClaimType.Clan,
     questType: QuestTypes.Other,
     questRank: Ranks.B,
     postedBy: "Sister Lasiter",
-    description: `"Holy Mother bless us with your light. The bodies were not exhumed by any living hand, but are exhuming themselves. Currently the undead are contained within the cemetery walls, but I worry the gates won't hold of ever. Please be the blessed mother's purifying sword and put these souls to rest."`,
-
-    parties: [],
+    description: `"Holy Mother bless us with your light. The bodies were not exhumed by any living hand, but are exhuming themselves. Currently the undead are contained within the cemetery walls, but I worry the gates won't hold much longer. Please be the blessed Mother's purifying sword and put these souls to rest."`,
+    parties: [
+      {
+        id: "p1-q5-1",
+        startWeek: 5,
+        notes: `TODO - Sir robin goes alone? Buster shows up and cleans house.`,
+        status: QuestStatus.Claimed,
+        clanId: "c1",
+        metrics: [
+          // {
+          //   metricRuleId: MetricRuleId.RewardGold,
+          //   value: 10,
+          //   week: 5,
+          // },
+        ],
+      },
+      {
+        id: "p2-q5-1",
+        startWeek: 5,
+        notes: `TODO - Radiantia - Louis, Twins, Juniper`,
+        status: QuestStatus.Claimed,
+        clanId: "c6",
+        metrics: [
+          // {
+          //   metricRuleId: MetricRuleId.RewardGold,
+          //   value: 10,
+          //   week: 5,
+          // },
+        ],
+      },
+    ],
   },
   {
     id: "q5-2",
     name: "Slay the Mad God Jachectapolk",
     reward: 3000,
     postedWeek: 5,
+    expireWeek: 5,
     claimType: QuestClaimType.Clan,
     questType: QuestTypes.Kill,
     questRank: Ranks.A,
     postedBy: "Guildmaster Vahn",
-    description: `"Hey! Shut it! Hey! Hey! Don't make me smash another table! QUIET! Yeah, so I'm sure you've all heard about the cult by now. The cult of Jaborkapek? Did I say it right? Japortachenk? Joborkapelt? Ja- whatever, it doesn't matter what they're called. They summoned their mad god. Classic cult thing. I need you all to do what you do best and Kill this damn thing!"`,
-
-    parties: [],
+    description: `"Hey! Shut it! Hey! Hey! Don't make me smash another table! QUIET! Yeah, so I'm sure you've all heard about the cult by now. The cult of Jaborkapek? Did I say it right? Japortachenk? Joborkapelt? Ja- whatever, it doesn't matter what they're called. They summoned their gloopy god. Classic cult thing. I need you all to do what you do best and dispatch that disarranged deity!"`,
+    parties: [
+      {
+        id: "p1-q5-2",
+        startWeek: 5,
+        notes: `TODO - Blessed sword`,
+        status: QuestStatus.Claimed,
+        clanId: "c4",
+        metrics: [
+          // {
+          //   metricRuleId: MetricRuleId.RewardGold,
+          //   value: 10,
+          //   week: 5,
+          // },
+        ],
+      },
+    ],
   },
   {
     id: "q5-3",
     name: "Keep the Chimeras Out",
     reward: 500,
     postedWeek: 5,
+    expireWeek: 5,
     claimType: QuestClaimType.Individual,
     questType: QuestTypes.Guard,
     questRank: Ranks.C,
     postedBy: "Mayor Corque",
-    description: `"You've spoken and I've heard you. You don't want to be devoured by horrible chimera monsters. I understand. I hope cowering for our lives from the amalgamated bodies for forest beasts can be viewed as an opportunity for growth as a community."`,
-
-    parties: [],
+    description: `"You've spoken and I've heard you. You don't want to be devoured by horrible chimera monsters. I understand. I hope cowering for our lives from the amalgamated bodies for forest beasts can be viewed as an opportunity for growth as a community, and when election time comes we all remember how I cowered with you."`,
+    parties: [
+      {
+        id: "p1-q5-3",
+        startWeek: 5,
+        notes: `TODO - Julia, Chairman, Tundrapaw, Bushi`,
+        status: QuestStatus.Claimed,
+        clanId: "c7",
+        metrics: [
+          // {
+          //   metricRuleId: MetricRuleId.RewardGold,
+          //   value: 10,
+          //   week: 5,
+          // },
+        ],
+      },
+      {
+        id: "p2-q5-3",
+        startWeek: 5,
+        notes: `TODO - Geoffrey`,
+        status: QuestStatus.Claimed,
+        clanId: "c6",
+        metrics: [
+          // {
+          //   metricRuleId: MetricRuleId.RewardGold,
+          //   value: 10,
+          //   week: 5,
+          // },
+        ],
+      },
+      {
+        id: "p3-q5-3",
+        startWeek: 5,
+        notes: `TODO - Clockwork`,
+        status: QuestStatus.Claimed,
+        clanId: "c5",
+        metrics: [
+          // {
+          //   metricRuleId: MetricRuleId.RewardGold,
+          //   value: 10,
+          //   week: 5,
+          // },
+        ],
+      },
+      {
+        id: "p4-q5-3",
+        startWeek: 5,
+        notes: `TODO - Healers`,
+        status: QuestStatus.Claimed,
+        clanId: "c8",
+        metrics: [
+          // {
+          //   metricRuleId: MetricRuleId.RewardGold,
+          //   value: 10,
+          //   week: 5,
+          // },
+        ],
+      },
+    ],
   },
   {
     id: "q5-4",
     name: "Deal with Jachectapolk Cultists",
     reward: 500,
     postedWeek: 5,
+    expireWeek: 5,
     claimType: QuestClaimType.Clan,
     questType: QuestTypes.Kill,
     questRank: Ranks.B,
     postedBy: "Guildmaster Vahn",
-    description: `"Oh yeah! One more thing. The Jaterbajek... Jakerpapok... Jagoffadong whatever cultists. Gotta get rid of them along with the mad god."`,
-
-    parties: [],
+    description: `"Oh yeah! One more thing. The Jaterbajek... Jakerpapok... Jagoffadong whatever cultists. Gotta get rid of them too."`,
+    parties: [
+      {
+        id: "p1-q5-4",
+        startWeek: 5,
+        notes: `TODO - Guy norman leads the mill.`,
+        status: QuestStatus.Claimed,
+        clanId: "c1",
+        metrics: [
+          // {
+          //   metricRuleId: MetricRuleId.RewardGold,
+          //   value: 10,
+          //   week: 5,
+          // },
+        ],
+      },
+      {
+        id: "p2-q5-4",
+        startWeek: 5,
+        notes: `TODO - Exploding fist lead by Clara revenge. Shelly comes with barkskin - Get Cliff Vanderbliff in his escape.`,
+        status: QuestStatus.Claimed,
+        clanId: "c9",
+        metrics: [
+          // {
+          //   metricRuleId: MetricRuleId.RewardGold,
+          //   value: 10,
+          //   week: 5,
+          // },
+        ],
+      },
+    ],
   },
   {
     id: "q5-5",
     name: "Get Mamut to Forest Grove",
     reward: 0,
     postedWeek: 5,
+    expireWeek: 5,
     claimType: QuestClaimType.Clan,
     questType: QuestTypes.Other,
     questRank: Ranks.A,
     postedBy: "Tall Pine Marlon",
     description: `TODO new description`,
-
-    parties: [],
+    parties: [
+      {
+        id: "p1-q5-5",
+        startWeek: 5,
+        notes: `TODO - Mythril trap guys help out verdant glade & icenose, Forst bough`,
+        status: QuestStatus.Claimed,
+        clanId: "c3",
+        metrics: [
+          // {
+          //   metricRuleId: MetricRuleId.RewardGold,
+          //   value: 10,
+          //   week: 5,
+          // },
+        ],
+      },
+    ],
   },
   {
     id: "q5-6",
     name: "A Nobel Retreat",
     reward: 5000,
     postedWeek: 5,
+    expireWeek: 5,
     claimType: QuestClaimType.Clan,
     questType: QuestTypes.Guard,
     questRank: Ranks.A,
-    postedBy: "Cliff Vanderbliff",
-    description: `"Get me out of here!"`,
-
-    parties: [],
+    postedBy: "Gorn Wigby",
+    description: `I have a message from my reclusive benefactor. It reads thusly, "Get me out of here!"`,
+    parties: [
+      {
+        id: "p1-q5-6",
+        startWeek: 5,
+        notes: `TODO - Whole Crew`,
+        status: QuestStatus.Claimed,
+        clanId: "c2",
+        metrics: [
+          // {
+          //   metricRuleId: MetricRuleId.RewardGold,
+          //   value: 10,
+          //   week: 5,
+          // },
+        ],
+      },
+    ],
   },
 
   // Week 4
