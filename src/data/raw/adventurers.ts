@@ -915,7 +915,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
       },
       {
         partyId: "p2-q3-7",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 2,
+            week: 3,
+          },
+        ],
       },
       {
         partyId: "p6-q1-7",
@@ -1196,11 +1202,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
       {
         partyId: "p1-q3-7",
         metrics: [
-          {
-            metricRuleId: MetricRuleId.CivilianSaved,
-            value: 1,
-            week: 3,
-          },
+
         ],
       },
       {
@@ -1615,7 +1617,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
-            value: 400,
+            value: 95,
             week: 3,
           },
         ],
@@ -1937,7 +1939,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
-        partyId: "p5-q2-5",
+        partyId: "p5-q2-5", // Week 3
         metrics: [
           {
             metricRuleId: MetricRuleId.Death,
@@ -3147,8 +3149,14 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
         metrics: [],
       },
       {
-        partyId: "p3-q1-9",
-        metrics: [],
+        partyId: "p3-q1-9", // week 3
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.CostsOrDamages,
+            value: 20,
+            week: 3,
+          },
+        ],
       },
     ],
   },
@@ -3490,6 +3498,11 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
             value: 1,
             week: 3,
           },
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 1,
+            week: 3,
+          },
         ],
       },
       {
@@ -3565,6 +3578,11 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     ],
     traits: [],
     questParties: [
+      {
+        lateAddition: true,
+        partyId: "p1-q5-5",
+        metrics: [],
+      },
       {
         partyId: "p1-q4-2",
         metrics: [

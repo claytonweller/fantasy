@@ -35,7 +35,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q5-1",
         startWeek: 5,
-        notes: `TODO - Sir robin goes alone? Buster shows up and cleans house.`,
+        notes: `TODO - Sir robing forced to go it alone. Bust shows up and cleans house. Undead stop after Jachectapolk defeated.`,
         status: QuestStatus.Claimed,
         clanId: "c1",
         metrics: [
@@ -49,7 +49,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p2-q5-1",
         startWeek: 5,
-        notes: `TODO - Radiantia - Louis, Twins, Juniper`,
+        notes: `TODO - Louis, Twins, Juniper - They show up just as the gate breaks. It's a long slog and Juniper keeps barfing. Undead stop after Jachectapolk defeated.`,
         status: QuestStatus.Claimed,
         clanId: "c6",
         metrics: [
@@ -100,12 +100,12 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questType: QuestTypes.Guard,
     questRank: Ranks.C,
     postedBy: "Mayor Corque",
-    description: `"You've spoken and I've heard you. You don't want to be devoured by horrible chimera monsters. I understand. I hope cowering for our lives from the amalgamated bodies for forest beasts can be viewed as an opportunity for growth as a community, and when election time comes we all remember how I cowered with you."`,
+    description: `"You've spoken and I've heard you. You don't want to be devoured by horrible chimera monsters. I understand. I hope cowering for our lives from the amalgamated bodies of forest beasts can be viewed as an opportunity for growth as a community, and when election time comes we all remember how I cowered with you."`,
     parties: [
       {
         id: "p1-q5-3",
         startWeek: 5,
-        notes: `TODO - Julia, Chairman, Tundrapaw, Bushi`,
+        notes: `TODO - Julia, Chairman, Tundrapaw, Bushi - The chairman gets hangry. `,
         status: QuestStatus.Claimed,
         clanId: "c7",
         metrics: [
@@ -119,7 +119,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p2-q5-3",
         startWeek: 5,
-        notes: `TODO - Geoffrey`,
+        notes: `TODO - Geoffrey - Saves some ladies. Goes in for the kiss and gets rejected.`,
         status: QuestStatus.Claimed,
         clanId: "c6",
         metrics: [
@@ -133,7 +133,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p3-q5-3",
         startWeek: 5,
-        notes: `TODO - Clockwork`,
+        notes: `TODO - Thorin, Bjork, Kizz - Despite their injuries Thorin and Bjork protect `,
         status: QuestStatus.Claimed,
         clanId: "c5",
         metrics: [
@@ -217,7 +217,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q5-5",
         startWeek: 5,
-        notes: `TODO - Mythril trap guys help out verdant glade & icenose, Forst bough`,
+        notes: `TODO - Mythril trap guys help out verdant glade & icenose, Forst bough, phil comes in late.`,
         status: QuestStatus.Claimed,
         clanId: "c3",
         metrics: [
@@ -245,7 +245,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q5-6",
         startWeek: 5,
-        notes: `TODO - Whole Crew`,
+        notes: `TODO - Whole Crew - wind up fighting Exploding fist. They mostly lose.`,
         status: QuestStatus.Claimed,
         clanId: "c2",
         metrics: [
@@ -303,7 +303,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q4-2",
         startWeek: 4,
-        notes: `Verdant Glade immediately takes the quest to find the god of the Northern forest. They need a good tracker and Ash suggest Icenose. The young beastkin eaglerly agrees to lend his sharp sense of smell to the cause. He leads them to the Noble quarter of town, they wait until nightfall to continue their investigation. The trail leads to the Mansion where Count Vanderbliff is staying, they hop the fence and sneak behind the building. They find a hidden doorway in the back of the maintenance shed which leads deep underground. At the base of the stairs there is a series of corridors. They here strange chanting, and quietly sneak to where it's coming from. In a large chamber, illuminated by torches, there are 40 or so people in the same orange and purple robes from the Sacred Grove. They are chanting and drawing a giant magic circle on the floor in the center stands a small rabbitkin girl with glowing eyes surrounded by unconscious bodies of missing townspeople and adventurers. At the far side of the room Mamut is chained to the wall and floor. His fur is stained red with blood. What appears to be a high priest holds aloft a curved spear. Followers wait at the ready with bowls. It is now clear what the robed figures are using to paint their magic circle. Just as the spear is about to lash again, Ash shouts, "No!" Every hooded figure freezes then slowly turn their heads in unison to face the intruders. The high priest just takes off his hood, "You're too late! Jachectapolk will begin the joining!" It's Count Vanderbliff! He slashes at the beast, blood sprays all over him, all the torches extinguish, then the bloody circle glows brighter and brighter. Screams can be heard as a roiling roiling purple ooze pulses out of the body of the rabbitkin, it rips everyone it touches into pieces and pulls them into its mass. The robed ones are not spared if they are too close. The Verdant Glad run as the mass follows them up and out of the catacombs. They make it near enough to the surface that Tall Pine can use the tree roots from above to collapse the tunneling stairway behind them. They rush to the Adventure guild to tell everyone what they have seen.`,
+        notes: `Verdant Glade immediately takes the quest to find the god of the Northern forest. They need a good tracker and Ash suggest Icenose. The young beastkin eaglerly agrees to lend his sharp sense of smell to the cause. He leads them to the Noble quarter of town, they wait until nightfall to continue their investigation. The trail leads to the Mansion where Count Vanderbliff is staying, they hop the fence and sneak behind the building. They find a hidden doorway in the back of the maintenance shed which leads deep underground. At the base of the stairs there is a series of corridors. They here strange chanting, and quietly sneak to where it's coming from. In a large chamber, illuminated by torches, there are 40 or so people in the same orange and purple robes from the Sacred Grove. They are chanting and drawing a giant magic circle on the floor in the center stands a small rabbitkin girl with glowing eyes surrounded by unconscious bodies of missing townspeople and adventurers. At the far side of the room Mamut is chained to the wall and floor. His fur is stained red with blood. What appears to be a high priest holds aloft a curved spear. Followers wait at the ready with bowls. It is now clear what the robed figures are using to paint their magic circle. Just as the spear is about to lash again, Ash shouts, "No!" Every hooded figure freezes then slowly turn their heads in unison to face the intruders. The high priest just takes off his hood, "You're too late! Jachectapolk will begin the joining!" It's Count Vanderbliff! He slashes at the beast, blood sprays all over him, all the torches extinguish, then the bloody circle glows brighter and brighter. Screams can be heard as a roiling roiling purple ooze pulses out of the body of the rabbitkin, it rips everyone it touches into pieces and pulls them into its mass. The robed ones are not spared if they are too close. The great wolf lets out a howl. The Verdant Glad run as the mass follows them up and out of the catacombs. They make it near enough to the surface that Tall Pine can use the tree roots from above to collapse the tunneling stairway behind them. They rush to the Adventure guild to tell everyone what they have seen.`,
         status: QuestStatus.Success,
         clanId: "c10",
         metrics: [
@@ -590,7 +590,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p2.1-q4-8",
         startWeek: 4,
-        notes: `Reginald Spintzmunge, was one of the butts that Guy Norman kicked in his raid. He was taken prisoner and was more than happy to tell everyone who would listen the about the Cult of Jachektapolk and its plans (in so far as he understood them... which might not have been well)`,
+        notes: `Reginald Spintzmunge, was one of the butts that Guy Norman kicked in his raid. He was taken prisoner and was more than happy to tell everyone who would listen the about the Cult of Jachectapolk and its plans (in so far as he understood them... which might not have been well)`,
         status: QuestStatus.Failed,
         clanId: "c6",
         metrics: [
@@ -605,7 +605,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p3-q4-8",
         startWeek: 4,
-        notes: `Squeakela asked derb to help her find some lost beastkin. Derb sent the rats out into the city and after a day they came back and led the duo into the sewer. Eventually they made it back to the large chamber where the rat king was killed, and the rats showed them a hidden door leading into the catacombs, and after a series branching paths they made it to a make shift prison filled with beastkin prisoners. Derb sic'd his rats on them and while they were distracted Squeakela got the keys. They released the beastkin. As they were escaping they heard some strange chanting, and then screams. The looked though a large archway and were next to a huge blue and white wolf. They couldn't make out what wast happening, but there was a lot of yelling, pulsing lights, and strange squelching noises. Then a terrified, posh looking man in a robe ran past them... he looked a lot like Count Vaderbliff. Squeakela used the prison key to unlock the wolf, which gave her a serious look, then hobbled out into the sewers. Derb and Squeakela led the beastkin prisoners to the relative safety of town.`,
+        notes: `Squeakela asked derb to help her find some lost beastkin. Derb sent the rats out into the city and after a day they came back and led the duo into the sewer. Eventually they made it back to the large chamber where the rat king was killed, and the rats showed them a hidden door leading into the catacombs, and after a series branching paths they made it to a make shift prison filled with beastkin prisoners. Derb sic'd his rats on them and while they were distracted Squeakela got the keys. They released the beastkin. As they were escaping they heard some strange chanting, and then screams. The looked though a large archway and were next to a huge blue and white wolf. They couldn't make out what wast happening, but there was a lot of yelling, pulsing lights, and strange squelching noises. The great wolf lets out a howl. Then a terrified, posh looking man in a robe ran past them... he looked a lot like Count Vaderbliff. Squeakela used the prison key to unlock the wolf, which gave her a serious look, then hobbled out into the sewers. Derb and Squeakela led the beastkin prisoners to the relative safety of town.`,
         status: QuestStatus.Success,
         clanId: "c1",
         metrics: [
@@ -667,7 +667,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q4-10",
         startWeek: 4,
-        notes: `The Crockpot clan went "fishing" off the the wall and brought up, a vulpeon, a warted gobloid (which they threw back), a couple mandrake drakes, and grooved onion turtle. They made a giant stew and set up an emergency soup kitchen. Even the Chairman rolled up his sleeves and got his hands dirty.`,
+        notes: `The Crockpot clan went "fishing" off the the wall and brought up, a spotted vulperaptor, a warted gobloid (which they threw back), a couple mandrake drakes, and grooved onion turtle. They made a giant stew and set up an emergency soup kitchen. Even the Chairman rolled up his sleeves and got his hands dirty.`,
         status: QuestStatus.Success,
         clanId: "c7",
         metrics: [
@@ -699,14 +699,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
     questRank: Ranks.A,
     postedBy: "Guildmaster Vahn",
     description: `The Adventurer Guild has found that there is an enraged monster in the center of the Norther Forest: A gigantic blue wolf. 
-    Guildmanster Vahn: "Hey! Shut Up! Hey! HEY!... sorry I'll pay for that... Ok. Anyway. I'm sure you've heard about the giant wolf. It's berserk and attacking anything that moves. It's scared all of the monsters out of the forest. Count Vanderbliff would like to say something.
+    Guildmaster Vahn: "Hey! Shut Up! Hey! HEY!... sorry I'll pay for that... Ok. Anyway. I'm sure you've heard about the giant wolf. It's berserk and attacking anything that moves. It's scared all of the monsters out of the forest. Count Vanderbliff would like to say something.
     Count Vanderbliff: "This monster must be stopped. It killed my people. However, I will match the guild reward if it is captured alive."`,
     parties: [
       {
         id: "p1-q3-1",
         startWeek: 3,
         notes:
-          "If there was ever a quest for Mythril trap this was it. They would have gone to hunt the giant wolf even if there were no reward. They set out and immediately caught signs of it. Broken trees. Scattered bodies. Shay tracked the beast and vince laid traps. Everything was going according to plan. The snared beast and began hitting it with paralyzing and sleep arrows. But as it was looking like it would go down without much of a fight, the blue beast broke suddenly sent white hot bolts of plasma out from its body, completely ripping loose from the snares. Metalfang stepped in just in time to protect the rest of the party, and was knocked briefly unconscious, seeing this his sister went into a blind rage. The monster's electric blast had obviously taken the last of its energy. Vince shouted about needing to keep the beast alive. But Stoneclaw was was about to end it. Metalfang had regained his senses and jumped to hold his sister back before the killing blow. She kept lashing, severely wounding her brother and Vince in the process. In the end Brother Chilpin who they had paid to wait by the edge of the forest for just such an occasion patched them up. They brought the beast in and it was displayed in a giant electric proof cage at the closing night of the festival.",
+          "If there was ever a quest for Mythril Trap this was it. They would have gone to hunt the giant wolf even if there were no reward. They set out and immediately caught signs of it. Broken trees. Scattered bodies. Shay tracked the beast and vince laid traps. Everything was going according to plan. They snared beast and began hitting it with paralyzing and sleep arrows. But as it was looking like it would go down without much of a fight, the blue beast broke suddenly sent white hot bolts of plasma out from its body, completely ripping loose from the snares. Metalfang stepped in just in time to protect the rest of the party, and was knocked briefly unconscious, seeing this his sister went into a blind rage. The monster's electric blast had obviously taken the last of its energy. Vince shouted about needing to keep the beast alive. But Stoneclaw was was about to end it. Metalfang had regained his senses and jumped to hold his sister back before the killing blow. She kept lashing, severely wounding her brother and Vince in the process. In the end Brother Chilpin who they had paid to wait by the edge of the forest for just such an occasion patched them up. They brought the beast in and it was displayed in a giant electric proof cage at the closing night of the festival.",
         status: QuestStatus.Success,
         clanId: "c3",
         metrics: [
@@ -753,11 +753,6 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
           {
             metricRuleId: MetricRuleId.TrapTriggered,
             value: 2,
-            week: 3,
-          },
-          {
-            metricRuleId: MetricRuleId.CivilianSaved,
-            value: 1,
             week: 3,
           },
           {
@@ -884,7 +879,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q3-7",
         startWeek: 3,
-        notes: "Louis walked some drunks home. Vivian stopped a mugging.",
+        notes: "Louis walked some drunks home. Vivian's presence at the city square was enough to keep even the surliest of partiers in line.",
         status: QuestStatus.Success,
         clanId: "c6",
         metrics: [
@@ -899,7 +894,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p2-q3-7",
         startWeek: 3,
         notes:
-          "Sheila stymied some would be burglars at the accessory shop. Drea's presence at the city square was enough to keep even the surliest of partiers in line.",
+          "Sheila stymied some would be burglars at the accessory shop. Drea stopped a mugging ",
         status: QuestStatus.Success,
         clanId: "c4",
         metrics: [
@@ -1364,7 +1359,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p5-q2-5",
         startWeek: 3,
         notes:
-          "The monsters were on a whole different level this week. Tad never stood a chance. It didn't matter how much dirt he manced. He was skewered by a spire wolf and the crushed by wartoise.",
+          "The monsters were on a whole different level this week. Tad never stood a chance. It didn't matter how much dirt he manced. He was skewered by a spire wolf and then crushed by wartoise. Corpse eaten by a slothnor.",
         status: QuestStatus.Failed,
         clanId: "c1",
         metrics: [

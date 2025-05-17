@@ -1,10 +1,10 @@
 import { IClan } from "types/Clan";
 import { IRules } from "../data/getRules";
 import { CardTypes } from "../types/Card";
-import { IQuest } from "../types/Quest";
+import { IQuest, MetricRuleId } from "../types/Quest";
 import { IVillager } from "../types/Villager";
 import Card from "./Card";
-import { IAdventurer } from "types/Adventurer";
+import { AdventurerStatuses, IAdventurer } from "types/Adventurer";
 import { ISearchParams } from "types/SearchParams";
 import { calculateAdventurerPickMetrics } from "utils/calculateAdventurerPickMetrics";
 import { Ranks } from "types/Ranks";
@@ -12,9 +12,6 @@ import { roundToHundredths } from "utils/roundToHundredths";
 import { calculateClanPickMetrics } from "utils/calculateClanPickMetrics";
 import { calculateVillagerRosterMetrics } from "utils/calculateVillagerRosterMetrics";
 import {
-  IRoster,
-  IRosterPick,
-  RosterPickTypes,
   RosterPositions,
 } from "types/Roster";
 import { adventurersById } from "data/queries/adventurers";
@@ -270,6 +267,7 @@ function calculateClanFacts(props: {
 interface AdventurerWithMetrics extends IAdventurer {
   points: number;
   isActive: boolean;
+  died: boolean;
 }
 
 function calculateAdventurerFacts(props: {
@@ -283,14 +281,23 @@ function calculateAdventurerFacts(props: {
     (a) => {
       const weeklyMetrics = calculateAdventurerPickMetrics(a, week, a.rank);
       let points = 0;
+      let died = false
+      const deadNextWeek = !!a.statusHistory.find(s => {
+        return s.startWeek >= week + 1 && s.status === AdventurerStatuses.Dead
+      })
       weeklyMetrics.metrics.forEach((m) => {
         const pointCalculator = rules.calculators[m.metricRuleId];
         const metricPoints = pointCalculator(m);
+
+        if(m.metricRuleId === MetricRuleId.Death && deadNextWeek) died = true
+
         points += metricPoints;
       });
       const isActive = !!weeklyMetrics.metrics.length;
+      
       return {
         ...a,
+        died,
         isActive,
         points,
       };
@@ -312,10 +319,12 @@ function calculateAdventurerFacts(props: {
 
   let totalPoints = 0;
   let activeCount = 0;
+  const whoDied: string[] = []
   allSorted.forEach((a) => {
     const { points } = a;
     totalPoints += points;
     if (a.isActive) activeCount += 1;
+    if(a.died) whoDied.push(a.name)
     rankSorted[a.rank].push(a);
   });
 
@@ -353,6 +362,9 @@ function calculateAdventurerFacts(props: {
         <b>Average Active</b>: {averageActive}
       </div>
       {adventurerFactsDisplay}
+      <div style={{ padding: 5 }}>
+        <b>R.I.P.</b>: {whoDied.length ? whoDied.join(', '): 'Nobody!'}
+      </div>
     </div>
   );
 
