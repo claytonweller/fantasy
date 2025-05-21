@@ -11,9 +11,7 @@ import { Ranks } from "types/Ranks";
 import { roundToHundredths } from "utils/roundToHundredths";
 import { calculateClanPickMetrics } from "utils/calculateClanPickMetrics";
 import { calculateVillagerRosterMetrics } from "utils/calculateVillagerRosterMetrics";
-import {
-  RosterPositions,
-} from "types/Roster";
+import { RosterPositions } from "types/Roster";
 import { adventurersById } from "data/queries/adventurers";
 import { clansById } from "data/queries/clans";
 
@@ -281,20 +279,24 @@ function calculateAdventurerFacts(props: {
     (a) => {
       const weeklyMetrics = calculateAdventurerPickMetrics(a, week, a.rank);
       let points = 0;
-      let died = false
-      const deadNextWeek = !!a.statusHistory.find(s => {
-        return s.startWeek >= week + 1 && s.status === AdventurerStatuses.Dead
-      })
+      let died = false;
+      const deadNextWeek = !!a.statusHistory.find((s) => {
+        return s.startWeek >= week + 1 && s.status === AdventurerStatuses.Dead;
+      });
       weeklyMetrics.metrics.forEach((m) => {
         const pointCalculator = rules.calculators[m.metricRuleId];
         const metricPoints = pointCalculator(m);
 
-        if(m.metricRuleId === MetricRuleId.Death && deadNextWeek) died = true
+        if (m.metricRuleId === MetricRuleId.Death && deadNextWeek) died = true;
 
         points += metricPoints;
       });
-      const isActive = !!weeklyMetrics.metrics.length;
-      
+      const isActive = !!a.quests.find((q) =>
+        q.parties.find((p) =>
+          p.adventurers.find((pa) => pa.id === a.id && p.startWeek === week),
+        ),
+      );
+
       return {
         ...a,
         died,
@@ -319,12 +321,12 @@ function calculateAdventurerFacts(props: {
 
   let totalPoints = 0;
   let activeCount = 0;
-  const whoDied: string[] = []
+  const whoDied: string[] = [];
   allSorted.forEach((a) => {
     const { points } = a;
     totalPoints += points;
     if (a.isActive) activeCount += 1;
-    if(a.died) whoDied.push(a.name)
+    if (a.died) whoDied.push(a.name);
     rankSorted[a.rank].push(a);
   });
 
@@ -361,9 +363,12 @@ function calculateAdventurerFacts(props: {
       <div style={{ padding: 5 }}>
         <b>Average Active</b>: {averageActive}
       </div>
+      <div style={{ padding: 5 }}>
+        <b>Active #</b>: {activeCount}
+      </div>
       {adventurerFactsDisplay}
       <div style={{ padding: 5 }}>
-        <b>R.I.P.</b>: {whoDied.length ? whoDied.join(', '): 'Nobody!'}
+        <b>R.I.P.</b>: {whoDied.length ? whoDied.join(", ") : "Nobody!"}
       </div>
     </div>
   );

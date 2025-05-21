@@ -2,6 +2,386 @@ import { EntityTypes, IResearch } from "types/Research";
 
 export const rawResearch: IResearch[] = [
   {
+    note: `TODO`,
+    weekHappened: 4,
+    villagerPrompts: [
+      // ALSO DOWN IN THE WEEK 3
+      {
+        villagerId: "v1",
+        week: 4,
+        text: "What's the deal with newcomer Vlort?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v1",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 4,
+    villagerPrompts: [
+      {
+        villagerId: "v1",
+        week: 4,
+        text: "Does Mogreal Thunderbottom have enough leaches to prevent the impending plague?",
+      },
+
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v1",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 4,
+    villagerPrompts: [
+      {
+        villagerId: "v1",
+        week: 4,
+        text: "Do I, Angus Jeter, have what it takes to become the next Iron Chef? Can I make enough bread and soup to feed the hungry masses and prevent the town from rioting?",
+      },
+
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v1",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 4,
+    villagerPrompts: [
+      {
+        villagerId: "v2",
+        week: 4,
+        text: "Which healers seem like they are best equipped to heal and/or understand what is causing this mysterious illness?",
+      },
+
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v2",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 4,
+    villagerPrompts: [
+      {
+        villagerId: "v2",
+        week: 4,
+        text: "Did Guy Norman get lucky, or does he remain on a monster killing spree?",
+      },
+
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v2",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 4,
+    villagerPrompts: [
+      {
+        villagerId: "v2",
+        week: 4,
+        text: "Can Mythril Trap find and trap the wolf AGAIN??",
+      },
+
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v2",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 4,
+    villagerPrompts: [
+      {
+        villagerId: "v3",
+        week: 4,
+        text: "TODO",
+      },
+
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v3",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 4,
+    villagerPrompts: [
+      {
+        villagerId: "v3",
+        week: 4,
+        text: "TODO",
+      },
+
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v3",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 4,
+    villagerPrompts: [
+      {
+        villagerId: "v3",
+        week: 4,
+        text: "TODO",
+      },
+
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v3",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 4,
+    villagerPrompts: [
+      {
+        villagerId: "v4",
+        week: 4,
+        text: "TODO",
+      },
+
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v4",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 4,
+    villagerPrompts: [
+      {
+        villagerId: "v4",
+        week: 4,
+        text: "TODO",
+      },
+
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v4",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 4,
+    villagerPrompts: [
+      {
+        villagerId: "v4",
+        week: 4,
+        text: "TODO",
+      },
+
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v4",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 4,
+    villagerPrompts: [
+      {
+        villagerId: "v5",
+        week: 4,
+        text: "TODO",
+      },
+
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v5",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 4,
+    villagerPrompts: [
+      {
+        villagerId: "v5",
+        week: 4,
+        text: "TODO",
+      },
+
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v5",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 4,
+    villagerPrompts: [
+      {
+        villagerId: "v5",
+        week: 4,
+        text: "TODO",
+      },
+
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v5",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 4,
+    villagerPrompts: [
+      {
+        villagerId: "v6",
+        week: 4,
+        text: "What quest is likely to produce the most points?",
+      },
+
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v6",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 4,
+    villagerPrompts: [
+      {
+        villagerId: "v6",
+        week: 4,
+        text: "Who is likely to be the adventurer of the week?",
+      },
+
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v6",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 4,
+    villagerPrompts: [
+      {
+        villagerId: "v6",
+        week: 4,
+        text: "Would a snake in the dike do?",
+      },
+
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v6",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 4,
+    villagerPrompts: [
+      {
+        villagerId: "v7",
+        week: 4,
+        text: "TODO",
+      },
+
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v7",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 4,
+    villagerPrompts: [
+      {
+        villagerId: "v7",
+        week: 4,
+        text: "TODO",
+      },
+
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v7",
+      },
+    ],
+  },
+  {
+    note: `TODO`,
+    weekHappened: 4,
+    villagerPrompts: [
+      {
+        villagerId: "v7",
+        week: 4,
+        text: "TODO",
+      },
+
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v7",
+      },
+    ],
+  },
+
+
+  {
     note: `While getting treated for a strange rash at the church infirmary, you mention Vince offhandedly. One of the sisters perks up at the name and says, "Vince Dawn? He was in here the other day talking to Brother Chilpin. Apparently Mythril Trap wanted a healer to be on standby incase something went wrong with a big quest."`,
     weekHappened: 3,
     villagerPrompts: [
@@ -249,11 +629,20 @@ export const rawResearch: IResearch[] = [
         week: 3,
         text: "Vlort, founder of the Mill: why is his clan so diverse, so multi-skilled, and the other clans are more homogenous?  Was that intentional?",
       },
+      {
+        villagerId: "v1",
+        week: 4,
+        text: "What's the deal with newcomer Vlort?",
+      },
     ],
     tags: [
       {
         entityType: EntityTypes.Villager,
         entityId: "v4",
+      },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v1",
       },
       {
         entityType: EntityTypes.Villager,

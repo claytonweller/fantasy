@@ -35,7 +35,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q5-1",
         startWeek: 5,
-        notes: `TODO - Sir robing forced to go it alone. Bust shows up and cleans house. Undead stop after Jachectapolk defeated.`,
+        notes: `TODO - Sir robin forced to go it alone. Bust shows up and cleans house. Undead stop after Jachectapolk defeated.`,
         status: QuestStatus.Claimed,
         clanId: "c1",
         metrics: [
@@ -189,7 +189,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p2-q5-4",
         startWeek: 5,
-        notes: `TODO - Exploding fist lead by Clara revenge. Shelly comes with barkskin - Get Cliff Vanderbliff in his escape.`,
+        notes: `TODO - Exploding fist lead by Clara revenge. Shelly comes with barkskin - Get Cliff Vanderbliff in his escape. Marcus Warps out with Vanderbliff and they are sent to the forest grove.`,
         status: QuestStatus.Claimed,
         clanId: "c9",
         metrics: [
@@ -204,7 +204,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
   },
   {
     id: "q5-5",
-    name: "Get Mamut to Forest Grove",
+    name: "Homeward Bound",
     reward: 0,
     postedWeek: 5,
     expireWeek: 5,
@@ -220,6 +220,20 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: `TODO - Mythril trap guys help out verdant glade & icenose, Forst bough, phil comes in late.`,
         status: QuestStatus.Claimed,
         clanId: "c3",
+        metrics: [
+          // {
+          //   metricRuleId: MetricRuleId.RewardGold,
+          //   value: 10,
+          //   week: 5,
+          // },
+        ],
+      },
+      {
+        id: "p2-q5-5",
+        startWeek: 5,
+        notes: `TODO - Marcus warps in with Cliff vanderbliff (and a couple other noble cultists) through the trap that killed Freya. Vanderbliff gets chomped by Mamut. Marcus gets whomped by Verdant glade.`,
+        status: QuestStatus.Claimed,
+        clanId: "c2",
         metrics: [
           // {
           //   metricRuleId: MetricRuleId.RewardGold,
@@ -706,7 +720,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p1-q3-1",
         startWeek: 3,
         notes:
-          "If there was ever a quest for Mythril Trap this was it. They would have gone to hunt the giant wolf even if there were no reward. They set out and immediately caught signs of it. Broken trees. Scattered bodies. Shay tracked the beast and vince laid traps. Everything was going according to plan. They snared beast and began hitting it with paralyzing and sleep arrows. But as it was looking like it would go down without much of a fight, the blue beast broke suddenly sent white hot bolts of plasma out from its body, completely ripping loose from the snares. Metalfang stepped in just in time to protect the rest of the party, and was knocked briefly unconscious, seeing this his sister went into a blind rage. The monster's electric blast had obviously taken the last of its energy. Vince shouted about needing to keep the beast alive. But Stoneclaw was was about to end it. Metalfang had regained his senses and jumped to hold his sister back before the killing blow. She kept lashing, severely wounding her brother and Vince in the process. In the end Brother Chilpin who they had paid to wait by the edge of the forest for just such an occasion patched them up. They brought the beast in and it was displayed in a giant electric proof cage at the closing night of the festival.",
+          "If there was ever a quest for Mythril Trap this was it. They would have gone to hunt the giant wolf even if there were no reward. They set out and immediately caught signs of it. Broken trees. Scattered bodies. Shay tracked the beast and vince laid traps. Everything was going according to plan. They snared beast and began hitting it with paralyzing and sleep arrows. But as it was looking like it would go down without much of a fight, the blue beast broke suddenly sent white hot bolts of plasma out from its body, completely ripping loose from the snares. Metalfang stepped in just in time to protect the rest of the party, and was knocked briefly unconscious, seeing this his sister went into a blind rage. The monster's electric blast had obviously taken the last of its energy. Vince shouted about needing to keep the beast alive. But Stoneclaw was was about to end it. Metalfang had regained his senses and jumped to hold his sister back before the killing blow. She kept lashing, severely wounding her brother and Vince in the process. In the end Brother Chilpin who they had paid to wait by the edge of the forest for just such an occasion patched them up (Stoneclaw paid the majority of his commission because she felt so bad). They brought the beast in and it was displayed in a giant electric proof cage at the closing night of the festival.",
         status: QuestStatus.Success,
         clanId: "c3",
         metrics: [
@@ -714,11 +728,6 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
             metricRuleId: MetricRuleId.EnemyDefeat,
             value: 1,
             rank: Ranks.A,
-            week: 3,
-          },
-          {
-            metricRuleId: MetricRuleId.RewardGold,
-            value: 3000,
             week: 3,
           },
         ],
@@ -879,7 +888,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q3-7",
         startWeek: 3,
-        notes: "Louis walked some drunks home. Vivian's presence at the city square was enough to keep even the surliest of partiers in line.",
+        notes:
+          "Louis walked some drunks home. Vivian's presence at the city square was enough to keep even the surliest of partiers in line.",
         status: QuestStatus.Success,
         clanId: "c6",
         metrics: [
