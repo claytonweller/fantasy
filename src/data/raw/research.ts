@@ -28,7 +28,6 @@ export const rawResearch: IResearch[] = [
         week: 4,
         text: "Does Mogreal Thunderbottom have enough leaches to prevent the impending plague?",
       },
-
     ],
     tags: [
       {
@@ -46,7 +45,6 @@ export const rawResearch: IResearch[] = [
         week: 4,
         text: "Do I, Angus Jeter, have what it takes to become the next Iron Chef? Can I make enough bread and soup to feed the hungry masses and prevent the town from rioting?",
       },
-
     ],
     tags: [
       {
@@ -64,7 +62,6 @@ export const rawResearch: IResearch[] = [
         week: 4,
         text: "Which healers seem like they are best equipped to heal and/or understand what is causing this mysterious illness?",
       },
-
     ],
     tags: [
       {
@@ -82,7 +79,6 @@ export const rawResearch: IResearch[] = [
         week: 4,
         text: "Did Guy Norman get lucky, or does he remain on a monster killing spree?",
       },
-
     ],
     tags: [
       {
@@ -100,7 +96,6 @@ export const rawResearch: IResearch[] = [
         week: 4,
         text: "Can Mythril Trap find and trap the wolf AGAIN??",
       },
-
     ],
     tags: [
       {
@@ -118,7 +113,6 @@ export const rawResearch: IResearch[] = [
         week: 4,
         text: "TODO",
       },
-
     ],
     tags: [
       {
@@ -136,7 +130,6 @@ export const rawResearch: IResearch[] = [
         week: 4,
         text: "TODO",
       },
-
     ],
     tags: [
       {
@@ -154,7 +147,6 @@ export const rawResearch: IResearch[] = [
         week: 4,
         text: "TODO",
       },
-
     ],
     tags: [
       {
@@ -172,7 +164,6 @@ export const rawResearch: IResearch[] = [
         week: 4,
         text: "TODO",
       },
-
     ],
     tags: [
       {
@@ -190,7 +181,6 @@ export const rawResearch: IResearch[] = [
         week: 4,
         text: "TODO",
       },
-
     ],
     tags: [
       {
@@ -208,7 +198,6 @@ export const rawResearch: IResearch[] = [
         week: 4,
         text: "TODO",
       },
-
     ],
     tags: [
       {
@@ -224,9 +213,8 @@ export const rawResearch: IResearch[] = [
       {
         villagerId: "v5",
         week: 4,
-        text: "TODO",
+        text: "Between missing people and exhumed bodies, I fear that we're looking at undead. Who are the most experienced adventurers in dealing with undead problems?",
       },
-
     ],
     tags: [
       {
@@ -242,9 +230,8 @@ export const rawResearch: IResearch[] = [
       {
         villagerId: "v5",
         week: 4,
-        text: "TODO",
+        text: "Which clan has the best resources and willingness to shore up the defenses of the town?",
       },
-
     ],
     tags: [
       {
@@ -260,9 +247,8 @@ export const rawResearch: IResearch[] = [
       {
         villagerId: "v5",
         week: 4,
-        text: "TODO",
+        text: "Does Axel Gearlywhirl's monster device actually work? Has it been effective in testing?",
       },
-
     ],
     tags: [
       {
@@ -280,7 +266,6 @@ export const rawResearch: IResearch[] = [
         week: 4,
         text: "What quest is likely to produce the most points?",
       },
-
     ],
     tags: [
       {
@@ -298,7 +283,6 @@ export const rawResearch: IResearch[] = [
         week: 4,
         text: "Who is likely to be the adventurer of the week?",
       },
-
     ],
     tags: [
       {
@@ -316,7 +300,6 @@ export const rawResearch: IResearch[] = [
         week: 4,
         text: "Would a snake in the dike do?",
       },
-
     ],
     tags: [
       {
@@ -334,7 +317,6 @@ export const rawResearch: IResearch[] = [
         week: 4,
         text: "TODO",
       },
-
     ],
     tags: [
       {
@@ -352,7 +334,6 @@ export const rawResearch: IResearch[] = [
         week: 4,
         text: "TODO",
       },
-
     ],
     tags: [
       {
@@ -370,7 +351,6 @@ export const rawResearch: IResearch[] = [
         week: 4,
         text: "TODO",
       },
-
     ],
     tags: [
       {
@@ -379,7 +359,6 @@ export const rawResearch: IResearch[] = [
       },
     ],
   },
-
 
   {
     note: `While getting treated for a strange rash at the church infirmary, you mention Vince offhandedly. One of the sisters perks up at the name and says, "Vince Dawn? He was in here the other day talking to Brother Chilpin. Apparently Mythril Trap wanted a healer to be on standby incase something went wrong with a big quest."`,
