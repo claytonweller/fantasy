@@ -2,7 +2,7 @@ import { EntityTypes, IResearch } from "types/Research";
 
 export const rawResearch: IResearch[] = [
   {
-    note: `TODO`,
+    note: `Vlort might not living up to his rank and protecting the weak. But though she may be aloof, everyone knows there isn't anyone who cares more for the people of Morton than Sleek Wind Shay`,
     weekHappened: 4,
     villagerPrompts: [
       // ALSO DOWN IN THE WEEK 3
@@ -20,7 +20,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `TODO`,
+    note: `When Mogreal tried to leach one of those afflicted by the scourge the leach grew to 3 times it's normal size, and merged directly into the patient's body. It had to be cut off causing incredible pain. Hopefully one of the parties looking for medical herbs can find a cure.`,
     weekHappened: 4,
     villagerPrompts: [
       {
@@ -37,7 +37,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `TODO`,
+    note: `You approach The Chairman and ask him if you have what it takes. "There is a chef that lives in all of us. We are all made of iron. Feed first. Glory will follow!" He then takes a huge bite of a bell pepper and walks away. He seems pretty fired up.`,
     weekHappened: 4,
     villagerPrompts: [
       {
@@ -54,7 +54,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `TODO`,
+    note: `Most of the healers have their hands full tending to the sick. Finding a cure will be left to those most suited to surviving outside of the wall with minimal support. If they do find a cure it will save tons of people.`,
     weekHappened: 4,
     villagerPrompts: [
       {
@@ -62,16 +62,25 @@ export const rawResearch: IResearch[] = [
         week: 4,
         text: "Which healers seem like they are best equipped to heal and/or understand what is causing this mysterious illness?",
       },
+      {
+        villagerId: "v3",
+        week: 4,
+        text: "All the diseases and darkness make me think healers will be especially powerful this week.  No one in Breath of Life is sick, injured, or dead... are any of their members particularly suited to this kind of desperate situation?",
+      },
     ],
     tags: [
       {
         entityType: EntityTypes.Villager,
         entityId: "v2",
       },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v3",
+      },
     ],
   },
   {
-    note: `TODO`,
+    note: `You overhear a discussion between some bedraggled town guards, "Where did that Norman guy come from? He's incredible." "Who cares where he came from. I just hope he doesn't decide to leave. I wouldn't have my legs if he weren't there this morning"`,
     weekHappened: 4,
     villagerPrompts: [
       {
@@ -88,7 +97,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `TODO`,
+    note: `Because of Stoneclaw's berserker fit, both MetalFang and Vince are out of commission. You see them while bringing supplies to the infirmary at the church. Vince is blabbing, "Our girls will get help from Valeon. Don't you worry. No one knows the northern forest like they do!"`,
     weekHappened: 4,
     villagerPrompts: [
       {
@@ -96,22 +105,31 @@ export const rawResearch: IResearch[] = [
         week: 4,
         text: "Can Mythril Trap find and trap the wolf AGAIN??",
       },
+      {
+        villagerId: "v7",
+        week: 4,
+        text: "EMPTY",
+      },
     ],
     tags: [
       {
         entityType: EntityTypes.Villager,
         entityId: "v2",
       },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v7",
+      },
     ],
   },
   {
-    note: `TODO`,
+    note: `You're poking around at the magic shop, and you seem Marcus McStain. He looks pretty tired, you hide behind a shelf and eavesdrop as he's talking to the clerk. "What do you mean you're out of Mana potions. I told you-know-who I would bring them... for the thing."`,
     weekHappened: 4,
     villagerPrompts: [
       {
         villagerId: "v3",
         week: 4,
-        text: "TODO",
+        text: "The dark lesions appearing on the townfolk, the oily black smudge that won't come off the quest board from that creepy lost pet quest, the grave robbing, and the swarm of flies.... if I didn't know better, I'd think there was a necromancer or a lich loose in town.  Any word on characters acting weird, dabbling in dark magic, or other such dark nonsense?",
       },
     ],
     tags: [
@@ -122,13 +140,13 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `TODO`,
+    note: `Your connections are more than happy to talk. "Everyone knows they're going to leave tonight. They even got Night Cowl completely booked to sneak them through the west gate. If I weren't so scared of Tjorn doing his thing to my bones you know I'd be following them."`,
     weekHappened: 4,
     villagerPrompts: [
       {
         villagerId: "v3",
         week: 4,
-        text: "TODO",
+        text: "Stimbar Kolnok's people have been running their mouths at the pubs around town.  This \"tour\" ain't what it seems.  What's the inside scoop on the tour?",
       },
     ],
     tags: [
@@ -139,30 +157,14 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `TODO`,
-    weekHappened: 4,
-    villagerPrompts: [
-      {
-        villagerId: "v3",
-        week: 4,
-        text: "TODO",
-      },
-    ],
-    tags: [
-      {
-        entityType: EntityTypes.Villager,
-        entityId: "v3",
-      },
-    ],
-  },
-  {
-    note: `TODO`,
+    note: `Blessed Sword is going to be trying to secure an escape route for the civilians, so if anyone is going to find a cure it's Breath of Life. Though they are definitely going to focus on curing the plague before your foot. We all need them to do that first for sure.
+`,
     weekHappened: 4,
     villagerPrompts: [
       {
         villagerId: "v4",
         week: 4,
-        text: "TODO",
+        text: "I have a horrible case of bog foot, more advanced than what I can cure with usual cattail-cricket poultice. I am shopping around for the best healers: how will Blessed sword heal me versus breath of life folk?",
       },
     ],
     tags: [
@@ -173,13 +175,13 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `TODO`,
+    note: `Chilpin looks like he might almost fall over from exhaustion. He's doing the work of five healers on his own. If you cuddled him he would probably collapse. Frost Bough or Shelly hopefully will find a cure so he can finally sleep.`,
     weekHappened: 4,
     villagerPrompts: [
       {
         villagerId: "v4",
         week: 4,
-        text: "TODO",
+        text: "What is brother chilpin up to this evening?  Would he enjoy a cuddle (for a cost) or is he busy?",
       },
     ],
     tags: [
@@ -190,13 +192,13 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `TODO`,
+    note: `You make the mistake of asking this question to a beastkin, they glare at you, "Oh! Oh right!? Because I'm a wolfkin I'm friends with the wolf? Hey... HEY HEY! How's your uncle? You know, that dirty swamp gorilla." She spits and walks away. Derb pats you on the shoulder, "You're not the first human to make that mistake." He toots his trumpet and a bunch of rats start searching around town.`,
     weekHappened: 4,
     villagerPrompts: [
       {
         villagerId: "v4",
         week: 4,
-        text: "TODO",
+        text: "Do any of these beast-kins personally know this wolf?",
       },
     ],
     tags: [
@@ -207,7 +209,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `TODO`,
+    note: `You go to the church of The Holy Mother and ask, a sister replies, "Well we used to have an exorcist... buuuuuut... he's a little-" Just then Buster Zedmore grabs you buy the shirtfront, "The Mass! The pulsing purple! It is born of the blood of blue lightning! We must to the hollow tree!" He smacks you a few times, smacks himself a few times, then runs off. The sister tips her head in his direction apologetically.`,
     weekHappened: 4,
     villagerPrompts: [
       {
@@ -224,7 +226,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `TODO`,
+    note: `You ask the town guard who is most excited to help with the wall. "Well Clockwork Chisel is setting up a post on the top of the wall to the north. The beasts are coming from thatways. I worry that they might be taking this a bit lightly though. Lotsa talk about how this is no problem. Where were they when the monsters came the first time." He looks forlonly out over the mass of writhing monsters, "Too bad that Norman fella isn't helping out this week."`,
     weekHappened: 4,
     villagerPrompts: [
       {
@@ -232,16 +234,25 @@ export const rawResearch: IResearch[] = [
         week: 4,
         text: "Which clan has the best resources and willingness to shore up the defenses of the town?",
       },
+      {
+        villagerId: "v6",
+        week: 4,
+        text: "Would a snake in the dike do?",
+      },
     ],
     tags: [
       {
         entityType: EntityTypes.Villager,
         entityId: "v5",
       },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v6",
+      },
     ],
   },
   {
-    note: `TODO`,
+    note: `Axel actually makes a stop into the watch shop. You notice him grabbing a bunch of supplies. You see that he's grabbing a bunch of low grade gears and try to talk to him about it. He cuts you off, "Oy! Gearboy, I'm not talking to you. Let the real artisans do the talking."`,
     weekHappened: 4,
     villagerPrompts: [
       {
@@ -258,7 +269,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `TODO`,
+    note: `The sentiment around town is that the three most dangerous and important quests this week are to: Get Reinforcements from Valeon, Curing the Plague, and Securing an Escape Route. If any of those is successful they will be huge. Though a lot of things have to go right for the escape route to work. It's not just Blessed Sword that will need to succeed.`,
     weekHappened: 4,
     villagerPrompts: [
       {
@@ -275,7 +286,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `TODO`,
+    note: `Everybody is talking about the mysterious newcomer Guy Norman. Also, because of the disease many people are banking on healers.`,
     weekHappened: 4,
     villagerPrompts: [
       {
@@ -292,30 +303,13 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `TODO`,
-    weekHappened: 4,
-    villagerPrompts: [
-      {
-        villagerId: "v6",
-        week: 4,
-        text: "Would a snake in the dike do?",
-      },
-    ],
-    tags: [
-      {
-        entityType: EntityTypes.Villager,
-        entityId: "v6",
-      },
-    ],
-  },
-  {
-    note: `TODO`,
+    note: `You're feeling under the weather. You hope you don't have the sickness everyone is talking about. You're staying in today in hopes you recouperate, out of your window you see Clara and Sir Robin. Clara is exasperated, "You took the easiest quest?! Robin, sir. How will we prove to my mother you're not the boob she thinks you are?--- Fine. If we're going to do it. Let's do it right. There has to be more going on with the cemetery than just robbers. It looks really strange over there."`,
     weekHappened: 4,
     villagerPrompts: [
       {
         villagerId: "v7",
         week: 4,
-        text: "TODO",
+        text: "EMPTY",
       },
     ],
     tags: [
@@ -326,13 +320,13 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `TODO`,
+    note: `You do feel better the next day. Seems like it was just fatigue and nerves. You are on a supply run and you see Axel Gearlywhirl leaving the watch shop. Gartok comes out and mumbles, "That guy just left with a bunch of defective gears." You both watch as he rushes away.`,
     weekHappened: 4,
     villagerPrompts: [
       {
         villagerId: "v7",
         week: 4,
-        text: "TODO",
+        text: "EMPTY",
       },
     ],
     tags: [
@@ -342,23 +336,8 @@ export const rawResearch: IResearch[] = [
       },
     ],
   },
-  {
-    note: `TODO`,
-    weekHappened: 4,
-    villagerPrompts: [
-      {
-        villagerId: "v7",
-        week: 4,
-        text: "TODO",
-      },
-    ],
-    tags: [
-      {
-        entityType: EntityTypes.Villager,
-        entityId: "v7",
-      },
-    ],
-  },
+
+  /// Week 3
 
   {
     note: `While getting treated for a strange rash at the church infirmary, you mention Vince offhandedly. One of the sisters perks up at the name and says, "Vince Dawn? He was in here the other day talking to Brother Chilpin. Apparently Mythril Trap wanted a healer to be on standby incase something went wrong with a big quest."`,
