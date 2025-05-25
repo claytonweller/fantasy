@@ -35,7 +35,8 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q5-1",
         startWeek: 5,
-        notes: `This was Sir Robin's last chance. Clara made that clear. He had to prove himself. He would march right back to that graveyard and re-kill those undead. He snuck in over the side wall, he tip toed around the larger groups, he found a place where it looked like he could easily retreat if need be. He found a solitary skeleton, raised his sword, closed his eyes, and swung as hard as he could. There was a sonorous BONG, he had missed and instead struck large metal bell. All of the undead in the area stopped moving... then immediately rushed him. His escape path was blocked. He swung his sword wildly as he ran for the only gap. Then right in front of him Buster Zeddmore appeared. He was only wearing a loin cloth, a sigil of the holy mother, and a huge backpack. The exorcist gnome was throwing vials of holy water, casting holy flame scrolls, bashing skeletons with a silver hammer, and screaming, "THE HOLY MOTHER'S LOVE BE WITH YOU! AND YOU! AND ESPECIALLY YOU!" Robin followed him for the remainder of the night.`,
+        notes: `This was Sir Robin's last chance. Clara made that clear. He had to prove himself. He would march right back to that graveyard and re-kill those undead. He snuck in over the side wall, he tip toed around the larger groups, he found a place where it looked like he could easily retreat if need be. He found a solitary skeleton, raised his sword, closed his eyes, and swung as hard as he could. There was a sonorous BONG. He had missed and instead struck large metal bell. All of the undead in the area stopped moving... then immediately rushed him. 
+        His escape path was blocked. He swung his sword wildly as he ran for the only gap. Then right in front of him Buster Zeddmore appeared. He was only wearing a loin cloth, a sigil of the holy mother, and a huge backpack. The exorcist gnome was throwing vials of holy water, casting holy flame scrolls, bashing skeletons with a silver hammer, and screaming, "THE HOLY MOTHER'S LOVE BE WITH YOU! AND YOU! AND ESPECIALLY YOU!" Robin followed him for the remainder of the night.`,
         status: QuestStatus.Claimed,
         clanId: "c1",
         metrics: [
@@ -49,7 +50,10 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p2-q5-1",
         startWeek: 5,
-        notes: `Sister Lasiter asked her brother Louis for help when she realized the only one who had signed up to deal with the undead was Sir Robin. He agreed and got the Duffenklampf twins to back him up. Juniper, now best friends with the twins, also tagged along. Friendship aside, a white mage is a must against undead. Right as they arrived at the barricade, there was a hug resonant BONG from from inside of the graveyard. Moments later a wall undead crashed through the makeshift barrier. Louis and the twins went to work. The second the first ghoul fell apart Juniper immediately vomited in disgust... but she kept casting holy spells and healing her three compatriots... but also kep vomiting. The did their best to keep the threat contained, but the wave was too much, eventually they were struggling to stay alive, let alone stop the tide. All looked like it was lost. Until all at once the corpses and skeletons all collapsed. Jachectapolk had been slain, and their motive force was removed. In the distance they saw Sir Robin standing on top a mountain of decaying bodies carrying a mostly naked Gnome on his back.`,
+        notes: `Sister Lasiter asked her brother Louis for help when she realized the only one who had signed up to deal with the undead was Sir Robin. He agreed and got the Duffenklampf twins to back him up. Juniper, now best friends with the twins, also tagged along. Friendship aside, a white mage is a must against undead. 
+        Right as they arrived at the barricade, there was a hug resonant BONG from from inside of the graveyard. Moments later a wall undead crashed through the makeshift barrier. Louis and the twins went to work. The second the first ghoul fell apart Juniper immediately vomited in disgust... but she kept casting holy spells and healing her three compatriots... but also kep vomiting. 
+        They did their best to keep the threat contained, but the wave was too much, eventually they were struggling to stay alive, let alone stop the tide. All looked like it was lost. Until all at once the corpses and skeletons all collapsed. Jachectapolk had been slain, and their motive force was removed. 
+        In the distance they saw Sir Robin standing on top a mountain of decaying bodies carrying a mostly naked Gnome on his back.`,
         status: QuestStatus.Claimed,
         clanId: "c6",
         metrics: [
@@ -77,7 +81,15 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q5-2",
         startWeek: 5,
-        notes: `Jachectapolk, the god of joining, burst forth from beneath the noble estate pulling any who were close enough to it into its pulsing purple mass. Blessed Sword led the charge. Arc immediately started doing massive swings, but every time he chopped off one of its "appendages" it would form into a smaller monster and start acting on its own. Drea and Sheila quickly dispatched those, but then the main body would pull the dead parts back into itself and reanimate them. They were slowing its advance to the city center, but not completely stopping it. The civilians fled as it moved into the city proper  but not all could make it away in time. Those screaming souls were captured, ripped into their constituent pieces, and subsumed into the amalgam. TODO - Circle destroyed `,
+        notes: `Jachectapolk, the god of joining, burst forth from beneath the noble estate pulling any who were close enough to it into its pulsing purple mass. Blessed Sword led the charge. Arc immediately started doing massive swings, but every time he chopped off one of its "appendages" it would form into a smaller monster and start acting on its own. Drea and Sheila quickly dispatched those, but then the main body would pull the dead parts back into itself and reanimate them. They were slowing its advance to the city center, but not completely stopping it. The civilians fled as it moved into the city proper but not all could make it away in time. Those screaming souls were captured, ripped into their constituent pieces, and subsumed into the amalgam. 
+          TODO - Circle destroyed 
+          TODO - Grove Fixed
+          TODO - Monsters Join
+          TODO - Undead Join
+          TODO - Reinforcements Arrive
+          TODO - Vlort?
+          TODO - Jachectapolk Defeated
+        `,
         status: QuestStatus.Claimed,
         clanId: "c4",
         metrics: [
@@ -175,7 +187,15 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q5-4",
         startWeek: 5,
-        notes: `Guy Norman took charge of The Mill. Vlort certainly wasn't going to do it. Squeakela and Derb recounted their trip into the sewer and how they found the Cultists and released Mamut (the blue wolf). Guy had them lead the way to the ritual chamber and when the party arrived, the still glowing summoning circle was protected by a large group of cultists. Under guys leadership they subdued them with no casualties to their party. Carlsbad then attempted to touch the circle and was blown back. A pause, then Guy tried the same thing with the same result. A longer pause. Everyone looked at each other. Fleeting Whisp Landorin rolled his eyes and groaned, before stepping forward, "Fine. Fine... FINE! Ok, you spend a couple hundred years as a mage. You say, 'That's enough, time to pursue your dream'. But then they bring you b---", he continued to grumble while walking around the perimeter of the circle. He sat. He closed his eyes. He chanted at a breakneck speed for 15 seconds, his hair floating as magic coursed through the room. The entire chamber began to shake, and the circle started shooting off sparks. Then Landorin opened his eyes and pushed his hands forward. The circle shone blindingly white, then disappeared, leaving the room in complete darkness. Another long pause. Landorin, "Ok I'll do the light too then." The light orb spell revealed a gobsmacked group of adventurers.`,
+        notes: `Guy Norman took charge of The Mill. Vlort certainly wasn't going to do it. Squeakela and Derb recounted their trip into the sewer and how they found the Cultists and released Mamut (the blue wolf). Guy had them lead the way to the ritual chamber and when the party arrived, the still glowing summoning circle was protected by a large group of cultists. Under Guy's leadership they subdued them with no casualties to their party. 
+        Carlsbad then attempted to touch the circle and was blown back. 
+        A pause. 
+        Guy tried the same thing with the same result. 
+        A longer pause. 
+        Everyone looked at each other. 
+        Fleeting Whisp Landorin rolled his eyes and groaned, before stepping forward, "Fine. Fine... FINE! Ok, you spend a couple hundred years as a mage. You say, 'That's enough, time to pursue your dream'. But then they bring you b---", he continued to grumble while walking around the perimeter of the circle. He sat. He closed his eyes. He chanted at a breakneck speed for 15 seconds, his hair floating as magic coursed through the room. The entire chamber began to shake, and the circle started shooting off sparks. Then Landorin opened his eyes and pushed his hands forward. The circle shone blindingly white, then disappeared, leaving the room in complete darkness. 
+        Another long pause. 
+        Landorin groaned, "Ok I'll do the light too then." The light orb spell revealed a gobsmacked group of adventurers.`,
         status: QuestStatus.Claimed,
         clanId: "c1",
         metrics: [
@@ -189,7 +209,12 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p2-q5-4",
         startWeek: 5,
-        notes: `Clara lit the funeral pyre for her mother, Mara, behind the Exploding Fist dojo.  Barkskin put his hand on her shoulder, "This isn't how we wanted you back pipsqueak. But we're glad you're here." She hugged him, then everyone came in for a group hug. Suddenly Fissure flew into the dojo. After her own set of tears and reunions she let them know that she had been attacked by Elise Shadowthread and that she and Night Cowl were attempting to escape the city with Cliff Vanderbliff and some other noble cultists. Clara wiped the snot off her nose, "Time to bash some skulls." Everyone cheered, and they rushed after Cliff Vanderbliff. They had to fight through some chimeras, but eventually they caught up with the fleeing count and his entourage. ---Continued in 'A Nobel Retreat' ---`,
+        notes: `Clara lit the funeral pyre for her mother, Mara, behind the Exploding Fist dojo.  Barkskin put his hand on her shoulder, "This isn't how we wanted you back pipsqueak. But we're glad you're here." 
+        She hugged him, then everyone came in for a group hug. 
+        Suddenly Fissure flew into the dojo. After her own set of tears and reunions she let them know that she had been attacked by Elise Shadowthread and that she and Night Cowl were attempting to escape the city with Cliff Vanderbliff and some other noble cultists. Clara wiped the snot off her nose, "Time to bash some skulls." 
+        Everyone cheered, and they rushed after Cliff Vanderbliff. 
+        They had to fight through some chimeras, but eventually they caught up with the fleeing count and his entourage. 
+        ---Continued in 'A Nobel Retreat' ---`,
         status: QuestStatus.Claimed,
         clanId: "c9",
         metrics: [
@@ -217,7 +242,10 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q5-5",
         startWeek: 5,
-        notes: `Tall Pine swallowed his pride and asked Vince for help. They didn't have to like each other or agree on beasts rights, but they could work together to save Morton. Icenose used his keen nose to track down the wolf... and it was just hiding behind an abandoned house. When it saw them it ran over with its tail waiving. Philagula was inside! He couldn't control Mamut but he could translate for him. They set off out of the north gate, villagers ran in horror despite the parties insistence that they were safe. With the aid of Mamut they made quick progress to the Northern Forest and into the sacred grove. Just as they were about to heal the All-tree... --- Continued Below w/ Marcus Below ---`,
+        notes: `Tall Pine swallowed his pride and asked Vince for help. They didn't have to like each other or agree on beasts rights, but they could work together to save Morton. Icenose used his keen nose to track down the wolf... and it was just hiding behind an abandoned house. When it saw them it ran over with its tail wagging. 
+        Philagula was inside! Phil couldn't control Mamut but they could translate for the wolf. 
+        The party set off out of the north gate, villagers ran in horror despite the parties insistence that they were safe. With the aid of Mamut they made quick progress to the Northern Forest and into the sacred grove. Just as they were about to heal the All-tree... 
+        --- Continued w/ Marcus Below ---`,
         status: QuestStatus.Claimed,
         clanId: "c3",
         metrics: [
@@ -231,7 +259,10 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p2-q5-5",
         startWeek: 5,
-        notes: `Marcus McStain knew what was at stake. Everything that had been taken from him: his title, his fortune, his estate, his pride. If he could keep Count Vanderbliff safe he could have it again, and more. He focused ever mote of mana left in his body opened the portal. There was only one place he could go. He hadn't retrieved the trap yet, and he wasn't powerful enough to set a waypoint with magic alone. It would have to do. He pulled the count in along with a few Cultists (he wouldn't be able to get  through the forest to Valeon alone after using all of his mana). They floated in the lightless void. His liminal space. It was full a floating liquid. Must be blood. He hadn't emptied it yet. He shouted, "Ok this is gonna be rough." A tear in the void cracked open below them, gravity returned and they all fell out. Marcus landed on top of a less lucky cultist, then got hit in the head with the lower torso of his victim (that hydrophile dwarf he offed last week). As he recovered for the shock, he watched the cultists get absolutely obliterated by some adventurers, and Count Vanderbliff was chomped by that giant blue wolf. Then the elf noticed him. Marcus tried to run but was impaled by what felt like a hundred tiny spears. Shit. This was plant guy. Marcus would no longer be a blemish on the McStain family name, just a blood stained core of a magic sapling.`,
+        notes: `Marcus McStain knew what was at stake. Everything that had been taken from him: his title, his fortune, his estate, his pride. If he could keep Count Vanderbliff safe he could have it again, and more. He focused ever mote of mana left in his body opened the portal. There was only one place he could go. He hadn't retrieved the trap yet, and he wasn't powerful enough to set a waypoint with magic alone. It would have to do. He pulled the count in along with a few cultists (he wouldn't be able to get through the forest to Valeon alone after using all of his mana). 
+        They floated in the lightless void. His liminal space. It was full a floating liquid. Must be blood. He hadn't emptied it yet. He shouted, "Ok this is gonna be rough." A tear in the void cracked open below them, gravity returned and they all fell out. 
+        Marcus landed on top of a less lucky cultist, then got hit in the head with the lower torso of his victim (that hydrophile dwarf he offed last week). As he recovered for the shock, he watched the cultists get absolutely obliterated by some adventurers. Then Count Vanderbliff was chomped, swung back and forth, and swallowed whole by that damn wolf. 
+        Then the elf noticed him. Marcus tried to run but was impaled by what felt like a hundred tiny spears. Shit. This was plant guy. Marcus would no longer be a blemish on the McStain family name, just a blood stained core of a magic sapling.`,
         status: QuestStatus.Claimed,
         clanId: "c2",
         metrics: [
@@ -259,7 +290,15 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q5-6",
         startWeek: 5,
-        notes: `Count Clifford Vanderbliff was not prepared for the magnitude of the joined-one's arrival. Nor was he satisfied with it's unwillingness to be controlled. Obviously this was everyone elses fault, this was not what he was owed. So, he would take his leave of this backwater hamlet. Night Cowl had been a useful tool for him, they were easily swayed by money, and that he had in abundance. Yes, they would ferry him back to Valeon, where he would regroup, make preparations, and properly return for Jachectapolk. Then the world would be finally be his. He made it out of the city undetected (Fixer and Sk'tar at work). He fought off the children of great rearranger (Marcus, Elise, and Tjorn), and just when they were nearly away he was accosted by a rabble of peasants (Exploding Fist). It hardly seemed worth his notice, but for some reason his escorts were not up to the task and were summarily bested by these ruffians. One by one his guards were knocked unconscious. Before it got any worse he grabbed the only person of peerage amongst his employ, some lesser noble mage (Marcus), "You! You wish to be an earl, yes? Of course you do. Well, magic us away from here and it is done." The dullard began to respond, "Right now, the only place I can go is--" Cliff smacked him, "Do it fool!" Marcus immediately opened a void portal and said, "Can't be worse than here I guess." --- Continued in 'Homeward Bound' ---`,
+        notes: `Count Clifford Vanderbliff was not prepared for the magnitude of the joined-one's arrival. Nor was he satisfied with it's unwillingness to be controlled. Obviously this was everyone elses fault, this was not what he was owed. So, he would take his leave of this backwater hamlet. Night Cowl had been a useful tool for him, they were easily swayed by money, and that he had in abundance. Yes, they would ferry him back to Valeon, where he would regroup, make preparations, and properly return for Jachectapolk. Then the world would be finally be his. 
+        He made it out of the city undetected (Fixer and Sk'tar at work). 
+        He fought off the children of great rearranger (Marcus, Elise, and Tjorn). 
+        And just when they were nearly away he was accosted by a rabble of peasants (Exploding Fist). It hardly seemed worth his notice, but for some reason his escorts were not up to the task and were summarily bested by these ruffians. One by one his guards were knocked unconscious. 
+        Before it got any worse he grabbed the only person of peerage amongst his employ, some lesser noble mage (Marcus), "You! You wish to be an earl, yes? Of course you do. Well, magic us away from here and it is done." 
+        The dullard began to respond, "Right now, the only place I can go is--" 
+        Cliff smacked him, "Do it fool!" 
+        Marcus immediately opened a void portal and said, "Can't be worse than here I guess." 
+        --- Continued in 'Homeward Bound' ---`,
         status: QuestStatus.Claimed,
         clanId: "c2",
         metrics: [

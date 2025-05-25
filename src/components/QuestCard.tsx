@@ -10,6 +10,7 @@ import { sortByRank } from "../utils/sortByRank";
 import Card from "./Card";
 import MetricGrid from "./MetricGrid";
 import { setVisibilityFromFilterState } from "utils/setVisibilityFromFilterState";
+import { Notes } from "./Notes";
 
 export default function QuestCard(props: {
   quest: IQuest;
@@ -129,7 +130,7 @@ function createPartyComponents(params: {
       metrics: p.metrics.map((m) => ({ ...m, questPartyId: "Placeholder" })),
     };
     const metaMetrics = [partyMetrics, ...adventurerMetrics];
-    const notes = p.notes ? <div>Notes: {p.notes}</div> : "";
+    
     return (
       <div
         key={"Party" + i}
@@ -142,9 +143,11 @@ function createPartyComponents(params: {
       >
         <div>
           <div>
-            <b>Status: {p.status}</b>
+            <b>Status: </b> {p.status}
           </div>
-          <div style={{ padding: "10px" }}>{notes}</div>
+          <div style={{ padding: "10px", textAlign:'left' }}>
+              <b>Notes: </b> <Notes noteString={p.notes}/>
+          </div>
           <MetricGrid
             metaMetrics={metaMetrics}
             makeSearchable={makeSearchable}
