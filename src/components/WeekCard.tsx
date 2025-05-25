@@ -136,7 +136,7 @@ function calculateBestRoster(
     <div>
       <h3 style={{ paddingTop: 20 }}>Best Possible Roster</h3>
       <div>
-        <b>Total</b> - {total}
+        <b>Total</b> - {roundToHundredths(total)}
       </div>
       {bestRosterRows}
     </div>
