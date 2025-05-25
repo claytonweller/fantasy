@@ -328,7 +328,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q4-1",
         startWeek: 4,
-        notes: `Sir Robin bravely took the only E rank quest available. They went to the graveyard. Everything seemed normal... until corpses started emerging from the ground. Sir Robing made a tactical retreat while Clara bashed some skeletons and ghouls. Oddly, the corpses were sticking together with a purple ooze which abosrbed all the dismembered pieces of the downed undead. Luckily the cemetery has a fairly high wall, and Clara had the foresight to bar the gate. So the problem is contained... for now.`,
+        notes: `Sir Robin bravely took the only E rank quest available. They went to the graveyard. Everything seemed normal... until corpses started emerging from the ground. Sir Robin made a tactical retreat while Clara bashed some skeletons and ghouls. Oddly, the corpses were sticking together with a purple ooze which abosrbed all the dismembered pieces of the downed undead. Luckily the cemetery has a fairly high wall, and Clara had the foresight to bar the gate. So the problem is contained... for now.`,
         status: QuestStatus.Success,
         clanId: "c1",
         metrics: [
@@ -445,7 +445,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         metrics: [
           {
             metricRuleId: MetricRuleId.RewardGold,
-            value: 30,
+            value: 15,
             week: 4,
           },
         ],
@@ -592,7 +592,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p4-q4-7",
         startWeek: 4,
-        notes: `The break in the wall was just up the way from the Church, where all of those afflicted with the sickness were being held, including Mara Wright. Who hearing the screams immediately sprung into action. She fought bravely, but the monsters and the sickness were too much for her to tackle alone. She died in the jaws of a ferrous komododon. Just as the light was fading from her eyes, Clara returned from the cemetery, she yelled, "Mom! No!" She ripped the giant lizard's lower jaw off, hoisted the beast over her head, and then suplexed it so hard only it's hind legs were visible in the blood crater. Only Clara heard what her mother said before Mara passed away moments later.`,
+        notes: `The break in the wall was just up the way from the Church, where all of those afflicted with the sickness were being held, including Mara Wright. Who hearing the screams immediately sprung into action. She fought bravely, but the monsters and the sickness were too much for her to tackle alone. She died in the jaws of a ferrous komododon. Just as the light was fading from her eyes, Clara returned from the cemetery, she yelled, "Mom! No!" She ripped the giant lizard's lower jaw off, hoisted the beast over her head, and then suplexed it so hard only it's hind legs were visible in the blood crater. Only Clara heard what her mother said before Mara passed away moments later. Norn rushed out fot the curch and quietly patched Clara up.`,
         clanId: "c9",
         status: QuestStatus.Success,
         metrics: [

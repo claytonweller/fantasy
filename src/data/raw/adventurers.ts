@@ -165,6 +165,12 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
             rank: Ranks.C,
             week: 4,
           },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            value: 10,
+            rank: Ranks.D,
+            week: 4,
+          },
         ],
       },
       {
@@ -347,7 +353,20 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
       },
       {
         partyId: "p1-q4-6",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            value: 1,
+            week: 4,
+            rank: Ranks.C,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            value: 4,
+            week: 4,
+            rank: Ranks.D,
+          },
+        ],
       },
       {
         partyId: "p1-q2-2",
@@ -756,7 +775,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
         metrics: [
           {
             metricRuleId: MetricRuleId.AllyHealed,
-            value: 4,
+            value: 3,
             rank: Ranks.C,
             week: 4,
           },
@@ -1638,7 +1657,6 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
             value: 1,
             week: 4,
           },
-          
         ],
       },
       {
@@ -2619,11 +2637,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
       },
       {
         partyId: "p1-q4-2",
-        metrics: [          {
-          metricRuleId: MetricRuleId.TrapDisarmed,
-          value: 2,
-          week: 4,
-        },],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.TrapDisarmed,
+            value: 2,
+            week: 4,
+          },
+        ],
       },
       {
         partyId: "p1-q2-6.3",
@@ -2971,6 +2991,17 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
         metrics: [],
       },
       {
+        partyId: "p4-q4-7",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            value: 1,
+            rank: Ranks.E,
+            week: 2,
+          },
+        ],
+      },
+      {
         partyId: "p3-q2-3",
         metrics: [
           {
@@ -3029,7 +3060,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
           {
             metricRuleId: MetricRuleId.AllyHealed,
             rank: Ranks.C,
-            value: 2,
+            value: 1,
             week: 4,
           },
         ],

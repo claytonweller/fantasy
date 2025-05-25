@@ -130,7 +130,7 @@ function createPartyComponents(params: {
       metrics: p.metrics.map((m) => ({ ...m, questPartyId: "Placeholder" })),
     };
     const metaMetrics = [partyMetrics, ...adventurerMetrics];
-    
+
     return (
       <div
         key={"Party" + i}
@@ -145,8 +145,8 @@ function createPartyComponents(params: {
           <div>
             <b>Status: </b> {p.status}
           </div>
-          <div style={{ padding: "10px", textAlign:'left' }}>
-              <b>Notes: </b> <Notes noteString={p.notes}/>
+          <div style={{ padding: "10px", textAlign: "left" }}>
+            <b>Notes: </b> <Notes noteString={p.notes} />
           </div>
           <MetricGrid
             metaMetrics={metaMetrics}
