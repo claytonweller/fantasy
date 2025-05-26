@@ -37,14 +37,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         startWeek: 5,
         notes: `This was Sir Robin's last chance. Clara made that clear. He had to prove himself. He would march right back to that graveyard and re-kill those undead. He snuck in over the side wall, he tip toed around the larger groups, he found a place where it looked like he could easily retreat if need be. He found a solitary skeleton, raised his sword, closed his eyes, and swung as hard as he could. There was a sonorous BONG. He had missed and instead struck large metal bell. All of the undead in the area stopped moving... then immediately rushed him. 
         His escape path was blocked. He swung his sword wildly as he ran for the only gap. Then right in front of him Buster Zeddmore appeared. He was only wearing a loin cloth, a sigil of the holy mother, and a huge backpack. The exorcist gnome was throwing vials of holy water, casting holy flame scrolls, bashing skeletons with a silver hammer, and screaming, "THE HOLY MOTHER'S LOVE BE WITH YOU! AND YOU! AND ESPECIALLY YOU!" Robin followed him for the remainder of the night.`,
-        status: QuestStatus.Claimed,
+        status: QuestStatus.Success,
         clanId: "c1",
         metrics: [
-          // {
-          //   metricRuleId: MetricRuleId.RewardGold,
-          //   value: 10,
-          //   week: 5,
-          // },
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 5,
+            week: 5,
+          },
         ],
       },
       {
@@ -54,14 +54,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         Right as they arrived at the barricade, there was a hug resonant BONG from from inside of the graveyard. Moments later a wall undead crashed through the makeshift barrier. Louis and the twins went to work. The second the first ghoul fell apart Juniper immediately vomited in disgust... but she kept casting holy spells and healing her three compatriots... but also kep vomiting. 
         They did their best to keep the threat contained, but the wave was too much, eventually they were struggling to stay alive, let alone stop the tide. All looked like it was lost. Until all at once the corpses and skeletons all collapsed. Jachectapolk had been slain, and their motive force was removed. 
         In the distance they saw Sir Robin standing on top a mountain of decaying bodies carrying a mostly naked Gnome on his back.`,
-        status: QuestStatus.Claimed,
+        status: QuestStatus.Success,
         clanId: "c6",
         metrics: [
-          // {
-          //   metricRuleId: MetricRuleId.RewardGold,
-          //   value: 10,
-          //   week: 5,
-          // },
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 5,
+            week: 5,
+          },
         ],
       },
     ],
@@ -81,21 +81,39 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p1-q5-2",
         startWeek: 5,
-        notes: `Jachectapolk, the god of joining, burst forth from beneath the noble estate pulling any who were close enough to it into its pulsing purple mass. Blessed Sword led the charge. Arc immediately started doing massive swings, but every time he chopped off one of its "appendages" it would form into a smaller monster and start acting on its own. Drea and Sheila quickly dispatched those, but then the main body would pull the dead parts back into itself and reanimate them. They were slowing its advance to the city center, but not completely stopping it. The civilians fled as it moved into the city proper but not all could make it away in time. Those screaming souls were captured, ripped into their constituent pieces, and subsumed into the amalgam. 
-          TODO - Circle destroyed 
-          TODO - Grove Fixed
-          TODO - Monsters Join
-          TODO - Undead Join
-          TODO - Reinforcements Arrive
-          TODO - Vlort?
-          TODO - Jachectapolk Defeated
-        `,
-        status: QuestStatus.Claimed,
+        notes: `Jachectapolk, the god of joining, burst forth from beneath the noble estate pulling any who were close enough to it into its pulsing purple mass. Blessed Sword led the charge. Arc immediately started doing massive swings, but every time he chopped off one of the monstrosity's "appendages" it would form into a smaller monster and start acting on its own. Drea and Sheila quickly dispatched those, but then the main body would pull the dead parts back into itself and reanimate them. They were slowing its advance to the city center, but not completely stopping it. The civilians fled as it moved into the city proper but not all could make it away in time. Those screaming souls were captured, ripped into their constituent pieces, and subsumed into the amalgam. 
+        The process was mostly a stalemate until the monsters that burst through the wall streamed into Jachectapolk. It quickly distributed their parts into it body and over whelmed Blessed Sword, who began quickly loosing ground and control of the situation. Vlort showed up, he gave a knowing look to Arc, who snapped, "I've got this. You stay out of it." Vlort shrugged and continued watching impassively. 
+        Then the undead from the cemetery also reached the main body of the mad god. It was now easily double the size of the largest building in the city. It could be seen glorping along from pretty much anywhere within the wall. Vlort again approached the party. Arc shouted, "This one's mine. If you step in--" a building fell on him. He blasted his way out angrily. "I'm fine!" Another shrug from Vlort.
+        Nearly half the entire population of the city was cowering on a hill near the northern gate, where was a natural built abutting the wall. It was the most defensible position within the walls. Jachectapolk was sludging closer, and closer. Blessed sword was putting up a last valiant stand. Dash Light Drea and Arc were both grabbed by fleshy tendrils, and were about the be pulled into the mass. Out of the sky a giant-magic arrow blasted through both the grasping appendages and freed the trapped adventurers.
+        On the wall above the gate stood three women. Sleek Wind Shay, Vivian Crestmor, and Stoneclaw Bengalkin. The beastkin jabbed, "Hey sword boy! You miss us?!"
+        Arc grumbled. 
+        Vivian shouted, "We brought reinforcements! I'm opening the gate!"
+        Sheila's and Drea's eyes went wide. They looked at each other, and then back at the gate in horror, "Noooo-!" But it was too late.
+        The reinforcements regiment rushed in. Jachectapolk quickly absorbed the vanguard. The knights behind them saw the horror unfolding, but the momentum of the warriors behind them kept them from retreating. They also got consumed, their parts repurposed into the horrible whole. The remaining half scrambled away in terror, re-closed the gate, and cowered on the other side.
+        Arc hollered up to the prodigal heroines, "Thanks for the help!"
+        Jachectapolk, substantially larger, continued it's inexorable, glurpy advance. This was it. Everyone braced. Maybe it wouldn't be so bad? Those sounds coming from the emanating of mouths couldn't actually be screams of agony right?
+        Suddenly the malformation stopped writhing and went silent. Across town, in the Noble district a blinding column of light shot straight up into the clouds. Jachectapolk's giant girth quivered. Then a moment later from the norther forest an echoing howl followed by a thunder strike. The mad god screeched from its thousand mouths.
+        Arc wasted no time and did an exploratory slash. It didn't immediately heal. He raised his sword, "Everything you've got! NOW!"
+        All the adventurers present poured it all in for a final attack.
+        On that day, the town of Morton killed a god. But only jerks liked that god anyway.`,
+        status: QuestStatus.Success,
         clanId: "c4",
         metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 3000,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.S,
+            value: 1,
+            week: 5,
+          },
+          // TODO figure out Saves and deaths
           // {
-          //   metricRuleId: MetricRuleId.RewardGold,
-          //   value: 10,
+          //   metricRuleId: MetricRuleId.CivilianSaved,
+          //   value: 100,
           //   week: 5,
           // },
         ],
@@ -118,56 +136,62 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p1-q5-3",
         startWeek: 5,
         notes: `What with all of the Jachectapolk stuff going on it was impractical to prepare a proper meal. That made The Chairman hangry: you wouldn't like him when he's Hangry. The rest of Crockpot could only follow him on his path of destruction. He destroyed a shed, a well, a monster with legs where its eyes should be and eyes where its ass should be, another shed, and then... a hole in the city wall, letting in a stream of chimera beasts. The barrage of monstrosities started rushing toward Jachectapolk.`,
-        status: QuestStatus.Claimed,
+        status: QuestStatus.Failed,
         clanId: "c7",
         metrics: [
-          // {
-          //   metricRuleId: MetricRuleId.RewardGold,
-          //   value: 10,
-          //   week: 5,
-          // },
+          {
+            metricRuleId: MetricRuleId.CiviliansDead,
+            value: 15,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.C,
+            value: 1,
+            week: 5,
+          },
         ],
       },
       {
         id: "p2-q5-3",
         startWeek: 5,
         notes: `Geoffrey found some female guards on the wall. Helped them stave off some chimeras. Then got a little too "friendly", was definitively rejected, and while he was throwing a fit about it not being fair he was pulled from the wall by a beast with a dog body and lizard legs covered in way too many eyes. Luckily, right before the beast landed the killing blow, Jachectapolk was slain and the chimera immediately fell apart in gooey corpse pile.`,
-        status: QuestStatus.Claimed,
+        status: QuestStatus.Success,
         clanId: "c6",
         metrics: [
-          // {
-          //   metricRuleId: MetricRuleId.RewardGold,
-          //   value: 10,
-          //   week: 5,
-          // },
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 10,
+            week: 5,
+          },
         ],
       },
       {
         id: "p3-q5-3",
         startWeek: 5,
-        notes: `Despite their battered bodies from their mechanical mishap on the wall, Thorin, Bjork and Kizz set out to the wall again to keep everyone safe. They did their best. They knew they were in over their heads. They might not be in a position to fight but they could reinforce the wall.`,
-        status: QuestStatus.Claimed,
+        notes: `Despite their battered bodies from their mechanical mishap on the wall, Thorin, Bjork and Kizz set out to the wall again to keep everyone safe. They did their best. They knew they were in over their heads. They might not be in a position to fight, but they could reinforce the wall.`,
+        status: QuestStatus.Success,
         clanId: "c5",
         metrics: [
-          // {
-          //   metricRuleId: MetricRuleId.RewardGold,
-          //   value: 10,
-          //   week: 5,
-          // },
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 100,
+            week: 5,
+          },
         ],
       },
       {
         id: "p4-q5-3",
         startWeek: 5,
         notes: `Norn and Chilpin ran a mobile healing operation. They saved a countless number of lives, but by the end of the ordeal they were actively hallucinating from sleep deprivation and mana depletion. Norn was seen putting sutures in a loaf of bread while Chilpin was doing chest compressions on a tailors dummy shouting, "Not another one! NOT ON MY WATCH!"`,
-        status: QuestStatus.Claimed,
+        status: QuestStatus.Success,
         clanId: "c8",
         metrics: [
-          // {
-          //   metricRuleId: MetricRuleId.RewardGold,
-          //   value: 10,
-          //   week: 5,
-          // },
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 100,
+            week: 5,
+          },
         ],
       },
     ],
@@ -196,14 +220,19 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         Fleeting Whisp Landorin rolled his eyes and groaned, before stepping forward, "Fine. Fine... FINE! Ok, you spend a couple hundred years as a mage. You say, 'That's enough, time to pursue your dream'. But then they bring you b---", he continued to grumble while walking around the perimeter of the circle. He sat. He closed his eyes. He chanted at a breakneck speed for 15 seconds, his hair floating as magic coursed through the room. The entire chamber began to shake, and the circle started shooting off sparks. Then Landorin opened his eyes and pushed his hands forward. The circle shone blindingly white, then disappeared, leaving the room in complete darkness. 
         Another long pause. 
         Landorin groaned, "Ok I'll do the light too then." The light orb spell revealed a gobsmacked group of adventurers.`,
-        status: QuestStatus.Claimed,
+        status: QuestStatus.Success,
         clanId: "c1",
         metrics: [
-          // {
-          //   metricRuleId: MetricRuleId.RewardGold,
-          //   value: 10,
-          //   week: 5,
-          // },
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 250,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 25,
+            week: 5,
+          }
         ],
       },
       {
@@ -215,14 +244,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         Everyone cheered, and they rushed after Cliff Vanderbliff. 
         They had to fight through some chimeras, but eventually they caught up with the fleeing count and his entourage. 
         ---Continued in 'A Nobel Retreat' ---`,
-        status: QuestStatus.Claimed,
+        status: QuestStatus.Success,
         clanId: "c9",
         metrics: [
-          // {
-          //   metricRuleId: MetricRuleId.RewardGold,
-          //   value: 10,
-          //   week: 5,
-          // },
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            value: 250,
+            week: 5,
+          },
         ],
       },
     ],
@@ -246,14 +275,14 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         Philagula was inside! Phil couldn't control Mamut but they could translate for the wolf. 
         The party set off out of the north gate, villagers ran in horror despite the parties insistence that they were safe. With the aid of Mamut they made quick progress to the Northern Forest and into the sacred grove. Just as they were about to heal the All-tree... 
         --- Continued w/ Marcus Below ---`,
-        status: QuestStatus.Claimed,
+        status: QuestStatus.Success,
         clanId: "c3",
         metrics: [
-          // {
-          //   metricRuleId: MetricRuleId.RewardGold,
-          //   value: 10,
-          //   week: 5,
-          // },
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 1,
+            week: 5,
+          },
         ],
       },
       {
@@ -263,14 +292,10 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         They floated in the lightless void. His liminal space. It was full a floating liquid. Must be blood. He hadn't emptied it yet. He shouted, "Ok this is gonna be rough." A tear in the void cracked open below them, gravity returned and they all fell out. 
         Marcus landed on top of a less lucky cultist, then got hit in the head with the lower torso of his victim (that hydrophile dwarf he offed last week). As he recovered for the shock, he watched the cultists get absolutely obliterated by some adventurers. Then Count Vanderbliff was chomped, swung back and forth, and swallowed whole by that damn wolf. 
         Then the elf noticed him. Marcus tried to run but was impaled by what felt like a hundred tiny spears. Shit. This was plant guy. Marcus would no longer be a blemish on the McStain family name, just a blood stained core of a magic sapling.`,
-        status: QuestStatus.Claimed,
+        status: QuestStatus.Failed,
         clanId: "c2",
         metrics: [
-          // {
-          //   metricRuleId: MetricRuleId.RewardGold,
-          //   value: 10,
-          //   week: 5,
-          // },
+
         ],
       },
     ],
@@ -292,21 +317,27 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         startWeek: 5,
         notes: `Count Clifford Vanderbliff was not prepared for the magnitude of the joined-one's arrival. Nor was he satisfied with it's unwillingness to be controlled. Obviously this was everyone elses fault, this was not what he was owed. So, he would take his leave of this backwater hamlet. Night Cowl had been a useful tool for him, they were easily swayed by money, and that he had in abundance. Yes, they would ferry him back to Valeon, where he would regroup, make preparations, and properly return for Jachectapolk. Then the world would be finally be his. 
         He made it out of the city undetected (Fixer and Sk'tar at work). 
-        He fought off the children of great rearranger (Marcus, Elise, and Tjorn). 
-        And just when they were nearly away he was accosted by a rabble of peasants (Exploding Fist). It hardly seemed worth his notice, but for some reason his escorts were not up to the task and were summarily bested by these ruffians. One by one his guards were knocked unconscious. 
+        He fought off the children of great rearranger (Marcus, Elise, and Tjorn actually did this). 
+        And just when they were nearly away, he was accosted by a rabble of peasants (Exploding Fist). It hardly seemed worth his notice, but for some reason his escorts were not up to the task and were summarily bested by these ruffians. One by one his guards were knocked unconscious. 
         Before it got any worse he grabbed the only person of peerage amongst his employ, some lesser noble mage (Marcus), "You! You wish to be an earl, yes? Of course you do. Well, magic us away from here and it is done." 
         The dullard began to respond, "Right now, the only place I can go is--" 
         Cliff smacked him, "Do it fool!" 
         Marcus immediately opened a void portal and said, "Can't be worse than here I guess." 
         --- Continued in 'Homeward Bound' ---`,
-        status: QuestStatus.Claimed,
+        status: QuestStatus.Failed,
         clanId: "c2",
         metrics: [
-          // {
-          //   metricRuleId: MetricRuleId.RewardGold,
-          //   value: 10,
-          //   week: 5,
-          // },
+          {
+            metricRuleId: MetricRuleId.TrapTriggered,
+            value: 1,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.QuestFailed,
+            rank: Ranks.A,
+            value: 1,
+            week: 5,
+          },
         ],
       },
     ],
@@ -749,7 +780,12 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
           {
             metricRuleId: MetricRuleId.EnemyDefeat,
             rank: Ranks.B,
-            value: 2,
+            value: 1,
+            week: 4,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSaved,
+            value: 10,
             week: 4,
           },
         ],
@@ -2075,7 +2111,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p6-q1-7",
         startWeek: 2,
-        status: QuestStatus.Claimed,
+        status: QuestStatus.Success,
         clanId: "c4",
         notes:
           "Drea was able to take down a caustipede before it could cary a swineherd to its larval brood.",
@@ -2090,7 +2126,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p7-q1-7",
         startWeek: 2,
-        status: QuestStatus.Claimed,
+        status: QuestStatus.Success,
         clanId: "c5",
         notes:
           "Bjork is the only member of Clockwork Chisel who isn't preparing for the festival. So she wen out and fought some long burrow munchers.",
@@ -2105,7 +2141,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p8-q1-7",
         startWeek: 2,
-        status: QuestStatus.Claimed,
+        status: QuestStatus.Success,
         clanId: "c9",
         notes: "Someone has to kill those slimes!",
         metrics: [

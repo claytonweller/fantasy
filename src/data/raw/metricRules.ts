@@ -52,6 +52,16 @@ export const rawMetricRules: IRawMetricRule[] = [
     multiplier: -1,
   },
   {
+    metricRuleId: MetricRuleId.CivilianSavedSolo,
+    questMetricType: QuestMetricType.Count,
+    multiplier: 0.5,
+  },
+  {
+    metricRuleId: MetricRuleId.CiviliansDeadSolo,
+    questMetricType: QuestMetricType.Count,
+    multiplier: -1,
+  },
+  {
     metricRuleId: MetricRuleId.RewardGold,
     questMetricType: QuestMetricType.GoldConvert,
     multiplier: 1,

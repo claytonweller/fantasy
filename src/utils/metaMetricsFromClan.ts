@@ -95,6 +95,10 @@ function calculateSingleWeekMetrics(params: {
                 totalGold += m.value;
               if (m.metricRuleId === MetricRuleId.CostsOrDamages)
                 totalGold -= m.value;
+              if (m.metricRuleId === MetricRuleId.CiviliansDeadSolo)
+                civiliansDead += m.value;
+              if (m.metricRuleId === MetricRuleId.CivilianSavedSolo)
+                civiliansSaved += m.value;
             });
           }
 

@@ -301,7 +301,7 @@ function calculateAdventurerFacts(props: {
         ...a,
         died,
         isActive,
-        points,
+        points: roundToHundredths(points),
       };
     },
   );
@@ -354,6 +354,7 @@ function calculateAdventurerFacts(props: {
 
   const average = roundToHundredths(totalPoints / adventurers.length);
   const averageActive = roundToHundredths(totalPoints / activeCount);
+  
   const display = (
     <div>
       <h3 style={{ paddingTop: 20 }}>Adventurer Facts</h3>

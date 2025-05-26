@@ -209,6 +209,10 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     clanId: "c2",
     statusHistory: [
       {
+        status: AdventurerStatuses.Dead,
+        startWeek: 6,
+      },
+      {
         status: AdventurerStatuses.ManaDepletion,
         startWeek: 4,
         endWeek: 4,
@@ -224,7 +228,13 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
       {
         lateAddition: true,
         partyId: "p2-q5-5",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.Death,
+            value: 1,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q5-6",
@@ -401,6 +411,28 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        lateAddition:true,
+        partyId: "p1-q5-2",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.CiviliansDeadSolo,
+            value: 10,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSavedSolo,
+            value: 15,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.B,
+            value: 4,
+            week: 5,
+          },
+        ],
+      },
+      {
         partyId: "p1-q4-3",
         metrics: [
           {
@@ -473,7 +505,20 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-5",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.B,
+            value: 2,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.C,
+            value: 2,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q3-1",
@@ -547,6 +592,34 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        lateAddition:true,
+        partyId: "p1-q5-2",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.CiviliansDeadSolo,
+            value: 10,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSavedSolo,
+            value: 15,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.B,
+            value: 1,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.C,
+            value: 5,
+            week: 5,
+          },
+        ],
+      },
+      {
         partyId: "p1-q4-3",
         metrics: [
           {
@@ -618,7 +691,20 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-5",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.D,
+            value: 12,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.C,
+            value: 3,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q3-1",
@@ -712,7 +798,25 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-3",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.C,
+            value: 2,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.D,
+            value: 3,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSavedSolo,
+            value: 2,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q4-10",
@@ -720,7 +824,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
           {
             metricRuleId: MetricRuleId.EnemyDefeat,
             rank: Ranks.D,
-            value: 5,
+            value: 2,
             week: 4,
           },
         ],
@@ -820,7 +924,41 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-2",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.B,
+            value: 2,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.C,
+            value: 7,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.B,
+            value: 1,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.CostsOrDamages,
+            value: 2000,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.CiviliansDeadSolo,
+            value: 15,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSavedSolo,
+            value: 30,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q4-9",
@@ -884,7 +1022,36 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-2",
-        metrics: [],
+        metrics: [          
+          {
+          metricRuleId: MetricRuleId.AllyHealed,
+          rank: Ranks.C,
+          value: 2,
+          week: 5,
+        },
+        {
+          metricRuleId: MetricRuleId.AllyHealed,
+          rank: Ranks.B,
+          value: 1,
+          week: 5,
+        },
+        {
+          metricRuleId: MetricRuleId.AllyHealed,
+          rank: Ranks.A,
+          value: 1,
+          week: 5,
+        },
+        {
+          metricRuleId: MetricRuleId.CiviliansDeadSolo,
+          value: 10,
+          week: 5,
+        },
+        {
+          metricRuleId: MetricRuleId.CivilianSavedSolo,
+          value: 20,
+          week: 5,
+        },
+      ],
       },
       {
         partyId: "p1-q4-9",
@@ -944,7 +1111,30 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-2",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            rank: Ranks.C,
+            value: 2,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            rank: Ranks.B,
+            value: 2,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.CiviliansDeadSolo,
+            value: 10,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSavedSolo,
+            value: 20,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q4-9",
@@ -1073,7 +1263,24 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-2",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.C,
+            value: 5,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.CiviliansDeadSolo,
+            value: 10,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSavedSolo,
+            value: 20,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q4-9",
@@ -1239,6 +1446,39 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     traits: [],
     questParties: [
       {
+        lateAddition:true,
+        partyId: "p1-q5-2",
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.TrapTriggered,
+            value: 1,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.CiviliansDeadSolo,
+            value: 10,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.CivilianSavedSolo,
+            value: 15,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            rank: Ranks.B,
+            value: 1,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            rank: Ranks.A,
+            value: 1,
+            week: 5,
+          },
+        ],
+      },
+      {
         partyId: "p1-q4-3",
         metrics: [
           {
@@ -1309,7 +1549,20 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-4",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.D,
+            value: 2,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.E,
+            value: 3,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q4-8",
@@ -1444,7 +1697,14 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p2-q5-4",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            rank: Ranks.D,
+            value: 7,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p3-q3-8",
@@ -1561,7 +1821,20 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p2-q5-1",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.D,
+            value: 5,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.E,
+            value: 25,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q4-7",
@@ -1634,7 +1907,26 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-5",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            rank: Ranks.B,
+            value: 2,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            rank: Ranks.E,
+            value: 2,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            rank: Ranks.C,
+            value: 2,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p2-q4-5",
@@ -1765,7 +2057,26 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-4",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.C,
+            value: 1,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.D,
+            value: 6,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.E,
+            value: 4,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p2-q4-8",
@@ -1943,7 +2254,26 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p2-q5-1",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.C,
+            value: 3,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            rank: Ranks.D,
+            value: 4,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            rank: Ranks.C,
+            value: 2,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q2-6.2",
@@ -2084,7 +2414,26 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-5",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.C,
+            value: 1,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.D,
+            value: 5,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            rank: Ranks.C,
+            value: 2,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q4-2",
@@ -2230,7 +2579,20 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p2-q5-4",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.B,
+            value: 1,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.C,
+            value: 5,
+            week: 5,
+          },
+        ],
       },
       {
         lateAddition: true,
@@ -2384,7 +2746,25 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-1",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.D,
+            value: 3,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.E,
+            value: 4,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.TrapTriggered,
+            value: 1,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q4-1",
@@ -2439,7 +2819,15 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-4",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.D,
+            value: 4,
+            week: 5,
+          },
+        ]
+        ,
       },
       {
         partyId: "p3-q4-8",
@@ -2518,7 +2906,19 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p2-q5-3",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.CivilianSavedSolo,
+            value: 2,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            value: 2,
+            week: 5,
+            rank: Ranks.C,
+          },
+        ],
       },
       {
         partyId: "p7-q3-8",
@@ -2633,7 +3033,25 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-5",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.TrapDisarmed,
+            value: 2,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.C,
+            value: 1,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.D,
+            value: 2,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q4-2",
@@ -2684,7 +3102,25 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-3",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.CivilianSavedSolo,
+            value: 4,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.C,
+            value: 2,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.D,
+            value: 5,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q4-10",
@@ -2692,7 +3128,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
           {
             metricRuleId: MetricRuleId.EnemyDefeat,
             rank: Ranks.D,
-            value: 4,
+            value: 1,
             week: 4,
           },
         ],
@@ -2770,7 +3206,14 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-4",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.E,
+            value: 4,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q2-6.3",
@@ -2800,7 +3243,23 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-3",
-        metrics: [],
+        metrics: [          {
+          metricRuleId: MetricRuleId.EnemyDefeat,
+          rank: Ranks.C,
+          value: 3,
+          week: 5,
+        },
+        {
+          metricRuleId: MetricRuleId.CivilianSavedSolo,
+          value: 1,
+          week: 5,
+        },
+        {
+          metricRuleId: MetricRuleId.EnemyDefeat,
+          rank: Ranks.D,
+          value: 2,
+          week: 5,
+        },],
       },
       {
         partyId: "p1-q4-10",
@@ -2862,7 +3321,20 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-4",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.E,
+            value: 1,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            rank: Ranks.D,
+            value: 1,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p3-q4-8",
@@ -2895,7 +3367,31 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-3",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.B,
+            value: 2,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.C,
+            value: 5,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.D,
+            value: 5,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.CostsOrDamages,
+            value: 1000,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q4-10",
@@ -2931,7 +3427,26 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
       {
         lateAddition: true,
         partyId: "p2-q5-4",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.B,
+            value: 1,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.C,
+            value: 2,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.D,
+            value: 2,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p2-q4-5",
@@ -2988,7 +3503,18 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p4-q5-3",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.CivilianSavedSolo,
+            value: 15,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.CiviliansDeadSolo,
+            value: 4,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p4-q4-7",
@@ -3052,7 +3578,26 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p2-q5-4",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            value: 3,
+            rank: Ranks.E,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            value: 1,
+            rank: Ranks.C,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            value: 1,
+            rank: Ranks.B,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q4-5",
@@ -3130,7 +3675,20 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p2-q5-1",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.D,
+            value: 5,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.E,
+            value: 10,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p5-q3-9",
@@ -3174,7 +3732,20 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p2-q5-1",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.D,
+            value: 5,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.E,
+            value: 10,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p5-q3-9",
@@ -3218,7 +3789,26 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
       {
         lateAddition: true,
         partyId: "p1-q5-1",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.E,
+            value: 30,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.D,
+            value: 15,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.C,
+            value: 2,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p3-q1-9", // week 3
@@ -3253,7 +3843,20 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p2-q5-4",
-        metrics: [],
+        metrics: [        
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            value: 1,
+            rank: Ranks.C,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            value: 6,
+            rank: Ranks.D,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q3-8",
@@ -3305,7 +3908,20 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-5",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.B,
+            value: 1,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.C,
+            value: 4,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q4-2",
@@ -3356,7 +3972,18 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p4-q5-3",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.CivilianSavedSolo,
+            value: 18,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.CiviliansDeadSolo,
+            value: 5,
+            week: 5,
+          },
+        ],
       },
       {
         lateAddition: true,
@@ -3453,7 +4080,20 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p2-q5-4",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            rank: Ranks.C,
+            value: 2,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            rank: Ranks.D,
+            value: 2,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q4-5",
@@ -3528,7 +4168,14 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p2-q5-4",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.RewardGold,
+            rank: Ranks.D,
+            value: 5,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p5-q3-8",
@@ -3623,7 +4270,19 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-4",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.TrapDisarmed,
+            value: 2,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.E,
+            value: 1,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p6-q2-5",
@@ -3662,7 +4321,20 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
       {
         lateAddition: true,
         partyId: "p1-q5-5",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.B,
+            value: 4,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            rank: Ranks.D,
+            value: 10,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q4-2",
