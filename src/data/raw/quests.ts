@@ -684,7 +684,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         notes: `Guy Norman spends some time interviewing several of the people who posted the missing persons requests. Notices that there's a pattern where they're predominantly from poorer neighborhoods surrounding the Noble quarter. After knocking some skulls in the underbelly of the city he gets a lead on a shifty organization paying good money for random kidnappings. He makes a solo raid on a strange catacomb where a bunch of fanatics in robes are holding citizens and a couple of adventurers in cages. He kicks butt, and sets them free.`,
         status: QuestStatus.Success,
         clanId: "c1",
-        metrics: [],
+        metrics: [          ],
       },
       {
         id: "p2.1-q4-8",

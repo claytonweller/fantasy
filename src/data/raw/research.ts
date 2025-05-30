@@ -2,10 +2,456 @@ import { EntityTypes, IResearch } from "types/Research";
 
 export const rawResearch: IResearch[] = [
   {
+    note: `You see Vlort chilling on the city wall taking swigs from a large bottle. His focus is loose. He's not looking at anything in particular. As people are rushing back and forth trying to prepare for the worst, he's completely unfazed. If anything he looks bored.`,
+    weekHappened: 5,
+    villagerPrompts: [
+      {
+        villagerId: "v1",
+        week: 5,
+        text: "Vlort has been sitting on the sidelines this whole time. Has he been waiting for his moment to put on a grand show? Are the stakes finally high enough that he will get off his ass and actually save the town… nay, the world?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v1",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a20",
+      },
+    ],
+  },
+  {
+    note: `Clara has been hanging around with the Exploding fist crew ever since Mara's death. They seem to know who she is, and are all very affectionate toward her. She seems to have a fire in her eyes behind the tears.`,
+    weekHappened: 5,
+    villagerPrompts: [
+      {
+        villagerId: "v1",
+        week: 5,
+        text: "Clara Kimberflorn has had a series of good weeks. How has she been sustaining her stamina this whole time? Does she have it in her to go another week?",
+      },
+      {
+        villagerId: "v3",
+        week: 5,
+        text: "Clara Kimberflorn's sudden appearance as a powerhouse the last couple weeks has been quite a twist.  Who is this mysterious person, and is there any reason to believe that The Mill might suddenly turn into something useful with her helping them?",
+      },
+      {
+        villagerId: "v5",
+        week: 5,
+        text: "With Mara dead will Clara take up the leadership of the guild?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v1",
+      },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v3",
+      },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v5",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a40",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a39",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c9",
+      },
+    ],
+  },
+  {
+    note: `Tall Pine Marlon has been very clear that he's going to try and get Mamut (the giant wolf) back to the sacred grove deep in the northern forest. So, he is going to have plenty of trees to work with.`,
+    weekHappened: 5,
+    villagerPrompts: [
+      {
+        villagerId: "v1",
+        week: 5,
+        text: "How many trees are left standing that Tall Pine Marlon can deploy to fight against whatever monstrosities that attack? Are those battles going to be in the woods where it is strategically useful for Tall Pine Marlon? ",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v1",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a59",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q5-5",
+      },
+    ],
+  },
+  {
+    note: `You go for a walk to clear your head. There aren't many places inside to get away from people now, but the area near where Axel's contraption exploded has a bit of a taboo feeling, so it's the best you've got. As you turn a corner you freeze. You see Tall Pine Marlon, talking to a gigantic blue wolf, "PHIL!? You're in there?! I thought you were dead for sure!" The wolf gives the elf a huge sloppy lick, lifting him 6 inches off the ground leaving him drenched with slobber, "Well solves the problem of finding Mamut I guess!"`,
+    weekHappened: 5,
+    villagerPrompts: [
+      {
+        villagerId: "v2",
+        week: 5,
+        text: "Sick",
+      },
+      {
+        villagerId: "v6",
+        week: 5,
+        text: "????",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v2",
+      },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v6",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a59",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q5-5",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a60",
+      },
+    ],
+  },
+  {
+    note: `Arc Northstar walks by you with purpose, he's quickly followed by Sheila Solara. "We're doing this right?! We're going to take on this glorp god right?! YEAH! WOO! This is hero stuff right here. ALRIGHT! YEAH!" Arc doesn't turn around, and keeps walking, "This isn't a game." But you see him clench his fist and smile ever so slightly.`,
+    weekHappened: 5,
+    villagerPrompts: [
+      {
+        villagerId: "v2",
+        week: 5,
+        text: "sick",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v2",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a19",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a15",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q5-2",
+      },
+    ],
+  },
+  {
+    note: `You grease some palms with the little money you have left, "Don't tell anyone I told ya... but Gorn is the front fer tha' Valeon Count Vanderbliff. 'Parently he's trying to weasel his way out'a town. Don't know how well that's gonna go fer him though... hear he's the guy wot got us in this mess the first place." He spits.`,
+    weekHappened: 5,
+    villagerPrompts: [
+      {
+        villagerId: "v3",
+        week: 5,
+        text: "Who is Gorn Wigby's benefactor, and what is it that they want?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v3",
+      },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "q5-6",
+      },
+    ],
+  },
+  {
+    note: `You chat up some of your bookie "friends" while moving stuff to a more defensible location, "I mean that Northstar guy has a stick up his ass for sure. I'm normally all about Night Cowel, they're my kind of people. Buuuuuut listen... let's just say if I was drowning in the river... I know who I'd rather have on the bank ya' hear me? The only way I'm not sinking to the bottom with Night Cowl is if they know: 1. I'm rich. 2. They'll only get paid if I'm alive." He puts a crate down and looks at you seriously, "Alls I'm sayin' is that right now we're all in a river buddy... and you're sure as hell not rich."`,
+    weekHappened: 5,
+    villagerPrompts: [
+      {
+        villagerId: "v3",
+        week: 5,
+        text: "I know Night Cowl ended up a big fat flop last week, but of the A and B tier clans, only them and Blessed Sword are still at full strength.  While Blessed Sword has been almost boringly consistently strong the entire game, Night Cowl are the ones who can turn the tables when dark mysterious shit is happening.  What's the word on the street about the members of Night Cowl and what they're up to this week?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v3",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c2",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a15",
+      },
+    ],
+  },
+  {
+    note: `You ask this question to the one of the clerks at the Adventurers guild, "Finally! Yes! Someone gets it! Hard choices all around, they're all so great." Apparently the staff a the guild are in it for more than just the money, "Ok ok ok. I mean... all of them. Like all of them are so... you know?" Eyebrows and a whistle, "Ok for me personally I think I would absolutely have to marry Shay, she's so reliable. Then I'd get busy with Elise because, I mean, damn. You get it. I can tell, YOU get it. She'd be like, A LOT, with all the threads and stuff you know?! Ugh but then I'd have to kill Vince and he's super nice to everyone at the guild, and so funny. Ugh maybe I marry him?! Yeah. Ok then I have to kill Shay! NO!"... this continues for a long time. Long after you leave.`,
+    weekHappened: 5,
+    villagerPrompts: [
+      {
+        villagerId: "v4",
+        week: 5,
+        text: "I'm dealing with a horrible demon. Fuck Marry Kill: Vince Dawn, sleek Wind Shay, Elise Shadowthread.",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v4",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a2",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a9",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a8",
+      },
+    ],
+  },
+  {
+    note: `You see Buster filling a giant backpack with holy water, magic scrolls, and stakes. Nearby is a silver hammer as big as his body. Also, you notice that he's shirtless... and pants-less... ok he's wearing only a loin cloth. Oh and now he's oiling his body up. He's muttering a lot. Why does he smacking himself? He's definitely up to... something.`,
+    weekHappened: 5,
+    villagerPrompts: [
+      {
+        villagerId: "v4",
+        week: 5,
+        text: "How does buster zeddemore feel about zombies?",
+      },
+      {
+        villagerId: "v5",
+        week: 5,
+        text: "Will Buster actually do something about the undead?",
+      },
+      {
+        villagerId: "v7",
+        week: 5,
+        text: "Has anyone actually dealt with the undead before?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v4",
+      },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v5",
+      },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v7",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a57",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q5-1",
+      },
+    ],
+  },
+  {
+    note: `While helping Sister Lasiter carry a stretcher you ask her about the church and the cult, " Oh! Looking for light in the darkness I see. The Church of the Holy Mother has been around for hundreds of years. It was founded by the four children of the Holy Mother herself, after she purified the wastes of Volgoth..." The description goes on quite a while, you eventually interrupt to ask about it's relation to the cult, she stares at you, "There are many old gods, lesser deities, and unknowable entities in this world... some prey on the weak of soul. They feed on the madness of man. They offer nothing but promises and pain. As long as there are people who will fight these false divinities will always falter and fade."`,
+    weekHappened: 5,
+    villagerPrompts: [
+      {
+        villagerId: "v4",
+        week: 5,
+        text: "How is the cult and sacred mother religion related? Is anyone at risk of joining this cult?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v4",
+      },
+    ],
+  },
+  {
+    note: `Clockwork Chisel is pretty much out of commission. They're all laid up in the Church of the Holy Mother's infirmary. Axel in particular is really banged up. Though Norn has to keep bringing Thorin back to his bed, because he keeps trying to help repair the wall.`,
+    weekHappened: 5,
+    villagerPrompts: [
+      {
+        villagerId: "v5",
+        week: 5,
+        text: "Is clockwork chizel going to do anything to make up for their failures last week?",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v5",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a38",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a52",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a21",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c5",
+      },
+    ],
+  },
+  {
+    note: `Derb approaches you because he can now control rats, and he now feels you're kind of a colleague. He tells you about The Mill, "You know I joined because it was literally the only clan that would take me... but now that Guy is there he's kind of become a defacto leader. Filling to hole that Vlort leaves you know? Anyway, he's really listening to all of us and pulling us into a team. I was scared before, but now I don't know. Maybe we can do this!" He toots his horn and rats bring him his leather helmet.`,
+    weekHappened: 5,
+    villagerPrompts: [
+      {
+        villagerId: "v6",
+        week: 5,
+        text: "?????",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v6",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a42",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a20",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a31",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c1",
+      },
+    ],
+  },
+  {
+    note: `You check in at the town square where Crockpot is running the refuge mess tent. There doesn't seem to be much food left in the crates and barrels. You see The Chairman pacing around, he looks pretty sweaty. Julia Pepperschild and Tundrapaw are keeping a close eye on him. They look nervous. Spicetro comes in with a weird looking root, "Look this is what I could find." The Chairman immediately snatches it and devours it, then goes back to pacing. Everyone watches them warily. You leave before whatever happens... happens.`,
+    weekHappened: 5,
+    villagerPrompts: [
+      {
+        villagerId: "v7",
+        week: 5,
+        text: "Are we running out of food?!?",
+      },
+      {
+        villagerId: "v2",
+        week: 5,
+        text: "sick",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v7",
+      },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v2",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c7",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a50",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a46",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a13",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a62",
+      },
+    ],
+  },
+  {
+    note: `You're not alone in this feeling of helplessness. The town is safe for now on the inside, but it feels like a pressure cooker. You happen to be walking by and hear Guildmaster Vahn mention quietly to Arc Northstar, "I don't want to get anyone's hopes up, but the paired magic ring that Vivian Crestmor gave me just turned white. Looks like the talks with Valeon went well and they're on their way back."`,
+    weekHappened: 5,
+    villagerPrompts: [
+      {
+        villagerId: "v7",
+        week: 5,
+        text: "What is even happening!??! We do we even have city walls?!?! It seems like it's just as dangerous inside as it is outside.",
+      },
+      {
+        villagerId: "v6",
+        week: 5,
+        text: "?????",
+      },
+    ],
+    tags: [
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v7",
+      },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v6",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a15",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q4-3",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a22",
+      },
+    ],
+  },
+
+
+  {
     note: `Vlort might not living up to his rank and protecting the weak. But though she may be aloof, everyone knows there isn't anyone who cares more for the people of Morton than Sleek Wind Shay`,
     weekHappened: 4,
     villagerPrompts: [
-      // ALSO DOWN IN THE WEEK 3
       {
         villagerId: "v1",
         week: 4,
@@ -16,6 +462,14 @@ export const rawResearch: IResearch[] = [
       {
         entityType: EntityTypes.Villager,
         entityId: "v1",
+      },
+      {
+        entityType: EntityTypes.Villager,
+        entityId: "v1",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a20",
       },
     ],
   },
@@ -34,6 +488,10 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v1",
       },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q4-5",
+      },
     ],
   },
   {
@@ -50,6 +508,14 @@ export const rawResearch: IResearch[] = [
       {
         entityType: EntityTypes.Villager,
         entityId: "v1",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a50",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q4-10",
       },
     ],
   },
@@ -77,6 +543,10 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v3",
       },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q4-10",
+      },
     ],
   },
   {
@@ -93,6 +563,10 @@ export const rawResearch: IResearch[] = [
       {
         entityType: EntityTypes.Villager,
         entityId: "v2",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a31",
       },
     ],
   },
@@ -120,6 +594,22 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v7",
       },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a10",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a11",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a9",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q4-3",
+      },
     ],
   },
   {
@@ -137,6 +627,10 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v3",
       },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a4",
+      },
     ],
   },
   {
@@ -153,6 +647,18 @@ export const rawResearch: IResearch[] = [
       {
         entityType: EntityTypes.Villager,
         entityId: "v3",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c2",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a3",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q4-6",
       },
     ],
   },
@@ -172,6 +678,18 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v4",
       },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c4",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c8",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q4-5",
+      },
     ],
   },
   {
@@ -188,6 +706,22 @@ export const rawResearch: IResearch[] = [
       {
         entityType: EntityTypes.Villager,
         entityId: "v4",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a61",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a53",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a29",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q4-5",
       },
     ],
   },
@@ -206,6 +740,14 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v4",
       },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a42",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q4-2",
+      },
     ],
   },
   {
@@ -222,6 +764,10 @@ export const rawResearch: IResearch[] = [
       {
         entityType: EntityTypes.Villager,
         entityId: "v5",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a57",
       },
     ],
   },
@@ -249,6 +795,18 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v6",
       },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c5",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a31",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q4-7",
+      },
     ],
   },
   {
@@ -265,6 +823,14 @@ export const rawResearch: IResearch[] = [
       {
         entityType: EntityTypes.Villager,
         entityId: "v5",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a38",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q4-7",
       },
     ],
   },
@@ -283,6 +849,22 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v6",
       },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q4-3",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q4-5",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q4-9",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c4",
+      },
     ],
   },
   {
@@ -299,6 +881,14 @@ export const rawResearch: IResearch[] = [
       {
         entityType: EntityTypes.Villager,
         entityId: "v6",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a31",
+      },
+      {
+        entityType: EntityTypes.Clan,
+        entityId: "c8",
       },
     ],
   },
@@ -317,6 +907,18 @@ export const rawResearch: IResearch[] = [
         entityType: EntityTypes.Villager,
         entityId: "v7",
       },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a39",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a41",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q4-1",
+      },
     ],
   },
   {
@@ -333,6 +935,14 @@ export const rawResearch: IResearch[] = [
       {
         entityType: EntityTypes.Villager,
         entityId: "v7",
+      },
+      {
+        entityType: EntityTypes.Adventurer,
+        entityId: "a38",
+      },
+      {
+        entityType: EntityTypes.Quest,
+        entityId: "q4-7",
       },
     ],
   },

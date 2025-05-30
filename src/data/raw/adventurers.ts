@@ -2090,7 +2090,7 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
           {
             metricRuleId: MetricRuleId.EnemyDefeat,
             rank: Ranks.D,
-            value: 10,
+            value: 8,
             week: 4,
           },
           {
@@ -2099,8 +2099,8 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
             week: 4,
           },
           {
-            metricRuleId: MetricRuleId.CivilianSaved,
-            value: 11,
+            metricRuleId: MetricRuleId.CivilianSavedSolo,
+            value: 9,
             week: 4,
           },
         ],

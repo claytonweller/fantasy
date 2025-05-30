@@ -354,10 +354,15 @@ function calculateAdventurerFacts(props: {
 
   const average = roundToHundredths(totalPoints / adventurers.length);
   const averageActive = roundToHundredths(totalPoints / activeCount);
+  const allDisplay = allSorted.filter(a => a.points !==0)
+  .map(({name, points}) => {
+    return (<div>{name}: {points}</div>)
+  })
   
   const display = (
     <div>
       <h3 style={{ paddingTop: 20 }}>Adventurer Facts</h3>
+      {allDisplay}
       <div style={{ padding: 5 }}>
         <b>Average All</b>: {average}
       </div>
