@@ -101,7 +101,14 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-6",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            value: 2,
+            rank: Ranks.B,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q4-4",
@@ -154,7 +161,14 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-6",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            value: 3,
+            rank: Ranks.C,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q4-6",
@@ -238,7 +252,20 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
       },
       {
         partyId: "p1-q5-6",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            value: 2,
+            rank: Ranks.C,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.EnemyDefeat,
+            value: 1,
+            rank: Ranks.B,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q3-3",
@@ -359,7 +386,19 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-6",
-        metrics: [],
+        metrics: [          {
+          metricRuleId: MetricRuleId.AllyHealed,
+          value: 2,
+          rank: Ranks.C,
+          week: 5,
+        },
+        {
+          metricRuleId: MetricRuleId.AllyHealed,
+          value: 2,
+          rank: Ranks.D,
+          week: 5,
+        },
+      ],
       },
       {
         partyId: "p1-q4-6",
@@ -872,7 +911,20 @@ export const rawAdventurers: IRawAdventurer[] = shuffleArray([
     questParties: [
       {
         partyId: "p1-q5-6",
-        metrics: [],
+        metrics: [
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            value: 1,
+            rank: Ranks.B,
+            week: 5,
+          },
+          {
+            metricRuleId: MetricRuleId.AllyHealed,
+            value: 1,
+            rank: Ranks.C,
+            week: 5,
+          },
+        ],
       },
       {
         partyId: "p1-q4-6",

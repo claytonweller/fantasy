@@ -214,7 +214,7 @@ export const rawResearch: IResearch[] = [
       {
         villagerId: "v4",
         week: 5,
-        text: "I'm dealing with a horrible demon. Fuck Marry Kill: Vince Dawn, sleek Wind Shay, Elise Shadowthread.",
+        text: "hy  ",
       },
     ],
     tags: [
@@ -237,7 +237,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `You see Buster filling a giant backpack with holy water, magic scrolls, and stakes. Nearby is a silver hammer as big as his body. Also, you notice that he's shirtless... and pants-less... ok he's wearing only a loin cloth. Oh and now he's oiling his body up. He's muttering a lot. Why does he smacking himself? He's definitely up to... something.`,
+    note: `You see Buster filling a giant backpack with holy water, magic scrolls, and stakes. Nearby is a silver hammer as big as his body. Also, you notice that he's shirtless... and pants-less... ok he's wearing only a loin cloth. Oh and now he's oiling his body up. He's muttering a lot. Why does he keep smacking himself? He's definitely up to... something.`,
     weekHappened: 5,
     villagerPrompts: [
       {
@@ -363,7 +363,7 @@ export const rawResearch: IResearch[] = [
     ],
   },
   {
-    note: `You check in at the town square where Crockpot is running the refuge mess tent. There doesn't seem to be much food left in the crates and barrels. You see The Chairman pacing around, he looks pretty sweaty. Julia Pepperschild and Tundrapaw are keeping a close eye on him. They look nervous. Spicetro comes in with a weird looking root, "Look this is what I could find." The Chairman immediately snatches it and devours it, then goes back to pacing. Everyone watches them warily. You leave before whatever happens... happens.`,
+    note: `You check in at the town square where Crockpot is running the refugee mess tent. There doesn't seem to be much food left in the crates and barrels. You see The Chairman pacing around, he looks pretty sweaty. Julia Pepperschild and Tundrapaw are keeping a close eye on him. They look nervous. Spicetro comes in with a weird looking root, "Look this is what I could find." The Chairman immediately snatches it and devours it, then goes back to pacing. Everyone watches them warily. You leave before whatever happens... happens.`,
     weekHappened: 5,
     villagerPrompts: [
       {

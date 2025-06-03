@@ -30,11 +30,13 @@ export default function AdventurerCard(props: {
     typeSpecificFilters,
   } = props;
   const { name, bio, clan, quests, rank, currentStatuses, races } = adventurer;
+  
   const metaMetrics: IMetricsWithMeta[] = quests.map((quest) => {
-    return metaMetricsFromAdventurerQuest({
+    const meta = metaMetricsFromAdventurerQuest({
       quest,
       week: quest.parties[0].startWeek,
     });
+    return meta
   });
   const questSection = (
     <MetricGrid
@@ -85,7 +87,7 @@ export default function AdventurerCard(props: {
   );
 
   // We do this so the search function doesn't eventually return all
-  // Adventurers for ever query
+  // Adventurers for every query
   const reducedQuests = quests.map((q) => {
     return {
       ...q,

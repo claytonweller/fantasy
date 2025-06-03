@@ -169,7 +169,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
       {
         id: "p3-q5-3",
         startWeek: 5,
-        notes: `Despite their battered bodies from their mechanical mishap on the wall, Thorin, Bjork and Kizz set out to the wall again to keep everyone safe. They did their best. They knew they were in over their heads. They might not be in a position to fight, but they could reinforce the wall.`,
+        notes: `Despite their battered bodies from their mechanical mishap on the wall, Thorin, Bjork and Kizz set out to the wall again to keep everyone safe. They did their best. They knew they were in over their heads. They might not be in a position to fight, but they could fortify the defenses on the tall hear near the norther wall. Just incase things get very bad.`,
         status: QuestStatus.Success,
         clanId: "c5",
         metrics: [
@@ -289,7 +289,7 @@ export const rawQuests: IRawQuest[] = shuffleQuestsByWeek([
         id: "p2-q5-5",
         startWeek: 5,
         notes: `Marcus McStain knew what was at stake. Everything that had been taken from him: his title, his fortune, his estate, his pride. If he could keep Count Vanderbliff safe he could have it again, and more. He focused ever mote of mana left in his body opened the portal. There was only one place he could go. He hadn't retrieved the trap yet, and he wasn't powerful enough to set a waypoint with magic alone. It would have to do. He pulled the count in along with a few cultists (he wouldn't be able to get through the forest to Valeon alone after using all of his mana). 
-        They floated in the lightless void. His liminal space. It was full a floating liquid. Must be blood. He hadn't emptied it yet. He shouted, "Ok this is gonna be rough." A tear in the void cracked open below them, gravity returned and they all fell out. 
+        They floated in the lightless void. His liminal space. It was full a floating liquid. Must be blood. He hadn't emptied it yet. He shouted, "Ok this is gonna be rough." A tear in the void cracked open below them, gravity returned and they all fell out.
         Marcus landed on top of a less lucky cultist, then got hit in the head with the lower torso of his victim (that hydrophile dwarf he offed last week). As he recovered for the shock, he watched the cultists get absolutely obliterated by some adventurers. Then Count Vanderbliff was chomped, swung back and forth, and swallowed whole by that damn wolf. 
         Then the elf noticed him. Marcus tried to run but was impaled by what felt like a hundred tiny spears. Shit. This was plant guy. Marcus would no longer be a blemish on the McStain family name, just a blood stained core of a magic sapling.`,
         status: QuestStatus.Failed,
